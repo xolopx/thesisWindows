@@ -51,22 +51,7 @@ Linear operations are characterized by two properties,
   \item They preserve vector space operations, meaning it doesn't matter if they're applied before or after another linear operation, the result is the same.
 \end{enumerate}
 
-All linear filters operate on the same prinicpal, that is, they output a weighted average of their input. It is the weightings of a filter, known as \emph{filter coefficients}, that determine the effect of the filter. These weights are stored in a matrix called a \emph{mask} or \emph{kernel} that's then passed over the image. The mask is nearly always square so as to have a center which sits atop a reference pixel. The position of the reference pixel in the filtered image (output) will hold the result of the filter application that had that position at its center.
-
-[SHOW FILTER OVER IMAGE, NEIGHBORHOOD, CENTER PIXEL, MASK ]
-\begin{figure}[!ht]
-  \begin{mdframed}
-  \centering
-  \centering\includegraphics[width=350pt]{kernel_graphics}
-  \end{mdframed}
-  \caption{Application of a Filter Kernel to an Image}
-
-\end{figure}
-
-For example, a box filter simply outputs the average of its inputs by having all filter coefficients equal and then scaling the result by the sum of all weights. This is useful for smoothing images.
-
-[ SHOW BOX FILTER MASK MATRIX ]
-\begin{figure}
+\begin{figure}[H]
   \begin{gather}
     Kernel  = \frac{1}{\sum\limits_{i=0}^{M}\sum\limits_{j=0}^{N}c_{i,j}}
     \begin{bmatrix}
@@ -77,6 +62,29 @@ For example, a box filter simply outputs the average of its inputs by having all
     \end{bmatrix}
   \end{gather}
   \caption{General Form of a Linear Filter}
+  \label{fig:generalForm}
+\end{figure}
+
+All linear filters operate on the same prinicpal, that is, they output a weighted average of their input. It is the weightings of a filter, known as \emph{filter coefficients}, that determine the effect of the filter. These weights are stored in a matrix called a \emph{mask} or \emph{kernel} (see Figure \ref{fig:generalForm}) that's then passed over the image. The mask is nearly always square so as to have a center which sits atop a reference pixel. The position of the reference pixel in the filtered image (output) will hold the result of the filter application that had that position at its center.
+
+\begin{figure}[H]
+  \centering
+  \centering\includegraphics[width=350pt]{kernel_graphics}
+  \caption{Application of a Filter Kernel to an Image}
+\end{figure}
+
+For example, a box filter simply outputs the average of its inputs by having all filter coefficients equal and then scaling the result by the sum of all weights. This is useful for smoothing images.
+
+\begin{figure}[H]
+  \begin{gather}
+    \frac{1}{9}
+    \begin{bmatrix}
+      1 & 1 & 1 \\
+      1 & 1 & 1 \\
+      1 & 1 & 1
+    \end{bmatrix}
+  \end{gather}
+  \caption{3x3 Box Filter Mask}
 \end{figure}
 
 
@@ -107,7 +115,7 @@ g(i,j) = \sum_{u=-k}^{k}\sum_{v = -l}^{l}f(i+u,j+v)h(u,v)
 \end{equation}
 
 
-where the dimensions of the filter kernel are $2k+1 \times 2l+1$. Filter kernels are nearly always odd dimensioned so as to have a center. This is because an asymmetric kernel (even numbered dimensions) will result in information being distorted because the output from the filter will be weighted unevenly by being placed in a reference pixel more one to one side than another.
+where the dimensions of the filter kernel are ($2k+1) \times (2l+1$). Filter kernels are nearly always odd dimensioned so as to have a center. This is because an asymmetric kernel, one which has eve numbered dimensions, will result in output being distorted. This is because the output from the filter will be weighted unevenly by being placed in a reference pixel that is not centered.
 
 [ SHOW RESULT OF USING ASYMMETRICAL KERNEL ] 
 
