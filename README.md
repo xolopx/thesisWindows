@@ -1,1 +1,1 @@
-thesisWindows
+thesis
