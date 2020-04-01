@@ -1,12 +1,12 @@
 \chapter{Literature Review}
-This section of the report expands upon the theory behind the design of the system. Digital image processing and computer vision are a broad fields and so only concepts relevant to this system are detailed.
+This section of the report expands upon the theory behind the design of the system. Digital image processing and computer vision are a broad fields and so only concepts relevant to this system are explored.
 
 \section{Digital Images}
-Unlike its analog predecessor the digital image consists of a discrete number of discrete valued data points called pixels. An image's resolution is defined how many pixels are in it and a pixel's value determines its colour. A pixel's value is also called its \emph{intensity} and lies within a spectrum of values, for example an 8-bit image can have pixel values $[0, 255]$. 
+Digital images consists of a discrete number of discrete valued data points called pixels. It is the value of these pixels that determine their color. A pixel's value is also called its \emph{intensity} and will lie within a range of values determined by the image's encoding. For example an 8-bit image has pixel values in the range $[0, 255]$. 
 
-Digital images are often represented as a 2D array of values where each cell corresponds to an intesnity. In software this is how digital images are stored and manipulated. The image's array is $M\;pixels\times N\; pixels$ in size. Notice that in Figure \ref{fig:2Darray}, the lowest value is 0 (black) and the highest value is 255 (white). All other color that can be represented by 8-bits are between these two values.
+Digital images are often represented as a 2D array of values where each cell corresponds to an intesnity. In software in particular,  digital images are stored and manipulated as arrays. An image's array is $M\times N$ pixels in size, which is also its resolution. Notice that in Figure \ref{fig:2Darray} the lowest value is 0 (black) and the highest value is 255 (white). All other colors that can be represented by 8-bits are between these two values.
 
-\begin{figure}[ht!]
+\begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.5\linewidth}
       \centering\includegraphics[width=150pt]{chessboard}
@@ -18,23 +18,22 @@ Digital images are often represented as a 2D array of values where each cell cor
     \end{subfigure}
     \caption{(\subref{fig:fig1}) A Simple 8-bit Image ~(\subref{fig:fig2}) Array Representation of Image.}
     \label{fig:2Darray}
-
 \end{figure}
   
 
-The 2D array representation allows pixels to be referenced by their relative position in the $M$ and $N$ directions. Furthermore, $M$ and $N$ may be substituted for something more familiar like the x and y-axis of a Cartesian plane. In fact, a digital image is just a two dimensional function (Equation \ref{eq:2Dfunc}), where each pixel is described by a coordinate (x,y) and an intensity (z) at that point.
+The 2D array representation allows pixels to be referenced by their relative position in the $M$ and $N$ directions. Furthermore, $M$ and $N$ may be substituted for the x and y axes of the Cartesian plane. In fact, a digital image is just a two dimensional function (see Equation \ref{eq:2Dfunc}) where each pixel is described by a coordinate (x,y) and an intensity (z) at that point.
 
 \begin{equation}
     z = f(x,y)
     \label{eq:2Dfunc}
 \end{equation}
 
-This means that two dimnesional operations may be applied to a digital images. As a consequence images may be modelled as 3D surfaces. This is useful when trying to visualize rates of change in an image.
+This means that two dimnesional operations may be applied to a digital images and images may be modelled as 3D surfaces. This is useful when trying to visualize rates of change in an image. In Figure \ref{fig:2Darray} you can see that there is a distinct edge between the different coloured squares.
 
 \begin{figure}[ht!]
   \centering
   \centering\includegraphics[width=150pt]{3Dchess}
-  \caption{\label{fig:fig1} Surface Plot of Figure \ref{fig:fig1}\ref{sub@fig:fig1}}
+  \caption{\label{fig:fig1} Surface Plot of Figure \ref{fig:2Darray}\ref{sub@fig:fig1}}
 \end{figure}
 
 
@@ -52,25 +51,27 @@ Linear operations are characterized by two properties,
 \end{enumerate}
 
 \begin{figure}[H]
-  \begin{gather}
-    Kernel  = \frac{1}{\sum\limits_{i=0}^{M}\sum\limits_{j=0}^{N}c_{i,j}}
+  
+   \[ 
+     Kernel  = \frac{1}{\sum\limits_{i=0}^{M}\sum\limits_{j=0}^{N}c_{i,j}}
     \begin{bmatrix}
       c_{0,0} & c_{0,1} & \dots & c_{0,n} \\
       c_{1,0} & c_{1,1} & \dots & c_{1,n} \\
       \vdots & \vdots & \ddots & \vdots \\
       c_{m,0} & c_{m,1} & \dots & c_{m,n}
     \end{bmatrix}
-  \end{gather}
+  \]
   \caption{General Form of a Linear Filter}
   \label{fig:generalForm}
 \end{figure}
 
-All linear filters operate on the same prinicpal, that is, they output a weighted average of their input. It is the weightings of a filter, known as \emph{filter coefficients}, that determine the effect of the filter. These weights are stored in a matrix called a \emph{mask} or \emph{kernel} (see Figure \ref{fig:generalForm}) that's then passed over the image. The mask is nearly always square so as to have a center which sits atop a reference pixel. The position of the reference pixel in the filtered image (output) will hold the result of the filter application that had that position at its center.
+All linear filters operate on the same prinicpal, that is, they output a weighted average of their input. It is the weightings of a filter, known as filter coefficients, that determine the effect of the filter. These weights are stored in a matrix called a mask or kernel (see Figure \ref{fig:generalForm}) that's then convolved or correlated with the image. The mask is nearly always square so as to have a center which sits atop a reference pixel. The position of the reference pixel in the output image will hold the result of the filter's application at that pixel in the original image. Notice in Figure \ref{fig:kernel_graphics} how the mask sits over the reference pixel.
 
 \begin{figure}[H]
   \centering
   \centering\includegraphics[width=350pt]{kernel_graphics}
-  \caption{Application of a Filter Kernel to an Image}
+  \caption{Visualization of a Filter Kernel Application}
+  \label{fig:kernel_graphics}
 \end{figure}
 
 For example, a box filter simply outputs the average of its inputs by having all filter coefficients equal and then scaling the result by the sum of all weights. This is useful for smoothing images.
@@ -90,22 +91,11 @@ For example, a box filter simply outputs the average of its inputs by having all
 
 Here, the weights are evenly distributed and equal to the chosen weight divided by the sum of all weights. By passing this filter over an entire image the sharpness of the image is reduced as all the values are averages of their neighbourhood, giving a smoothing or blurring effect.
 
-[ SHOW OUTCOME OF APPLYING BOX FILTER TO IMAGE  ]
-
-\begin{figure}[ht!]
+\begin{figure}[H]
   \centering
-  \begin{subfigure}[b]{0.5\linewidth}
-    \centering\includegraphics[width=150pt]{dogPug}
-    \caption{Photo by Charles Deluvio on Unsplash}
-    \label{fig:roughDog}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.5\linewidth}
-    \centering\includegraphics[width=150pt]{dogPug}
-    \caption{Photo by Charles Deluvio on Unsplash}
-    \label{fig:smoothDog}
-  \end{subfigure}
-  \caption{Application of Box Filter to RGB Dog}
-  \label{fig:dogPug}
+  \centering\includegraphics[width=450pt]{dogPug}
+  \caption{Left: Original Image. Right: Boxfiltered original. Photo by Charles Deluvio on Unsplash}
+  \label{fig:roughDog}
 \end{figure}
 
 The application of a linear filter $h(u,v)$ to an entire image $f(i,j)$, where $h(0,0)$ is the center of the filter mask and $f(0,0)$ is the target pixel beneath the masks center, may be described as follows
@@ -118,7 +108,12 @@ g(i,j) = \sum_{u=-k}^{k}\sum_{v = -l}^{l}f(i+u,j+v)h(u,v)
 where the dimensions of the filter kernel are ($2k+1) \times (2l+1$). Filter kernels are nearly always odd dimensioned so as to have a center. This is because an asymmetric kernel, one which has eve numbered dimensions, will result in output being distorted. This is because the output from the filter will be weighted unevenly by being placed in a reference pixel that is not centered.
 
 [ SHOW RESULT OF USING ASYMMETRICAL KERNEL ] 
-
+\begin{figure}[ht!]
+  \centering
+  \centering\includegraphics[width=200pt]{van}
+  \caption{Photo by Jason Leung on Unsplash}
+  \label{fig:roughDog}
+\end{figure}
 
 
 \subsection{Correlation}
