@@ -29,7 +29,7 @@ Filtering an image is a way to augment or extract information from it. Linear fi
 
 A 'box filter', for example, outputs the average of its inputs. This is because the filter weights are evenly distributed. By passing this filter over an image its sharpness is reduced giving a smoothing or blurring effect. This can be observed in Figure \ref{fig:roughDog}.
 
-% DOG %
+% DOG BOX FILTERED%
 \begin{figure}[H]
   \centering
   \centering\includegraphics[width=350pt]{dogPug}
@@ -37,6 +37,7 @@ A 'box filter', for example, outputs the average of its inputs. This is because 
   \label{fig:roughDog}
 \end{figure}
 
+% CORRELATION
 \subsection{Correlation}
 
 The application of a linear filter $h(u,v)$ to an image $f(i,j)$ may be described as follows
@@ -48,6 +49,7 @@ g(i,j) = \sum_{u=-k}^{k}\sum_{v = -l}^{l}f(i+u,j+v)h(u,v)
 
 The dimensions of the filter kernel are ($2k+1) \times (2l+1$). Filter kernels are nearly always odd dimensioned so as to have a center. This is because an asymmetric kernel, one which has even numbered dimensions, will result in output being distorted. This is because the output from the filter will be weighted unevenly by being placed in a reference pixel that is not centered causing aliasing.
 
+% ALIASING
 \begin{figure}[H]
   \centering
   \centering\includegraphics[width=200pt]{van}
@@ -59,36 +61,56 @@ Performing correlation with a filter may be notated more concisely by the \emph{
 
 \[g = f \otimes h\]
 
-Correlation measures the similarity between two signals. Both digital images and linear filters are two dimensional signals. Performing correlation between them will yield an image where the highest values output correspond to where the image and filter are most similar \cite{optimalKernel}. This useful because if you wish to emphasise a feature in an image it can be done by correlating a filter that describes that feature with an image. For example, if you wished to exagerate straight vertical lines you would apply a filter that looks like a straight vertical line,
+Correlation measures the similarity between two signals. Both digital images and linear filters are two dimensional signals. Performing correlation between them will yield an output image where the highest values correspond to where the image and filter are most similar \cite{optimalKernel}. This useful because if you wish to emphasise a feature in an image it can be done by correlating it with a filter that describes that feature. For example, if you wished to exagerate lines, you could use Sobel filters for vertical and straight lines. These filter masks are composed as in Figure \ref{fig:sobel_filters}.
 
-\[ 
-\begin{bmatrix}
-  0 & 1 & 0 \\
-  0 & 1 & 0 \\
-  0 & 1 & 0
-\end{bmatrix}
-\]
+% SOBEL MASKS
+\begin{figure}[H]
+  \begin{subfigure}[b]{0.49\textwidth}
+    \[
+    \begin{bmatrix*}[l]
+     -1 & -1 & -1 \\
+      \phantom{-}2 & \phantom{-}2 & \phantom{-}2 \\
+      -1 & -1 & -1 
+    \end{bmatrix*}
+    \]
+    \caption{Horizontal Sobel Filter Mask}
+    \label{rfidtest_xaxis}
+\end{subfigure}
+\begin{subfigure}[b]{0.49\textwidth}
+  \[ 
+    \begin{bmatrix}
+      -1 & 2 & -1 \\
+      -1 & 2 & -1 \\
+      -1 & 2 & -1
+    \end{bmatrix}
+    \]
+    \caption{Vertical Sobel Filter Mask}  
+\end{subfigure}
+    \caption{Sobel Filters}
+    \label{fig:sobel_filters}
+\end{figure}
 
+Correlation a Sobel filter's, as in Figure \ref{fig:sobel_apply}, isolates the features described by the filter. The filter's are weighted such that if they're sitting atop of line, a high value is produced at that location in the output image. Hence, the output images Figure \ref{fig:vert}, and Figure \ref{fig:hoz} show emphasised vertical and horizontal lines.
 
+% SOBEL FILTER APPLICATION
 \begin{figure}[htbp]
   \centering
   \begin{subfigure}[b]{0.3\textwidth}
-      \includegraphics[width=\textwidth]{im}
+      \includegraphics[width=\textwidth]{im_color}
       \caption{Image by Simone Hutsch}
-      \label{rfidtest_xaxis}
   \end{subfigure}
   \begin{subfigure}[b]{0.3\textwidth}
       \includegraphics[width=\textwidth]{gv}
       \caption{Vertical Sobel Filter}
-      \label{rfidtest_yaxis}
+      \label{fig:vert}
   \end{subfigure}
   \begin{subfigure}[b]{0.3\textwidth}
       \includegraphics[width=\textwidth]{gh}
       \caption{Horizontal Sobel Filter}
-      \label{rfidtest_zaxis}
+      \label{fig:hoz}
   \end{subfigure}
-  \caption[RFID tag read-range testing]{RFID tag read-range testing setup. In all tests, the finger moves towards along an axis towards the tag.}
-  \label{rfidtag_testing}
+  \caption{Application of Sobel filters to exagerate lines.}
+  \label{fig:sobel_apply}
 \end{figure}
 
 This operation is \emph{shift invariant}, which means that it does the same thing no matter where in an image it is applied. Therefore, correlation operations obey both the superposition principle

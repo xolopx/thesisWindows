@@ -6,7 +6,8 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Visualization of a Filter Kernel Application\relax }}{5}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Left image is the original and the right image has had $16\times 16$ box filter applied. \emph {Photo by Charles Deluvio on Unsplash.}\relax }}{6}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces SHOW IMAGE ALIASING. Photo by Jason Leung on Unsplash\relax }}{7}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces RFID tag read-range testing}}{8}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Sobel Filters\relax }}{8}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Application of Sobel filters to exagerate lines.\relax }}{8}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
