@@ -113,25 +113,60 @@ Correlation a Sobel filter's, as in Figure \ref{fig:sobel_apply}, isolates the f
   \label{fig:sobel_apply}
 \end{figure}
 
-This operation is \emph{shift invariant}, which means that it does the same thing no matter where in an image it is applied. Therefore, correlation operations obey both the superposition principle
+Correlation is \emph{shift invariant}, which means that it does the same thing no matter where in an image it is applied. To satisfy this property correlation may be superpositioned 
 
 \[a(f_1 + f_2) = af_1 + af_2\]
 
-and the shift invariance principle
+and abides by the shift invariance principle
 
 \[g(i,j)=f(i+k,j+l) \Leftrightarrow\ (h\circ g)(i,j)=(h\circ f)(i+k,j+l)\]
 
-This operation has the side effect of flipping both horizontally and vertically the location of output points relative to location the center point (\emph{reference point}) in the original image which may be undesirable.
+Correlation has the side effect of flipping both horizontally and vertically the location of output points relative to location the center point (\emph{reference point}) in the original image which may be undesirable.
 
-[ SHOW EXAMPLE OF HOW CORRELATION FLIPS INPUT FOR OUTPUT ]
+
+\begin{figure}[H]
+  \centering
+  \begin{tabular}{ccccc}
+    \begin{tabularx}{0.01/textwidth}{|c|c|c|c|c|}
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 1 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+    \end{tabularx}%
+    & %
+    $\otimes$
+    & %
+    \begin{tabular}{|c|c|c|}
+      \hline
+      a & b & c \\
+      \hline
+      d & e & f \\
+      \hline
+      g & h & i \\
+      \hline
+    \end{tabular}%
+    & $=$\\
+    $F(x,y)$ & & $H(u,v)$& & $G(x,y)$ \\
+  \end{tabular}
+  \caption{Correlation of a filter and an image.}
+  \label{fig:correlation}
+\end{figure}
+
 
 \subsection{Convolution}
 
-Convolution is also a linear operation that is shift invariant. It is very similar to correlation except that the output signal from a convolution operation is not flipped relative to the input signal. It is described mathematically by the expression,
+Convolution is also a linear operation that is shift invariant and the order of its operands don't matter. It is very similar to correlation except that where correlation measure similarity between signals convolution measures the effect of one signal on another. It is described mathematically by the expression,
 
-\[ g(i,j) = \sum_{u=-k}^{k}\sum_{v = -l}^{k}f(u,v)h(i-u,j-v)\]
+\[ g(i,j) = \sum_{u=-k}^{k}\sum_{v = -l}^{l}f(u,v)h(i-u,j-v)\]
 
-We see that this is similar to equation \ref{eq:1} but that the filter $h(i,j)$ is the entity being shifted, furthermore it is flipped (note the negative signs), this results in the output's orientation being correct. Convolution may be notated with the following operator
+Notice that the filter $h(i,j)$ is rotated  180 degrees. This causes the output's orientation to match the original image.Convolution may be notated as follows,
 
 \[g = f \ast h\]
 
