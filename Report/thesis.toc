@@ -1,0 +1,21 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}%
+\contentsline {chapter}{\numberline {2}Literature Review}{3}%
+\contentsline {section}{\numberline {2.1}Digital Images}{3}%
+\contentsline {section}{\numberline {2.2}Linear Filtering}{5}%
+\contentsline {subsection}{\numberline {2.2.1}Correlation}{6}%
+\contentsline {subsection}{\numberline {2.2.2}Convolution}{9}%
+\contentsline {section}{\numberline {2.3}Clustering}{10}%
+\contentsline {subsection}{\numberline {2.3.1}K-Means}{11}%
+\contentsline {section}{\numberline {2.4}Gaussian Mixture Model}{12}%
+\contentsline {section}{\numberline {2.5}Morphology}{12}%
+\contentsline {section}{\numberline {2.6}Contours}{12}%
+\contentsline {section}{\numberline {2.7}Centroid Tracking}{12}%
+\contentsline {chapter}{\numberline {3}Design}{13}%
+\contentsline {chapter}{\numberline {4}Implementation}{14}%
+\contentsline {chapter}{\numberline {5}Summary and Reflections}{15}%
+\contentsline {section}{\numberline {5.1}Project management}{15}%
+\contentsline {section}{\numberline {5.2}Contributions and reflections}{15}%
+\contentsline {chapter}{Bibliography}{15}%
+\contentsline {chapter}{Appendices}{17}%
+\contentsline {chapter}{\numberline {A}User Manuals}{17}%
+\contentsline {chapter}{\numberline {B}User Evaluation Questionnaire}{18}%

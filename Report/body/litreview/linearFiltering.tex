@@ -33,7 +33,7 @@ A 'box filter', for example, outputs the average of its inputs. This is because 
 \begin{figure}[H]
   \centering
   \centering\includegraphics[width=350pt]{dogPug}
-  \caption{Left image is the original and the right image has had $16\times16$ box filter applied. \emph{Photo by Charles Deluvio on Unsplash.}}
+  \caption{Left: Photo by Charles Deluvio on Unsplash Right: Application of $16\times16$ box filter.}
   \label{fig:roughDog}
 \end{figure}
 
@@ -47,7 +47,7 @@ g(i,j) = \sum_{u=-k}^{k}\sum_{v = -l}^{l}f(i+u,j+v)h(u,v)
 \end{equation}
 
 
-The dimensions of the filter kernel are ($2k+1) \times (2l+1$). Filter kernels are nearly always odd dimensioned so as to have a center. This is because an asymmetric kernel, one which has even numbered dimensions, will result in output being distorted. This is because the output from the filter will be weighted unevenly by being placed in a reference pixel that is not centered causing aliasing.
+The dimensions of the filter kernel are ($2k+1) \times (2l+1$). Filter kernels are nearly always odd dimensioned so as to have a center. This is because an asymmetric kernel, one which has even numbered dimensions, will result in output being distorted \cite{optimalKernel}. This is because the output from the filter will be weighted unevenly by being placed in a reference pixel that is not centered causing aliasing.
 
 % ALIASING
 \begin{figure}[H]
@@ -121,13 +121,13 @@ and abides by the shift invariance principle
 
 \[g(i,j)=f(i+k,j+l) \Leftrightarrow\ (h\circ g)(i,j)=(h\circ f)(i+k,j+l)\]
 
-Correlation has the side effect of flipping both horizontally and vertically the location of output points relative to location the center point (\emph{reference point}) in the original image which may be undesirable.
+Correlation has the side effect of flipping both horizontally and vertically the location of output points relative to location the center point (\emph{reference point}) in the original image which may be undesirable.\newline
 
-
-\begin{figure}[H]
+% CORRELATION EXAMPLE  %
+\begin{figure}[H] 
   \centering
   \begin{tabular}{ccccc}
-    \begin{tabularx}{0.01/textwidth}{|c|c|c|c|c|}
+      \begin{tabular}{|c|c|c|c|c|}
       \hline
       0 & 0 & 0 & 0 & 0 \\[1pt]
       \hline
@@ -139,10 +139,8 @@ Correlation has the side effect of flipping both horizontally and vertically the
       \hline
       0 & 0 & 0 & 0 & 0 \\[1pt]
       \hline
-    \end{tabularx}%
-    & %
-    $\otimes$
-    & %
+      \end{tabular}%
+    & $\otimes$ &
     \begin{tabular}{|c|c|c|}
       \hline
       a & b & c \\
@@ -150,9 +148,22 @@ Correlation has the side effect of flipping both horizontally and vertically the
       d & e & f \\
       \hline
       g & h & i \\
+      \hline 
+    \end{tabular}
+    & $=$ &
+    \begin{tabular}{|c|c|c|c|c|}
       \hline
-    \end{tabular}%
-    & $=$\\
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & \textbf{i} & \textbf{h} & \textbf{g} & 0 \\[1pt]
+      \hline
+      0 & \textbf{f} & \textbf{e} & \textbf{d} & 0 \\[1pt]
+      \hline
+      0 & \textbf{c} & \textbf{b} & \textbf{a} & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+    \end{tabular} \\
     $F(x,y)$ & & $H(u,v)$& & $G(x,y)$ \\
   \end{tabular}
   \caption{Correlation of a filter and an image.}
@@ -170,4 +181,49 @@ Notice that the filter $h(i,j)$ is rotated  180 degrees. This causes the output'
 
 \[g = f \ast h\]
 
-[ SHOW EXAMPLE OF CONVOLUTION NOT FLIPPING OUTPUT ]
+% CORRELATION EXAMPLE  %
+\begin{figure}[H] 
+  \centering
+  \begin{tabular}{ccccc}
+      \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 1 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      \end{tabular}%
+    & $\ast$ &
+    \begin{tabular}{|c|c|c|}
+      \hline
+      a & b & c \\
+      \hline
+      d & e & f \\
+      \hline
+      g & h & i \\
+      \hline 
+    \end{tabular}
+    & $=$ &
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 &  \textbf{a} & \textbf{b} & \textbf{c} & 0 \\[1pt]
+      \hline
+      0 & \textbf{d} & \textbf{e} & \textbf{f} & 0 \\[1pt]
+      \hline
+      0 & \textbf{g} & \textbf{h} & \textbf{i} & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+    \end{tabular} \\
+    $F(x,y)$ & & $H(u,v)$& & $G(x,y)$ \\
+  \end{tabular}
+  \caption{Convolution of a filter and an image.}
+  \label{fig:convolution}
+\end{figure}

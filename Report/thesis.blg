@@ -1,0 +1,17 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+The style file: unsrt.bst
+Database file #1: bibliography/bibliography.bib
+Warning--entry type for "industrialization" isn't style-file defined
+--line 4 of file bibliography/bibliography.bib
+Warning--entry type for "emissions" isn't style-file defined
+--line 18 of file bibliography/bibliography.bib
+Warning--entry type for "ecotoll" isn't style-file defined
+--line 25 of file bibliography/bibliography.bib
+Warning--entry type for "optimalKernel" isn't style-file defined
+--line 34 of file bibliography/bibliography.bib
+Warning--entry type for "cost" isn't style-file defined
+--line 41 of file bibliography/bibliography.bib
+Warning--empty institution in trafficworse
+Warning--empty institution in mixedSolution
+Warning--empty institution in iot
+(There were 8 warnings)
