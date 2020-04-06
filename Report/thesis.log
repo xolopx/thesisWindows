@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  5 APR 2020 22:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  6 APR 2020 15:27
 entering extended mode
 **c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
 (c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
@@ -656,12 +656,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]) (body/body.tex (body/litreview/litReview.tex [2]
 Chapter 2.
 (body/litreview/digital.tex
-<./images/chessboard.jpg, id=39, 120.45pt x 120.45pt>
+<./images/chessboard.jpg, id=38, 120.45pt x 120.45pt>
 File: ./images/chessboard.jpg Graphic file (type jpg)
 <use ./images/chessboard.jpg>
 Package pdftex.def Info: ./images/chessboard.jpg  used on input line 9.
 (pdftex.def)             Requested size: 150.0pt x 150.0144pt.
-<./images/array2.png, id=40, 153.4533pt x 146.7081pt>
+<./images/array2.png, id=39, 153.4533pt x 146.7081pt>
 File: ./images/array2.png Graphic file (type png)
 <use ./images/array2.png>
 Package pdftex.def Info: ./images/array2.png  used on input line 13.
@@ -677,58 +677,48 @@ File: ./images/3Dchess.png Graphic file (type png)
 <use ./images/3Dchess.png>
 Package pdftex.def Info: ./images/3Dchess.png  used on input line 32.
 (pdftex.def)             Requested size: 150.0pt x 133.61078pt.
-) (body/litreview/linearFiltering.tex [4 <./images/chessboard.jpg> <./images/array2.png> <./images/3Dchess.png>]
+) (body/litreview/linearFiltering.tex
+Underfull \vbox (badness 1082) has occurred while \output is active []
+
+ [4 <./images/chessboard.jpg> <./images/array2.png> <./images/3Dchess.png>]
 <./images/kernel_graphics.jpg, id=54, 956.82469pt x 662.475pt>
 File: ./images/kernel_graphics.jpg Graphic file (type jpg)
 <use ./images/kernel_graphics.jpg>
-Package pdftex.def Info: ./images/kernel_graphics.jpg  used on input line 25.
+Package pdftex.def Info: ./images/kernel_graphics.jpg  used on input line 26.
 (pdftex.def)             Requested size: 350.0pt x 242.32196pt.
  [5 <./images/kernel_graphics.jpg>]
 <./images/dogPug.jpg, id=62, 1104.125pt x 740.7675pt>
 File: ./images/dogPug.jpg Graphic file (type jpg)
 <use ./images/dogPug.jpg>
-Package pdftex.def Info: ./images/dogPug.jpg  used on input line 35.
-(pdftex.def)             Requested size: 350.0pt x 234.82372pt.
-<./images/van.jpg, id=63, 4496.8pt x 6745.2pt>
-File: ./images/van.jpg Graphic file (type jpg)
-<use ./images/van.jpg>
-Package pdftex.def Info: ./images/van.jpg  used on input line 55.
-(pdftex.def)             Requested size: 200.0pt x 299.9186pt.
-
-Underfull \vbox (badness 3884) has occurred while \output is active []
-
+Package pdftex.def Info: ./images/dogPug.jpg  used on input line 37.
+(pdftex.def)             Requested size: 300.0pt x 201.27585pt.
  [6 <./images/dogPug.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./images/van.jpg>]
-<./images/im_color.png, id=71, 488.0634pt x 602.25pt>
+<./images/im_color.png, id=67, 488.0634pt x 602.25pt>
 File: ./images/im_color.png Graphic file (type png)
 <use ./images/im_color.png>
-Package pdftex.def Info: ./images/im_color.png  used on input line 99.
+Package pdftex.def Info: ./images/im_color.png  used on input line 106.
 (pdftex.def)             Requested size: 136.57462pt x 168.52776pt.
-<./images/gv.jpg, id=72, 1016.79875pt x 1254.6875pt>
+<./images/gv.jpg, id=68, 1016.79875pt x 1254.6875pt>
 File: ./images/gv.jpg Graphic file (type jpg)
 <use ./images/gv.jpg>
-Package pdftex.def Info: ./images/gv.jpg  used on input line 103.
+Package pdftex.def Info: ./images/gv.jpg  used on input line 110.
 (pdftex.def)             Requested size: 136.57462pt x 168.51398pt.
-<./images/gh.jpg, id=73, 1016.79875pt x 1254.6875pt>
+<./images/gh.jpg, id=69, 1016.79875pt x 1254.6875pt>
 File: ./images/gh.jpg Graphic file (type jpg)
 <use ./images/gh.jpg>
-Package pdftex.def Info: ./images/gh.jpg  used on input line 108.
+Package pdftex.def Info: ./images/gh.jpg  used on input line 115.
 (pdftex.def)             Requested size: 136.57462pt x 168.51398pt.
 
-Underfull \vbox (badness 7308) has occurred while \output is active []
-
- [8 <./images/im_color.png (PNG copy)> <./images/gv.jpg> <./images/gh.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-
- []
-
-
-Underfull \vbox (badness 5008) has occurred while \output is active []
-
- [9]) (body/litreview/clustering.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <./images/im_color.png (PNG copy)> <./images/gv.jpg> <./images/gh.jpg>]) (body/litreview/clustering.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+Underfull \vbox (badness 1635) has occurred while \output is active []
 
  [10])) (body/design.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -762,17 +752,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16338 strings out of 492484
- 301396 string characters out of 3122506
- 366781 words of memory out of 3000000
- 20482 multiletter control sequences out of 15000+200000
- 539795 words of font info for 51 fonts, out of 3000000 for 9000
+ 16339 strings out of 492484
+ 301447 string characters out of 3122506
+ 370832 words of memory out of 3000000
+ 20483 multiletter control sequences out of 15000+200000
+ 540741 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,14n,75p,907b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,14n,75p,907b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (26 pages, 4925660 bytes).
+Output written on thesis.pdf (26 pages, 1082151 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
+ 147 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,12 +4,11 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Surface Plot of Figure 2.1\hbox {}a\hbox {}\relax }}{4}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces General Form of a Linear Filter\relax }}{5}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Visualization of a Filter Kernel Application\relax }}{5}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Left: Photo by Charles Deluvio on Unsplash Right: Application of $16\times 16$ box filter.\relax }}{6}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces SHOW IMAGE ALIASING. Photo by Jason Leung on Unsplash\relax }}{7}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Sobel Filters\relax }}{8}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Application of Sobel filters to exagerate lines.\relax }}{8}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Correlation of a filter and an image.\relax }}{9}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Convolution of a filter and an image.\relax }}{10}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Box Filter application and kernel.\relax }}{6}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Sobel Filters\relax }}{7}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Application of Sobel filters to exagerate lines.\relax }}{8}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Correlation of a filter and an image.\relax }}{9}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Convolution of a filter and an image.\relax }}{10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

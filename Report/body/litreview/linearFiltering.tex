@@ -1,6 +1,7 @@
 \section{Linear Filtering}
 
-Filtering an image is a way to augment or extract information from it. Linear filters are a subset of operations that operate on a neighbourhood of pixels in an image. A filter's size determines the size of the neighbourhood to take as input for the operation. All linear filters operate on the same prinicpal, that is, they output a weighted average of their input. It is the weightings of a filter, known as filter coefficients, that determine the effect of the filter. These weights are stored in a matrix called a mask or kernel (see Figure \ref{fig:generalForm}) that's then convolved or correlated with an image.
+Filtering an image is a way to augment or extract information from it. Linear filters are a subset of operations that operate on a neighbourhood of pixels in an image. All linear filters operate on the same prinicpal, that is, they output a weighted average of their input. Filters take pixels in the neighbourhood covered by the filter as input. It is the weightings of a filter, known as filter coefficients, that determine the effect of the filter. These weights are stored in a matrix called a mask or kernel (see Figure \ref{fig:generalForm}) that's then convolved or correlated with an image (see sections \ref{subsection:corr} \& \ref{subsection:conv}).
+
 
 \begin{figure}[h]
   
@@ -27,41 +28,47 @@ Filtering an image is a way to augment or extract information from it. Linear fi
   \label{fig:kernel_graphics}
 \end{figure}
 
-A 'box filter', for example, outputs the average of its inputs. This is because the filter weights are evenly distributed. By passing this filter over an image its sharpness is reduced giving a smoothing or blurring effect. This can be observed in Figure \ref{fig:roughDog}.
+A 'box filter', for example, outputs the average of its inputs because the filter weights are evenly distributed. By passing this filter over an image its sharpness is reduced giving a smoothing or blurring effect. This can be observed in Figure \ref{fig:roughDog}.
 
 % DOG BOX FILTERED%
 \begin{figure}[H]
   \centering
-  \centering\includegraphics[width=350pt]{dogPug}
-  \caption{Left: Photo by Charles Deluvio on Unsplash Right: Application of $16\times16$ box filter.}
-  \label{fig:roughDog}
+  \begin{subfigure}[b]{0.75\textwidth}
+    \centering\includegraphics[width=300pt]{dogPug}
+    \caption{Left: Photo by Charles Deluvio. Right: Application of $16\times16$ box filter.}
+    \label{fig:roughDog}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.25\textwidth}
+    \centering
+    \[
+      \frac{1}{9}
+    \begin{bmatrix}
+       1 & 1 & 1 \\
+       1 & 1 & 1 \\
+       1 & 1 & 1
+    \end{bmatrix}
+    \]
+    \caption{Box Filter Kernel.}
+    \label{fig:boxkernel}
+  \end{subfigure}
+  \caption{Box Filter application and kernel.}
+  \label{fig:boxfilter}
 \end{figure}
 
 % CORRELATION
 \subsection{Correlation}
-
+\label{subsection:corr}
 The application of a linear filter $h(u,v)$ to an image $f(i,j)$ may be described as follows
 
 \begin{equation} \label{eq:1}
 g(i,j) = \sum_{u=-k}^{k}\sum_{v = -l}^{l}f(i+u,j+v)h(u,v)
 \end{equation}
 
-
-The dimensions of the filter kernel are ($2k+1) \times (2l+1$). Filter kernels are nearly always odd dimensioned so as to have a center. This is because an asymmetric kernel, one which has even numbered dimensions, will result in output being distorted \cite{optimalKernel}. This is because the output from the filter will be weighted unevenly by being placed in a reference pixel that is not centered causing aliasing.
-
-% ALIASING
-\begin{figure}[H]
-  \centering
-  \centering\includegraphics[width=200pt]{van}
-  \caption{SHOW IMAGE ALIASING. Photo by Jason Leung on Unsplash}
-  \label{fig:van}
-\end{figure}
-
-Performing correlation with a filter may be notated more concisely by the \emph{correlation} operator.
+$g(i,j)$ is the output image. Performing correlation with a filter may be notated more concisely by the correlation operator.
 
 \[g = f \otimes h\]
 
-Correlation measures the similarity between two signals. Both digital images and linear filters are two dimensional signals. Performing correlation between them will yield an output image where the highest values correspond to where the image and filter are most similar \cite{optimalKernel}. This useful because if you wish to emphasise a feature in an image it can be done by correlating it with a filter that describes that feature. For example, if you wished to exagerate lines, you could use Sobel filters for vertical and straight lines. These filter masks are composed as in Figure \ref{fig:sobel_filters}.
+Correlation measures the similarity between two signals. Both digital images and linear filters are two dimensional signals. Performing correlation between them will yield an output image where the highest values correspond to where the image and filter were most similar \cite{optimalKernel}. This useful because if you wish to emphasise a feature in an image it can be done by correlating it with a filter that describes that feature. For example, if you wished to exagerate vertical and horizontal lines you could use Sobel filters as in \ref{fig:sobel_filters}. 
 
 % SOBEL MASKS
 \begin{figure}[H]
@@ -90,10 +97,10 @@ Correlation measures the similarity between two signals. Both digital images and
     \label{fig:sobel_filters}
 \end{figure}
 
-Correlation a Sobel filter's, as in Figure \ref{fig:sobel_apply}, isolates the features described by the filter. The filter's are weighted such that if they're sitting atop of line, a high value is produced at that location in the output image. Hence, the output images Figure \ref{fig:vert}, and Figure \ref{fig:hoz} show emphasised vertical and horizontal lines.
+The use of negative weightings means that values next to an edge are diminished and the positively weighted line sections (the 2s) strengthen line features. Notice in figure \ref{fig:sobel_apply} how the lines have a high values (white) and regions that aren't lines are low valued (black).
 
 % SOBEL FILTER APPLICATION
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \begin{subfigure}[b]{0.3\textwidth}
       \includegraphics[width=\textwidth]{im_color}
@@ -121,7 +128,7 @@ and abides by the shift invariance principle
 
 \[g(i,j)=f(i+k,j+l) \Leftrightarrow\ (h\circ g)(i,j)=(h\circ f)(i+k,j+l)\]
 
-Correlation has the side effect of flipping both horizontally and vertically the location of output points relative to location the center point (\emph{reference point}) in the original image which may be undesirable.\newline
+Correlation has the side effect of flipping both horizontally and vertically the location of output points relative to location the center point (\emph{reference point}) in the original image which may be undesirable.
 
 % CORRELATION EXAMPLE  %
 \begin{figure}[H] 
@@ -172,16 +179,16 @@ Correlation has the side effect of flipping both horizontally and vertically the
 
 
 \subsection{Convolution}
-
-Convolution is also a linear operation that is shift invariant and the order of its operands don't matter. It is very similar to correlation except that where correlation measure similarity between signals convolution measures the effect of one signal on another. It is described mathematically by the expression,
+\label{subsection:conv}
+Convolution is also a linear operation that is shift invariant. It is very similar to correlation except that where correlation measure similarity between signals convolution measures the effect of one signal on another. It is described mathematically by the expression,
 
 \[ g(i,j) = \sum_{u=-k}^{k}\sum_{v = -l}^{l}f(u,v)h(i-u,j-v)\]
 
-Notice that the filter $h(i,j)$ is rotated  180 degrees. This causes the output's orientation to match the original image.Convolution may be notated as follows,
+Notice that the filter $h(i,j)$ is rotated  180 degrees. This causes the output's orientation to match the original image. Convolution may be notated as follows,
 
 \[g = f \ast h\]
 
-% CORRELATION EXAMPLE  %
+% Convolution example  %
 \begin{figure}[H] 
   \centering
   \begin{tabular}{ccccc}
