@@ -1,36 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{industrialization}
-The~Editors of~the Encyclopaedia~Britannica.
-\newblock Industrial revolution.
-
-\bibitem{trafficworse}
-M.~Bradley.
-\newblock Road congestion in australia.
-\newblock Technical report, 2018.
-
-\bibitem{emissions}
-WHO.
-\newblock Climate impacts.
-
-\bibitem{ecotoll}
-CITYLAB.
-\newblock Traffic’s mind-boggling economic toll.
-
-\bibitem{cost}
-INRIX.
-\newblock Congestion costs each american 1348 dollars per year.
-
-\bibitem{mixedSolution}
-Smarter~Cambridge Transport.
-\newblock Reducing traffic congestion and pollution in urban areas.
-\newblock Technical report, 2016.
-
-\bibitem{iot}
-McKinsey~\& Company.
-\newblock Smart cities digital solutions for a more livable future.
-\newblock Technical report, 2016.
-
 \bibitem{optimalKernel}
 Sabyasachi Sahoo.
 \newblock Deciding optimal kernel size for cnn.

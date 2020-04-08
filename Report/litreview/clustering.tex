@@ -1,10 +1,26 @@
 \section{Clustering}
-This is a method of separating an image in disjoint sets (clusters). This is useful as we can semantically label different sections of an image according to their similarity.
+Clustering is a method segmenting an image into classes which are disjoint sets. This is useful as each class can have a semantic label that converys useful information about an image.
 
-[ SHOW EXAMPLE OF IMAGE SEGMENTED BY CLUSTERING ]
+[ SHOW SCATTER PLOT OF CLUSERED DATA  ]
 
 An entity’s  (for example a pixel) membership to a cluster is justified by it meeting some criteria that along with the rest of the cluster’s members. A simple example of this is a luster defined by its location in an image, all pixels in that region would belong to that cluster. This is a very simple criteria and often more sophisticated prerequisites must be met in order to classify a pixel's cluster. Entities like pixels or a neighbourhood of pixels' characteristics are represented in something called a feature vector.
 
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.5\linewidth}
+      		\centering\includegraphics[width=220pt]{toyCar}
+      		\caption{Image by Gustavo, Upsplash.}
+		    \label{fig:toycarA}
+    	\end{subfigure}%
+    	\begin{subfigure}[b]{0.5\linewidth}
+      		\centering\includegraphics[width=220pt]{toycarseg}
+      		\caption{Segmentation of car from background.}
+       		\label{fig:toycarB}
+    	\end{subfigure}
+    	\caption{Segmentation of toy cars using K-Means Clustering.}
+    	\label{fig:toycar}
+\end{figure} 
 
 \subsection{K-Means}
 There are many methods by which to segment an image with clustering but K-Means is very popular for its simplicity and speed. K-means produces K clusters implemented as follows

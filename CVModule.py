@@ -4,12 +4,6 @@ import cv2 as cv
 import numpy as np
 import time
 
-
-
-
-
-
-
 def define_contours(fgMask):
 
     contours, _ = cv.findContours(fgMask, cv.RETR_EXTERNAL,

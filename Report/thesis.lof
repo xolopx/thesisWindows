@@ -1,16 +1,12 @@
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces (\subref {fig:fig1}) A Simple 8-bit Image \nobreakspace {}(\subref {fig:fig2}) Array Representation of Image.\relax }}{4}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Surface Plot of Figure 2.1\hbox {}a\hbox {}\relax }}{4}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces General Form of a Linear Filter\relax }}{5}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Visualization of a Filter Kernel Application\relax }}{5}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Box Filter application and kernel.\relax }}{6}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Sobel Filters\relax }}{7}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Application of Sobel filters to exagerate lines.\relax }}{8}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Correlation of a filter and an image.\relax }}{9}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Convolution of a filter and an image.\relax }}{10}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces (\subref {fig:fig1}) A Simple 8-bit Image \nobreakspace {}(\subref {fig:fig2}) Array Representation of Image.\relax }}{2}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Surface Plot of Figure 1.1\hbox {}a\hbox {}\relax }}{2}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces General Form of a Linear Filter\relax }}{3}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Visualization of a Filter Kernel Application\relax }}{3}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Box Filter application and kernel.\relax }}{4}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Sobel Filters\relax }}{5}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Application of Sobel filters to exagerate lines.\relax }}{5}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Correlation of a filter and an image.\relax }}{6}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Convolution of a filter and an image.\relax }}{7}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{8}%
 \addvspace {10\p@ }

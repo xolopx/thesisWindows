@@ -1,0 +1,13 @@
+\section{Mixture of Gaussians}
+
+Method of modelling each background pixel by a mixture of K Gaussian distributions. 
+
+Each background colour is represented by a Gaussian. A colour is most likely background if it stays static longer. Static single-colour objects form tight clusters in the colour space while moving ones form wide clusters due to different reflecting surfaces during movement. 
+
+\subsection{Background Subtraction}
+
+This is performed by identifying a background image and then subtracting this image from subsequent frames of video to determine what has changed and hence what is a foreground image.
+
+\subsection{Expectation Maximization}
+
+This is an optimization scheme used to fit a Gaussian Mixture Model. It is an iterative method that faurantees convergence to a local maximum in a search space.
