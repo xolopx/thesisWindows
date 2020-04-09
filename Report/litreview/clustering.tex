@@ -1,5 +1,5 @@
 \section{Clustering}
-Clustering is a method of segmenting an image into disjoint sets known as classes. This is useful for indentifying types of features or objects in an image. For example in Figure \ref{fig:toycar} the toy car has been identified out of the background.l
+Clustering is a method of segmenting an image into disjoint sets known as classes. This is useful for separating types of features or objects in an image. For example in Figure \ref{fig:toycar} the toy car has been segmented from the background.
 
 \begin{figure}[H]
 	\centering
@@ -17,7 +17,7 @@ Clustering is a method of segmenting an image into disjoint sets known as classe
     	\label{fig:toycar}
 \end{figure} 
 
-In the context of an image generally every pixel is individually classified however groups of pixels known as superpixels may also be classified. Entities are classified based on the similarity of their features. For example, a pixel's intensity is a feature that could be used to cluster it with other pixels of similar intensity. As seen in (\ref{eq:featurevector}) an entity may be represented by any number of features, known also as dimensions, $d$. 
+In an image every pixel can be individually classified or groups of pixels known as superpixels may be treated as single entities. Entities are sorted based on their similarity. For example, a pixel's intensity is a feature that could be used to cluster it with other pixels of similar intensity. As seen in (\ref{eq:featurevector}) an entity's comparable traits may be represented by a feature vector. An entity may have any number of features which as also regarded as dimensions, $d$. 
 
 \begin{equation}
     \vec{v} = 

@@ -1,26 +1,53 @@
  \subsection{Mixtures of Gaussians}
 
-Mixtures of Gaussian is method of clustering data that's more complex than K-Means but is more effective and is able to disentangle ambiguous samples by considering probabilistic classification, known as soft assignments. 
+Mixtures of Gaussian or the Gaussian Mixture Model (GMM) is a method of clustering data that's able to disentangle ambiguous samples by considering a sample's class membership probability, known as soft assignments. 
 
-Each cluster is modelled by a Gaussian that gives the probability density of a certain values (a sample) belong to that class. The Gaussian is initially developed by taking a histogram of all values. For one dimnesional data it would appear as in Figure \ref{fig:histGauss}. A histogram can be created for any N-dimensional data set but it becomes increasingly problematic to visualize with each additional dimension.
+Initially K Gaussian probability density functions are randomly generated corresponding to K clusters. The Gaussians model the probability of a sample belonging to the corresponding cluster. By superpositioning the Gaussians the relative proabilities of a sample's cluster membership are modelled. If a dataset has low dimensionality (2D or less) then the initial conditions of the system can be approximated by using a histogram of the dataset as in Figure \ref{fig:mixture}.
+
+The parameters of the mixture model's Gaussian components are tuned according to the covariance between each of the samples in the corresponding cluster's dataset. Ideally, members with low covariance will be placed into other clusters and remaining samples will consolidate their membership by modifying the characteristics of the Gaussian that describes their cluster.
+
+With each iteration of the algorithm the three defining properties of the Gaussian components are updated, the mean, 
+
+Each cluster is modelled by a Gaussian that gives the probability density of a samples that belong to that class. The Gaussian is initially determined by taking a histogram of all values. For one dimensional data this would look something like Figure \ref{fig:histGauss}. A histogram can be created for any N-dimensional data set but it becomes increasingly problematic to visualize with each additional dimension.
 
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.5\linewidth}
             \centering\includegraphics[width=215pt]{histGauss}
-      		\caption{Normalized Histogram of 1D random samples.}
+      		\caption{Normalized Histogram of 1D samples.}
 		\label{fig:histGauss}
     	\end{subfigure}%
     	\begin{subfigure}[b]{0.5\linewidth}
       		\centering\includegraphics[width=215pt]{hist_gauss_curve}
-      		\caption{Individual Gaussians derived from 1D histogram. }
+      		\caption{Gaussians derived from 1D histogram. }
        		\label{fig:histCurve}
     	\end{subfigure}
     	\caption{Formulation of Mixture of Gaussians.}
     	\label{fig:mixture}
 \end{figure}
 
-The point of interest present in the data histogram is the domain value of the 
+Figure \ref{fig:histCurve} shows that the number of peaks in the histogram correspond to the number of Gaussians it can be broken in to. Furthermore, each Gaussian represents a potential cluster in the dataset. In Figure \ref{fig:histScale} it can be seen that the local maxima have a domain value equal to the mean of the corresponding Gaussian, $\mu_k$. By knowing the mean of the
+
+The \q{mixture} of Gaussians is the superposition of each of the individual Gaussians forming a new probability density function. Because a sample \emph{must} belong to one of the classes the total area under the mixed model must be one. 
+
+In Figure \ref{fig:histScale} the arrows indicate the approximate location of the mean and standard deviation. 
+
+The values atop each peak are the weigthings for each Gaussian.
+
+
+Notice the peaks in Figure \ref{fig:histScale} have been scaled such that the sum of weigthings is equal to one. This is because the probability of a sample belonging to at least one of the clusters must be equal to one. This is expressed in \ref{eq:gauss_weight1} and \ref{eq:gauss_weight2}
+
+\begin{equation}
+    0\leq \pi_k \leq 1
+\label{eq:gauss_weight1}
+\end{equation}
+\begin{equation}
+    \sum_{k=1}^{K}\pi_k = 1
+\label{eq:gauss_weight2}
+\end{equation}
+
+
+
 
 
 
