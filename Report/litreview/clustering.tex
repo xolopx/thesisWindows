@@ -1,10 +1,5 @@
 \section{Clustering}
-Clustering is a method segmenting an image into classes which are disjoint sets. This is useful as each class can have a semantic label that converys useful information about an image.
-
-[ SHOW SCATTER PLOT OF CLUSERED DATA  ]
-
-An entity’s  (for example a pixel) membership to a cluster is justified by it meeting some criteria that along with the rest of the cluster’s members. A simple example of this is a luster defined by its location in an image, all pixels in that region would belong to that cluster. This is a very simple criteria and often more sophisticated prerequisites must be met in order to classify a pixel's cluster. Entities like pixels or a neighbourhood of pixels' characteristics are represented in something called a feature vector.
-
+Clustering is a method of segmenting an image into disjoint sets known as classes. This is useful for indentifying types of features or objects in an image. For example in Figure \ref{fig:toycar} the toy car has been identified out of the background.l
 
 \begin{figure}[H]
 	\centering
@@ -22,26 +17,20 @@ An entity’s  (for example a pixel) membership to a cluster is justified by it 
     	\label{fig:toycar}
 \end{figure} 
 
-\subsection{K-Means}
-There are many methods by which to segment an image with clustering but K-Means is very popular for its simplicity and speed. K-means produces K clusters implemented as follows
+In the context of an image generally every pixel is individually classified however groups of pixels known as superpixels may also be classified. Entities are classified based on the similarity of their features. For example, a pixel's intensity is a feature that could be used to cluster it with other pixels of similar intensity. As seen in (\ref{eq:featurevector}) an entity may be represented by any number of features, known also as dimensions, $d$. 
 
-    \begin{enumerate}
-    \itemsep0em
-        \item Place K points on the image randomly or with some educated guess. These points are the initial centroids for the K clusters.  
-        \item Assign all data points to their nearest centroid.
-        \item Update the centroids' positions as the mean of all data points in that class.
-        \item Repeat steps 2 and 3 until cluster centroids no longer move (converge). 
-    \end{enumerate}
-
-K-means is guided by trying to limit the variance within each class. Variance is described by the expression
-
-\begin{equation}\label{eq:2}
-   V = \sum_{i=1}^k\sum_{x_j\in c_i}(x_j-\mu_i)^2 
+\begin{equation}
+    \vec{v} = 
+    \begin{bmatrix}
+        d_1 \\
+        d_2 \\
+        \vdots \\ 
+        d_n
+    \end{bmatrix}
+    \label{eq:featurevector}
 \end{equation}
 
-Where {$x_j$} are the data vectors, $c_i$ are the classes that the data point belong to and $\mu_i$ are the class centroids.
-
-Because the K-Means algorithm is fast and the success of the segmentation depends on the initial placement of centroids, often the algorithm is performed many times with different initial conditions and the instance that yields the best results is used. 
 
 
-[ SHOW EXAMPLE OF K-MEANS CLUSTERING BEING USED ]
+\input{litreview/kmeans}
+\input{litreview/mog}

@@ -1,8 +1,47 @@
-\section{Mixture of Gaussians}
+ \subsection{Mixtures of Gaussians}
 
-Method of modelling each background pixel by a mixture of K Gaussian distributions. 
+Mixtures of Gaussian is method of clustering data that's more complex than K-Means but is more effective and is able to disentangle ambiguous samples by considering probabilistic classification, known as soft assignments. 
 
-Each background colour is represented by a Gaussian. A colour is most likely background if it stays static longer. Static single-colour objects form tight clusters in the colour space while moving ones form wide clusters due to different reflecting surfaces during movement. 
+Each cluster is modelled by a Gaussian that gives the probability density of a certain values (a sample) belong to that class. The Gaussian is initially developed by taking a histogram of all values. For one dimnesional data it would appear as in Figure \ref{fig:histGauss}. A histogram can be created for any N-dimensional data set but it becomes increasingly problematic to visualize with each additional dimension.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.5\linewidth}
+            \centering\includegraphics[width=215pt]{histGauss}
+      		\caption{Normalized Histogram of 1D random samples.}
+		\label{fig:histGauss}
+    	\end{subfigure}%
+    	\begin{subfigure}[b]{0.5\linewidth}
+      		\centering\includegraphics[width=215pt]{hist_gauss_curve}
+      		\caption{Individual Gaussians derived from 1D histogram. }
+       		\label{fig:histCurve}
+    	\end{subfigure}
+    	\caption{Formulation of Mixture of Gaussians.}
+    	\label{fig:mixture}
+\end{figure}
+
+The point of interest present in the data histogram is the domain value of the 
+
+
+
+\begin{figure}[H]
+    \centering
+    \centering\includegraphics[width=450pt]{gauss_mix_scale}
+    \caption{Individual Gaussians with scaled weightings.}
+    \label{fig:histScale}
+  \end{figure} 
+
+This method is perhaps explained with an example. 
+
+
+
+
+\subsubsection{Expectation Maximization}
+
+
+
+
+
 
 \subsection{Background Subtraction}
 
