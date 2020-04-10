@@ -1,0 +1,5 @@
+y = normpdf(0,0.2);
+x = [-1:0.05:1];
+
+
+figure(); plot(x,y);

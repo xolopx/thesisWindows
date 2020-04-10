@@ -22,9 +22,6 @@ Initially, K Gaussian probability density functions are randomly generated corre
 
 With each iteration of the GMM algorithm the parameters of the model's component Gaussians are tuned according to the covariance between samples in each cluster. The algorithm seeks the highest covariance possible in each of its clusters. It is by considering the covariance of samples that the GMM is able to best classify ambiguous samples. The higher the correlation between sample dimensions the more likely it is they belong in the same cluster. This can observed in Figure \ref{fig:mogcov}, the data being clustered is the same as in Figure \ref{fig:clusters} but notice the elliptical shape of the cluster distributions as opposed to the spherical shape of K-Means clustering.
 
-
-
-
 \begin{figure}[H]
 	\centering
 	\centering\includegraphics[width=450pt]{mog}
@@ -32,6 +29,7 @@ With each iteration of the GMM algorithm the parameters of the model's component
 	\label{fig:mogcov}
 \end{figure}
   
+
 first by use of the Halanobis Distance or second by a changing of axes using eigenvalues according to covariance such that we can now just think of distances as Euclidean as in the K-Means met
 
 With each iteration of the algorithm the three defining properties of the Gaussian components are updated, the mean, 

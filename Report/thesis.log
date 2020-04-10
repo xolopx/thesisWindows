@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  10 APR 2020 10:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  10 APR 2020 18:01
 entering extended mode
 **c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
 (c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
@@ -520,6 +520,14 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 Package: notoccite 2000/07/20
 ) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsrefs\textcmds.sty"
 Package: textcmds 2012/08/02 v2.00
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\bm.sty"
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup5
+\symboldletters=\mathgroup6
+\symboldsymbols=\mathgroup7
+\symboldlasy=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
 ) (blocked.sty) (uhead.sty) (boxit.sty) (thesis.sty)
 \c@definition=\count283
 \c@theorem=\count284
@@ -612,6 +620,11 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 18.
 ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 18.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 18.
+
 Overfull \vbox (91.85759pt too high) detected at line 18
  []
 
@@ -638,23 +651,24 @@ Overfull \vbox (91.85759pt too high) detected at line 18
 
 ] [4
 
-] (thesis.lof)
-\tf@lof=\write5
-\openout5 = `thesis.lof'.
+] (thesis.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5
 
-] [6
+])
+\tf@lof=\write5
+\openout5 = `thesis.lof'.
 
-] (litreview/litreview.tex
+ [6] (litreview/litreview.tex
 Chapter 1.
 (litreview/digital.tex
-<./images/chessboard.jpg, id=31, 120.45pt x 120.45pt>
+<./images/chessboard.jpg, id=32, 120.45pt x 120.45pt>
 File: ./images/chessboard.jpg Graphic file (type jpg)
 <use ./images/chessboard.jpg>
 Package pdftex.def Info: ./images/chessboard.jpg  used on input line 9.
 (pdftex.def)             Requested size: 150.0pt x 150.0144pt.
-<./images/array2.png, id=32, 153.4533pt x 146.7081pt>
+<./images/array2.png, id=33, 153.4533pt x 146.7081pt>
 File: ./images/array2.png Graphic file (type png)
 <use ./images/array2.png>
 Package pdftex.def Info: ./images/array2.png  used on input line 13.
@@ -663,6 +677,7 @@ Package pdftex.def Info: ./images/array2.png  used on input line 13.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
+
 
 ]
 <./images/3Dchess.png, id=40, 422.57875pt x 376.40625pt>
@@ -707,13 +722,31 @@ Underfull \vbox (badness 1102) has occurred while \output is active []
  [5 <./images/im_color.png (PNG copy)> <./images/gv.jpg> <./images/gh.jpg>]) (litreview/convolution.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6])) (litreview/gaussian.tex) (litreview/clustering.tex
-<./images/toyCar.jpg, id=70, 1036.87375pt x 739.76375pt>
+ [6])) (litreview/gaussian.tex
+<./images/bellcurve.jpg, id=70, 1927.2pt x 976.64874pt>
+File: ./images/bellcurve.jpg Graphic file (type jpg)
+<use ./images/bellcurve.jpg>
+Package pdftex.def Info: ./images/bellcurve.jpg  used on input line 7.
+(pdftex.def)             Requested size: 450.0pt x 228.03714pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
+<./images/gauss2D.jpg, id=74, 1927.2pt x 976.64874pt>
+File: ./images/gauss2D.jpg Graphic file (type jpg)
+<use ./images/gauss2D.jpg>
+Package pdftex.def Info: ./images/gauss2D.jpg  used on input line 14.
+(pdftex.def)             Requested size: 300.0pt x 152.01979pt.
+
+Underfull \vbox (badness 3492) has occurred while \output is active []
+
+ [8 <./images/bellcurve.jpg> <./images/gauss2D.jpg>]) (litreview/clustering.tex
+<./images/toyCar.jpg, id=78, 1036.87375pt x 739.76375pt>
 File: ./images/toyCar.jpg Graphic file (type jpg)
 <use ./images/toyCar.jpg>
 Package pdftex.def Info: ./images/toyCar.jpg  used on input line 7.
 (pdftex.def)             Requested size: 220.0pt x 156.95784pt.
-<./images/toycarseg.jpg, id=71, 1036.87375pt x 739.76375pt>
+<./images/toycarseg.jpg, id=79, 1036.87375pt x 739.76375pt>
 File: ./images/toycarseg.jpg Graphic file (type jpg)
 <use ./images/toycarseg.jpg>
 Package pdftex.def Info: ./images/toycarseg.jpg  used on input line 12.
@@ -721,8 +754,8 @@ Package pdftex.def Info: ./images/toycarseg.jpg  used on input line 12.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7] (litreview/kmeans.tex [8 <./images/toyCar.jpg> <./images/toycarseg.jpg>]
-<./images/kmeans_clusters.jpg, id=78, 562.1pt x 421.575pt>
+ [9] (litreview/kmeans.tex [10 <./images/toyCar.jpg> <./images/toycarseg.jpg>]
+<./images/kmeans_clusters.jpg, id=90, 562.1pt x 421.575pt>
 File: ./images/kmeans_clusters.jpg Graphic file (type jpg)
 <use ./images/kmeans_clusters.jpg>
 Package pdftex.def Info: ./images/kmeans_clusters.jpg  used on input line 26.
@@ -730,13 +763,13 @@ Package pdftex.def Info: ./images/kmeans_clusters.jpg  used on input line 26.
 ) (litreview/mog.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-<./images/histGauss.jpg, id=82, 562.1pt x 421.575pt>
+ [11]
+<./images/histGauss.jpg, id=95, 562.1pt x 421.575pt>
 File: ./images/histGauss.jpg Graphic file (type jpg)
 <use ./images/histGauss.jpg>
 Package pdftex.def Info: ./images/histGauss.jpg  used on input line 10.
 (pdftex.def)             Requested size: 215.0pt x 161.24869pt.
-<./images/hist_gauss_curve.jpg, id=83, 562.1pt x 421.575pt>
+<./images/hist_gauss_curve.jpg, id=96, 562.1pt x 421.575pt>
 File: ./images/hist_gauss_curve.jpg Graphic file (type jpg)
 <use ./images/hist_gauss_curve.jpg>
 Package pdftex.def Info: ./images/hist_gauss_curve.jpg  used on input line 15.
@@ -744,32 +777,32 @@ Package pdftex.def Info: ./images/hist_gauss_curve.jpg  used on input line 15.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10 <./images/kmeans_clusters.jpg>]
-<./images/mog.jpg, id=87, 562.1pt x 421.575pt>
+ [12 <./images/kmeans_clusters.jpg>]
+<./images/mog.jpg, id=100, 562.1pt x 421.575pt>
 File: ./images/mog.jpg Graphic file (type jpg)
 <use ./images/mog.jpg>
-Package pdftex.def Info: ./images/mog.jpg  used on input line 30.
+Package pdftex.def Info: ./images/mog.jpg  used on input line 27.
 (pdftex.def)             Requested size: 450.0pt x 337.49846pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11 <./images/histGauss.jpg> <./images/hist_gauss_curve.jpg>]
+ [13 <./images/histGauss.jpg> <./images/hist_gauss_curve.jpg>]
 Underfull \vbox (badness 6173) has occurred while \output is active []
 
- [12 <./images/mog.jpg>]
-<./images/gauss_mix_scale.jpg, id=95, 1927.2pt x 976.64874pt>
+ [14 <./images/mog.jpg>]
+<./images/gauss_mix_scale.jpg, id=107, 1927.2pt x 976.64874pt>
 File: ./images/gauss_mix_scale.jpg Graphic file (type jpg)
 <use ./images/gauss_mix_scale.jpg>
-Package pdftex.def Info: ./images/gauss_mix_scale.jpg  used on input line 70.
+Package pdftex.def Info: ./images/gauss_mix_scale.jpg  used on input line 68.
 (pdftex.def)             Requested size: 450.0pt x 228.03714pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]))) (body/body.tex (body/design/design.tex [14 <./images/gauss_mix_scale.jpg>]
+ [15]))) (body/body.tex (body/design/design.tex [16 <./images/gauss_mix_scale.jpg>]
 Chapter 2.
-)) (thesis.bbl [15
+)) (thesis.bbl [17
 
-]) [16
+]) [18
 
 ] (thesis.aux)
 
@@ -777,17 +810,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16447 strings out of 492484
- 303224 string characters out of 3122506
- 367194 words of memory out of 3000000
- 20587 multiletter control sequences out of 15000+200000
- 540741 words of font info for 55 fonts, out of 3000000 for 9000
+ 16560 strings out of 492484
+ 304621 string characters out of 3122506
+ 368623 words of memory out of 3000000
+ 20687 multiletter control sequences out of 15000+200000
+ 544336 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,14n,75p,1022b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (24 pages, 1367081 bytes).
+ 57i,14n,75p,1022b,524s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on thesis.pdf (26 pages, 1535826 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
+ 168 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
