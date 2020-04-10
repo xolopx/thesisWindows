@@ -2,7 +2,7 @@
 
 Mixtures of Gaussian or the Gaussian Mixture Model (GMM) is a method of clustering data that's able to disentangle ambiguous samples by considering a sample's probability of belonging to a class, known as a soft assignment. 
 
-Initially, K Gaussian probability density functions are randomly generated corresponding to K clusters. The Gaussians model the probability of a sample belonging to a corresponding cluster. By superpositioning all of the Gaussians a sample's complete probabilistic model is created, i.e. a model for \emph{all} clusters. If a dataset has low dimensionality, by taking a histogram of its values the Gasussian's initial conditions can be approximated, as in Figure \ref{fig:mixture}.
+Initially, K Gaussian functions are randomly generated corresponding to K clusters. If a dataset has low dimensionality, by taking a histogram of its values the Gasussian's initial conditions can be approximated, as in Figure \ref{fig:mixture}. By superpositioning all of the Gaussians a sample's complete probabilistic model is created, i.e. a model for \emph{all} clusters. 
 
 \begin{figure}[H]
 	\centering
@@ -20,7 +20,16 @@ Initially, K Gaussian probability density functions are randomly generated corre
     	\label{fig:mixture}
 \end{figure}
 
-With each iteration of the GMM algorithm the parameters of the model's component Gaussians are tuned according to the covariance between samples in each cluster. The algorithm seeks the highest covariance possible in each of its clusters. It is by considering the covariance of samples that the GMM is able to best classify ambiguous samples. The higher the correlation between sample dimensions the more likely it is they belong in the same cluster. This can observed in Figure \ref{fig:mogcov}, the data being clustered is the same as in Figure \ref{fig:clusters} but notice the elliptical shape of the cluster distributions as opposed to the spherical shape of K-Means clustering.
+With each iteration of the GMM algorithm the parameters of the model's component Gaussians are tuned according to the covariance $\ref{eq:cov}$ between samples in each cluster. 
+
+\begin{equation}
+Cov(X, Y) = \frac{\Sigma(X_i-\overline X)(Y_j-\overline Y)}{n}
+\label{eq:cov}
+\end{equation}
+
+Where, $X$ and $Y$ are the variables being compared, $\overline X$ and $\overline Y$ are variable means and $n$ is the number of samples.
+
+The algorithm seeks the highest covariance possible in each of its clusters. It is by considering the covariance of samples that the GMM is able to best classify ambiguous samples. The higher the correlation between sample dimensions the more likely it is they belong in the same cluster. This can observed in Figure \ref{fig:mogcov}, the data being clustered is the same as in Figure \ref{fig:clusters} but notice the elliptical shape of the cluster distributions as opposed to the spherical shape of K-Means clustering.
 
 \begin{figure}[H]
 	\centering
@@ -29,24 +38,6 @@ With each iteration of the GMM algorithm the parameters of the model's component
 	\label{fig:mogcov}
 \end{figure}
   
-
-first by use of the Halanobis Distance or second by a changing of axes using eigenvalues according to covariance such that we can now just think of distances as Euclidean as in the K-Means met
-
-With each iteration of the algorithm the three defining properties of the Gaussian components are updated, the mean, 
-
-Each cluster is modelled by a Gaussian that gives the probability density of a samples that belong to that class. The Gaussian is initially determined by taking a histogram of all values. For one dimensional data this would look something like Figure \ref{fig:histGauss}. A histogram can be created for any N-dimensional data set but it becomes increasingly problematic to visualize with each additional dimension.
-
-
-
-Figure \ref{fig:histCurve} shows that the number of peaks in the histogram correspond to the number of Gaussians it can be broken in to. Furthermore, each Gaussian represents a potential cluster in the dataset. In Figure \ref{fig:histScale} it can be seen that the local maxima have a domain value equal to the mean of the corresponding Gaussian, $\mu_k$. By knowing the mean of the
-
-The \q{mixture} of Gaussians is the superposition of each of the individual Gaussians forming a new probability density function. Because a sample \emph{must} belong to one of the classes the total area under the mixed model must be one. 
-
-In Figure \ref{fig:histScale} the arrows indicate the approximate location of the mean and standard deviation. 
-
-The values atop each peak are the weigthings for each Gaussian.
-
-
 Notice the peaks in Figure \ref{fig:histScale} have been scaled such that the sum of weigthings is equal to one. This is because the probability of a sample belonging to at least one of the clusters must be equal to one. This is expressed in \ref{eq:gauss_weight1} and \ref{eq:gauss_weight2}
 
 \begin{equation}
