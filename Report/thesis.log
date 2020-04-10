@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  9 APR 2020 18:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  10 APR 2020 10:43
 entering extended mode
 **c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
 (c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
@@ -316,4 +316,478 @@ Package: expl3 2019-11-07 L3 programming layer (code)
 \c__coffin_empty_coffin=\box43
 \l__coffin_display_coffin=\box44
 \l__coffin_display_coord_coffin=\box45
-\l__coffin_display_pole_coffi
+\l__coffin_display_pole_coffin=\box46
+\l__coffin_display_offset_dim=\dimen158
+\l__coffin_display_x_dim=\dimen159
+\l__coffin_display_y_dim=\dimen160
+\g__char_data_ior=\read2
+ ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\l3deprecation.def"
+File: l3deprecation.def 2019-04-06 v L3 Deprecated functions
+)) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
+File: l3backend-pdfmode.def 2019-04-06 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count198
+\l__pdf_internal_box=\box47
+))
+Package: xparse 2019-10-11 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count199
+\g__xparse_grabber_int=\count266
+\l__xparse_m_args_int=\count267
+\l__xparse_v_nesting_int=\count268
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count269
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\zref-abspage.sty"
+Package: zref-abspage 2018/11/21 v2.27 Module abspage for zref (HO)
+ ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\zref-base.sty"
+Package: zref-base 2018/11/21 v2.27 Module base for zref (HO)
+ ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdftexcmds\pdftexcmds.sty"
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 762.
+Package zref Info: New property: default on input line 763.
+Package zref Info: New property: page on input line 764.
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\atbegshi.sty"
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+ ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifpdf.sty"
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+))
+\c@abspage=\count270
+Package zref Info: New property: abspage on input line 65.
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/needspace\needspace.sty"
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+ ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+\mdf@templength=\skip52
+\c@mdf@globalstyle@cnt=\count271
+\mdf@skipabove@length=\skip53
+\mdf@skipbelow@length=\skip54
+\mdf@leftmargin@length=\skip55
+\mdf@rightmargin@length=\skip56
+\mdf@innerleftmargin@length=\skip57
+\mdf@innerrightmargin@length=\skip58
+\mdf@innertopmargin@length=\skip59
+\mdf@innerbottommargin@length=\skip60
+\mdf@splittopskip@length=\skip61
+\mdf@splitbottomskip@length=\skip62
+\mdf@outermargin@length=\skip63
+\mdf@innermargin@length=\skip64
+\mdf@linewidth@length=\skip65
+\mdf@innerlinewidth@length=\skip66
+\mdf@middlelinewidth@length=\skip67
+\mdf@outerlinewidth@length=\skip68
+\mdf@roundcorner@length=\skip69
+\mdf@footenotedistance@length=\skip70
+\mdf@userdefinedwidth@length=\skip71
+\mdf@needspace@length=\skip72
+\mdf@frametitleaboveskip@length=\skip73
+\mdf@frametitlebelowskip@length=\skip74
+\mdf@frametitlerulewidth@length=\skip75
+\mdf@frametitleleftmargin@length=\skip76
+\mdf@frametitlerightmargin@length=\skip77
+\mdf@shadowsize@length=\skip78
+\mdf@extratopheight@length=\skip79
+\mdf@subtitleabovelinewidth@length=\skip80
+\mdf@subtitlebelowlinewidth@length=\skip81
+\mdf@subtitleaboveskip@length=\skip82
+\mdf@subtitlebelowskip@length=\skip83
+\mdf@subtitleinneraboveskip@length=\skip84
+\mdf@subtitleinnerbelowskip@length=\skip85
+\mdf@subsubtitleabovelinewidth@length=\skip86
+\mdf@subsubtitlebelowlinewidth@length=\skip87
+\mdf@subsubtitleaboveskip@length=\skip88
+\mdf@subsubtitlebelowskip@length=\skip89
+\mdf@subsubtitleinneraboveskip@length=\skip90
+\mdf@subsubtitleinnerbelowskip@length=\skip91
+ ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mdframed\md-frame-0.mdf"
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box48
+\mdf@footnotebox=\box49
+\mdf@splitbox@one=\box50
+\mdf@splitbox@two=\box51
+\mdf@splitbox@save=\box52
+\mdfsplitboxwidth=\skip92
+\mdfsplitboxtotalwidth=\skip93
+\mdfsplitboxheight=\skip94
+\mdfsplitboxdepth=\skip95
+\mdfsplitboxtotalheight=\skip96
+\mdfframetitleboxwidth=\skip97
+\mdfframetitleboxtotalwidth=\skip98
+\mdfframetitleboxheight=\skip99
+\mdfframetitleboxdepth=\skip100
+\mdfframetitleboxtotalheight=\skip101
+\mdffootnoteboxwidth=\skip102
+\mdffootnoteboxtotalwidth=\skip103
+\mdffootnoteboxheight=\skip104
+\mdffootnoteboxdepth=\skip105
+\mdffootnoteboxtotalheight=\skip106
+\mdftotallinewidth=\skip107
+\mdfboundingboxwidth=\skip108
+\mdfboundingboxtotalwidth=\skip109
+\mdfboundingboxheight=\skip110
+\mdfboundingboxdepth=\skip111
+\mdfboundingboxtotalheight=\skip112
+\mdf@freevspace@length=\skip113
+\mdf@horizontalwidthofbox@length=\skip114
+\mdf@verticalmarginwhole@length=\skip115
+\mdf@horizontalspaceofbox=\skip116
+\mdfsubtitleheight=\skip117
+\mdfsubsubtitleheight=\skip118
+\c@mdfcountframes=\count272
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count273
+\c@mdf@env@i=\count274
+\c@mdf@env@ii=\count275
+\c@mdf@zref@counter=\count276
+Package zref Info: New property: mdf@pagevalue on input line 895.
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/placeins\placeins.sty"
+Package: placeins 2005/04/18  v 2.2
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count277
+\float@exts=\toks23
+\float@box=\box53
+\@float@everytoks=\toks24
+\@floatcapt=\box54
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mathtools.sty"
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+ ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count278
+\calc@Bcount=\count279
+\calc@Adimen=\dimen161
+\calc@Bdimen=\dimen162
+\calc@Askip=\skip119
+\calc@Bskip=\skip120
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count280
+\calc@Cskip=\skip121
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhsetup.sty"
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count281
+\l_MT_multwidth_dim=\dimen163
+\origjot=\skip122
+\l_MT_shortvdotswithinadjustabove_dim=\dimen164
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen165
+\l_MT_above_intertext_sep=\dimen166
+\l_MT_below_intertext_sep=\dimen167
+\l_MT_above_shortintertext_sep=\dimen168
+\l_MT_below_shortintertext_sep=\dimen169
+\xmathstrut@box=\box55
+\xmathstrut@dim=\dimen170
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\tabularx.sty"
+Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
+ ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen171
+\ar@mcellbox=\box56
+\extrarowheight=\dimen172
+\NC@list=\toks25
+\extratabsurround=\skip123
+\backup@length=\skip124
+\ar@cellbox=\box57
+)
+\TX@col@width=\dimen173
+\TX@old@table=\dimen174
+\TX@old@col=\dimen175
+\TX@target=\dimen176
+\TX@delta=\dimen177
+\TX@cols=\count282
+\TX@ftn=\toks26
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/notoccite\notoccite.sty"
+Package: notoccite 2000/07/20
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsrefs\textcmds.sty"
+Package: textcmds 2012/08/02 v2.00
+) (blocked.sty) (uhead.sty) (boxit.sty) (thesis.sty)
+\c@definition=\count283
+\c@theorem=\count284
+) (thesis.aux
+
+LaTeX Warning: Label `fig:fig1' multiply defined.
+
+)
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+ ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count285
+\scratchdimen=\dimen178
+\scratchbox=\box58
+\nofMPsegments=\count286
+\nofMParguments=\count287
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count288
+\MPscratchDim=\dimen179
+\MPnumerator=\count289
+\makeMPintoPDFobject=\count290
+\everyMPtoPDFconversion=\toks28
+) ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
+Package: epstopdf-base 2019/11/24 v2.7 Base part for package epstopdf
+ ("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 442.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 460.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(56.9055pt, 702.78308pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=85.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box59
+<images/uon.png, id=1, 301.125pt x 301.125pt>
+File: images/uon.png Graphic file (type png)
+<use images/uon.png>
+Package pdftex.def Info: images/uon.png  used on input line 18.
+(pdftex.def)             Requested size: 159.33821pt x 159.34276pt.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 18.
+("C:\Users\Tom\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+Overfull \vbox (91.85759pt too high) detected at line 18
+ []
+
+[1
+
+
+
+{C:/Users/Tom/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/uon.png>] [2
+
+] (thesis.toc)
+\tf@toc=\write3
+\openout3 = `thesis.toc'.
+
+ [1
+
+
+] [2
+
+] (thesis.lot)
+\tf@lot=\write4
+\openout4 = `thesis.lot'.
+
+ [3
+
+] [4
+
+] (thesis.lof)
+\tf@lof=\write5
+\openout5 = `thesis.lof'.
+
+ [5
+
+] [6
+
+] (litreview/litreview.tex
+Chapter 1.
+(litreview/digital.tex
+<./images/chessboard.jpg, id=31, 120.45pt x 120.45pt>
+File: ./images/chessboard.jpg Graphic file (type jpg)
+<use ./images/chessboard.jpg>
+Package pdftex.def Info: ./images/chessboard.jpg  used on input line 9.
+(pdftex.def)             Requested size: 150.0pt x 150.0144pt.
+<./images/array2.png, id=32, 153.4533pt x 146.7081pt>
+File: ./images/array2.png Graphic file (type png)
+<use ./images/array2.png>
+Package pdftex.def Info: ./images/array2.png  used on input line 13.
+(pdftex.def)             Requested size: 150.0pt x 143.41925pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+]
+<./images/3Dchess.png, id=40, 422.57875pt x 376.40625pt>
+File: ./images/3Dchess.png Graphic file (type png)
+<use ./images/3Dchess.png>
+Package pdftex.def Info: ./images/3Dchess.png  used on input line 32.
+(pdftex.def)             Requested size: 150.0pt x 133.61078pt.
+) (litreview/linearFiltering.tex
+Underfull \vbox (badness 1888) has occurred while \output is active []
+
+ [2 <./images/chessboard.jpg> <./images/array2.png> <./images/3Dchess.png>]
+<./images/kernel_graphics.jpg, id=48, 956.82469pt x 662.475pt>
+File: ./images/kernel_graphics.jpg Graphic file (type jpg)
+<use ./images/kernel_graphics.jpg>
+Package pdftex.def Info: ./images/kernel_graphics.jpg  used on input line 26.
+(pdftex.def)             Requested size: 350.0pt x 242.32196pt.
+ [3 <./images/kernel_graphics.jpg>]
+<./images/dogPug.jpg, id=55, 1104.125pt x 740.7675pt>
+File: ./images/dogPug.jpg Graphic file (type jpg)
+<use ./images/dogPug.jpg>
+Package pdftex.def Info: ./images/dogPug.jpg  used on input line 37.
+(pdftex.def)             Requested size: 300.0pt x 201.27585pt.
+ (litreview/correlation.tex [4 <./images/dogPug.jpg>]
+<./images/im_color.png, id=60, 488.0634pt x 602.25pt>
+File: ./images/im_color.png Graphic file (type png)
+<use ./images/im_color.png>
+Package pdftex.def Info: ./images/im_color.png  used on input line 49.
+(pdftex.def)             Requested size: 136.57462pt x 168.52776pt.
+<./images/gv.jpg, id=61, 1016.79875pt x 1254.6875pt>
+File: ./images/gv.jpg Graphic file (type jpg)
+<use ./images/gv.jpg>
+Package pdftex.def Info: ./images/gv.jpg  used on input line 53.
+(pdftex.def)             Requested size: 136.57462pt x 168.51398pt.
+<./images/gh.jpg, id=62, 1016.79875pt x 1254.6875pt>
+File: ./images/gh.jpg Graphic file (type jpg)
+<use ./images/gh.jpg>
+Package pdftex.def Info: ./images/gh.jpg  used on input line 58.
+(pdftex.def)             Requested size: 136.57462pt x 168.51398pt.
+
+Underfull \vbox (badness 1102) has occurred while \output is active []
+
+ [5 <./images/im_color.png (PNG copy)> <./images/gv.jpg> <./images/gh.jpg>]) (litreview/convolution.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6])) (litreview/gaussian.tex) (litreview/clustering.tex
+<./images/toyCar.jpg, id=70, 1036.87375pt x 739.76375pt>
+File: ./images/toyCar.jpg Graphic file (type jpg)
+<use ./images/toyCar.jpg>
+Package pdftex.def Info: ./images/toyCar.jpg  used on input line 7.
+(pdftex.def)             Requested size: 220.0pt x 156.95784pt.
+<./images/toycarseg.jpg, id=71, 1036.87375pt x 739.76375pt>
+File: ./images/toycarseg.jpg Graphic file (type jpg)
+<use ./images/toycarseg.jpg>
+Package pdftex.def Info: ./images/toycarseg.jpg  used on input line 12.
+(pdftex.def)             Requested size: 220.0pt x 156.95784pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7] (litreview/kmeans.tex [8 <./images/toyCar.jpg> <./images/toycarseg.jpg>]
+<./images/kmeans_clusters.jpg, id=78, 562.1pt x 421.575pt>
+File: ./images/kmeans_clusters.jpg Graphic file (type jpg)
+<use ./images/kmeans_clusters.jpg>
+Package pdftex.def Info: ./images/kmeans_clusters.jpg  used on input line 26.
+(pdftex.def)             Requested size: 300.0pt x 224.99683pt.
+) (litreview/mog.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+<./images/histGauss.jpg, id=82, 562.1pt x 421.575pt>
+File: ./images/histGauss.jpg Graphic file (type jpg)
+<use ./images/histGauss.jpg>
+Package pdftex.def Info: ./images/histGauss.jpg  used on input line 10.
+(pdftex.def)             Requested size: 215.0pt x 161.24869pt.
+<./images/hist_gauss_curve.jpg, id=83, 562.1pt x 421.575pt>
+File: ./images/hist_gauss_curve.jpg Graphic file (type jpg)
+<use ./images/hist_gauss_curve.jpg>
+Package pdftex.def Info: ./images/hist_gauss_curve.jpg  used on input line 15.
+(pdftex.def)             Requested size: 215.0pt x 161.24869pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./images/kmeans_clusters.jpg>]
+<./images/mog.jpg, id=87, 562.1pt x 421.575pt>
+File: ./images/mog.jpg Graphic file (type jpg)
+<use ./images/mog.jpg>
+Package pdftex.def Info: ./images/mog.jpg  used on input line 30.
+(pdftex.def)             Requested size: 450.0pt x 337.49846pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./images/histGauss.jpg> <./images/hist_gauss_curve.jpg>]
+Underfull \vbox (badness 6173) has occurred while \output is active []
+
+ [12 <./images/mog.jpg>]
+<./images/gauss_mix_scale.jpg, id=95, 1927.2pt x 976.64874pt>
+File: ./images/gauss_mix_scale.jpg Graphic file (type jpg)
+<use ./images/gauss_mix_scale.jpg>
+Package pdftex.def Info: ./images/gauss_mix_scale.jpg  used on input line 70.
+(pdftex.def)             Requested size: 450.0pt x 228.03714pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]))) (body/body.tex (body/design/design.tex [14 <./images/gauss_mix_scale.jpg>]
+Chapter 2.
+)) (thesis.bbl [15
+
+]) [16
+
+] (thesis.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 16447 strings out of 492484
+ 303224 string characters out of 3122506
+ 367194 words of memory out of 3000000
+ 20587 multiletter control sequences out of 15000+200000
+ 540741 words of font info for 55 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,14n,75p,1022b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on thesis.pdf (24 pages, 1367081 bytes).
+PDF statistics:
+ 143 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+

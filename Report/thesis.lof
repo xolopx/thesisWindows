@@ -11,5 +11,6 @@
 \contentsline {figure}{\numberline {1.10}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{8}%
 \contentsline {figure}{\numberline {1.11}{\ignorespaces K-Means clustering performed on random data.\relax }}{10}%
 \contentsline {figure}{\numberline {1.12}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{11}%
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{12}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Clustering using GMM.\relax }}{12}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{14}%
 \addvspace {10\p@ }

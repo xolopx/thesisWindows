@@ -1,14 +1,16 @@
 A = [3 2; -2 1];
-sz = size(A);
-R1 = normrnd(0,0.323,1000000, 1);
-R2 = normrnd(1,0.2,1000000, 1);
-R3 = normrnd(2,0.5,1000000, 1);
+R1 = normrnd(0,0.323,1000, 1);
+R2 = normrnd(1,0.6,1000, 1);
+R3 = normrnd(2,0.55,1000, 1);
 
-R = cat(2,R1,R2,R3);
+R = cat(1,R1,R2,R3);
 size(R)
 %q = [1 0; 2 3; 4 5]
+m = [-1:.0015:3.5];
+m = m(1:end-1);
+size(R)
 figure();x = histogram(R);
-
+figure(); p = gscatter(R,m);
 %%
 text1 = '\pi_1';
 text2 = '\pi_2';

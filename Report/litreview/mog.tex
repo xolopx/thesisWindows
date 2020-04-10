@@ -1,14 +1,8 @@
  \subsection{Mixtures of Gaussians}
 
-Mixtures of Gaussian or the Gaussian Mixture Model (GMM) is a method of clustering data that's able to disentangle ambiguous samples by considering a sample's class membership probability, known as soft assignments. 
+Mixtures of Gaussian or the Gaussian Mixture Model (GMM) is a method of clustering data that's able to disentangle ambiguous samples by considering a sample's probability of belonging to a class, known as a soft assignment. 
 
-Initially K Gaussian probability density functions are randomly generated corresponding to K clusters. The Gaussians model the probability of a sample belonging to the corresponding cluster. By superpositioning the Gaussians the relative proabilities of a sample's cluster membership are modelled. If a dataset has low dimensionality (2D or less) then the initial conditions of the system can be approximated by using a histogram of the dataset as in Figure \ref{fig:mixture}.
-
-The parameters of the mixture model's Gaussian components are tuned according to the covariance between each of the samples in the corresponding cluster's dataset. Ideally, members with low covariance will be placed into other clusters and remaining samples will consolidate their membership by modifying the characteristics of the Gaussian that describes their cluster.
-
-With each iteration of the algorithm the three defining properties of the Gaussian components are updated, the mean, 
-
-Each cluster is modelled by a Gaussian that gives the probability density of a samples that belong to that class. The Gaussian is initially determined by taking a histogram of all values. For one dimensional data this would look something like Figure \ref{fig:histGauss}. A histogram can be created for any N-dimensional data set but it becomes increasingly problematic to visualize with each additional dimension.
+Initially, K Gaussian probability density functions are randomly generated corresponding to K clusters. The Gaussians model the probability of a sample belonging to a corresponding cluster. By superpositioning all of the Gaussians a sample's complete probabilistic model is created, i.e. a model for \emph{all} clusters. If a dataset has low dimensionality, by taking a histogram of its values the Gasussian's initial conditions can be approximated, as in Figure \ref{fig:mixture}.
 
 \begin{figure}[H]
 	\centering
@@ -21,10 +15,30 @@ Each cluster is modelled by a Gaussian that gives the probability density of a s
       		\centering\includegraphics[width=215pt]{hist_gauss_curve}
       		\caption{Gaussians derived from 1D histogram. }
        		\label{fig:histCurve}
-    	\end{subfigure}
-    	\caption{Formulation of Mixture of Gaussians.}
+		\end{subfigure}
+		\caption{Formulation of Mixture of Gaussians.}
     	\label{fig:mixture}
 \end{figure}
+
+With each iteration of the GMM algorithm the parameters of the model's component Gaussians are tuned according to the covariance between samples in each cluster. The algorithm seeks the highest covariance possible in each of its clusters. It is by considering the covariance of samples that the GMM is able to best classify ambiguous samples. The higher the correlation between sample dimensions the more likely it is they belong in the same cluster. This can observed in Figure \ref{fig:mogcov}, the data being clustered is the same as in Figure \ref{fig:clusters} but notice the elliptical shape of the cluster distributions as opposed to the spherical shape of K-Means clustering.
+
+
+
+
+\begin{figure}[H]
+	\centering
+	\centering\includegraphics[width=450pt]{mog}
+	\caption{Clustering using GMM.}
+	\label{fig:mogcov}
+\end{figure}
+  
+first by use of the Halanobis Distance or second by a changing of axes using eigenvalues according to covariance such that we can now just think of distances as Euclidean as in the K-Means met
+
+With each iteration of the algorithm the three defining properties of the Gaussian components are updated, the mean, 
+
+Each cluster is modelled by a Gaussian that gives the probability density of a samples that belong to that class. The Gaussian is initially determined by taking a histogram of all values. For one dimensional data this would look something like Figure \ref{fig:histGauss}. A histogram can be created for any N-dimensional data set but it becomes increasingly problematic to visualize with each additional dimension.
+
+
 
 Figure \ref{fig:histCurve} shows that the number of peaks in the histogram correspond to the number of Gaussians it can be broken in to. Furthermore, each Gaussian represents a potential cluster in the dataset. In Figure \ref{fig:histScale} it can be seen that the local maxima have a domain value equal to the mean of the corresponding Gaussian, $\mu_k$. By knowing the mean of the
 

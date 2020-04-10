@@ -7,8 +7,8 @@
 \contentsline {section}{\numberline {1.4}Clustering}{7}%
 \contentsline {subsection}{\numberline {1.4.1}K-Means}{8}%
 \contentsline {subsection}{\numberline {1.4.2}Mixtures of Gaussians}{10}%
-\contentsline {subsubsection}{Expectation Maximization}{12}%
-\contentsline {subsection}{\numberline {1.4.3}Background Subtraction}{12}%
-\contentsline {subsection}{\numberline {1.4.4}Expectation Maximization}{13}%
-\contentsline {chapter}{\numberline {2}Design}{14}%
-\contentsline {chapter}{Bibliography}{14}%
+\contentsline {subsubsection}{Expectation Maximization}{14}%
+\contentsline {subsection}{\numberline {1.4.3}Background Subtraction}{14}%
+\contentsline {subsection}{\numberline {1.4.4}Expectation Maximization}{14}%
+\contentsline {chapter}{\numberline {2}Design}{15}%
+\contentsline {chapter}{Bibliography}{15}%
