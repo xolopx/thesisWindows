@@ -10,9 +10,9 @@
 \contentsline {figure}{\numberline {1.9}{\ignorespaces Convolution of a filter and an image.\relax }}{7}%
 \contentsline {figure}{\numberline {1.10}{\ignorespaces The Gaussian Function in 2D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{8}%
 \contentsline {figure}{\numberline {1.11}{\ignorespaces The Gaussian Function in 1D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{8}%
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{10}%
-\contentsline {figure}{\numberline {1.13}{\ignorespaces K-Means clustering performed on random data.\relax }}{12}%
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{13}%
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Clustering using GMM.\relax }}{14}%
-\contentsline {figure}{\numberline {1.16}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{15}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{9}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces K-Means clustering performed on random data.\relax }}{11}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{12}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Clustering using GMM.\relax }}{13}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{14}%
 \addvspace {10\p@ }

@@ -20,16 +20,16 @@ Initially, K Gaussian functions are randomly generated corresponding to K cluste
     	\label{fig:mixture}
 \end{figure}
 
-With each iteration of the GMM algorithm the parameters of the model's component Gaussians are tuned according to the covariance $\ref{eq:cov}$ between samples in each cluster. 
+With each iteration of the GMM algorithm the parameters of the model's component Gaussians are tuned according to the covariance (\ref{eq:cov}) between samples in each cluster. $X$ and $Y$ are the variables being compared, $\overline X$ and $\overline Y$ are variable means and $n$ is the number of samples. For a multidimensional dataset this results in a covariance matrix $\bm{\Sigma_k}$ for each Gaussian, furthermore a multidimensional Gaussian requires also a mean vector $\bm{\mu_k}$ as opposed to scalar. 
 
 \begin{equation}
 Cov(X, Y) = \frac{\Sigma(X_i-\overline X)(Y_j-\overline Y)}{n}
 \label{eq:cov}
 \end{equation}
 
-Where, $X$ and $Y$ are the variables being compared, $\overline X$ and $\overline Y$ are variable means and $n$ is the number of samples.
 
-The algorithm seeks the highest covariance possible in each of its clusters. It is by considering the covariance of samples that the GMM is able to best classify ambiguous samples. The higher the correlation between sample dimensions the more likely it is they belong in the same cluster. This can observed in Figure \ref{fig:mogcov}, the data being clustered is the same as in Figure \ref{fig:clusters} but notice the elliptical shape of the cluster distributions as opposed to the spherical shape of K-Means clustering.
+
+The algorithm seeks the highest covariance possible in each of its clusters. It is by considering the covariance of samples that the GMM is able to best classify ambiguous samples. The higher the covariance (aka correlation) between sample dimensions the more likely it is they belong in the same cluster. This can observed in Figure \ref{fig:mogcov}, the data being clustered is the same as in Figure \ref{fig:clusters} but notice the elliptical shape of the Gaussian cluster distributions as opposed to the spherical shape of K-Means clustering.
 
 \begin{figure}[H]
 	\centering
@@ -38,7 +38,7 @@ The algorithm seeks the highest covariance possible in each of its clusters. It 
 	\label{fig:mogcov}
 \end{figure}
   
-Notice the peaks in Figure \ref{fig:histScale} have been scaled such that the sum of weigthings is equal to one. This is because the probability of a sample belonging to at least one of the clusters must be equal to one. This is expressed in \ref{eq:gauss_weight1} and \ref{eq:gauss_weight2}
+Within the complete mixture model the probability a sample belongs in one of them is 100\%. In Figure \ref{fig:histScale} the Gaussians from Figure \ref{fig:histCurve} have been scaled to have the amplitudes $\pi_1 = 0.3$, $\pi_1 = 0.5$ and $\pi_1 = 0.2$. These are weightings that give the mixing ratio of the model and represent a cluster's proportion of the total samples. The more samples a cluster contains the more likely it is a sample belongs to it. The sum of ratios must add to one because the probability a sample belongs to at least one cluster is one, as defined in \ref{eq:gauss_weight1} and \ref{eq:gauss_weight2}.
 
 \begin{equation}
     0\leq \pi_k \leq 1
@@ -50,10 +50,6 @@ Notice the peaks in Figure \ref{fig:histScale} have been scaled such that the su
 \end{equation}
 
 
-
-
-
-
 \begin{figure}[H]
     \centering
     \centering\includegraphics[width=450pt]{gauss_mix_scale}
@@ -61,12 +57,65 @@ Notice the peaks in Figure \ref{fig:histScale} have been scaled such that the su
     \label{fig:histScale}
   \end{figure} 
 
-This method is perhaps explained with an example. 
-
-
-
+Each Gaussian's three parameters, mean $\mu_k$, ampltidue $\pi_k$ and covariance matrix $\Sigma_k$ are updated following each iteration of the algorithm. This augmentations are performed according to 'Expectation Maximization'.
 
 \subsubsection{Expectation Maximization}
+
+Expectation Maximization (EM) is a method by which to update the parameters of the Gaussian distributions that seeks to maximize a sample's likelihood of belonging to a cluster. 
+
+EM will compute the a sample's proability  of being in a cluster. This value will be used to reestimate the Gaussian proability to better fit the data that is presented by trying to maximizing all sample's probabilities of belonging in a cluster.
+
+The reajustment of the mean of each Gaussian receives weighting from all points proportional to their probability of belonging to that Gaussian's cluster.
+
+The algorithm is comprised of two steps
+
+
+%% EM STEPS %%
+\begin{enumerate}
+	\item The \emph{expectation} step estimates the probability the sample $x_i$ belongs to Gaussian cluster $k$.
+	\begin{equation}
+		z_{ik} = \frac{1}{Z_i}\pi_k\, \mathcal{N}(\bm{x}\,|\,\bm{\mu_k},\bm{\Sigma_k})
+	\end{equation}
+
+	\item The \emph{maximization} step aguments the Gaussian parameter values.
+	\begin{align*}	
+	\tag{eqn1}
+	\bm{\mu_k} &= \frac{1}{N_k}\sum_i z_i \bm{x}_i \\
+	\tag{eqn2}
+	\bm{\Sigma}_k &=  \frac{1}{N_k}\sum_i z_{ik} (\bm{x}_i - \bm{\mu}_k)(\bm{x}_i - \bm{\mu}_k)^T \\
+	\tag{eqn3}
+	\pi_k &= \frac{N_k}{N}
+	\end{align*}
+	where \newline
+	\centerline{$N_k = \sum_i z_{ik}$}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+A cluster indicator $z_i$ exists for every sample, it is the \emph{probability} that the $i$th sample is associated with the $k$th cluster. It is completely specified by the mixture weight $\pi_k$. I.e.
+
+$p(z_i=k) = \pi_k $
+
+If we know that a sample $x_i$ is from cluster $k$ the \emph{likelihood} of seeing it in Gaussian associated with that cluster is
+
+$ p(x_i\, |\, z_i = k, \mu_k, \Sigma_k) = \mathcal{N}(x_i\, |\,\mu_k, \Sigma_k)$ 
+
+
+
+
+
+
+
+for each cluster such that a sample's likelihood of belonging to each cluster is maximized. 
 
 
 
