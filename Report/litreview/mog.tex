@@ -61,33 +61,36 @@ Each Gaussian's three parameters, mean $\mu_k$, ampltidue $\pi_k$ and covariance
 
 \subsubsection{Expectation Maximization}
 
-Expectation Maximization (EM) is a method by which to update the parameters of the Gaussian distributions that seeks to maximize a sample's likelihood of belonging to a cluster. 
+Expectation Maximization (EM) is a method by which to update the parameters of the cluster Gaussian distributions that seeks to maximize a sample's likelihood of belonging to a cluster. 
 
-EM will compute the a sample's proability  of being in a cluster. This value will be used to reestimate the Gaussian proability to better fit the data that is presented by trying to maximizing all sample's probabilities of belonging in a cluster.
+A cluster indicator $z_i$ exists for every sample, it is the \emph{probability} that the $i$th sample is associated with the $k$th cluster. It is completely specified by the mixture weight $\pi_k$ because the area under a Gaussian component of the mixture of Gaussians is equal to its mixing ratio, i.e.
 
-The reajustment of the mean of each Gaussian receives weighting from all points proportional to their probability of belonging to that Gaussian's cluster.
+\centerline{$p(z_i=k) = \pi_k $}
 
-The algorithm is comprised of two steps
+If we know that a sample $x_i$ is from cluster $k$ the \emph{likelihood} of seeing it in the Gaussian associated with that cluster is
 
+\centerline{$ p(x_i\, |\, z_i = k, \bm{\mu_k}, \bm{\Sigma_k}) = \mathcal{N}(x_i\, |\,\bm{\mu_k}, \bm{\Sigma_k})$}
+
+The EM algorithm is comprised of two steps
 
 %% EM STEPS %%
 \begin{enumerate}
-	\item The \emph{expectation} step estimates the probability the sample $x_i$ belongs to Gaussian cluster $k$.
+	\item The \emph{expectation} step estimates the likelihood the sample $x_i$ was generated\footnote{Each Gaussian has a 'resposibility' for generating a value all of which will sum to one.} by Gaussian cluster $k$.
 	\begin{equation}
 		z_{ik} = \frac{1}{Z_i}\pi_k\, \mathcal{N}(\bm{x}\,|\,\bm{\mu_k},\bm{\Sigma_k})
 	\end{equation}
 
-	\item The \emph{maximization} step aguments the Gaussian parameter values.
-	\begin{align*}	
-	\tag{eqn1}
+	\item The \emph{maximization} step augments the Gaussian parameter values.
+	\begin{align}	
+	\label{eq:mean}
 	\bm{\mu_k} &= \frac{1}{N_k}\sum_i z_i \bm{x}_i \\
-	\tag{eqn2}
+	\label{eq:covariance}
 	\bm{\Sigma}_k &=  \frac{1}{N_k}\sum_i z_{ik} (\bm{x}_i - \bm{\mu}_k)(\bm{x}_i - \bm{\mu}_k)^T \\
-	\tag{eqn3}
+	\label{eq:ratio}
 	\pi_k &= \frac{N_k}{N}
-	\end{align*}
+	\end{align}
 	where \newline
-	\centerline{$N_k = \sum_i z_{ik}$}
+	\[N_k = \sum_{i} z_{ik}\]
 \end{enumerate}
 
 
@@ -101,21 +104,6 @@ The algorithm is comprised of two steps
 
 
 
-A cluster indicator $z_i$ exists for every sample, it is the \emph{probability} that the $i$th sample is associated with the $k$th cluster. It is completely specified by the mixture weight $\pi_k$. I.e.
-
-$p(z_i=k) = \pi_k $
-
-If we know that a sample $x_i$ is from cluster $k$ the \emph{likelihood} of seeing it in Gaussian associated with that cluster is
-
-$ p(x_i\, |\, z_i = k, \mu_k, \Sigma_k) = \mathcal{N}(x_i\, |\,\mu_k, \Sigma_k)$ 
-
-
-
-
-
-
-
-for each cluster such that a sample's likelihood of belonging to each cluster is maximized. 
 
 
 
