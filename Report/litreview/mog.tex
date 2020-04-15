@@ -2,7 +2,7 @@
 
 Mixtures of Gaussian or the Gaussian Mixture Model (GMM) is a method of clustering data that's able to disentangle ambiguous samples by considering a sample's probability of belonging to a class, known as a soft assignment. 
 
-Initially, K Gaussian functions are randomly generated corresponding to K clusters. If a dataset has low dimensionality, by taking a histogram of its values the Gasussian's initial conditions can be approximated, as in Figure \ref{fig:mixture}. By superpositioning all of the Gaussians a sample's complete probabilistic model is created, i.e. a model for \emph{all} clusters. 
+Initially, K Gaussian functions are randomly generated corresponding to K clusters. If a dataset has low dimensionality, by taking a histogram of its values the Gasussians' initial conditions can be approximated, as in Figure \ref{fig:histGauss}. By superpositioning all of the Gaussians a sample's complete probabilistic model is created, i.e. a model for \emph{all} clusters, see Figure \ref{fig:histCurve}. 
 
 \begin{figure}[H]
 	\centering
@@ -13,14 +13,14 @@ Initially, K Gaussian functions are randomly generated corresponding to K cluste
     	\end{subfigure}%
     	\begin{subfigure}[b]{0.5\linewidth}
       		\centering\includegraphics[width=215pt]{hist_gauss_curve}
-      		\caption{Gaussians derived from 1D histogram. }
+      		\caption{Gaussians derived from 1D histogram.}
        		\label{fig:histCurve}
 		\end{subfigure}
 		\caption{Formulation of Mixture of Gaussians.}
     	\label{fig:mixture}
 \end{figure}
 
-With each iteration of the GMM algorithm the parameters of the model's component Gaussians are tuned according to the covariance (\ref{eq:cov}) between samples in each cluster. $X$ and $Y$ are the variables being compared, $\overline X$ and $\overline Y$ are variable means and $n$ is the number of samples. For a multidimensional dataset this results in a covariance matrix $\bm{\Sigma_k}$ for each Gaussian, furthermore a multidimensional Gaussian requires also a mean vector $\bm{\mu_k}$ as opposed to scalar. 
+With each iteration of the GMM algorithm the parameters of the model's component Gaussians are tuned according to the covariance between samples in each cluster. In \ref{eq:cov} $X$ and $Y$ are the variables being compared, $\overline X$ and $\overline Y$ are variable means and $n$ is the number of samples. For a multidimensional dataset a covariance matrix $\bm{\Sigma_k}$ will be generated and each Gaussian will require a mean vector $\bm{\mu_k}$ as opposed to a scalar. 
 
 \begin{equation}
 Cov(X, Y) = \frac{\Sigma(X_i-\overline X)(Y_j-\overline Y)}{n}
@@ -34,11 +34,11 @@ The algorithm seeks the highest covariance possible in each of its clusters. It 
 \begin{figure}[H]
 	\centering
 	\centering\includegraphics[width=450pt]{mog}
-	\caption{Clustering using GMM.}
+	\caption{Clustering using GMM. X marks cluster mean.}
 	\label{fig:mogcov}
 \end{figure}
   
-Within the complete mixture model the probability a sample belongs in one of them is 100\%. In Figure \ref{fig:histScale} the Gaussians from Figure \ref{fig:histCurve} have been scaled to have the amplitudes $\pi_1 = 0.3$, $\pi_1 = 0.5$ and $\pi_1 = 0.2$. These are weightings that give the mixing ratio of the model and represent a cluster's proportion of the total samples. The more samples a cluster contains the more likely it is a sample belongs to it. The sum of ratios must add to one because the probability a sample belongs to at least one cluster is one, as defined in \ref{eq:gauss_weight1} and \ref{eq:gauss_weight2}.
+In Figure \ref{fig:histScale} the Gaussians from Figure \ref{fig:histCurve} have been scaled to have the amplitudes $\pi_1 = 0.3$, $\pi_1 = 0.5$ and $\pi_1 = 0.2$. These are weightings that give the mixing ratio of the GMM and represent each cluster's proportion of the total samples. The more samples a cluster contains the more likely it is a sample belongs to it. The sum of ratios must add to one because the probability a sample belongs to at least one cluster is one, as defined in \ref{eq:gauss_weight1} and \ref{eq:gauss_weight2}.
 
 \begin{equation}
     0\leq \pi_k \leq 1
@@ -57,63 +57,78 @@ Within the complete mixture model the probability a sample belongs in one of the
     \label{fig:histScale}
   \end{figure} 
 
-Each Gaussian's three parameters, mean $\mu_k$, ampltidue $\pi_k$ and covariance matrix $\Sigma_k$ are updated following each iteration of the algorithm. This augmentations are performed according to 'Expectation Maximization'.
+Each Gaussian's three parameters, mean $\bm{\mu}_k$, ampltidue $\pi_k$ and covariance $\bm{\Sigma}_k$ are updated following each iteration of the algorithm according to the 'Expectation Maximization' algorithm.
 
 \subsubsection{Expectation Maximization}
 
-Expectation Maximization (EM) is a method by which to update the parameters of the cluster Gaussian distributions that seeks to maximize a sample's likelihood of belonging to a cluster. 
+Expectation Maximization (EM) is a method of updating the parameters of cluster Gaussians that seeks to maximize a sample's likelihood of belonging to said Gaussians (\ref{eq:likelihood}). 
 
-A cluster indicator $z_i$ exists for every sample, it is the \emph{probability} that the $i$th sample is associated with the $k$th cluster. It is completely specified by the mixture weight $\pi_k$ because the area under a Gaussian component of the mixture of Gaussians is equal to its mixing ratio, i.e.
+\begin{equation}
+\label{eq:likelihood}
+p(x) = \sum^K_{k=1} \pi_k \mathcal{N}(x|\bm{\mu}_k, \bm{\Sigma}_k)
+\end{equation}
 
-\centerline{$p(z_i=k) = \pi_k $}
+A binary indicator $z_{i}$ exists for every sample $x_i$, it is 1 if the sample belongs in the cluster $k$ and 0 otherwise such that $z_{ik} \in \{0, 1\}$ and $\sum_k z_{ik} = 1$. If the data is multidimensional then the sample and inidicator are both vectors, $\bm{x}$ and $\bm{z}$. The marginal probability $p(\bm{z}_{k} = 1)$ is the probability that a sample $\bm{x}$ is in cluster $k$. This quantity is completely specified by the mixture weight $\pi_k$ for each Gaussian because the area under a Gaussian component is equal to its mixing ratio, i.e.
 
-If we know that a sample $x_i$ is from cluster $k$ the \emph{likelihood} of seeing it in the Gaussian associated with that cluster is
+\begin{equation}
+	\label{eq:marginalk}
+	p(\bm{z}_{k}=1) = \pi_k 
+\end{equation}
+	
+If we know that a sample $\bm{x}$ is from cluster $k$ the \emph{likelihood} of seeing it in the associated Gaussian is the value of the Gaussian at that point,
+\begin{equation}
+	\label{eq:cond}
+	p(\bm{x}\, |\, \bm{z}_{k} = 1) = \mathcal{N}(\bm{x}\, |\,\bm{\mu_k}, \bm{\Sigma_k})
+\end{equation}
 
-\centerline{$ p(x_i\, |\, z_i = k, \bm{\mu_k}, \bm{\Sigma_k}) = \mathcal{N}(x_i\, |\,\bm{\mu_k}, \bm{\Sigma_k})$}
+The conditional probability of $\bm{z}_{ik}$ given the value of sample, $\bm{x}_i$ is denoted as $\gamma(\bm{z}_{ik})$. This is the probability that a sample belongs to cluster $k$ given its value $\bm{x}_i$ and is the quantity of interest when trying to classify a sample.  Using Bayes Theorem [REF APPENDIX] quantity can be found 
 
-The EM algorithm is comprised of two steps
+\begin{align}
+	\gamma(\bm{z}_{ik}) \equiv p(\bm{z}_{ik} =1 | \bm{x}_i)
+	\label{eq:gamma2}
+	&= \frac{p(\bm{z}_{ik}=1)p(\bm{x}_i\, |\, \bm{z}_{ik} = 1)}{\sum^K_{j=1}p(\bm{z}_{jk}=1)p(\bm{x}_j\, |\, \bm{z}_{jk} = 1)}\\ 
+	\label{eq:gamma3}
+	&= \frac{\pi_k\, \mathcal{N}(\bm{x}\,|\,\bm{\mu_k},\bm{\Sigma_k})}{\sum_{j=1}^{K}\pi_k\, \mathcal{N}(\bm{x}\,|\,\bm{\mu_k},\bm{\Sigma_k})}
+\end{align}
+
+
+To maximize the likelihood of each sample being in each Gaussian the distribution parameters are modified. This is achieved by taking derivatives of the log of the likelihood function (\ref{eq:likelihood}) with respect to each Gaussian parameter and setting the result to 0 to find local maxima. To take the log of the likelihood function assume all samples in are in an $N \times D$ matrix $\bm{X}$ and the corresponding indicators are in an $ N \times K$ matrix $\bm{Z}$. 
+
+\begin{equation}
+\label{eq:log}
+ln\,p(X|\bm{\pi}, \bm{\mu}, \bm{\Sigma}) = \sum_{n=1}^N
+ln \Bigg\{ \sum_{k=1}^K \pi_k\mathcal(N)(\bm{x}_n|\bm{\mu}_k,\bm{\Sigma}_k)\Bigg\}
+\end{equation}
+
+
+
+
+
+
+
+\centerline{}
+
+The EM algorithm is comprised of [X] steps
 
 %% EM STEPS %%
 \begin{enumerate}
-	\item The \emph{expectation} step estimates the likelihood the sample $x_i$ was generated\footnote{Each Gaussian has a 'resposibility' for generating a value all of which will sum to one.} by Gaussian cluster $k$.
+	\item Generate the initial K Gaussian parameters mean $\bm{\mu}_{k}$, covariance $\bm{\Sigma}_k$ and mixing ratios $\pi_k$ either randomly or informed by a histogram.
+	\item Estimate the likelihood sample n was generated by cluster k for all samples. 
 	\begin{equation}
-		z_{ik} = \frac{1}{Z_i}\pi_k\, \mathcal{N}(\bm{x}\,|\,\bm{\mu_k},\bm{\Sigma_k})
+		\gamma(\bm{z}_{ik})=\frac{\pi_k\, \mathcal{N}(\bm{x}\,|\,\bm{\mu_k},\bm{\Sigma_k})}{\sum_{j=1}^{K}\pi_k\, \mathcal{N}(\bm{x}\,|\,\bm{\mu_k},\bm{\Sigma_k})}
 	\end{equation}
 
-	\item The \emph{maximization} step augments the Gaussian parameter values.
+	\item Maximize the Gaussian parameter using derivatives of log likelihood for each parameter.
 	\begin{align}	
 	\label{eq:mean}
-	\bm{\mu_k} &= \frac{1}{N_k}\sum_i z_i \bm{x}_i \\
+	\bm{\mu}_{k}^{new} &= \frac{1}{N_k}\sum_{n=1}^N \gamma(z_{nk} ) \bm{x}_n \\
 	\label{eq:covariance}
-	\bm{\Sigma}_k &=  \frac{1}{N_k}\sum_i z_{ik} (\bm{x}_i - \bm{\mu}_k)(\bm{x}_i - \bm{\mu}_k)^T \\
+	\bm{\Sigma}_k^{new} &=  \frac{1}{N_k}\sum_{n=1}^N\gamma(z_{nk})(\bm{x}_n- \bm{\mu}_k^{new})(\bm{x}_n - \bm{\mu}_k^{new})^T \\
 	\label{eq:ratio}
 	\pi_k &= \frac{N_k}{N}
 	\end{align}
 	where \newline
 	\[N_k = \sum_{i} z_{ik}\]
+	\item Repeat steps 2 and 3 until convergence of log likelihood (\ref{eq:likelihood}) or parameters. 
 \end{enumerate}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection{Background Subtraction}
-
-This is performed by identifying a background image and then subtracting this image from subsequent frames of video to determine what has changed and hence what is a foreground image.
-
-\subsection{Expectation Maximization}
-
-This is an optimization scheme used to fit a Gaussian Mixture Model. It is an iterative method that faurantees convergence to a local maximum in a search space.
