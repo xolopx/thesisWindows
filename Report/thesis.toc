@@ -1,0 +1,13 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}%
+\contentsline {chapter}{\numberline {2}Literature Review}{3}%
+\contentsline {section}{\numberline {2.1}Digital Images}{3}%
+\contentsline {section}{\numberline {2.2}Linear Filtering}{5}%
+\contentsline {subsection}{\numberline {2.2.1}Correlation}{6}%
+\contentsline {subsection}{\numberline {2.2.2}Convolution}{9}%
+\contentsline {section}{\numberline {2.3}The Gaussian}{10}%
+\contentsline {section}{\numberline {2.4}Clustering}{12}%
+\contentsline {subsection}{\numberline {2.4.1}K-Means}{13}%
+\contentsline {subsection}{\numberline {2.4.2}Mixtures of Gaussians}{14}%
+\contentsline {subsubsection}{Expectation Maximization}{17}%
+\contentsline {chapter}{\numberline {3}Design}{20}%
+\contentsline {chapter}{Bibliography}{20}%

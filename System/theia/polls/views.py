@@ -3,20 +3,33 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.template import loader
 from .models import Question, Choice
 from django.urls import reverse
+from django.views import generic
+from django.utils import timezone
 
 
-def index(request):
-    return HttpResponse("Hello world. You're a the polls index.")
+class IndexView(generic.ListView):
+    template_name = 'polls/index.html'
+    context_object_name = 'latest_question_list'
+
+    def get_queryset(self):
+        """Return the last five published questions"""
+        return Question.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')[:5]
 
 
-def detail(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)                   # Get the question using the question id from the url passed to the view. Throw 404 if doesn't exist.
-    return render(request, 'polls/detail.html', {'question': question})      # Render the Response and return.
+class DetailView(generic.DetailView):
+    model = Question
+    template_name = 'polls/detail.html'
+
+    def get_queryset(self):
+        """
+        Excludes any questions that aren't published yet.
+        """
+        return Question.objects.filter(pub_date__lte=timezone.now())
 
 
-def results(request, question_id):
-    response = "You're looking at the results of question %s."
-    return HttpResponse(response % question_id)
+class ResultsView(generic.DetailView):
+    model = Question
+    template_name = 'polls/results.html'
 
 
 def vote(request, question_id):
@@ -35,18 +48,3 @@ def vote(request, question_id):
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
-
-
-def index(request):
-    latest_question_list = Question.objects.order_by('-pub_date')[:5]       # Retrieve the latest question list (logic = backend).
-    template = loader.get_template('polls/index.html')                      # Retrieve template for web-page design (appearance = frontend).
-    context = {                                                             # Context passes the information to the web-page and give it a label corresponding to what's found on web-page.
-        'latest_question_list': latest_question_list,
-    }
-    # return HttpResponse(template.render(context, request))                  # We pass the response back to urls.py so that it can be like processed or something.
-
-    return render(request, 'polls/index.html', context)                       # Returns a HttpResponse object of the given template rendered with the given context.
-
-
-
-
