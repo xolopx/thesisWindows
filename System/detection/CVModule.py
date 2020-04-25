@@ -1,10 +1,9 @@
 import time
 
-import CentroidTracker
+
+from detection import CentroidTracker, TrackableObject
 import cv2 as cv
 import numpy as np
-
-from detection import TrackableObject
 
 
 def define_contours(fgMask):
@@ -56,7 +55,6 @@ class CVModule:
         self.countDown = 0                                          # Number of objects that have moved downward
         self.struct = cv.getStructuringElement(cv.MORPH_ELLIPSE, (2,2)) 			# General purpose kernel.
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
-
 
     def filter_frame(self,fgMask):
         """
@@ -129,7 +127,6 @@ class CVModule:
         cv.putText(image, "Frame: {}".format(self.frameCount), (280, 30),cv.FONT_HERSHEY_SIMPLEX, 0.5, (224, 9, 52, 2))
         self.draw_grid(image)
 
-
     def draw_grid(self,image):
 
         across = 0
@@ -183,14 +180,14 @@ class CVModule:
 
     def process(self):
         """
-        Executes processing on video input. Resposible for:
+        Executes processing on video input. Responsible for:
          -
          -
          -
         :return:
         """
 
-        self.train_subtractor()         # Initially, train the subtractor.
+        # self.train_subtractor()         # Initially, train the subtractor.
 
 
         """ MAIN LOOP """
