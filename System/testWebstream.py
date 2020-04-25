@@ -1,5 +1,5 @@
-from asd import detect_motion
-from webstream import app
+from webapp.streamer import detect_motion
+from webapp import customApp
 import threading
 import argparse
 
@@ -17,5 +17,7 @@ t2 = threading.Thread(target=detect_motion)
 t2.daemon = True
 t2.start()
 
-app.run(host=args["ip"], port=args["port"], debug=True,
+customApp.run(host=args["ip"], port=args["port"], debug=True,
         threaded=True, use_reloader=False)
+
+

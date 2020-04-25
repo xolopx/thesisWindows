@@ -1,7 +1,7 @@
 # import the necessary packages
-from webapp import app
+from webapp import customApp
 from imutils.video import VideoStream
-from flask import Response, Flask, render_template
+from flask import Response, render_template
 
 import imutils
 import cv2
@@ -9,15 +9,17 @@ import threading
 import argparse
 import datetime
 import time
+import numpy as np
 
 outputFrame = None  # Initialize outputFrame
 lock = threading.Lock()  # Initialize lock
-vs = VideoStream(src=0).start()  # Start the video stream
+# vs = VideoStream(src=0).start()  # Start the video stream
+vs = cv2.VideoCapture(0)
 time.sleep(2.0)  # Give it time to initialize
 
 
 # Retrieves the rendered html page
-@app.route("/")
+@customApp.route("/")
 def index():
     # print("call to index")
     # return the rendered template
@@ -33,7 +35,10 @@ def detect_motion():
     # md = SingleMotionDetector(accumWeight=0.1)
     total = 0
     while True:
-        frame = vs.read()
+        ret, frame = vs.read()
+        # showFrame = np.array(frame)
+        # cv2.imshow('',frame)
+        # cv2.waitKey(1)
         frame = imutils.resize(frame, width=400)
         timestamp = datetime.datetime.now()
         cv2.putText(frame, timestamp.strftime(
@@ -68,7 +73,7 @@ def generate():
                bytearray(encodedImage) + b'\r\n')
 
 
-@app.route("/video_feed")
+@customApp.route("/video_feed")
 def video_feed():
     # return the response generated along with the specific media
     # type (mime type)
@@ -94,7 +99,7 @@ if __name__ == '__main__':
     t.start()
     # detect_motion()
     # start the flask app
-    app.run(host=args["ip"], port=args["port"], debug=True,
+    customApp.run(host=args["ip"], port=args["port"], debug=True,
             threaded=True, use_reloader=False)
 # release the video stream pointer
-vs.stop()
+# vs.stop()

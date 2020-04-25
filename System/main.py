@@ -1,8 +1,9 @@
-import cv2 as cv
-from detection import CVModule
-from webstream import WebStream
-import threading
 import argparse
+import threading
+import cv2 as cv
+from detection import *
+from webapp import customApp
+from webapp.streamer import detect_motion
 
 if __name__ == '__main__':
 
@@ -20,15 +21,17 @@ if __name__ == '__main__':
     inputVideo = cv.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")      # Grab the video
     process = CVModule.CVModule(inputVideo)                                                                     # Create the computer vision module.
 
-    # Initializing asd.
-    webapp = WebStream.WebStream()
-
     # Commencing threads
-    # t1 = threading.Thread(target=process.process)     # This thread runs method detect_motion().
-    # t1.daemon = True                                    # Means that all threads stop when this one does.
-    # t1.start()                                          # Start the thread.
-    # print("Started Detection Thread")
+    t1 = threading.Thread(target=process.process)     # This thread runs method detect_motion().
+    t1.daemon = True                                    # Means that all threads stop when this one does.
+    t1.start()                                          # Start the thread.
+    print("Started Detection Thread")
 
-    t2 = threading.Thread(target=webapp.startStream, args=(args,))
-    # t2.daemon = True
+    t2 = threading.Thread(target=detect_motion)
+    t2.daemon = True
     t2.start()
+    print("Started Web Cam")
+
+customApp.run(host=args["ip"], port=args["port"], debug=True,
+        threaded=True, use_reloader=False)
+print("Started Streaming Service")
