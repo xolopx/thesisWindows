@@ -4,6 +4,7 @@ import time
 from detection import CentroidTracker, TrackableObject
 import cv2 as cv
 import numpy as np
+from database import globs
 
 
 def define_contours(fgMask):
@@ -55,6 +56,7 @@ class CVModule:
         self.countDown = 0                                          # Number of objects that have moved downward
         self.struct = cv.getStructuringElement(cv.MORPH_ELLIPSE, (2,2)) 			# General purpose kernel.
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
+        self.currentFrame = globs.Globs().currentFrame              # New shared frame.
 
     def filter_frame(self,fgMask):
         """
@@ -71,7 +73,6 @@ class CVModule:
 
         return fgMask
 
-
     def train_subtractor(self, trainNum=500):
         """
         Trains subtractor on the first N frames of video so it has a better idea
@@ -84,7 +85,6 @@ class CVModule:
             _, frame = self.video.read()
             self.subtractor.apply(frame, None, 0.001)
             i += 1
-
 
     def draw_info(self, image, boxes):
         """
@@ -139,8 +139,6 @@ class CVModule:
             cv.line(image,(up,0),(up,int(self.height)), (66, 135, 245), 1)
             up += 50
 
-
-
     def update_tracks(self):
         """ Generates and updates trackable objects with centroids data. """
         centroids = self.cenTrack.centroids                                 # Get the dicitonary of centroids out of the centroid tracker
@@ -176,8 +174,6 @@ class CVModule:
                 else:
                     track.currentFrame = self.frameCount
 
-
-
     def process(self):
         """
         Executes processing on video input. Responsible for:
@@ -197,9 +193,9 @@ class CVModule:
             _, frame = self.video.read()									# Read out a frame of the input video.
             mask = self.subtractor.apply(frame)							    # Apply the subtractor trackObj the frame of the image trackObj get the foreground.
 
-            mask = self.filter_frame(mask)                                       # Apply morphology, threshing and median filter.
+            mask = self.filter_frame(mask)                                  # Apply morphology, threshing and median filter.
 
-            boundingRect = define_contours(mask)                       # Get the bounding boxes by locating contours in the foreground mask.
+            boundingRect = define_contours(mask)                            # Get the bounding boxes by locating contours in the foreground mask.
 
             objects, deregID = self.cenTrack.update(boundingRect)			# Update centroids by looking at the newest bounding rectangle information.
 
@@ -211,6 +207,8 @@ class CVModule:
 
             combined = np.hstack((frame, mask))								# Stitch together original image and foreground mask for display.
             cv.imshow("Original", combined)	 								# Show the result.
+
+            self.currentFrame = combined                                    # Updating the Database frame.
 
             self.frameCount += 1											# Increment the number of frames.
 

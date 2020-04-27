@@ -1,6 +1,4 @@
-# import the necessary packages
-from webapp import customApp
-from imutils.video import VideoStream
+from webapp import customApp, db
 from flask import Response, render_template
 
 import imutils
@@ -8,45 +6,36 @@ import cv2
 import threading
 import argparse
 import datetime
-import time
-import numpy as np
 
-outputFrame = None  # Initialize outputFrame
-lock = threading.Lock()  # Initialize lock
-# vs = VideoStream(src=0).start()  # Start the video stream
-vs = cv2.VideoCapture(0)
-time.sleep(2.0)  # Give it time to initialize
+outputFrame = db.currentFrame   # Creates reference to current frame from Glob database so that both Flask and detector must share it.
+lock = db.lock                  # Creates reference to lock from Glob so that both Flask and detector share same lock.
+vs = cv2.VideoCapture(0)        # Initialize video capture stream.
 
 
 # Retrieves the rendered html page
 @customApp.route("/")
 def index():
-    # print("call to index")
-    # return the rendered template
     return render_template("index.html")
 
 
 def detect_motion():
-    # grab global references to the video stream, output frame, and
-    # lock variables
     global vs, outputFrame, lock
-    # initialize the motion detector and the total number of frames
-    # read thus far
-    # md = SingleMotionDetector(accumWeight=0.1)
     total = 0
     while True:
-        ret, frame = vs.read()
-        # showFrame = np.array(frame)
-        # cv2.imshow('',frame)
-        # cv2.waitKey(1)
-        frame = imutils.resize(frame, width=400)
-        timestamp = datetime.datetime.now()
-        cv2.putText(frame, timestamp.strftime(
-            "%A %d %B %Y %I:%M:%S%p"), (10, frame.shape[0] - 10),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
-        total += 1
-        with lock:
-            # print("Stuck in Detect Motion \n")
+        # frame = vs.read()
+        frame = db.currentFrame     # Get current frame from db.
+
+        if frame is not None:
+            cv2.imshow('', frame)
+            cv2.waitKey(1)
+
+            frame = imutils.resize(frame, width=400)
+            timestamp = datetime.datetime.now()
+            cv2.putText(frame, timestamp.strftime(
+                "%A %d %B %Y %I:%M:%S%p"), (10, frame.shape[0] - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
+            total += 1
+
             outputFrame = frame.copy()
 
 
@@ -57,17 +46,19 @@ def generate():
     # Each time yield is reached the function returns a generator.
     while True:
         # wait until the lock is acquired
-        with lock:
-            # print("Stuck in Generate() \n")
-            # check if the output frame is available, otherwise skip
-            # the iteration of the loop
-            if outputFrame is None:
-                continue
-            # encode the frame in JPEG format
-            (flag, encodedImage) = cv2.imencode(".jpg", outputFrame)
-            # ensure the frame was successfully encoded
-            if not flag:
-                continue
+        # with lock:
+            # lock.acquire()
+        # print("Stuck in Generate() \n")
+        # check if the output frame is available, otherwise skip
+        # the iteration of the loop
+        if outputFrame is None:
+            continue
+        # encode the frame in JPEG format
+        (flag, encodedImage) = cv2.imencode(".jpg", outputFrame)
+        # ensure the frame was successfully encoded
+        if not flag:
+            continue
+            # lock.release()
         # yield the output frame in the byte format. This returns a generator.
         yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' +
                bytearray(encodedImage) + b'\r\n')
