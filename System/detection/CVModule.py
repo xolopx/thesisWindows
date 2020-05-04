@@ -1,10 +1,7 @@
 import time
-
-
 from detection import CentroidTracker, TrackableObject
 import cv2 as cv
 import numpy as np
-from database import globs
 
 
 def define_contours(fgMask):
@@ -56,8 +53,9 @@ class CVModule:
         self.countDown = 0                                          # Number of objects that have moved downward
         self.struct = cv.getStructuringElement(cv.MORPH_ELLIPSE, (2,2)) 			# General purpose kernel.
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
-        self.currentFrame = globs.Globs().currentFrame              # New shared frame.
-
+        # self.currentFrame = outputFrame                             # Reference to frame in main thread.
+        # self.lock = lock
+        # self.event = event
     def filter_frame(self,fgMask):
         """
         Applys morphology and median filtering to subtracted image to consolidate foreground objects
@@ -154,7 +152,7 @@ class CVModule:
             else:												            # If the object does exists determine the direction it's travelling.
                 y = [c[1] for c in trackObj.centroids]			            # Look at difference between y-coord of current centroid and mean of previous centroids.
                 direction = centroid[1] - np.mean(y)			            # Get the difference.
-                trackObj.centroids.append(centroid)		;		            # Assign the current centroid to the trackable objects history of centroids.
+                trackObj.centroids.append(centroid)				            # Assign the current centroid to the trackable objects history of centroids.
                 thresh = 250                                                # Thresh value reflect position of the counting line.
                 if not trackObj.counted : 						            # If the object hasn't been counted
                     if direction < 0 and centroid[1] < thresh:	            # If direction is up.
@@ -208,8 +206,7 @@ class CVModule:
             combined = np.hstack((frame, mask))								# Stitch together original image and foreground mask for display.
             cv.imshow("Original", combined)	 								# Show the result.
 
-            self.currentFrame = combined                                    # Updating the Database frame.
-
+            self.currentFrame = combined                                # Updating the Database frame.
             self.frameCount += 1											# Increment the number of frames.
 
             if self.frameCount % 1 == 0:                                    # To reduce frequency of determing object speed.
