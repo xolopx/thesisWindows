@@ -1,7 +1,8 @@
 import time
-from detection import CentroidTracker, TrackableObject
+import globals
 import cv2 as cv
 import numpy as np
+from detection import CentroidTracker, TrackableObject
 
 
 def define_contours(fgMask):
@@ -53,7 +54,7 @@ class CVModule:
         self.countDown = 0                                          # Number of objects that have moved downward
         self.struct = cv.getStructuringElement(cv.MORPH_ELLIPSE, (2,2)) 			# General purpose kernel.
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
-        # self.currentFrame = outputFrame                             # Reference to frame in main thread.
+        # self.outputFrame = globals.image                             # Reference to frame in main thread.
         # self.lock = lock
         # self.event = event
     def filter_frame(self,fgMask):
@@ -173,6 +174,7 @@ class CVModule:
                     track.currentFrame = self.frameCount
 
     def process(self):
+        global image
         """
         Executes processing on video input. Responsible for:
          -
@@ -187,7 +189,7 @@ class CVModule:
         """ MAIN LOOP """
         timeStart = time.time()
         while True and self.frameCount < (self.totalFrames-600):															# Loop will execute until all input processed or user exits.
-
+            # with self.lock:
             _, frame = self.video.read()									# Read out a frame of the input video.
             mask = self.subtractor.apply(frame)							    # Apply the subtractor trackObj the frame of the image trackObj get the foreground.
 
@@ -206,7 +208,7 @@ class CVModule:
             combined = np.hstack((frame, mask))								# Stitch together original image and foreground mask for display.
             cv.imshow("Original", combined)	 								# Show the result.
 
-            self.currentFrame = combined                                # Updating the Database frame.
+            globals.image = combined.copy()                                 # Updating the Database frame.
             self.frameCount += 1											# Increment the number of frames.
 
             if self.frameCount % 1 == 0:                                    # To reduce frequency of determing object speed.
@@ -220,6 +222,12 @@ class CVModule:
                     key = cv.waitKey(50)
                     if key == ord('n'):
                         break
+            # Logic to make video continue looping.
+            if (self.frameCount >= (self.totalFrames-600)):
+                # Reset frame count.
+                self.frameCount = 0
+                # Reset video cursor.
+                self.video.set(cv.CAP_PROP_POS_FRAMES, 0)
         print("Time Elapsed: {}".format(time.time()-timeStart))
         print("Frames Consumed: {}".format(self.frameCount))
 

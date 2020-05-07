@@ -7,39 +7,26 @@ import cv2
 import threading
 import argparse
 import datetime
+import globals
+import database_interface as db
 
 
-outputFrame = None
+globals.initialize()
+# outputFrame = None
 someOtherFrame = None
 lock = threading.Lock()
-vs = cv2.VideoCapture(0)        # Initialize video capture stream.
+vs = cv2.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")        # Initialize video capture stream.
+# vs = cv2.VideoCapture(0)        # Initialize video capture stream.
 event = Event()
 app = Flask(__name__)
 
-def detect_motion():
-    global outputFrame
-    total = 0
-    # might need to put the lock in here.
-    while True:
-        _, frame = vs.read()
-
-        if frame is not None:
-
-
-            frame = imutils.resize(frame, width=400)
-            timestamp = datetime.datetime.now()
-            cv2.putText(frame, timestamp.strftime(
-                "%A %d %B %Y %I:%M:%S%p"), (10, frame.shape[0] - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
-            total += 1
-            outputFrame = frame.copy()
-
 def generate():
-    global outputFrame
+    # global outputFrame
+    print('Got image in web-server')
     while True:
-        if outputFrame is None:
+        if globals.image is None:
             continue
-        (flag, encodedImage) = cv2.imencode(".jpg", outputFrame)
+        (flag, encodedImage) = cv2.imencode(".jpg", globals.image)
         if not flag:
             continue
         yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' +
@@ -65,10 +52,42 @@ def argumentRead():
     args = vars(ap.parse_args())
     return args
 
+def update_or_add_node():
+    """ Checks and updates the node's profile in the database. Creates a new entry if
+        it doesn't exist in the database.
+        """
+
+    # This is dummy data for now.
+    node_name = "Node001"
+    id = 0
+    location = "King St"
+    perspective = "West"
+    latitude = 10
+    longitude = 10
+
+    # Attempt update
+    if db.query.node_exists(id):
+        print ('Entry Exists So Update.')
+        db.update.update_node(id, node_name, perspective, longitude, latitude)
+    else:
+        print('Entry Not Found So Create New')
+        db.insert.insert_node(id, node_name, perspective, longitude, latitude)
+
+
 if __name__ == '__main__':
 
+    globals.initialize()
     args = argumentRead()
 
+    # Try to add a node
+    # update_or_add_node()
+    db.delete.delete_node(0)
+    # Try to read back node that's been added
+    # retrieve_node()
+
+
+
+    #
     inputVideo = cv.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")      # Grab the video
     process = CVModule.CVModule(inputVideo)                                                                     # Create the computer vision module.
 
@@ -77,11 +96,7 @@ if __name__ == '__main__':
     t2.start()                                                                                                  # Start the thread.
     print("Training Detection")
 
-    t1 = threading.Thread(target=detect_motion)  # This thread runs method detect_motion().
-    t1.daemon = True  # Means that all threads stop when this one does.
-    t1.start()  # Start the thread.
-    print("Started App loop")
-
     app.run(host=args["ip"], port=args["port"], debug=True,
             threaded=True, use_reloader=False)
+
 
