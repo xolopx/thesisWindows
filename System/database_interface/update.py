@@ -38,3 +38,7 @@ def update_node(id, node_name, perspective, latitude, longitude):
     finally:
         cursor.close()
         conn.close()
+
+def update_node_minute_count(id, count):
+    """ Gives a node entry it's most recent count for the minute. """
+    

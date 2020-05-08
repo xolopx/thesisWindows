@@ -1,5 +1,6 @@
 import time
 import globals
+import datetime
 import cv2 as cv
 import numpy as np
 from detection import CentroidTracker, TrackableObject
@@ -54,9 +55,7 @@ class CVModule:
         self.countDown = 0                                          # Number of objects that have moved downward
         self.struct = cv.getStructuringElement(cv.MORPH_ELLIPSE, (2,2)) 			# General purpose kernel.
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
-        # self.outputFrame = globals.image                             # Reference to frame in main thread.
-        # self.lock = lock
-        # self.event = event
+        self.time = datetime.datetime.now()                         # Keep the time
     def filter_frame(self,fgMask):
         """
         Applys morphology and median filtering to subtracted image to consolidate foreground objects
@@ -112,6 +111,12 @@ class CVModule:
         textDown = "Down {}".format(self.countDown)
         cv.putText(image, textUp, (50, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
         cv.putText(image, textDown, (500, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+
+        # Add timestamp to the frames.
+        timestamp = datetime.datetime.now()
+        cv.putText(image, timestamp.strftime(
+            "%A %d %B %Y %I:%M:%S%p"), (10, image.shape[0] - 10),
+                    cv.FONT_HERSHEY_SIMPLEX, 0.35, (6, 64, 7), 1)
 
         # Draw speeds
         for (trackID, track) in self.objTracks.items():
