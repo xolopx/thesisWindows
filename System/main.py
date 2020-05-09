@@ -76,26 +76,23 @@ def update_or_add_node():
 
 if __name__ == '__main__':
 
+
     globals.initialize()
     args = argumentRead()
 
-    # Try to add a node
-    # update_or_add_node()
-    db.delete.delete_node(0)
-    # Try to read back node that's been added
-    # retrieve_node()
+    # Instantiate Detection Module
+    inputVideo = cv.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")
+    process = CVModule.CVModule(inputVideo, id=0, lat=10, long=10)
 
+    update_or_add_node()
 
-
-    #
-    inputVideo = cv.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")      # Grab the video
-    process = CVModule.CVModule(inputVideo)                                                                     # Create the computer vision module.
-
-    t2 = threading.Thread(target=process.process)                                                               # This thread runs method detect_motion().
-    t2.daemon = True                                                                                            # Means that all threads stop when this one does.
-    t2.start()                                                                                                  # Start the thread.
+    # Start detection thread
+    t2 = threading.Thread(target=process.process)
+    t2.daemon = True
+    t2.start()
     print("Training Detection")
 
+    # Start the flask app
     app.run(host=args["ip"], port=args["port"], debug=True,
             threaded=True, use_reloader=False)
 

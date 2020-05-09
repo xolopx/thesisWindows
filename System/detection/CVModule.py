@@ -1,36 +1,28 @@
 import time
 import globals
-import datetime
+from datetime import datetime
 import cv2 as cv
 import numpy as np
 from detection import CentroidTracker, TrackableObject
+import database_interface as db
 
 
 def define_contours(fgMask):
+    # Look for contours in the foreground mask.
+    contours, _ = cv.findContours(fgMask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
+    # Create list to hold contour best rectangle fits.
+    boundRect = []
 
-    contours, _ = cv.findContours(fgMask, cv.RETR_EXTERNAL,
-                              cv.CHAIN_APPROX_NONE)						# Look for contours in the foreground mask.
-
-    threshedConts = []												    # Instantiate an empty list that will hold contours that meet the threshold
-
-    # for i in range(len(contours)):			 						    # Delete contours that have a smallest area than the threshold.
-    #     if cv.contourArea(contours[i]) > self.areaThresh:
-    #         threshedConts.append(contours[i])
-
-    # contours = threshedConts		 								    # Replaced list of contours with only those that passed thresh.
-
-    contours_poly = [None] * len(contours)		 					    # Create list to hold contour polys.
-    boundRect = []		 						    # Create list to hold contour best rectangle fits.
-
-    for i, c in enumerate(contours):			 					    # Move through contours list generating enumerated pairs (indice, value).
-        # contours_poly[i] = cv.approxPolyDP(c, 3, True)	 			    # Approximate a polyform contrackObjur +/- 3
-
-        (x, y, w, h) = cv.boundingRect(c)	 		    # Generate bounding rect from the polyform contrackObjur. Returns "Upright Rectangle", i.e. Axis-aligned on bottrackObjm edge and whos eleft edge is vertical.
-        if w >= 20 and h >= 25:                                       # Thresh bounding box by width and height.
-            # boundRect[i] = cv.boundingRect(contours_poly[i])	 		# Generate bounding rect from the polyform contrackObjur. Returns "Upright Rectangle", i.e. Axis-aligned on bottrackObjm edge and whos eleft edge is vertical.
-            boundRect.append(cv.boundingRect(c)) 		# Generate bounding rect from the polyform contrackObjur. Returns "Upright Rectangle", i.e. Axis-aligned on bottrackObjm edge and whos eleft edge is vertical.
-
-    return boundRect                                                    # Return the bounding rectangles.
+    # Move through contours list generating enumerated pairs (indice, value).
+    for i, c in enumerate(contours):
+        # Generate bounding rect from the polyform contrackObject. Returns "Upright Rectangle", i.e. Axis-aligned on bottrackObjm edge and whos eleft edge is vertical.
+        (x, y, w, h) = cv.boundingRect(c)
+        # Thresh bounding box by width and height.
+        if w >= 20 and h >= 25:
+            # Generate bounding rect from the polyform contrackObjur. Returns "Upright Rectangle", i.e. Axis-aligned on bottrackObjm edge and whos eleft edge is vertical.
+            boundRect.append(cv.boundingRect(c))
+    # Return the bounding rectangles.
+    return boundRect
 
 
 class CVModule:
@@ -38,7 +30,7 @@ class CVModule:
     Handles the detection, tracking, counting and speed estimation of an object given a
     series of images.
     """
-    def __init__(self, inputVideo):
+    def __init__(self, inputVideo, id, lat, long):
         """
         :param inputVideo: Video input to the module.
         """
@@ -55,7 +47,12 @@ class CVModule:
         self.countDown = 0                                          # Number of objects that have moved downward
         self.struct = cv.getStructuringElement(cv.MORPH_ELLIPSE, (2,2)) 			# General purpose kernel.
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
-        self.time = datetime.datetime.now()                         # Keep the time
+        self.time = datetime.now()                         # Keep the time
+        # Information for database.
+        self.id = id
+        self.latitude = lat
+        self.longitude = long
+
     def filter_frame(self,fgMask):
         """
         Applys morphology and median filtering to subtracted image to consolidate foreground objects
@@ -113,7 +110,7 @@ class CVModule:
         cv.putText(image, textDown, (500, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
 
         # Add timestamp to the frames.
-        timestamp = datetime.datetime.now()
+        timestamp = datetime.now()
         cv.putText(image, timestamp.strftime(
             "%A %d %B %Y %I:%M:%S%p"), (10, image.shape[0] - 10),
                     cv.FONT_HERSHEY_SIMPLEX, 0.35, (6, 64, 7), 1)
@@ -144,7 +141,7 @@ class CVModule:
             up += 50
 
     def update_tracks(self):
-        """ Generates and updates trackable objects with centroids data. """
+        """ Generates and updates trackable objects with centroid data. """
         centroids = self.cenTrack.centroids                                 # Get the dicitonary of centroids out of the centroid tracker
 
         for (objectID, centroid) in centroids.items():			            # Loop through all centroids.
@@ -187,38 +184,49 @@ class CVModule:
          -
         :return:
         """
-
-        # self.train_subtractor()         # Initially, train the subtractor.
-
+        self.train_subtractor()         # Initially, train the subtractor.
+        # Initializing a timer that is used to measure if a statistics interval has passed.
+        timerStart = datetime.now()
+        # # Make sure the node is in the database. *** HANDLED IN MAIN ***
+        # db.insert.insert_node(self.id, "Node001", "West", self.longitude, self.latitude)
 
         """ MAIN LOOP """
-        timeStart = time.time()
         while True and self.frameCount < (self.totalFrames-600):															# Loop will execute until all input processed or user exits.
-            # with self.lock:
-            _, frame = self.video.read()									# Read out a frame of the input video.
-            mask = self.subtractor.apply(frame)							    # Apply the subtractor trackObj the frame of the image trackObj get the foreground.
-
-            mask = self.filter_frame(mask)                                  # Apply morphology, threshing and median filter.
-
-            boundingRect = define_contours(mask)                            # Get the bounding boxes by locating contours in the foreground mask.
-
-            objects, deregID = self.cenTrack.update(boundingRect)			# Update centroids by looking at the newest bounding rectangle information.
-
-            self.update_tracks()						                    # Update trackable object statuses and statistics (up & down count).
-
-            mask = cv.cvtColor(mask, cv.COLOR_GRAY2RGB)			 			# Convert foreground mask to a 3-channel image.
-            self.draw_info(mask, boundingRect)	 	 	 			        # Draw graphics onto mask
-            self.draw_info(frame, boundingRect) 			 		        # Draw graphics onto frame
-
-            combined = np.hstack((frame, mask))								# Stitch together original image and foreground mask for display.
-            cv.imshow("Original", combined)	 								# Show the result.
-
-            globals.image = combined.copy()                                 # Updating the Database frame.
-            self.frameCount += 1											# Increment the number of frames.
-
-            if self.frameCount % 1 == 0:                                    # To reduce frequency of determing object speed.
+            # Read a frame of input video.
+            _, frame = self.video.read()
+            # Apply the subtractor to the frame to get foreground objects.
+            mask = self.subtractor.apply(frame)
+            # Apply morphology, threshing and median filter.
+            mask = self.filter_frame(mask)
+            # Get bounding boxes for the foreground objects.
+            boundingRect = define_contours(mask)
+            # Get centroids from the bounding boxes.                *** LOOK INTO WHAT THIS METHOD IS DOING AND IF IT'S NECESSARY ***
+            objects, deregID = self.cenTrack.update(boundingRect)
+            # Update the object positions and vehicle statistics.   *** MAYBE WANT TO SEPARATE THIS INTO TWO METHODS ***
+            self.update_tracks()
+            # Convert foreground mask back to a 3-channel image.
+            mask = cv.cvtColor(mask, cv.COLOR_GRAY2RGB)
+            # Draw graphics onto mask
+            self.draw_info(mask, boundingRect)
+            # Draw graphics onto original frame
+            self.draw_info(frame, boundingRect)
+            # Stitch together original image and foreground mask for display.
+            combined = np.hstack((frame, mask))
+            # Show the result.
+            cv.imshow("Original", combined)
+            # Updating the frame shared with Flask app.
+            globals.image = combined.copy()
+            # Increment the number of frames.
+            self.frameCount += 1
+            # Perform speed measurements                            *** PUT THIS IN A METHOD *** ALSO FIX THE SPEED CALCULATION SO THEY WORK ****
+            if self.frameCount % 1 == 0:
                 for objID, objs in self.objTracks.items():
                     objs.calc_speed()
+
+            # Log statistics
+            timerStart = self.log_stats(timerStart, 3)
+
+            # *** TESTING: FOR CONTROLLING SPEED OF VIDEO AND PAUSING VIDEO ***
             key = cv.waitKey(30)
             if key == 27:
                 break
@@ -227,13 +235,28 @@ class CVModule:
                     key = cv.waitKey(50)
                     if key == ord('n'):
                         break
-            # Logic to make video continue looping.
+
+            # *** TESTING: LOOPING LOGIC JUST FOR TESTING WITH SHORT VIDEO ***
             if (self.frameCount >= (self.totalFrames-600)):
                 # Reset frame count.
                 self.frameCount = 0
                 # Reset video cursor.
                 self.video.set(cv.CAP_PROP_POS_FRAMES, 0)
-        print("Time Elapsed: {}".format(time.time()-timeStart))
-        print("Frames Consumed: {}".format(self.frameCount))
 
+    def log_stats(self, timerStart, interval):
+        """ Handles entering vehicle count and speed data into the database.
+        :param timerStart: The start time of the timer which is used to measure if an interval has passed.
+        :param interval: The amount of time between storing a new reading. Measured in seconds.
+        """
 
+        # If time interval has passed.
+        if (datetime.now() - timerStart).total_seconds() >= interval:
+            # Store the readings in the database
+            db.insert.insert_count_minute(self.countUp,timerStart.strftime('%Y-%m-%d %H:%M:%S'),self.id)
+            # Reset the count
+            self.countUp = 0
+            # Return the new time to the timer.
+            return datetime.now()
+        else:
+            # Return the timer that was passed in.
+            return timerStart
