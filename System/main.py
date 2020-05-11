@@ -76,12 +76,12 @@ def update_or_add_node():
 
 if __name__ == '__main__':
 
-
     globals.initialize()
     args = argumentRead()
 
     # Instantiate Detection Module
     inputVideo = cv.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")
+    # inputVideo = cv.VideoCapture(0)
     process = CVModule.CVModule(inputVideo, id=0, lat=10, long=10)
 
     update_or_add_node()

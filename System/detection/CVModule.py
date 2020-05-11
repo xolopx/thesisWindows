@@ -1,10 +1,9 @@
-import time
 import globals
-from datetime import datetime
 import cv2 as cv
 import numpy as np
-from detection import CentroidTracker, TrackableObject
+from datetime import datetime
 import database_interface as db
+from detection import CentroidTracker, TrackableObject
 
 
 def define_contours(fgMask):
@@ -15,11 +14,11 @@ def define_contours(fgMask):
 
     # Move through contours list generating enumerated pairs (indice, value).
     for i, c in enumerate(contours):
-        # Generate bounding rect from the polyform contrackObject. Returns "Upright Rectangle", i.e. Axis-aligned on bottrackObjm edge and whos eleft edge is vertical.
+        # Generate bounding rect from the poly-form contrackObject. Returns "Upright Rectangle", i.e. Axis-aligned on bot track Obj edge and whose left edge is vertical.
         (x, y, w, h) = cv.boundingRect(c)
         # Thresh bounding box by width and height.
         if w >= 20 and h >= 25:
-            # Generate bounding rect from the polyform contrackObjur. Returns "Upright Rectangle", i.e. Axis-aligned on bottrackObjm edge and whos eleft edge is vertical.
+            # Generate bounding rect from the poly-form contrackObject. Returns "Upright Rectangle", i.e. Axis-aligned on bot track Obj edge and whose left edge is vertical.
             boundRect.append(cv.boundingRect(c))
     # Return the bounding rectangles.
     return boundRect
@@ -68,7 +67,7 @@ class CVModule:
 
         return fgMask
 
-    def train_subtractor(self, trainNum=500):
+    def     train_subtractor(self, trainNum=500):
         """
         Trains subtractor on the first N frames of video so it has a better idea
         of what the background consists of.
@@ -126,7 +125,7 @@ class CVModule:
 
         # Draw the number of frames
         cv.putText(image, "Frame: {}".format(self.frameCount), (280, 30),cv.FONT_HERSHEY_SIMPLEX, 0.5, (224, 9, 52, 2))
-        self.draw_grid(image)
+        # self.draw_grid(image)
 
     def draw_grid(self,image):
 
@@ -252,7 +251,8 @@ class CVModule:
         # If time interval has passed.
         if (datetime.now() - timerStart).total_seconds() >= interval:
             # Store the readings in the database
-            db.insert.insert_count_minute(self.countUp,timerStart.strftime('%Y-%m-%d %H:%M:%S'),self.id)
+            # db.insert.insert_count_minute(self.countUp,timerStart.strftime('%Y-%m-%d %H:%M:%S'),self.id)
+            db.insert.insert_count_minute(self.countUp,timerStart,self.id)
             # Reset the count
             self.countUp = 0
             # Return the new time to the timer.
