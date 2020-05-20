@@ -11,7 +11,17 @@ $g(i,j)$ is the output image. Performing correlation with a filter may be notate
 
 \[g = f \otimes h\]
 
-Correlation measures the \emph{similarity} between two signals and as both digital images and linear filters are two dimensional signals by correlating them we can see where they are most similar. Performing correlation between them will produce an output image whose highest values correspond to where the image and filter were most similar \cite{optimalKernel}. This is an important operation in image classification as it can be used to highlight features in an image and diminish everything else by correlating a filter that describes the desired feature. The feature could be as simple as a straight line as in a Sobel filter (\ref{fig:sobel_filters}) or as specific as the outline of a car wheel.
+Correlation measures the \emph{similarity} between two signals and as both digital images and linear filters are two dimensional signals by correlating them we can see where they are most similar. Performing correlation between them will produce an output image whose highest values correspond to where the image and filter were most similar \cite{optimalKernel}. This is an important operation in image classification as it can be used to highlight features in an image and diminish everything else by correlating a filter that describes the desired feature. The feature could be as simple as a straight line as in a Sobel filter (Figure \ref{fig:sobel_filters}) or as specific as the outline of a car wheel. This method of feature detection is called \emph{templating}.
+
+In Figure \ref{fig:sobel_apply} vertical and horizontal Sobel filters are applied to produce images that emphasise lines that match the orientation in the respective filter, the lines that are most similar. The result is black and white as the initial output image's intensities have been thresholded to either be 1 or 0. I.e. where initial output image is $F(x,y) = z$ and $T$ is the threshold intensity:
+
+\begin{equation}
+  Binary Output = 
+  \begin{cases}
+    1 & \text{if $z$ $>=$ $T$} \\
+    0 & \text{if $z$ $<$  $T$}
+  \end{cases}
+\end{equation}
 
 % SOBEL MASKS
 \begin{figure}[H]
@@ -39,8 +49,6 @@ Correlation measures the \emph{similarity} between two signals and as both digit
     \caption{Sobel Filters}
     \label{fig:sobel_filters}
 \end{figure}
-
-The use of negative weightings means that values next to an edge are diminished and the positively weighted line sections (the 2s) strengthen line features. Notice in figure \ref{fig:sobel_apply} how the lines have a high values (white) and regions that aren't lines are low valued (black).
 
 % SOBEL FILTER APPLICATION
 \begin{figure}[H]
@@ -71,7 +79,7 @@ and abides by the shift invariance principle
 
 \[g(i,j)=f(i+k,j+l) \Leftrightarrow\ (h\circ g)(i,j)=(h\circ f)(i+k,j+l)\]
 
-Correlation has the side effect of flipping both horizontally and vertically the location of output points relative to location the center point (\emph{reference point}) in the original image which may be undesirable.
+Correlation has the side effect of flipping both horizontally and vertically the location of output points relative to the center point (\emph{reference point}) in the original image which may be undesirable as can be observed in Figure \ref{fig:correlation}.
 
 % CORRELATION EXAMPLE  %
 \begin{figure}[H] 

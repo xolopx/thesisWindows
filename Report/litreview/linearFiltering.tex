@@ -2,8 +2,6 @@
 
 Filtering an image is a way to augment or extract information from it. Linear filtering is a mathematical operation on a neighbourhood of pixels in an image that outputs a weighted average of the pixels in that neighbourhood. It is the weightings of a filter, known as filter coefficients, that determine the effect of the filter. These weights are stored in a matrix called a mask or kernel (see Figure \ref{fig:generalForm}) that's then convolved with an image (see sections \ref{subsection:corr} \& \ref{subsection:conv}).
 
-
-
 \begin{figure}[h]
   
    \[ 
@@ -21,45 +19,8 @@ Filtering an image is a way to augment or extract information from it. Linear fi
 
 \input{litreview/correlation}
 \input{litreview/convolution}
+\input{litreview/kernels}
 
-\subsection{Kernels}
-
- A filter kernel is nearly always square so as to have a center cell which sits atop a reference pixel. The result of the filter's application at that reference pixel will be stored in the output image at the location of the reference pixel. Notice in Figure \ref{fig:kernel_graphics} how the mask sits over the reference pixel.
-
-% TREE %
-\begin{figure}[H]
-  \centering
-  \centering\includegraphics[width=350pt]{kernel_graphics}
-  \caption{Visualization of a Filter Kernel Application}
-  \label{fig:kernel_graphics}
-\end{figure}
-
-A 'box filter', for example, outputs the average of its inputs because the filter weights are evenly distributed. By passing this filter over an image its sharpness is reduced giving a smoothing or blurring effect. This can be observed in Figure \ref{fig:roughDog}.
-
-% DOG BOX FILTERED%
-\begin{figure}[H]
-  \centering
-  \begin{subfigure}[b]{0.75\textwidth}
-    \centering\includegraphics[width=300pt]{dogPug}
-    \caption{Left: Photo by Charles Deluvio. Right: Application of $16\times16$ box filter.}
-    \label{fig:roughDog}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.25\textwidth}
-    \centering
-    \[
-      \frac{1}{9}
-    \begin{bmatrix}
-       1 & 1 & 1 \\
-       1 & 1 & 1 \\
-       1 & 1 & 1
-    \end{bmatrix}
-    \]
-    \caption{Box Filter Kernel.}
-    \label{fig:boxkernel}
-  \end{subfigure}
-  \caption{Box Filter application and kernel.}
-  \label{fig:boxfilter}
-\end{figure}
 
 
 

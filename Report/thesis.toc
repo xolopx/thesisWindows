@@ -3,12 +3,14 @@
 \contentsline {section}{\numberline {2.1}Digital Images}{4}%
 \contentsline {section}{\numberline {2.2}Linear Filtering}{6}%
 \contentsline {subsection}{\numberline {2.2.1}Correlation}{6}%
-\contentsline {subsection}{\numberline {2.2.2}Convolution}{8}%
-\contentsline {subsection}{\numberline {2.2.3}Kernels}{9}%
-\contentsline {section}{\numberline {2.3}The Gaussian}{11}%
-\contentsline {section}{\numberline {2.4}Clustering}{13}%
-\contentsline {subsection}{\numberline {2.4.1}K-Means}{14}%
-\contentsline {subsection}{\numberline {2.4.2}Mixtures of Gaussians}{15}%
-\contentsline {subsubsection}{Expectation Maximization}{18}%
-\contentsline {chapter}{\numberline {3}Design}{21}%
-\contentsline {chapter}{Bibliography}{21}%
+\contentsline {subsection}{\numberline {2.2.2}Convolution}{9}%
+\contentsline {subsection}{\numberline {2.2.3}Kernels}{10}%
+\contentsline {subsubsection}{Box Filter}{11}%
+\contentsline {subsubsection}{Gaussian Kernel}{11}%
+\contentsline {section}{\numberline {2.3}The Gaussian}{12}%
+\contentsline {section}{\numberline {2.4}Clustering}{14}%
+\contentsline {subsection}{\numberline {2.4.1}K-Means}{15}%
+\contentsline {subsection}{\numberline {2.4.2}Mixtures of Gaussians}{16}%
+\contentsline {subsubsection}{Expectation Maximization}{19}%
+\contentsline {chapter}{\numberline {3}Design}{22}%
+\contentsline {chapter}{Bibliography}{22}%
