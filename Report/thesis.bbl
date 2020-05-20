@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{industrialization}
 The~Editors of~the Encyclopaedia~Britannica.
@@ -22,14 +22,39 @@ INRIX.
 \newblock Congestion costs each american 1348 dollars per year.
 
 \bibitem{mixedSolution}
+Vassilis Kostakos, Timo Ojala, and Tomi Juntunen.
+\newblock Traffic in the smart city.
+\newblock Technical report, 2016.
+
+\bibitem{smartsolution}
 Smarter~Cambridge Transport.
 \newblock Reducing traffic congestion and pollution in urban areas.
 \newblock Technical report, 2016.
+
+\bibitem{smartsolution2}
+M.~{Pla-Castells}, J.~J. {Martinez-Durá}, J.~J. {Samper-Zapater}, and R.~V.
+  {Cirilo-Gimeno}.
+\newblock Use of ict in smart cities. a practical case applied to traffic
+  management in the city of valencia.
+\newblock In {\em 2015 Smart Cities Symposium Prague (SCSP)}, 2015.
+
+\bibitem{smartsolution3}
+A.~{Sharif}, J.~{Li}, M.~{Khalil}, R.~{Kumar}, M.~I. {Sharif}, and A.~{Sharif}.
+\newblock Internet of things — smart traffic management system for smart
+  cities using big data analytics.
+\newblock In {\em 2017 14th International Computer Conference on Wavelet Active
+  Media Technology and Information Processing (ICCWAMTIP)}, 2017.
 
 \bibitem{iot}
 McKinsey~\& Company.
 \newblock Smart cities digital solutions for a more livable future.
 \newblock Technical report, 2016.
+
+\bibitem{methodsofcollection}
+David Green, Jeanette~Ward Kenneth~Lewis, Ann-Marie~Head, and Cameron Munro.
+\newblock Guide to traffic management part 3: Transport studies and analysis
+  methods.
+\newblock Technical report, 2020.
 
 \bibitem{optimalKernel}
 Sabyasachi Sahoo.

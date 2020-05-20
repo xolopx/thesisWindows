@@ -13,5 +13,7 @@ Warning--entry type for "cost" isn't style-file defined
 --line 41 of file bibliography/bibliography.bib
 Warning--empty institution in trafficworse
 Warning--empty institution in mixedSolution
+Warning--empty institution in smartsolution
 Warning--empty institution in iot
-(There were 8 warnings)
+Warning--empty institution in methodsofcollection
+(There were 10 warnings)

@@ -67,7 +67,7 @@ class CVModule:
 
         return fgMask
 
-    def     train_subtractor(self, trainNum=500):
+    def train_subtractor(self, trainNum=500):
         """
         Trains subtractor on the first N frames of video so it has a better idea
         of what the background consists of.
@@ -222,7 +222,8 @@ class CVModule:
                 for objID, objs in self.objTracks.items():
                     objs.calc_speed()
 
-            # Log statistics
+
+            # Log statistics   *** CURRENTLY TURNED OFF ***
             timerStart = self.log_stats(timerStart, 3)
 
             # *** TESTING: FOR CONTROLLING SPEED OF VIDEO AND PAUSING VIDEO ***

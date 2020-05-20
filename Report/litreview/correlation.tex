@@ -11,7 +11,7 @@ $g(i,j)$ is the output image. Performing correlation with a filter may be notate
 
 \[g = f \otimes h\]
 
-Correlation measures the similarity between two signals. Both digital images and linear filters are two dimensional signals. Performing correlation between them will yield an output image where the highest values correspond to where the image and filter were most similar \cite{optimalKernel}. This useful because if you wish to emphasise a feature in an image it can be done by correlating it with a filter that describes that feature. For example, if you wished to exagerate vertical and horizontal lines you could use Sobel filters as in \ref{fig:sobel_filters}. 
+Correlation measures the \emph{similarity} between two signals and as both digital images and linear filters are two dimensional signals by correlating them we can see where they are most similar. Performing correlation between them will produce an output image whose highest values correspond to where the image and filter were most similar \cite{optimalKernel}. This is an important operation in image classification as it can be used to highlight features in an image and diminish everything else by correlating a filter that describes the desired feature. The feature could be as simple as a straight line as in a Sobel filter (\ref{fig:sobel_filters}) or as specific as the outline of a car wheel.
 
 % SOBEL MASKS
 \begin{figure}[H]

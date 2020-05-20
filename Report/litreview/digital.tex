@@ -1,5 +1,5 @@
 \section{Digital Images}
-Digital images consists of a discrete number of discrete valued data points called pixels. It is the value of these pixels that determine their color. A pixel's value is also called its \emph{intensity} and will lie within a range of values determined by the image's encoding. For example an 8-bit image has pixel values in the range $[0, 255]$. 
+Digital images consist of discrete valued data points called pixels arranged in a grid where it is the value of these pixels that determine the colour of each cell. A pixel's value is also called its \emph{intensity} and lies within a range of values determined by the image's encoding. For example an 8-bit image has pixel values in the range $[0, 255]$. 
 
 Digital images are often represented as a 2D array of values where each cell corresponds to an intesnity. In software in particular,  digital images are stored and manipulated as arrays. An image's array is $M\times N$ pixels in size, which is also its resolution. Notice that in Figure \ref{fig:2Darray} the lowest value is 0 (black) and the highest value is 255 (white). All other colors that can be represented by 8-bits are between these two values.
 
@@ -25,13 +25,16 @@ Digital images are often represented as a 2D array of values where each cell cor
     \label{eq:2Dfunc}
 \end{equation}
 
-This means that two dimnesional operations may be applied to a digital image and images may be modelled as 3D surfaces. Modelling images as a surface is useful when trying to visualize rates of change in an image. In Figure \ref{fig:2Darray} you can see that there is a rapid change in value between different coloured squares, shown as steep cliff edges.
+This representation is extremely useful as it means that two dimnesional operations may be applied to a images. Rates of change, derivatives, of a digital images are important in computer vision because they help to identify features like lines and object edges. Figure \ref{fig:3Dplot} is a 3D plot of a 2D image where you can see that there is a rapid change in value between different coloured squares, shown as steep cliff edges. 
 
 \begin{figure}[ht!]
   \centering
   \centering\includegraphics[width=150pt]{3Dchess}
   \caption{\label{fig:fig1} Surface Plot of Figure \ref{fig:2Darray}\ref{sub@fig:fig1}}
+  \label{fig:3Dplot}
 \end{figure}
+
+
 
 
 

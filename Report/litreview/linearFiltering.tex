@@ -1,6 +1,7 @@
 \section{Linear Filtering}
 
-Filtering an image is a way to augment or extract information from it. Linear filters are a subset of operations that operate on a neighbourhood of pixels in an image. All linear filters operate on the same prinicpal, that is, they output a weighted average of their input. Filters take pixels in the neighbourhood covered by the filter as input. It is the weightings of a filter, known as filter coefficients, that determine the effect of the filter. These weights are stored in a matrix called a mask or kernel (see Figure \ref{fig:generalForm}) that's then convolved or correlated with an image (see sections \ref{subsection:corr} \& \ref{subsection:conv}).
+Filtering an image is a way to augment or extract information from it. Linear filtering is a mathematical operation on a neighbourhood of pixels in an image that outputs a weighted average of the pixels in that neighbourhood. It is the weightings of a filter, known as filter coefficients, that determine the effect of the filter. These weights are stored in a matrix called a mask or kernel (see Figure \ref{fig:generalForm}) that's then convolved with an image (see sections \ref{subsection:corr} \& \ref{subsection:conv}).
+
 
 
 \begin{figure}[h]
@@ -17,6 +18,11 @@ Filtering an image is a way to augment or extract information from it. Linear fi
   \caption{General Form of a Linear Filter}
   \label{fig:generalForm}
 \end{figure}
+
+\input{litreview/correlation}
+\input{litreview/convolution}
+
+\subsection{Kernels}
 
  A filter kernel is nearly always square so as to have a center cell which sits atop a reference pixel. The result of the filter's application at that reference pixel will be stored in the output image at the location of the reference pixel. Notice in Figure \ref{fig:kernel_graphics} how the mask sits over the reference pixel.
 
@@ -55,8 +61,7 @@ A 'box filter', for example, outputs the average of its inputs because the filte
   \label{fig:boxfilter}
 \end{figure}
 
-\input{litreview/correlation}
-\input{litreview/convolution}
+
 
 
 

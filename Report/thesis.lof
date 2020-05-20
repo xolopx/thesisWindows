@@ -1,19 +1,19 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces (\subref {fig:fig1}) A Simple 8-bit Image \nobreakspace {}(\subref {fig:fig2}) Array Representation of Image.\relax }}{4}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Surface Plot of Figure 2.1\hbox {}a\hbox {}\relax }}{4}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces General Form of a Linear Filter\relax }}{5}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Visualization of a Filter Kernel Application\relax }}{5}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Box Filter application and kernel.\relax }}{6}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Sobel Filters\relax }}{7}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Application of Sobel filters to exagerate lines.\relax }}{8}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Correlation of a filter and an image.\relax }}{9}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Convolution of a filter and an image.\relax }}{10}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces The Gaussian Function in 2D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{11}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces The Gaussian Function in 1D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{11}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{12}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces K-Means clustering performed on random data.\relax }}{14}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{15}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Clustering using GMM. X marks cluster mean.\relax }}{16}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{17}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces (\subref {fig:fig1}) A Simple 8-bit Image \nobreakspace {}(\subref {fig:fig2}) Array Representation of Image.\relax }}{5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Surface Plot of Figure 2.1\hbox {}a\hbox {}\relax }}{5}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces General Form of a Linear Filter\relax }}{6}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Sobel Filters\relax }}{7}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Application of Sobel filters to exagerate lines.\relax }}{7}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Correlation of a filter and an image.\relax }}{8}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Convolution of a filter and an image.\relax }}{9}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Visualization of a Filter Kernel Application\relax }}{10}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Box Filter application and kernel.\relax }}{11}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces The Gaussian Function in 2D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{12}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces The Gaussian Function in 1D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{12}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{13}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces K-Means clustering performed on random data.\relax }}{15}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{16}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Clustering using GMM. X marks cluster mean.\relax }}{17}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{18}%
 \addvspace {10\p@ }
