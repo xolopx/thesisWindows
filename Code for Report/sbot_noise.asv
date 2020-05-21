@@ -1,0 +1,5 @@
+%% Load image and make grayscale
+
+A = imread("C:\Users\Tom\Desktop\thesisWindows\Report\images\emu_ro")
+imshow(A);
+

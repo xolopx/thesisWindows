@@ -1,16 +1,19 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}%
-\contentsline {chapter}{\numberline {2}Theoretical Background}{4}%
-\contentsline {section}{\numberline {2.1}Digital Images}{4}%
-\contentsline {section}{\numberline {2.2}Linear Filtering}{6}%
-\contentsline {subsection}{\numberline {2.2.1}Correlation}{6}%
-\contentsline {subsection}{\numberline {2.2.2}Convolution}{9}%
-\contentsline {subsection}{\numberline {2.2.3}Kernels}{10}%
-\contentsline {subsubsection}{Box Filter}{11}%
-\contentsline {subsubsection}{Gaussian Kernel}{11}%
-\contentsline {section}{\numberline {2.3}The Gaussian}{12}%
-\contentsline {section}{\numberline {2.4}Clustering}{14}%
-\contentsline {subsection}{\numberline {2.4.1}K-Means}{15}%
-\contentsline {subsection}{\numberline {2.4.2}Mixtures of Gaussians}{16}%
-\contentsline {subsubsection}{Expectation Maximization}{19}%
-\contentsline {chapter}{\numberline {3}Design}{22}%
-\contentsline {chapter}{Bibliography}{22}%
+\contentsline {chapter}{\numberline {2}Theoretical Background}{5}%
+\contentsline {section}{\numberline {2.1}Digital Images}{5}%
+\contentsline {section}{\numberline {2.2}Linear Filtering}{7}%
+\contentsline {subsection}{\numberline {2.2.1}Correlation}{7}%
+\contentsline {subsection}{\numberline {2.2.2}Convolution}{10}%
+\contentsline {subsection}{\numberline {2.2.3}Kernels}{11}%
+\contentsline {subsubsection}{Box Filter}{12}%
+\contentsline {subsubsection}{Gaussian Kernel}{12}%
+\contentsline {section}{\numberline {2.3}Non-Linear Filters}{14}%
+\contentsline {subsubsection}{The Median Filter}{14}%
+\contentsline {section}{\numberline {2.4}Morphology}{15}%
+\contentsline {section}{\numberline {2.5}The Gaussian}{15}%
+\contentsline {section}{\numberline {2.6}Clustering}{17}%
+\contentsline {subsection}{\numberline {2.6.1}K-Means}{18}%
+\contentsline {subsection}{\numberline {2.6.2}Mixtures of Gaussians}{19}%
+\contentsline {subsubsection}{Expectation Maximization}{22}%
+\contentsline {chapter}{\numberline {3}Design}{25}%
+\contentsline {chapter}{Bibliography}{25}%

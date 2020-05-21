@@ -60,4 +60,9 @@ David Green, Jeanette~Ward Kenneth~Lewis, Ann-Marie~Head, and Cameron Munro.
 Sabyasachi Sahoo.
 \newblock Deciding optimal kernel size for cnn.
 
+\bibitem{cormen_2001}
+Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT Press Ltd, 2009.
+
 \end{thebibliography}
