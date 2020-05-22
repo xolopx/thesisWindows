@@ -10,10 +10,14 @@
 \contentsline {section}{\numberline {2.3}Non-Linear Filters}{14}%
 \contentsline {subsubsection}{The Median Filter}{14}%
 \contentsline {section}{\numberline {2.4}Morphology}{15}%
-\contentsline {section}{\numberline {2.5}The Gaussian}{15}%
-\contentsline {section}{\numberline {2.6}Clustering}{17}%
-\contentsline {subsection}{\numberline {2.6.1}K-Means}{18}%
-\contentsline {subsection}{\numberline {2.6.2}Mixtures of Gaussians}{19}%
-\contentsline {subsubsection}{Expectation Maximization}{22}%
-\contentsline {chapter}{\numberline {3}Design}{25}%
-\contentsline {chapter}{Bibliography}{25}%
+\contentsline {subsection}{\numberline {2.4.1}Morphological Operations}{15}%
+\contentsline {subsubsection}{Dilation}{16}%
+\contentsline {subsubsection}{Erosion}{16}%
+\contentsline {subsubsection}{Opening and Closing}{16}%
+\contentsline {section}{\numberline {2.5}The Gaussian}{18}%
+\contentsline {section}{\numberline {2.6}Clustering}{20}%
+\contentsline {subsection}{\numberline {2.6.1}K-Means}{21}%
+\contentsline {subsection}{\numberline {2.6.2}Mixtures of Gaussians}{23}%
+\contentsline {subsubsection}{Expectation Maximization}{26}%
+\contentsline {chapter}{\numberline {3}Design}{29}%
+\contentsline {chapter}{Bibliography}{29}%
