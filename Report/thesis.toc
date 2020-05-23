@@ -10,14 +10,20 @@
 \contentsline {section}{\numberline {2.3}Non-Linear Filters}{14}%
 \contentsline {subsubsection}{The Median Filter}{14}%
 \contentsline {section}{\numberline {2.4}Morphology}{15}%
-\contentsline {subsection}{\numberline {2.4.1}Morphological Operations}{15}%
-\contentsline {subsubsection}{Dilation}{16}%
+\contentsline {subsubsection}{Dilation}{15}%
 \contentsline {subsubsection}{Erosion}{16}%
 \contentsline {subsubsection}{Opening and Closing}{16}%
 \contentsline {section}{\numberline {2.5}The Gaussian}{18}%
 \contentsline {section}{\numberline {2.6}Clustering}{20}%
 \contentsline {subsection}{\numberline {2.6.1}K-Means}{21}%
-\contentsline {subsection}{\numberline {2.6.2}Mixtures of Gaussians}{23}%
-\contentsline {subsubsection}{Expectation Maximization}{26}%
-\contentsline {chapter}{\numberline {3}Design}{29}%
-\contentsline {chapter}{Bibliography}{29}%
+\contentsline {subsection}{\numberline {2.6.2}Mixtures of Gaussians}{22}%
+\contentsline {subsubsection}{Expectation Maximization}{25}%
+\contentsline {chapter}{\numberline {3}Design}{28}%
+\contentsline {section}{\numberline {3.1}Computer Vision}{29}%
+\contentsline {subsection}{\numberline {3.1.1}Training}{30}%
+\contentsline {subsection}{\numberline {3.1.2}Background Subtraction}{30}%
+\contentsline {subsection}{\numberline {3.1.3}Morhpology and Filtering}{30}%
+\contentsline {subsection}{\numberline {3.1.4}Countours and Bounding Boxes}{30}%
+\contentsline {subsection}{\numberline {3.1.5}Tracking}{30}%
+\contentsline {subsection}{\numberline {3.1.6}Speed Estimation and Counting}{31}%
+\contentsline {chapter}{Bibliography}{31}%

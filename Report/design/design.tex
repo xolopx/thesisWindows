@@ -1,0 +1,13 @@
+\chapter{Design}
+
+The purpose of this system is to collect the speed and vehicle volume of a road/s continuously. This is achieved by mounting a microcomputer, which will henceforth be referred to as a \emph{node}, on a pole at the location and directing a camera connected to the microcomputer, at the road. The road may be multi-lane travelling in both directions, the system can collect data for all vehicles observed. Speed and volume are sent every 30 seconds to another computer on the same network in real-time. The data is stored in a database and served up to an end user who can query the database for specific node's location and time period. The node converts the images collected by the camera into statistics by running a computer vision algorithm designed to recognize vehicles. This section of the report details the subsystems that comprise the overall system, how they interact with each other and how they were implemented. In Figure \ref{fig:overall_design} the overall design flow of the system can be observed. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{detection_design}
+    \caption{Overall System Design}
+    \label{fig:overall_design}
+\end{figure}
+
+\input{design/detection}
+
+

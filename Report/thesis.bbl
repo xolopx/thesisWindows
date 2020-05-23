@@ -65,4 +65,20 @@ Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
 \newblock {\em Introduction to Algorithms}.
 \newblock MIT Press Ltd, 2009.
 
+\bibitem{adrian_rosebrock_simple_object_tracking}
+Adrian Rosebrock.
+\newblock Simple object tracking with opencv.
+
+\bibitem{adrian_rosebrock_vehicle_tracking}
+Adrian Rosebrock.
+\newblock Opencv vehicle detection, tracking, and speed estimation.
+
+\bibitem{andrey_nikishaev_traffic_counting}
+Andrey Nikishaev.
+\newblock Traffic counting with opencv.
+
+\bibitem{opencv}
+OpenCV~Foundation Inc.
+\newblock Opencv.
+
 \end{thebibliography}

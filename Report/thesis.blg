@@ -11,9 +11,17 @@ Warning--entry type for "optimalKernel" isn't style-file defined
 --line 34 of file bibliography/bibliography.bib
 Warning--entry type for "cost" isn't style-file defined
 --line 41 of file bibliography/bibliography.bib
+Warning--entry type for "adrian_rosebrock_simple_object_tracking" isn't style-file defined
+--line 111 of file bibliography/bibliography.bib
+Warning--entry type for "adrian_rosebrock_vehicle_tracking" isn't style-file defined
+--line 117 of file bibliography/bibliography.bib
+Warning--entry type for "andrey_nikishaev_traffic_counting" isn't style-file defined
+--line 123 of file bibliography/bibliography.bib
+Warning--entry type for "opencv" isn't style-file defined
+--line 130 of file bibliography/bibliography.bib
 Warning--empty institution in trafficworse
 Warning--empty institution in mixedSolution
 Warning--empty institution in smartsolution
 Warning--empty institution in iot
 Warning--empty institution in methodsofcollection
-(There were 10 warnings)
+(There were 14 warnings)
