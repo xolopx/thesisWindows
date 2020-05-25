@@ -79,7 +79,8 @@
 \newlabel{fig:gauss_kernel}{{2.12}{13}}
 \citation{cormen_2001}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Non-Linear Filters}{14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{The Median Filter}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}The Median Filter}{14}\protected@file@percent }
+\newlabel{subsection:median_filter}{{2.3.1}{14}}
 \newlabel{fig:emu_noise}{{2.13a}{14}}
 \newlabel{sub@fig:emu_noise}{{a}{14}}
 \newlabel{fig:emu_gauss}{{2.13b}{14}}
@@ -89,6 +90,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Filtering out salt and pepper noise with Gaussian and median filter. Original image by Grant Durr.\relax }}{14}\protected@file@percent }
 \newlabel{fig:shot_noise}{{2.13}{14}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Morphology}{15}\protected@file@percent }
+\newlabel{section:morphology}{{2.4}{15}}
 \newlabel{fig:emu_noise}{{2.14a}{15}}
 \newlabel{sub@fig:emu_noise}{{a}{15}}
 \newlabel{fig:emu_gauss}{{2.14b}{15}}
@@ -136,6 +138,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.19}{\ignorespaces K-Means clustering performed on random data.\relax }}{22}\protected@file@percent }
 \newlabel{fig:clusters}{{2.19}{22}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}Mixtures of Gaussians}{22}\protected@file@percent }
+\newlabel{subsection:mog}{{2.6.2}{22}}
 \newlabel{fig:histGauss}{{2.20a}{23}}
 \newlabel{sub@fig:histGauss}{{a}{23}}
 \newlabel{fig:histCurve}{{2.20b}{23}}
@@ -162,26 +165,43 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Design}{28}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {subsubsection}{System Overview}{28}\protected@file@percent }
 \citation{adrian_rosebrock_simple_object_tracking}
 \citation{adrian_rosebrock_vehicle_tracking}
 \citation{andrey_nikishaev_traffic_counting}
 \citation{opencv}
+\citation{opencv_mog2}
+\citation{zivkovic_pattern_recognition}
+\citation{zivkovic_heijden_pattern_recognition_letters}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Overall System Design\relax }}{29}\protected@file@percent }
 \newlabel{fig:overall_design}{{3.1}{29}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Computer Vision}{29}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Subprocess that comprise the detection subsystem.\relax }}{29}\protected@file@percent }
 \newlabel{fig:detection_design}{{3.2}{29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}The Background Subtractor}{30}\protected@file@percent }
+\newlabel{subsection:training}{{3.1.1}{30}}
+\newlabel{fig:frame_original}{{3.3a}{31}}
+\newlabel{sub@fig:frame_original}{{a}{31}}
+\newlabel{fig:foreground_mask_unfiltered}{{3.3b}{31}}
+\newlabel{sub@fig:foreground_mask_unfiltered}{{b}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces A foreground mask generated from a traffic scene by OpenCV's GMM implementation.\relax }}{31}\protected@file@percent }
+\newlabel{fig:example_subtraction}{{3.3}{31}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Morhpology and Filtering}{31}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Filtering}{31}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces A foreground mask generated from a traffic scene by OpenCV's GMM implementation.\relax }}{32}\protected@file@percent }
+\newlabel{fig:foreground_mask_filtered}{{3.4}{32}}
+\@writefile{toc}{\contentsline {subsubsection}{Morphology}{32}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces A foreground mask generated from a traffic scene by OpenCV's GMM implementation.\relax }}{32}\protected@file@percent }
+\newlabel{fig:foreground_mask_morphed}{{3.5}{32}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Countours and Bounding Boxes}{32}\protected@file@percent }
 \bibstyle{unsrt}
 \bibdata{bibliography/bibliography}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Training}{30}\protected@file@percent }
-\newlabel{subsection:training}{{3.1.1}{30}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Background Subtraction}{30}\protected@file@percent }
-\newlabel{subsection:subtractor}{{3.1.2}{30}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Morhpology and Filtering}{30}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Countours and Bounding Boxes}{30}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}Tracking}{30}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.6}Speed Estimation and Counting}{31}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{31}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Tracking}{33}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.5}Speed Estimation and Counting}{33}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.6}Calibration}{33}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{33}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces A foreground mask generated from a traffic scene by OpenCV's GMM implementation.\relax }}{34}\protected@file@percent }
+\newlabel{fig:foreground_mask_morphed}{{3.6}{34}}
 \bibcite{industrialization}{1}
 \bibcite{trafficworse}{2}
 \bibcite{emissions}{3}
@@ -199,3 +219,6 @@
 \bibcite{adrian_rosebrock_vehicle_tracking}{15}
 \bibcite{andrey_nikishaev_traffic_counting}{16}
 \bibcite{opencv}{17}
+\bibcite{opencv_mog2}{18}
+\bibcite{zivkovic_pattern_recognition}{19}
+\bibcite{zivkovic_heijden_pattern_recognition_letters}{20}

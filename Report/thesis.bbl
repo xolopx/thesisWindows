@@ -81,4 +81,16 @@ Andrey Nikishaev.
 OpenCV~Foundation Inc.
 \newblock Opencv.
 
+\bibitem{opencv_mog2}
+OpenCV~Foundation Inc.
+\newblock Backgroundsubtractormog2.
+
+\bibitem{zivkovic_pattern_recognition}
+Zoran Zivkovic.
+\newblock 2004.
+
+\bibitem{zivkovic_heijden_pattern_recognition_letters}
+Zoran Zivkovic and Ferdinand van~der Heijden.
+\newblock 2006.
+
 \end{thebibliography}

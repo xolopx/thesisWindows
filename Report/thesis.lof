@@ -25,3 +25,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Overall System Design\relax }}{29}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Subprocess that comprise the detection subsystem.\relax }}{29}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces A foreground mask generated from a traffic scene by OpenCV's GMM implementation.\relax }}{31}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces A foreground mask generated from a traffic scene by OpenCV's GMM implementation.\relax }}{32}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces A foreground mask generated from a traffic scene by OpenCV's GMM implementation.\relax }}{32}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces A foreground mask generated from a traffic scene by OpenCV's GMM implementation.\relax }}{34}%

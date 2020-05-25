@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  23 MAY 2020 22:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  25 MAY 2020 13:22
 entering extended mode
 **c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
 (c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
@@ -567,6 +567,9 @@ LaTeX Warning: Label `fig:emu_median' multiply defined.
 
 LaTeX Warning: Label `sub@fig:emu_median' multiply defined.
 
+
+LaTeX Warning: Label `fig:foreground_mask_morphed' multiply defined.
+
 )
 \openout1 = `thesis.aux'.
 
@@ -666,7 +669,10 @@ Overfull \vbox (91.85759pt too high) detected at line 18
 
 {C:/Users/Tom/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/uon.png>] [2
 
-] (thesis.toc [1
+] (thesis.toc
+Underfull \vbox (badness 4291) has occurred while \output is active []
+
+ [1
 
 
 ])
@@ -925,43 +931,127 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
 ))) (design/design.tex [27]
 Chapter 3.
-<./images/detection_design.png, id=165, 495.50119pt x 180.675pt>
-File: ./images/detection_design.png Graphic file (type png)
-<use ./images/detection_design.png>
-Package pdftex.def Info: ./images/detection_design.png  used on input line 6.
-(pdftex.def)             Requested size: 318.66948pt x 116.20227pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28
+<./images/overall_design.png, id=165, 514.92375pt x 194.22563pt>
+File: ./images/overall_design.png Graphic file (type png)
+<use ./images/overall_design.png>
+Package pdftex.def Info: ./images/overall_design.png  used on input line 11.
+(pdftex.def)             Requested size: 318.66948pt x 120.20229pt.
+[28
 
 ] (design/detection.tex
+<./images/detection_design.png, id=169, 476.982pt x 180.675pt>
 File: ./images/detection_design.png Graphic file (type png)
 <use ./images/detection_design.png>
 Package pdftex.def Info: ./images/detection_design.png  used on input line 7.
-(pdftex.def)             Requested size: 409.71692pt x 149.4033pt.
+(pdftex.def)             Requested size: 409.71692pt x 155.19826pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29 <./images/detection_design.png>])) (thesis.bbl [30] [31] [32
+ [29 <./images/overall_design.png> <./images/detection_design.png>]
+<./images/foreground_frame.png, id=174, 962.09438pt x 541.27219pt>
+File: ./images/foreground_frame.png Graphic file (type png)
+<use ./images/foreground_frame.png>
+Package pdftex.def Info: ./images/foreground_frame.png  used on input line 22.
+(pdftex.def)             Requested size: 204.85846pt x 115.248pt.
+<./images/foreground_mask_unfiltered.png, id=175, 963.6pt x 544.28343pt>
+File: ./images/foreground_mask_unfiltered.png Graphic file (type png)
+<use ./images/foreground_mask_unfiltered.png>
+Package pdftex.def Info: ./images/foreground_mask_unfiltered.png  used on input line 28.
+(pdftex.def)             Requested size: 204.85846pt x 115.70645pt.
 
-]) [33] (thesis.aux)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+File: ./images/foreground_mask_unfiltered.png Graphic file (type png)
+<use ./images/foreground_mask_unfiltered.png>
+Package pdftex.def Info: ./images/foreground_mask_unfiltered.png  used on input line 51.
+(pdftex.def)             Requested size: 204.85846pt x 115.70645pt.
+<./images/foreground_mask_filtered.png, id=179, 963.6pt x 542.025pt>
+File: ./images/foreground_mask_filtered.png Graphic file (type png)
+<use ./images/foreground_mask_filtered.png>
+Package pdftex.def Info: ./images/foreground_mask_filtered.png  used on input line 56.
+(pdftex.def)             Requested size: 204.85846pt x 115.22633pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31 <./images/foreground_frame.png> <./images/foreground_mask_unfiltered.png>]
+File: ./images/foreground_mask_filtered.png Graphic file (type png)
+<use ./images/foreground_mask_filtered.png>
+Package pdftex.def Info: ./images/foreground_mask_filtered.png  used on input line 72.
+(pdftex.def)             Requested size: 204.85846pt x 115.22633pt.
+<./images/foreground_mask_morphed.png, id=185, 959.83594pt x 540.51938pt>
+File: ./images/foreground_mask_morphed.png Graphic file (type png)
+<use ./images/foreground_mask_morphed.png>
+Package pdftex.def Info: ./images/foreground_mask_morphed.png  used on input line 77.
+(pdftex.def)             Requested size: 204.85846pt x 115.35988pt.
+ [32 <./images/foreground_mask_filtered.png> <./images/foreground_mask_morphed.png>]
+
+LaTeX Warning: Reference `fig:original_frame' on page 33 undefined on input line 103.
+
+
+LaTeX Warning: Reference `fig:morph_analysis' on page 33 undefined on input line 103.
+
+File: ./images/foreground_mask_filtered.png Graphic file (type png)
+<use ./images/foreground_mask_filtered.png>
+Package pdftex.def Info: ./images/foreground_mask_filtered.png  used on input line 108.
+(pdftex.def)             Requested size: 204.85846pt x 115.22633pt.
+File: ./images/foreground_mask_morphed.png Graphic file (type png)
+<use ./images/foreground_mask_morphed.png>
+Package pdftex.def Info: ./images/foreground_mask_morphed.png  used on input line 113.
+(pdftex.def)             Requested size: 204.85846pt x 115.35988pt.
+File: ./images/foreground_mask_morphed.png Graphic file (type png)
+<use ./images/foreground_mask_morphed.png>
+Package pdftex.def Info: ./images/foreground_mask_morphed.png  used on input line 118.
+(pdftex.def)             Requested size: 204.85846pt x 115.35988pt.
+File: ./images/foreground_mask_filtered.png Graphic file (type png)
+<use ./images/foreground_mask_filtered.png>
+Package pdftex.def Info: ./images/foreground_mask_filtered.png  used on input line 123.
+(pdftex.def)             Requested size: 204.85846pt x 115.22633pt.
+File: ./images/foreground_mask_morphed.png Graphic file (type png)
+<use ./images/foreground_mask_morphed.png>
+Package pdftex.def Info: ./images/foreground_mask_morphed.png  used on input line 128.
+(pdftex.def)             Requested size: 204.85846pt x 115.35988pt.
+File: ./images/foreground_mask_morphed.png Graphic file (type png)
+<use ./images/foreground_mask_morphed.png>
+Package pdftex.def Info: ./images/foreground_mask_morphed.png  used on input line 133.
+(pdftex.def)             Requested size: 204.85846pt x 115.35988pt.
+File: ./images/foreground_mask_filtered.png Graphic file (type png)
+<use ./images/foreground_mask_filtered.png>
+Package pdftex.def Info: ./images/foreground_mask_filtered.png  used on input line 138.
+(pdftex.def)             Requested size: 204.85846pt x 115.22633pt.
+File: ./images/foreground_mask_morphed.png Graphic file (type png)
+<use ./images/foreground_mask_morphed.png>
+Package pdftex.def Info: ./images/foreground_mask_morphed.png  used on input line 143.
+(pdftex.def)             Requested size: 204.85846pt x 115.35988pt.
+File: ./images/foreground_mask_morphed.png Graphic file (type png)
+<use ./images/foreground_mask_morphed.png>
+Package pdftex.def Info: ./images/foreground_mask_morphed.png  used on input line 148.
+(pdftex.def)             Requested size: 204.85846pt x 115.35988pt.
+
+LaTeX Warning: Float too large for page by 55.41563pt on input line 155.
+
+)) (thesis.bbl [33] [34] [35
+
+]) [36] (thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16772 strings out of 492484
- 308906 string characters out of 3122506
- 373191 words of memory out of 3000000
- 20879 multiletter control sequences out of 15000+200000
+ 16821 strings out of 492484
+ 310406 string characters out of 3122506
+ 373302 words of memory out of 3000000
+ 20928 multiletter control sequences out of 15000+200000
  545998 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,14n,75p,1298b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,14n,75p,1936b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (41 pages, 3024614 bytes).
+Output written on thesis.pdf (44 pages, 3956801 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
+ 259 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

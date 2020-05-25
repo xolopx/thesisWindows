@@ -1,5 +1,5 @@
 \section{Morphology}
-
+\label{section:morphology}
 Morphological operations are yet another set of neighborhood operators however unlike filtering they are designed to modify the shape of objects in binary images specifically. Producing a binary image from a coloured one involves first converting that image to grayscale and then thresholding (Equation \ref{eq:threshold}) its intensity such that pixels are converted to a 1 or 0 depending on whether they lay above or below the threshold (Figure \ref{fig:thresholding}). These are useful operations when you wish to modify an object's shape in order for it to fit some criteria, for example its total area or whether or not it's an open or closed contour. All morphological operators work by convolving a binary \emph{structuring element} with an image and thresholding the output pixel. There are two fundamental morphological operations, \emph{dilation} and \emph{erosion}, that comprise all others. 
 
 \begin{figure}[htbp]

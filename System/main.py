@@ -15,7 +15,8 @@ globals.initialize()
 # outputFrame = None
 someOtherFrame = None
 lock = threading.Lock()
-vs = cv2.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")        # Initialize video capture stream.
+# vs = cv2.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")        # Initialize video capture stream.
+vs = cv2.VideoCapture(r"C:\Users\Tom\Desktop\road.mp4")        # Initialize video capture stream.
 # vs = cv2.VideoCapture(0)        # Initialize video capture stream.
 event = Event()
 app = Flask(__name__)
@@ -80,8 +81,9 @@ if __name__ == '__main__':
     args = argumentRead()
 
     # Instantiate Detection Module
-    inputVideo = cv.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")
+    # inputVideo = cv.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")
     # inputVideo = cv.VideoCapture(0)
+    inputVideo = cv2.VideoCapture(r"C:\Users\Tom\Desktop\road.mp4")  # Initialize video capture stream.
     process = CVModule.CVModule(inputVideo, id=0, lat=10, long=10)
 
     update_or_add_node()

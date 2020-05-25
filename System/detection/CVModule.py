@@ -58,12 +58,31 @@ class CVModule:
         and remove salt& pepper noise.
         :param fgMask: The foreground mask after applying subtractor
         """
-    
-        fgMask[fgMask < 240] = 0                                            # Threshold out shadows. (They're darker colored than pure foreground).
-        fgMask = cv.medianBlur(fgMask,5)                                    # Apply median blur filter trackObj remove salt and pepper noise.
-        fgMask = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, self.struct)           # Apply a closing trackObj join trackObjgether the surviving foreground blobs.
-        fgMask = cv.morphologyEx(fgMask, cv.MORPH_OPEN, self.struct)                # Apply an opening trackObj remove some of the smaller and disconnected foreground blobs.
-        fgMask = cv.dilate(fgMask, self.struct, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
+
+        struct1 = cv.getStructuringElement(cv.MORPH_ELLIPSE, (5, 5))
+        struct2 = cv.getStructuringElement(cv.MORPH_CROSS, (5, 5))
+        struct3 = cv.getStructuringElement(cv.MORPH_RECT, (5, 5))
+        iter = 1
+
+        # Threshold out shadows. (They're darker colored than pure foreground).
+        fgMask[fgMask < 240] = 0
+        # Apply median blur filter to remove salt and pepper noise.
+        fgMask = cv.medianBlur(fgMask,7)
+
+        # Apply a closing to the surviving foreground blobs.
+        fgMask1 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct1, iterations = iter)
+        fgMask2 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct2, iterations = iter)
+        fgMask3 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct3, iterations = iter)
+
+        fgMask1 = cv.dilate(fgMask1, struct1, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
+        fgMask2 = cv.dilate(fgMask2, struct2, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
+        fgMask3 = cv.dilate(fgMask3, struct3, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
+
+        if (self.frameCount) == 100:
+            cv.imshow("1", fgMask1)
+            cv.imshow("2", fgMask2)
+            cv.imshow("3", fgMask3)
+            cv.waitKey(0)
 
         return fgMask
 
@@ -183,7 +202,7 @@ class CVModule:
          -
         :return:
         """
-        self.train_subtractor()         # Initially, train the subtractor.
+        # self.train_subtractor()         # Initially, train the subtractor.
         # Initializing a timer that is used to measure if a statistics interval has passed.
         timerStart = datetime.now()
         # # Make sure the node is in the database. *** HANDLED IN MAIN ***
@@ -195,6 +214,9 @@ class CVModule:
             _, frame = self.video.read()
             # Apply the subtractor to the frame to get foreground objects.
             mask = self.subtractor.apply(frame)
+            # if (self.frameCount) == 100:
+            #     cv.imshow("f", frame)
+
             # Apply morphology, threshing and median filter.
             mask = self.filter_frame(mask)
             # Get bounding boxes for the foreground objects.
