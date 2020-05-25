@@ -1,0 +1,28 @@
+\section{Computer Vision}
+
+The computer vision subsystem is a software component that is designed to recognise and track vehicles in images in order to count them and estimate their speed, henceforth to be referred to as the \emph{detection} component of the system. Each time an image is processed by the detection algorithm several subprocesses are performed in order to manipulate the original image into a state where vehicles have been isolated. These subprocesses can be seen in Figure \ref{fig:detection_design}. The vehicle tracking subprocess was largely influenced by the work of Adrian Rosebrock \cite{adrian_rosebrock_simple_object_tracking}\cite{adrian_rosebrock_vehicle_tracking} of PyImageSearch and the vehicle segmentation subprocess was influenced by the work of Andrey Nikishaev \cite{andrey_nikishaev_traffic_counting}. Much of the functionality is provided by the Python open source computer vision library, OpenCV \cite{opencv}
+
+
+\begin{figure}[H]
+    \includegraphics[width=0.9\columnwidth]{design/detection/detection_design}
+    \caption{Subprocess that comprise the detection subsystem.}
+    \label{fig:detection_design}
+\end{figure}
+
+
+\input{design/detection/contours_bounding}
+
+
+
+\subsection{Tracking}
+
+Tracking is follows an objects movement across multiple images. This requires that the object be reidentified in each new image and matched to it's old location.
+
+\subsection{Speed Estimation and Counting}
+
+This subprocess consolidates the efforts of the former ones and convert the information about an objects position into vehicle counts and speeds.
+
+
+\input{design/detection/background_subtraction}
+\input{design/detection/morphology_filtering}
+\input{design/detection/calibration}

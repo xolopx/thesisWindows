@@ -59,10 +59,10 @@ class CVModule:
         :param fgMask: The foreground mask after applying subtractor
         """
 
-        struct1 = cv.getStructuringElement(cv.MORPH_ELLIPSE, (5, 5))
-        struct2 = cv.getStructuringElement(cv.MORPH_CROSS, (5, 5))
-        struct3 = cv.getStructuringElement(cv.MORPH_RECT, (5, 5))
-        iter = 1
+        # struct1 = cv.getStructuringElement(cv.MORPH_ELLIPSE, (5, 5))
+        # struct2 = cv.getStructuringElement(cv.MORPH_CROSS, (5, 5))
+        struct1 = cv.getStructuringElement(cv.MORPH_RECT, (5, 5))
+        iter = 5
 
         # Threshold out shadows. (They're darker colored than pure foreground).
         fgMask[fgMask < 240] = 0
@@ -71,20 +71,20 @@ class CVModule:
 
         # Apply a closing to the surviving foreground blobs.
         fgMask1 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct1, iterations = iter)
-        fgMask2 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct2, iterations = iter)
-        fgMask3 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct3, iterations = iter)
+        # fgMask2 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct2, iterations = iter)
+        # fgMask3 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct3, iterations = iter)
 
-        fgMask1 = cv.dilate(fgMask1, struct1, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
-        fgMask2 = cv.dilate(fgMask2, struct2, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
-        fgMask3 = cv.dilate(fgMask3, struct3, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
+        fgMask1 = cv.dilate(fgMask1, struct1, iterations=4)                    # Apply dilation trackObj bolden the foreground objects.
+        # fgMask2 = cv.dilate(fgMask2, struct2, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
+        # fgMask3 = cv.dilate(fgMask3, struct3, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
 
         if (self.frameCount) == 100:
             cv.imshow("1", fgMask1)
-            cv.imshow("2", fgMask2)
-            cv.imshow("3", fgMask3)
-            cv.waitKey(0)
+            # cv.imshow("2", fgMask2)
+            # cv.imshow("3", fgMask3)
+            # cv.waitKey(0)
 
-        return fgMask
+        return fgMask1
 
     def train_subtractor(self, trainNum=500):
         """
