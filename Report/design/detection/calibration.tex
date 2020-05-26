@@ -1,4 +1,4 @@
-10\subsection{Calibration}
+\subsection{Calibration}
 
 It is unfortunate but neccessary that for this method of vehicle classification that for each different location and camera angle an element of calibration is required to obtain best results. This is a function of the size of vehicles in the camera frame and the lighting conditions at the location. Presently these factors are compensated for by manually calibrating the morphological operations and areas of interest for counting and speed measurement. 
 
@@ -8,12 +8,13 @@ To find the optimal morphological structuring element shape and size, and the nu
 
 
 \begin{figure}[htbp]
-    \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \begin{subfigure}[b]{0.42\textwidth}
         \includegraphics[width=\textwidth]{design/detection/calibration/rect_3_edit}
         \captionsetup{format = hang}
         \caption{Rectangular structuring element closure}
     \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
+    \begin{subfigure}[b]{0.42\textwidth}
         \includegraphics[width=\textwidth]{design/detection/calibration/ellipse_3_edit}
         \captionsetup{format = hang}
         \caption{Elliptical structuring element closure}
@@ -26,10 +27,10 @@ To find the optimal morphological structuring element shape and size, and the nu
 
 \begin{figure*}[htbp]
     \begin{tabular}{
-        >{\centering\arraybackslash}m{0.5cm}
-        >{\centering\arraybackslash}m{5cm}
-        >{\centering\arraybackslash}m{5cm}
-        >{\centering\arraybackslash}m{5cm}}
+        >{\centering\arraybackslash}m{0.4cm}
+        >{\centering\arraybackslash}m{4.5cm}
+        >{\centering\arraybackslash}m{4.5cm}
+        >{\centering\arraybackslash}m{4.5cm}}
           & Ellipse & Cross & Rectangle \\
         1 
         &

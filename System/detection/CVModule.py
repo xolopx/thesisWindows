@@ -21,7 +21,8 @@ def define_contours(fgMask):
             # Generate bounding rect from the poly-form contrackObject. Returns "Upright Rectangle", i.e. Axis-aligned on bot track Obj edge and whose left edge is vertical.
             boundRect.append(cv.boundingRect(c))
     # Return the bounding rectangles.
-    return boundRect
+
+    return contours, boundRect
 
 
 class CVModule:
@@ -66,6 +67,11 @@ class CVModule:
 
         # Threshold out shadows. (They're darker colored than pure foreground).
         fgMask[fgMask < 240] = 0
+        if (self.frameCount) == 100:
+            cv.imshow("1", fgMask)
+            # cv.imshow("2", fgMask2)
+            # cv.imshow("3", fgMask3)
+            # cv.waitKey(0)
         # Apply median blur filter to remove salt and pepper noise.
         fgMask = cv.medianBlur(fgMask,7)
 
@@ -78,11 +84,7 @@ class CVModule:
         # fgMask2 = cv.dilate(fgMask2, struct2, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
         # fgMask3 = cv.dilate(fgMask3, struct3, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
 
-        if (self.frameCount) == 100:
-            cv.imshow("1", fgMask1)
-            # cv.imshow("2", fgMask2)
-            # cv.imshow("3", fgMask3)
-            # cv.waitKey(0)
+
 
         return fgMask1
 
@@ -109,13 +111,26 @@ class CVModule:
         # Draw on the bounding boxes.
         for i in range(len(boxes)):
             cv.rectangle(image, (int(boxes[i][0]), int(boxes[i][1])),
-                (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
+                         (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
 
-        # Draw centroids.
+        # if self.frameCount == 100:
+        #     cv.imshow("bound", image)
+        #     cv.waitKey(0)
+
         for (objectID, centroid) in self.cenTrack.centroids.items():
             text = "ID {}".format(objectID)
             cv.putText(image, text, (centroid[0] - 10, centroid[1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
             cv.circle(image, (centroid[0], centroid[1]), 4, (0,355, 0),-1)
+
+        # if self.frameCount == 100 or self.frameCount == 70 or self.frameCount == 40:
+        #     cv.imshow("bound", image)
+        if self.frameCount == 100:
+            cv.imshow("centroids", image)
+            cv.waitKey(0)
+
+
+        # Draw centroids.
+
 
         # Draw lines
         # cv.line(image, (0, 340), (640, 340), (255, 1, 255), 2)
@@ -131,7 +146,7 @@ class CVModule:
         timestamp = datetime.now()
         cv.putText(image, timestamp.strftime(
             "%A %d %B %Y %I:%M:%S%p"), (10, image.shape[0] - 10),
-                    cv.FONT_HERSHEY_SIMPLEX, 0.35, (6, 64, 7), 1)
+                   cv.FONT_HERSHEY_SIMPLEX, 0.35, (6, 64, 7), 1)
 
         # Draw speeds
         for (trackID, track) in self.objTracks.items():
@@ -214,13 +229,17 @@ class CVModule:
             _, frame = self.video.read()
             # Apply the subtractor to the frame to get foreground objects.
             mask = self.subtractor.apply(frame)
-            # if (self.frameCount) == 100:
-            #     cv.imshow("f", frame)
-
             # Apply morphology, threshing and median filter.
             mask = self.filter_frame(mask)
             # Get bounding boxes for the foreground objects.
-            boundingRect = define_contours(mask)
+            contours, boundingRect = define_contours(mask)
+
+            # if self.frameCount == 100:
+            #     im_contours = cv.cvtColor(mask, cv.COLOR_RGB2BGR)
+            #     cv.drawContours(im_contours,contours,-1, (252, 10, 220), 2)
+            #     cv.imshow("contours",im_contours)
+            #     cv.waitKey(0)
+
             # Get centroids from the bounding boxes.                *** LOOK INTO WHAT THIS METHOD IS DOING AND IF IT'S NECESSARY ***
             objects, deregID = self.cenTrack.update(boundingRect)
             # Update the object positions and vehicle statistics.   *** MAYBE WANT TO SEPARATE THIS INTO TWO METHODS ***
@@ -229,6 +248,7 @@ class CVModule:
             mask = cv.cvtColor(mask, cv.COLOR_GRAY2RGB)
             # Draw graphics onto mask
             self.draw_info(mask, boundingRect)
+
             # Draw graphics onto original frame
             self.draw_info(frame, boundingRect)
             # Stitch together original image and foreground mask for display.

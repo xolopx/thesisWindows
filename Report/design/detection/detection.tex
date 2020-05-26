@@ -1,6 +1,6 @@
 \section{Computer Vision}
 
-The computer vision subsystem is a software component that is designed to recognise and track vehicles in images in order to count them and estimate their speed, henceforth to be referred to as the \emph{detection} component of the system. Each time an image is processed by the detection algorithm several subprocesses are performed in order to manipulate the original image into a state where vehicles have been isolated. These subprocesses can be seen in Figure \ref{fig:detection_design}. The vehicle tracking subprocess was largely influenced by the work of Adrian Rosebrock \cite{adrian_rosebrock_simple_object_tracking}\cite{adrian_rosebrock_vehicle_tracking} of PyImageSearch and the vehicle segmentation subprocess was influenced by the work of Andrey Nikishaev \cite{andrey_nikishaev_traffic_counting}. Much of the functionality is provided by the Python open source computer vision library, OpenCV \cite{opencv}
+The computer vision subsystem is a software component that is designed to recognise and track vehicles in images in order to count them and estimate their speed, henceforth to be referred to as the \emph{detection} component of the system. Each time an image is processed by the detection algorithm several subprocesses are performed in order to manipulate the original image into a state where vehicles have been isolated. These subprocesses can be seen in Figure \ref{fig:detection_design}. The vehicle tracking subprocess was largely influenced by the work of Adrian Rosebrock \cite{adrian_rosebrock_simple_object_tracking}\cite{adrian_rosebrock_vehicle_tracking} of PyImageSearch and the vehicle segmentation subprocess was influenced by the work of Andrey Nikishaev \cite{andrey_nikishaev_traffic_counting}. Much of the functionality of the detection system is provided by the Python open source computer vision library, OpenCV \cite{opencv}.
 
 
 \begin{figure}[H]
@@ -10,19 +10,53 @@ The computer vision subsystem is a software component that is designed to recogn
 \end{figure}
 
 
-\input{design/detection/contours_bounding}
-
-
-
-\subsection{Tracking}
-
-Tracking is follows an objects movement across multiple images. This requires that the object be reidentified in each new image and matched to it's old location.
-
-\subsection{Speed Estimation and Counting}
-
-This subprocess consolidates the efforts of the former ones and convert the information about an objects position into vehicle counts and speeds.
-
-
 \input{design/detection/background_subtraction}
 \input{design/detection/morphology_filtering}
+\input{design/detection/contours_bounding}
+\input{design/detection/tracking}
+\input{design/detection/counting}
+
+\begin{figure*}[htbp]
+    \begin{tabular}{c c}
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{design/detection/subtractor/original_frame}
+            \captionsetup{format = hang}
+            \caption{Img: Andrey Nikishaev.}
+            \label{fig:original_frame}
+        \end{subfigure} & 
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{design/detection/subtractor/foreground_mask}
+            \captionsetup{format = hang}
+            \caption{Background subtractor output.}
+            \label{fig:foreground_mask_unfiltered}
+        \end{subfigure} \\
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{design/detection/subtractor/foreground_thresholded}
+            \captionsetup{format = hang}
+            \caption{Shadows thresholded.}
+        \end{subfigure} &
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{design/detection/morphology/foreground_mask_filtered}
+            \captionsetup{format = hang}
+            \caption{Median Filtered.}
+        \end{subfigure} \\
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{design/detection/morphology/rect_3}
+            \captionsetup{format = hang}
+            \caption{Morphologically altered.}
+            \label{fig:morphed}
+        \end{subfigure} &
+        \begin{subfigure}[b]{0.45\textwidth}
+            \includegraphics[width=\textwidth]{design/detection/bounding/mask_bound}
+            \captionsetup{format = hang}
+            \caption{Bounding Boxes.}
+            \label{fig:bounding_boxes}
+        \end{subfigure}
+    \end{tabular}
+    \captionsetup{format=hang}
+    \caption{Stages in the computer vision detection process.}
+    \label{fig:example_subtraction}
+\end{figure*}
+
+
 \input{design/detection/calibration}
