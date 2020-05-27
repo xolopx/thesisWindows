@@ -35,7 +35,7 @@ class CVModule:
         :param inputVideo: Video input to the module.
         """
         self.cenTrack = CentroidTracker.CentroidTracker()           # Object containing centroids detected for a given frame.
-        self.objTracks = {}                                         # Dictionary of TrackbleObjects.
+        self.tracks = {}                                            # Dictionary of TrackbleObjects.
         self.frameCount = 0                                         # Number of frames of video processed.
         self.video = inputVideo                                     # Video from which to extract information.
         self.subtractor = cv.createBackgroundSubtractorMOG2(
@@ -109,32 +109,28 @@ class CVModule:
         """
 
         # Draw on the bounding boxes.
-        for i in range(len(boxes)):
-            cv.rectangle(image, (int(boxes[i][0]), int(boxes[i][1])),
-                         (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
-
-        # if self.frameCount == 100:
-        #     cv.imshow("bound", image)
-        #     cv.waitKey(0)
-
+        # for i in range(len(boxes)):
+            # cv.rectangle(image, (int(boxes[i][0]), int(boxes[i][1])), (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
         for (objectID, centroid) in self.cenTrack.centroids.items():
             text = "ID {}".format(objectID)
-            cv.putText(image, text, (centroid[0] - 10, centroid[1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-            cv.circle(image, (centroid[0], centroid[1]), 4, (0,355, 0),-1)
+            # cv.putText(image, text, (centroid[0] - 10, centroid[1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            # cv.circle(image, (centroid[0], centroid[1]), 4, (0,355, 0),-1)
 
-        # if self.frameCount == 100 or self.frameCount == 70 or self.frameCount == 40:
-        #     cv.imshow("bound", image)
+        # Draw Rectangle
+        imcopy = image.copy()
+        cv.rectangle(imcopy,(0, 380), (1280, 719), (255, 1, 255), -1)
+        alpha = 0.5
+        cv.addWeighted(imcopy, alpha, image, 1- alpha, 0, image)
         if self.frameCount == 100:
-            cv.imshow("centroids", image)
+            cv.imshow("Image", image)
             cv.waitKey(0)
-
-
-        # Draw centroids.
 
 
         # Draw lines
         # cv.line(image, (0, 340), (640, 340), (255, 1, 255), 2)
-        cv.line(image, (0, 250), (640, 250), (255, 1, 255), 2)
+        cv.line(image, (0, 380), (1280, 380), (255, 1, 255), 2)
+
+
 
         # Draw on counts
         textUp = "Up {}".format(self.countUp)
@@ -142,14 +138,18 @@ class CVModule:
         cv.putText(image, textUp, (50, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
         cv.putText(image, textDown, (500, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
 
+
+
         # Add timestamp to the frames.
         timestamp = datetime.now()
         cv.putText(image, timestamp.strftime(
             "%A %d %B %Y %I:%M:%S%p"), (10, image.shape[0] - 10),
                    cv.FONT_HERSHEY_SIMPLEX, 0.35, (6, 64, 7), 1)
 
+
+
         # Draw speeds
-        for (trackID, track) in self.objTracks.items():
+        for (trackID, track) in self.tracks.items():
             if not track.finished:											# Show speed until object's centroid is deregistered.
                 center = track.centroids[-1]								# Get the last centroid in items history.
                 x = center[0]
@@ -175,33 +175,40 @@ class CVModule:
 
     def update_tracks(self):
         """ Generates and updates trackable objects with centroid data. """
-        centroids = self.cenTrack.centroids                                 # Get the dicitonary of centroids out of the centroid tracker
+        # Create a copy of centroid dictionary.
+        centroids = self.cenTrack.centroids
 
-        for (objectID, centroid) in centroids.items():			            # Loop through all centroids.
-
-            trackObj = self.objTracks.get(objectID, None)		            # Check if a trackable object exists given a centroid's ID.
-
-            if trackObj is None:								            # If there's no existing trackabe object for that centroid create a new one.
-                trackObj = TrackableObject.TrackableObject(
-                    objectID, centroid, self.frameCount)  	                # Create new trackable object to match centroid.
-
-            else:												            # If the object does exists determine the direction it's travelling.
-                y = [c[1] for c in trackObj.centroids]			            # Look at difference between y-coord of current centroid and mean of previous centroids.
-                direction = centroid[1] - np.mean(y)			            # Get the difference.
-                trackObj.centroids.append(centroid)				            # Assign the current centroid to the trackable objects history of centroids.
-                thresh = 250                                                # Thresh value reflect position of the counting line.
-                if not trackObj.counted : 						            # If the object hasn't been counted
-                    if direction < 0 and centroid[1] < thresh:	            # If direction is up.
+        # Iterate over centroid (key, value) pairs to check for counting and speed updates.
+        for (objectID, centroid) in centroids.items():
+            # Check if a trackable object exists for a centroid.
+            trackObj = self.tracks.get(objectID)
+            # If there's no existing trackable object for that centroid create a new one.
+            if trackObj is None:
+                trackObj = TrackableObject.TrackableObject(objectID, centroid, self.frameCount)
+                # Add the new trackable object trackObj the dictionary using its id as key.
+                self.tracks[objectID] = trackObj
+            # If a trackable object exists for the centroid then need to update some things hahaaa.
+            else:
+                # Compile a list of y-values for the centroid being tracked.
+                y = [c[1] for c in trackObj.centroids]
+                # Compare the latest y-value for the tracked centroid to the mean of it's y-values.
+                # The mean is used to measure the overall direction the item is travelling.
+                direction = centroid[1] - np.mean(y)
+                # Append the latest position of the centroid to it's tracking data.
+                trackObj.centroids.append(centroid)
+                # Set the y-value position of the counting line.
+                thresh = 250
+                # If tracked centroid hasn't been counted then record it's statistics.
+                if not trackObj.counted:
+                    if direction < 0 and centroid[1] < thresh:
                         self.countUp += 1
-                        trackObj.counted = True					            # Set obj as counted
-
-                    elif direction > 0 and centroid[1] > thresh:            # Direction is down.
+                        trackObj.counted = True
+                    elif direction > 0 and centroid[1] > thresh:
                         self.countDown += 1
                         trackObj.counted = True
 
-            self.objTracks[objectID] = trackObj				                # Add the new trackable object trackObj the dictionary using its id as key.
-
-        for trackID, track in self.objTracks.items():
+        # Terminate tracks whose centroid has been dismissed.
+        for trackID, track in self.tracks.items():
             for ID in self.cenTrack.deregisteredID:
                 if track.objectID == ID:
                     track.finished = True
@@ -261,7 +268,7 @@ class CVModule:
             self.frameCount += 1
             # Perform speed measurements                            *** PUT THIS IN A METHOD *** ALSO FIX THE SPEED CALCULATION SO THEY WORK ****
             if self.frameCount % 1 == 0:
-                for objID, objs in self.objTracks.items():
+                for objID, objs in self.tracks.items():
                     objs.calc_speed()
 
 

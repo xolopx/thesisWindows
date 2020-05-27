@@ -26,6 +26,9 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Overall System Design\relax }}{29}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Subprocess that comprise the detection subsystem.\relax }}{29}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Contours outlining foregroung mask objects.\relax }}{32}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Stages in the computer vision detection process.\relax }}{34}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Comparison of morphological closure using a 7x7 rectangular and elliptical structuring element for 3 iterations.\relax }}{35}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Morphological closing using different 7x7 structuring elements and iterations.\relax }}{36}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Centroids plotted over foreground objects.\relax }}{34}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Vehicle count threshold lines visualized on traffic setting and foreground mask.\relax }}{35}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Visualization of speed measurement region.\relax }}{36}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Stages in the computer vision detection process.\relax }}{37}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Comparison of morphological closure using a 7x7 rectangular and elliptical structuring element for 3 iterations.\relax }}{38}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Morphological closing using different 7x7 structuring elements and iterations.\relax }}{38}%

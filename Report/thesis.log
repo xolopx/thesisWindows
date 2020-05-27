@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  26 MAY 2020 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  27 MAY 2020 22:45
 entering extended mode
 **c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
 (c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
@@ -693,20 +693,21 @@ Overfull \vbox (91.85759pt too high) detected at line 18
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [6] (introduction/introduction.tex
+ [6] [7] [8
+
+] (introduction/introduction.tex
 Chapter 1.
 [1
-
 
 ] [2] [3]) (litreview/litreview.tex [4]
 Chapter 2.
 (litreview/digital.tex
-<./images/chessboard.jpg, id=46, 120.45pt x 120.45pt>
+<./images/chessboard.jpg, id=53, 120.45pt x 120.45pt>
 File: ./images/chessboard.jpg Graphic file (type jpg)
 <use ./images/chessboard.jpg>
 Package pdftex.def Info: ./images/chessboard.jpg  used on input line 9.
 (pdftex.def)             Requested size: 150.0pt x 150.0144pt.
-<./images/array2.png, id=47, 153.4533pt x 146.7081pt>
+<./images/array2.png, id=54, 153.4533pt x 146.7081pt>
 File: ./images/array2.png Graphic file (type png)
 <use ./images/array2.png>
 Package pdftex.def Info: ./images/array2.png  used on input line 13.
@@ -714,120 +715,120 @@ Package pdftex.def Info: ./images/array2.png  used on input line 13.
  [5
 
 ]
-<./images/3Dchess.png, id=54, 422.57875pt x 376.40625pt>
+<./images/3Dchess.png, id=60, 422.57875pt x 376.40625pt>
 File: ./images/3Dchess.png Graphic file (type png)
 <use ./images/3Dchess.png>
 Package pdftex.def Info: ./images/3Dchess.png  used on input line 32.
 (pdftex.def)             Requested size: 150.0pt x 133.61078pt.
 ) (litreview/linearFiltering.tex [6 <./images/chessboard.jpg> <./images/array2.png> <./images/3Dchess.png>] (litreview/correlation.tex [7]
-<./images/im_color.png, id=68, 488.0634pt x 602.25pt>
+<./images/im_color.png, id=74, 488.0634pt x 602.25pt>
 File: ./images/im_color.png Graphic file (type png)
 <use ./images/im_color.png>
 Package pdftex.def Info: ./images/im_color.png  used on input line 58.
 (pdftex.def)             Requested size: 136.57462pt x 168.52776pt.
-<./images/gv.jpg, id=69, 1016.79875pt x 1254.6875pt>
+<./images/gv.jpg, id=75, 1016.79875pt x 1254.6875pt>
 File: ./images/gv.jpg Graphic file (type jpg)
 <use ./images/gv.jpg>
 Package pdftex.def Info: ./images/gv.jpg  used on input line 62.
 (pdftex.def)             Requested size: 136.57462pt x 168.51398pt.
-<./images/gh.jpg, id=70, 1016.79875pt x 1254.6875pt>
+<./images/gh.jpg, id=76, 1016.79875pt x 1254.6875pt>
 File: ./images/gh.jpg Graphic file (type jpg)
 <use ./images/gh.jpg>
 Package pdftex.def Info: ./images/gh.jpg  used on input line 67.
 (pdftex.def)             Requested size: 136.57462pt x 168.51398pt.
  [8]) (litreview/convolution.tex [9 <./images/im_color.png (PNG copy)> <./images/gv.jpg> <./images/gh.jpg>]) (litreview/kernels.tex [10]
-<./images/kernel_graphics.jpg, id=80, 956.82469pt x 662.475pt>
+<./images/kernel_graphics.jpg, id=87, 956.82469pt x 662.475pt>
 File: ./images/kernel_graphics.jpg Graphic file (type jpg)
 <use ./images/kernel_graphics.jpg>
 Package pdftex.def Info: ./images/kernel_graphics.jpg  used on input line 8.
 (pdftex.def)             Requested size: 350.0pt x 242.32196pt.
  [11 <./images/kernel_graphics.jpg>]
-<./images/pug_resized.jpg, id=85, 639.38875pt x 740.7675pt>
+<./images/pug_resized.jpg, id=91, 639.38875pt x 740.7675pt>
 File: ./images/pug_resized.jpg Graphic file (type jpg)
 <use ./images/pug_resized.jpg>
 Package pdftex.def Info: ./images/pug_resized.jpg  used on input line 22.
 (pdftex.def)             Requested size: 136.57462pt x 158.22202pt.
-<./images/pug_blur.jpg, id=86, 639.38875pt x 740.7675pt>
+<./images/pug_blur.jpg, id=92, 639.38875pt x 740.7675pt>
 File: ./images/pug_blur.jpg Graphic file (type jpg)
 <use ./images/pug_blur.jpg>
 Package pdftex.def Info: ./images/pug_blur.jpg  used on input line 27.
 (pdftex.def)             Requested size: 136.57462pt x 158.22202pt.
  [12 <./images/pug_resized.jpg> <./images/pug_blur.jpg>]
-<./images/pug_noise.jpg, id=90, 639.38875pt x 740.7675pt>
+<./images/pug_noise.jpg, id=96, 639.38875pt x 740.7675pt>
 File: ./images/pug_noise.jpg Graphic file (type jpg)
 <use ./images/pug_noise.jpg>
 Package pdftex.def Info: ./images/pug_noise.jpg  used on input line 64.
 (pdftex.def)             Requested size: 136.57462pt x 158.22202pt.
-<./images/pug_denoised.jpg, id=91, 639.38875pt x 740.7675pt>
+<./images/pug_denoised.jpg, id=97, 639.38875pt x 740.7675pt>
 File: ./images/pug_denoised.jpg Graphic file (type jpg)
 <use ./images/pug_denoised.jpg>
 Package pdftex.def Info: ./images/pug_denoised.jpg  used on input line 69.
 (pdftex.def)             Requested size: 136.57462pt x 158.22202pt.
 )) (litreview/nonlinear_filters.tex [13 <./images/pug_noise.jpg> <./images/pug_denoised.jpg>]
-<./images/emu_noise.jpg, id=95, 676.5275pt x 846.16125pt>
+<./images/emu_noise.jpg, id=101, 676.5275pt x 846.16125pt>
 File: ./images/emu_noise.jpg Graphic file (type jpg)
 <use ./images/emu_noise.jpg>
 Package pdftex.def Info: ./images/emu_noise.jpg  used on input line 12.
 (pdftex.def)             Requested size: 136.57462pt x 170.81735pt.
-<./images/emu_gauss.jpg, id=96, 676.5275pt x 846.16125pt>
+<./images/emu_gauss.jpg, id=102, 676.5275pt x 846.16125pt>
 File: ./images/emu_gauss.jpg Graphic file (type jpg)
 <use ./images/emu_gauss.jpg>
 Package pdftex.def Info: ./images/emu_gauss.jpg  used on input line 17.
 (pdftex.def)             Requested size: 136.57462pt x 170.81735pt.
-<./images/emu_median.jpg, id=97, 676.5275pt x 846.16125pt>
+<./images/emu_median.jpg, id=103, 676.5275pt x 846.16125pt>
 File: ./images/emu_median.jpg Graphic file (type jpg)
 <use ./images/emu_median.jpg>
 Package pdftex.def Info: ./images/emu_median.jpg  used on input line 22.
 (pdftex.def)             Requested size: 136.57462pt x 170.81735pt.
 ) (litreview/morphology.tex [14 <./images/emu_noise.jpg> <./images/emu_gauss.jpg> <./images/emu_median.jpg>]
-<./images/palms_resized.jpg, id=101, 1056.94875pt x 1321.93875pt>
+<./images/palms_resized.jpg, id=107, 1056.94875pt x 1321.93875pt>
 File: ./images/palms_resized.jpg Graphic file (type jpg)
 <use ./images/palms_resized.jpg>
 Package pdftex.def Info: ./images/palms_resized.jpg  used on input line 8.
 (pdftex.def)             Requested size: 136.57462pt x 170.80917pt.
-<./images/palms_grayscale.jpg, id=102, 676.5275pt x 846.16125pt>
+<./images/palms_grayscale.jpg, id=108, 676.5275pt x 846.16125pt>
 File: ./images/palms_grayscale.jpg Graphic file (type jpg)
 <use ./images/palms_grayscale.jpg>
 Package pdftex.def Info: ./images/palms_grayscale.jpg  used on input line 13.
 (pdftex.def)             Requested size: 136.57462pt x 170.81735pt.
-<./images/palms_binary.jpg, id=103, 676.5275pt x 846.16125pt>
+<./images/palms_binary.jpg, id=109, 676.5275pt x 846.16125pt>
 File: ./images/palms_binary.jpg Graphic file (type jpg)
 <use ./images/palms_binary.jpg>
 Package pdftex.def Info: ./images/palms_binary.jpg  used on input line 18.
 (pdftex.def)             Requested size: 136.57462pt x 170.81735pt.
  [15 <./images/palms_resized.jpg> <./images/palms_grayscale.jpg> <./images/palms_binary.jpg>] [16]
-<./images/ice_binary.jpg, id=110, 1411.2725pt x 912.40875pt>
+<./images/ice_binary.jpg, id=117, 1411.2725pt x 912.40875pt>
 File: ./images/ice_binary.jpg Graphic file (type jpg)
 <use ./images/ice_binary.jpg>
 Package pdftex.def Info: ./images/ice_binary.jpg  used on input line 47.
 (pdftex.def)             Requested size: 223.07211pt x 144.20633pt.
-<./images/ice_dilate.jpg, id=111, 1411.2725pt x 912.40875pt>
+<./images/ice_dilate.jpg, id=118, 1411.2725pt x 912.40875pt>
 File: ./images/ice_dilate.jpg Graphic file (type jpg)
 <use ./images/ice_dilate.jpg>
 Package pdftex.def Info: ./images/ice_dilate.jpg  used on input line 52.
 (pdftex.def)             Requested size: 223.07211pt x 144.20633pt.
-<./images/ice_erode.jpg, id=112, 1411.2725pt x 912.40875pt>
+<./images/ice_erode.jpg, id=119, 1411.2725pt x 912.40875pt>
 File: ./images/ice_erode.jpg Graphic file (type jpg)
 <use ./images/ice_erode.jpg>
 Package pdftex.def Info: ./images/ice_erode.jpg  used on input line 57.
 (pdftex.def)             Requested size: 223.07211pt x 144.20633pt.
-<./images/ice_open.jpg, id=113, 1411.2725pt x 912.40875pt>
+<./images/ice_open.jpg, id=120, 1411.2725pt x 912.40875pt>
 File: ./images/ice_open.jpg Graphic file (type jpg)
 <use ./images/ice_open.jpg>
 Package pdftex.def Info: ./images/ice_open.jpg  used on input line 62.
 (pdftex.def)             Requested size: 223.07211pt x 144.20633pt.
-<./images/ice_close.jpg, id=114, 1411.2725pt x 912.40875pt>
+<./images/ice_close.jpg, id=121, 1411.2725pt x 912.40875pt>
 File: ./images/ice_close.jpg Graphic file (type jpg)
 <use ./images/ice_close.jpg>
 Package pdftex.def Info: ./images/ice_close.jpg  used on input line 67.
 (pdftex.def)             Requested size: 223.07211pt x 144.20633pt.
 ) (litreview/gaussian.tex [17 <./images/ice_binary.jpg> <./images/ice_dilate.jpg> <./images/ice_erode.jpg> <./images/ice_open.jpg> <./images/ice_close.jpg>]
-<./images/bellcurve.jpg, id=119, 1927.2pt x 976.64874pt>
+<./images/bellcurve.jpg, id=125, 1927.2pt x 976.64874pt>
 File: ./images/bellcurve.jpg Graphic file (type jpg)
 <use ./images/bellcurve.jpg>
 Package pdftex.def Info: ./images/bellcurve.jpg  used on input line 11.
 (pdftex.def)             Requested size: 450.0pt x 228.03714pt.
-<./images/gauss2D.jpg, id=120, 1927.2pt x 976.64874pt>
+<./images/gauss2D.jpg, id=126, 1927.2pt x 976.64874pt>
 File: ./images/gauss2D.jpg Graphic file (type jpg)
 <use ./images/gauss2D.jpg>
 Package pdftex.def Info: ./images/gauss2D.jpg  used on input line 18.
@@ -836,41 +837,41 @@ Package pdftex.def Info: ./images/gauss2D.jpg  used on input line 18.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 32.
  [19 <./images/gauss2D.jpg>]) (litreview/clustering.tex
-<./images/toyCar.jpg, id=132, 1036.87375pt x 739.76375pt>
+<./images/toyCar.jpg, id=138, 1036.87375pt x 739.76375pt>
 File: ./images/toyCar.jpg Graphic file (type jpg)
 <use ./images/toyCar.jpg>
 Package pdftex.def Info: ./images/toyCar.jpg  used on input line 7.
 (pdftex.def)             Requested size: 220.0pt x 156.95784pt.
-<./images/toycarseg.jpg, id=133, 1036.87375pt x 739.76375pt>
+<./images/toycarseg.jpg, id=139, 1036.87375pt x 739.76375pt>
 File: ./images/toycarseg.jpg Graphic file (type jpg)
 <use ./images/toycarseg.jpg>
 Package pdftex.def Info: ./images/toycarseg.jpg  used on input line 12.
 (pdftex.def)             Requested size: 220.0pt x 156.95784pt.
  (litreview/kmeans.tex [20 <./images/toyCar.jpg> <./images/toycarseg.jpg>]
-<./images/kmeans_clusters.jpg, id=137, 562.1pt x 421.575pt>
+<./images/kmeans_clusters.jpg, id=143, 562.1pt x 421.575pt>
 File: ./images/kmeans_clusters.jpg Graphic file (type jpg)
 <use ./images/kmeans_clusters.jpg>
 Package pdftex.def Info: ./images/kmeans_clusters.jpg  used on input line 26.
 (pdftex.def)             Requested size: 300.0pt x 224.99683pt.
  [21]) (litreview/mog.tex
-<./images/histGauss.jpg, id=141, 562.1pt x 421.575pt>
+<./images/histGauss.jpg, id=148, 562.1pt x 421.575pt>
 File: ./images/histGauss.jpg Graphic file (type jpg)
 <use ./images/histGauss.jpg>
 Package pdftex.def Info: ./images/histGauss.jpg  used on input line 10.
 (pdftex.def)             Requested size: 215.0pt x 161.24869pt.
-<./images/hist_gauss_curve.jpg, id=142, 562.1pt x 421.575pt>
+<./images/hist_gauss_curve.jpg, id=149, 562.1pt x 421.575pt>
 File: ./images/hist_gauss_curve.jpg Graphic file (type jpg)
 <use ./images/hist_gauss_curve.jpg>
 Package pdftex.def Info: ./images/hist_gauss_curve.jpg  used on input line 15.
 (pdftex.def)             Requested size: 215.0pt x 161.24869pt.
  [22 <./images/kmeans_clusters.jpg>]
-<./images/mog.jpg, id=146, 562.1pt x 421.575pt>
+<./images/mog.jpg, id=153, 562.1pt x 421.575pt>
 File: ./images/mog.jpg Graphic file (type jpg)
 <use ./images/mog.jpg>
 Package pdftex.def Info: ./images/mog.jpg  used on input line 36.
 (pdftex.def)             Requested size: 450.0pt x 337.49846pt.
  [23 <./images/histGauss.jpg> <./images/hist_gauss_curve.jpg>]
-<./images/gauss_mix_scale.jpg, id=152, 1927.2pt x 976.64874pt>
+<./images/gauss_mix_scale.jpg, id=158, 1927.2pt x 976.64874pt>
 File: ./images/gauss_mix_scale.jpg Graphic file (type jpg)
 <use ./images/gauss_mix_scale.jpg>
 Package pdftex.def Info: ./images/gauss_mix_scale.jpg  used on input line 55.
@@ -882,7 +883,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
 ))) (design/design.tex [27]
 Chapter 3.
-<./images/design/overall_design.png, id=165, 514.92375pt x 194.22563pt>
+<./images/design/overall_design.png, id=172, 514.92375pt x 194.22563pt>
 File: ./images/design/overall_design.png Graphic file (type png)
 <use ./images/design/overall_design.png>
 Package pdftex.def Info: ./images/design/overall_design.png  used on input line 11.
@@ -890,7 +891,7 @@ Package pdftex.def Info: ./images/design/overall_design.png  used on input line 
 [28
 
 ] (design/detection/detection.tex
-<./images/design/detection/detection_design.png, id=169, 476.982pt x 180.675pt>
+<./images/design/detection/detection_design.png, id=176, 476.982pt x 180.675pt>
 File: ./images/design/detection/detection_design.png Graphic file (type png)
 <use ./images/design/detection/detection_design.png>
 Package pdftex.def Info: ./images/design/detection/detection_design.png  used on input line 7.
@@ -907,149 +908,192 @@ LaTeX Warning: Reference `fig:foreground_mask_filtered' on page 31 undefined on 
 LaTeX Warning: Reference `fig:foreground_mask_morphed' on page 31 undefined on input line 12.
 
 ) (design/detection/contours_bounding.tex [31]
-<./images/design/detection/bounding/mask_contours.png, id=180, 959.08313pt x 539.01375pt>
+<./images/design/detection/bounding/mask_contours.png, id=186, 959.08313pt x 539.01375pt>
 File: ./images/design/detection/bounding/mask_contours.png Graphic file (type png)
 <use ./images/design/detection/bounding/mask_contours.png>
 Package pdftex.def Info: ./images/design/detection/bounding/mask_contours.png  used on input line 8.
 (pdftex.def)             Requested size: 364.19667pt x 204.6793pt.
 ) (design/detection/tracking.tex
 
-LaTeX Warning: Reference `fig:centroids' on page 32 undefined on input line 3.
+LaTeX Warning: Reference `subsection:calibration' on page 32 undefined on input line 3.
 
-[32 <./images/design/detection/bounding/mask_contours.png>]) (design/detection/counting.tex)
-<./images/design/detection/subtractor/original_frame.png, id=185, 962.09438pt x 541.27219pt>
+[32 <./images/design/detection/bounding/mask_contours.png>]
+<./images/design/detection/tracking/mask_centroids.png, id=191, 960.58875pt x 537.50812pt>
+File: ./images/design/detection/tracking/mask_centroids.png Graphic file (type png)
+<use ./images/design/detection/tracking/mask_centroids.png>
+Package pdftex.def Info: ./images/design/detection/tracking/mask_centroids.png  used on input line 8.
+(pdftex.def)             Requested size: 364.19667pt x 203.7877pt.
+ [33]) (design/detection/counting.tex [34 <./images/design/detection/tracking/mask_centroids.png>]
+<./images/design/detection/counting/original_count.png, id=200, 959.83594pt x 543.53062pt>
+File: ./images/design/detection/counting/original_count.png Graphic file (type png)
+<use ./images/design/detection/counting/original_count.png>
+Package pdftex.def Info: ./images/design/detection/counting/original_count.png  used on input line 12.
+(pdftex.def)             Requested size: 191.20169pt x 108.27292pt.
+
+Overfull \hbox (11.74988pt too wide) in paragraph at lines 12--14
+ [][]\OT1/cmr/m/n/12 | 
+ []
+
+
+Underfull \hbox (badness 3547) in paragraph at lines 14--14
+[][]|\OT1/cmr/m/n/10.95 Count thresh-old lines, bound-ing
+ []
+
+
+Underfull \hbox (badness 3701) in paragraph at lines 14--14
+\OT1/cmr/m/n/10.95 boxes and cen-troids on orig-i-nal
+ []
+
+<./images/design/detection/counting/mask_count.png, id=201, 953.81343pt x 540.51938pt>
+File: ./images/design/detection/counting/mask_count.png Graphic file (type png)
+<use ./images/design/detection/counting/mask_count.png>
+Package pdftex.def Info: ./images/design/detection/counting/mask_count.png  used on input line 17.
+(pdftex.def)             Requested size: 191.20169pt x 108.34938pt.
+
+Underfull \hbox (badness 3219) in paragraph at lines 19--19
+[][]|\OT1/cmr/m/n/10.95 Count thresh-old lines, bound-ing
+ []
+
+[35 <./images/design/detection/counting/original_count.png> <./images/design/detection/counting/mask_count.png>]
+<./images/design/detection/counting/original_speed.png, id=207, 953.81343pt x 537.50812pt>
+File: ./images/design/detection/counting/original_speed.png Graphic file (type png)
+<use ./images/design/detection/counting/original_speed.png>
+Package pdftex.def Info: ./images/design/detection/counting/original_speed.png  used on input line 34.
+(pdftex.def)             Requested size: 364.19667pt x 205.23941pt.
+)
+<./images/design/detection/subtractor/original_frame.png, id=208, 962.09438pt x 541.27219pt>
 File: ./images/design/detection/subtractor/original_frame.png Graphic file (type png)
 <use ./images/design/detection/subtractor/original_frame.png>
 Package pdftex.def Info: ./images/design/detection/subtractor/original_frame.png  used on input line 22.
 (pdftex.def)             Requested size: 204.85846pt x 115.248pt.
-<./images/design/detection/subtractor/foreground_mask.png, id=186, 963.6pt x 544.28343pt>
+<./images/design/detection/subtractor/foreground_mask.png, id=209, 963.6pt x 544.28343pt>
 File: ./images/design/detection/subtractor/foreground_mask.png Graphic file (type png)
 <use ./images/design/detection/subtractor/foreground_mask.png>
 Package pdftex.def Info: ./images/design/detection/subtractor/foreground_mask.png  used on input line 28.
 (pdftex.def)             Requested size: 204.85846pt x 115.70645pt.
-<./images/design/detection/subtractor/foreground_thresholded.png, id=187, 957.5775pt x 539.76656pt>
+<./images/design/detection/subtractor/foreground_thresholded.png, id=210, 957.5775pt x 539.76656pt>
 File: ./images/design/detection/subtractor/foreground_thresholded.png Graphic file (type png)
 <use ./images/design/detection/subtractor/foreground_thresholded.png>
 Package pdftex.def Info: ./images/design/detection/subtractor/foreground_thresholded.png  used on input line 34.
 (pdftex.def)             Requested size: 204.85846pt x 115.47101pt.
-<./images/design/detection/morphology/foreground_mask_filtered.png, id=188, 963.6pt x 542.025pt>
+<./images/design/detection/morphology/foreground_mask_filtered.png, id=211, 963.6pt x 542.025pt>
 File: ./images/design/detection/morphology/foreground_mask_filtered.png Graphic file (type png)
 <use ./images/design/detection/morphology/foreground_mask_filtered.png>
 Package pdftex.def Info: ./images/design/detection/morphology/foreground_mask_filtered.png  used on input line 39.
 (pdftex.def)             Requested size: 204.85846pt x 115.22633pt.
-<./images/design/detection/morphology/rect_3.png, id=189, 956.82469pt x 539.01375pt>
+<./images/design/detection/morphology/rect_3.png, id=212, 956.82469pt x 539.01375pt>
 File: ./images/design/detection/morphology/rect_3.png Graphic file (type png)
 <use ./images/design/detection/morphology/rect_3.png>
 Package pdftex.def Info: ./images/design/detection/morphology/rect_3.png  used on input line 44.
 (pdftex.def)             Requested size: 204.85846pt x 115.40044pt.
-<./images/design/detection/bounding/mask_bound.png, id=190, 959.08313pt x 542.025pt>
+<./images/design/detection/bounding/mask_bound.png, id=213, 959.08313pt x 542.025pt>
 File: ./images/design/detection/bounding/mask_bound.png Graphic file (type png)
 <use ./images/design/detection/bounding/mask_bound.png>
 Package pdftex.def Info: ./images/design/detection/bounding/mask_bound.png  used on input line 50.
 (pdftex.def)             Requested size: 204.85846pt x 115.7722pt.
- (design/detection/calibration.tex [33] [34 <./images/design/detection/subtractor/original_frame.png> <./images/design/detection/subtractor/foreground_mask.png> <./images/design/detection/subtractor/foreground_thresholded.png> <./images/design/detection/morphology/foreground_mask_filtered.png> <./images/design/detection/morphology/rect_3.png> <./images/design/detection/bounding/mask_bound.png>]
-<./images/design/detection/calibration/rect_3_edit.png, id=202, 956.82469pt x 539.01375pt>
+ (design/detection/calibration.tex [36 <./images/design/detection/counting/original_speed.png>] [37 <./images/design/detection/subtractor/original_frame.png> <./images/design/detection/subtractor/foreground_mask.png> <./images/design/detection/subtractor/foreground_thresholded.png> <./images/design/detection/morphology/foreground_mask_filtered.png> <./images/design/detection/morphology/rect_3.png> <./images/design/detection/bounding/mask_bound.png>]
+<./images/design/detection/calibration/rect_3_edit.png, id=226, 956.82469pt x 539.01375pt>
 File: ./images/design/detection/calibration/rect_3_edit.png Graphic file (type png)
 <use ./images/design/detection/calibration/rect_3_edit.png>
-Package pdftex.def Info: ./images/design/detection/calibration/rect_3_edit.png  used on input line 13.
+Package pdftex.def Info: ./images/design/detection/calibration/rect_3_edit.png  used on input line 14.
 (pdftex.def)             Requested size: 191.20169pt x 107.71036pt.
-<./images/design/detection/calibration/ellipse_3_edit.png, id=203, 959.08313pt x 540.51938pt>
+<./images/design/detection/calibration/ellipse_3_edit.png, id=227, 959.08313pt x 540.51938pt>
 File: ./images/design/detection/calibration/ellipse_3_edit.png Graphic file (type png)
 <use ./images/design/detection/calibration/ellipse_3_edit.png>
-Package pdftex.def Info: ./images/design/detection/calibration/ellipse_3_edit.png  used on input line 18.
+Package pdftex.def Info: ./images/design/detection/calibration/ellipse_3_edit.png  used on input line 19.
 (pdftex.def)             Requested size: 191.20169pt x 107.75555pt.
-<./images/design/detection/morphology/ellipse_1.png, id=204, 961.34157pt x 542.025pt>
+<./images/design/detection/morphology/ellipse_1.png, id=228, 961.34157pt x 542.025pt>
 File: ./images/design/detection/morphology/ellipse_1.png Graphic file (type png)
 <use ./images/design/detection/morphology/ellipse_1.png>
-Package pdftex.def Info: ./images/design/detection/morphology/ellipse_1.png  used on input line 38.
+Package pdftex.def Info: ./images/design/detection/morphology/ellipse_1.png  used on input line 39.
 (pdftex.def)             Requested size: 136.57462pt x 76.99951pt.
 
-Overfull \hbox (8.53722pt too wide) in paragraph at lines 37--40
+Overfull \hbox (8.53722pt too wide) in paragraph at lines 38--41
  []|[]| 
  []
 
-<./images/design/detection/morphology/cross_1.png, id=205, 960.58875pt x 542.77782pt>
+<./images/design/detection/morphology/cross_1.png, id=229, 960.58875pt x 542.77782pt>
 File: ./images/design/detection/morphology/cross_1.png Graphic file (type png)
 <use ./images/design/detection/morphology/cross_1.png>
-Package pdftex.def Info: ./images/design/detection/morphology/cross_1.png  used on input line 42.
+Package pdftex.def Info: ./images/design/detection/morphology/cross_1.png  used on input line 43.
 (pdftex.def)             Requested size: 136.57462pt x 77.16443pt.
 
-Overfull \hbox (8.53722pt too wide) in paragraph at lines 41--44
+Overfull \hbox (8.53722pt too wide) in paragraph at lines 42--45
  []|[]| 
  []
 
-<./images/design/detection/morphology/rect_1.png, id=206, 961.34157pt x 539.76656pt>
+<./images/design/detection/morphology/rect_1.png, id=230, 961.34157pt x 539.76656pt>
 File: ./images/design/detection/morphology/rect_1.png Graphic file (type png)
 <use ./images/design/detection/morphology/rect_1.png>
-Package pdftex.def Info: ./images/design/detection/morphology/rect_1.png  used on input line 46.
+Package pdftex.def Info: ./images/design/detection/morphology/rect_1.png  used on input line 47.
 (pdftex.def)             Requested size: 136.57462pt x 76.67868pt.
 
-Overfull \hbox (8.53722pt too wide) in paragraph at lines 45--49
+Overfull \hbox (8.53722pt too wide) in paragraph at lines 46--50
  []|[]| 
  []
 
-<./images/design/detection/morphology/ellipse_3.png, id=207, 959.08313pt x 540.51938pt>
+<./images/design/detection/morphology/ellipse_3.png, id=231, 959.08313pt x 540.51938pt>
 File: ./images/design/detection/morphology/ellipse_3.png Graphic file (type png)
 <use ./images/design/detection/morphology/ellipse_3.png>
-Package pdftex.def Info: ./images/design/detection/morphology/ellipse_3.png  used on input line 51.
+Package pdftex.def Info: ./images/design/detection/morphology/ellipse_3.png  used on input line 52.
 (pdftex.def)             Requested size: 136.57462pt x 76.96707pt.
 
-Overfull \hbox (8.53722pt too wide) in paragraph at lines 50--53
+Overfull \hbox (8.53722pt too wide) in paragraph at lines 51--54
  []|[]| 
  []
 
-<./images/design/detection/morphology/cross_3.png, id=208, 960.58875pt x 539.01375pt>
+<./images/design/detection/morphology/cross_3.png, id=232, 960.58875pt x 539.01375pt>
 File: ./images/design/detection/morphology/cross_3.png Graphic file (type png)
 <use ./images/design/detection/morphology/cross_3.png>
-Package pdftex.def Info: ./images/design/detection/morphology/cross_3.png  used on input line 55.
+Package pdftex.def Info: ./images/design/detection/morphology/cross_3.png  used on input line 56.
 (pdftex.def)             Requested size: 136.57462pt x 76.6293pt.
 
-Overfull \hbox (8.53722pt too wide) in paragraph at lines 54--57
+Overfull \hbox (8.53722pt too wide) in paragraph at lines 55--58
  []|[]| 
  []
 
 File: ./images/design/detection/morphology/rect_3.png Graphic file (type png)
 <use ./images/design/detection/morphology/rect_3.png>
-Package pdftex.def Info: ./images/design/detection/morphology/rect_3.png  used on input line 59.
+Package pdftex.def Info: ./images/design/detection/morphology/rect_3.png  used on input line 60.
 (pdftex.def)             Requested size: 136.57462pt x 76.93362pt.
 
-Overfull \hbox (8.53722pt too wide) in paragraph at lines 58--62
+Overfull \hbox (8.53722pt too wide) in paragraph at lines 59--63
  []|[]| 
  []
 
-<./images/design/detection/morphology/ellipse_5.png, id=209, 962.09438pt x 540.51938pt>
+<./images/design/detection/morphology/ellipse_5.png, id=233, 962.09438pt x 540.51938pt>
 File: ./images/design/detection/morphology/ellipse_5.png Graphic file (type png)
 <use ./images/design/detection/morphology/ellipse_5.png>
-Package pdftex.def Info: ./images/design/detection/morphology/ellipse_5.png  used on input line 64.
+Package pdftex.def Info: ./images/design/detection/morphology/ellipse_5.png  used on input line 65.
 (pdftex.def)             Requested size: 136.57462pt x 76.72789pt.
 
-Overfull \hbox (8.53722pt too wide) in paragraph at lines 63--66
+Overfull \hbox (8.53722pt too wide) in paragraph at lines 64--67
  []|[]| 
  []
 
-<./images/design/detection/morphology/cross_5.png, id=210, 964.35281pt x 535.2497pt>
+<./images/design/detection/morphology/cross_5.png, id=234, 964.35281pt x 535.2497pt>
 File: ./images/design/detection/morphology/cross_5.png Graphic file (type png)
 <use ./images/design/detection/morphology/cross_5.png>
-Package pdftex.def Info: ./images/design/detection/morphology/cross_5.png  used on input line 68.
+Package pdftex.def Info: ./images/design/detection/morphology/cross_5.png  used on input line 69.
 (pdftex.def)             Requested size: 136.57462pt x 75.80017pt.
 
-Overfull \hbox (8.53722pt too wide) in paragraph at lines 67--70
+Overfull \hbox (8.53722pt too wide) in paragraph at lines 68--71
  []|[]| 
  []
 
-<./images/design/detection/morphology/rect_5.png, id=211, 963.6pt x 538.26094pt>
+<./images/design/detection/morphology/rect_5.png, id=235, 963.6pt x 538.26094pt>
 File: ./images/design/detection/morphology/rect_5.png Graphic file (type png)
 <use ./images/design/detection/morphology/rect_5.png>
-Package pdftex.def Info: ./images/design/detection/morphology/rect_5.png  used on input line 72.
+Package pdftex.def Info: ./images/design/detection/morphology/rect_5.png  used on input line 73.
 (pdftex.def)             Requested size: 136.57462pt x 76.2841pt.
 
-Overfull \hbox (8.53722pt too wide) in paragraph at lines 71--75
+Overfull \hbox (8.53722pt too wide) in paragraph at lines 72--76
  []|[]| 
  []
 
-))) (thesis.bbl [35 <./images/design/detection/calibration/rect_3_edit.png> <./images/design/detection/calibration/ellipse_3_edit.png>] [36 <./images/design/detection/morphology/ellipse_1.png> <./images/design/detection/morphology/cross_1.png> <./images/design/detection/morphology/rect_1.png> <./images/design/detection/morphology/ellipse_3.png> <./images/design/detection/morphology/cross_3.png> <./images/design/detection/morphology/ellipse_5.png> <./images/design/detection/morphology/cross_5.png> <./images/design/detection/morphology/rect_5.png>] [37
+))) (thesis.bbl [38 <./images/design/detection/calibration/rect_3_edit.png> <./images/design/detection/calibration/ellipse_3_edit.png> <./images/design/detection/morphology/ellipse_1.png> <./images/design/detection/morphology/cross_1.png> <./images/design/detection/morphology/rect_1.png> <./images/design/detection/morphology/ellipse_3.png> <./images/design/detection/morphology/cross_3.png> <./images/design/detection/morphology/ellipse_5.png> <./images/design/detection/morphology/cross_5.png> <./images/design/detection/morphology/rect_5.png>] [39
 
-]) [38] (thesis.aux)
+]) [40] (thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1058,17 +1102,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17125 strings out of 492484
- 319023 string characters out of 3122506
- 376149 words of memory out of 3000000
- 21179 multiletter control sequences out of 15000+200000
+ 17166 strings out of 492484
+ 320716 string characters out of 3122506
+ 376208 words of memory out of 3000000
+ 21212 multiletter control sequences out of 15000+200000
  545998 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,16n,75p,1994b,545s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,16n,75p,2577b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (46 pages, 4056974 bytes).
+Output written on thesis.pdf (50 pages, 5752463 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
+ 308 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 256 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 276 words of extra memory for PDF output out of 10000 (max. 10000000)
 
