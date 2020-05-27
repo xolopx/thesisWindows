@@ -67,11 +67,11 @@ class CVModule:
 
         # Threshold out shadows. (They're darker colored than pure foreground).
         fgMask[fgMask < 240] = 0
-        if (self.frameCount) == 100:
-            cv.imshow("1", fgMask)
-            # cv.imshow("2", fgMask2)
-            # cv.imshow("3", fgMask3)
-            # cv.waitKey(0)
+        # if (self.frameCount) == 100:
+        #     cv.imshow("1", fgMask)
+        #     # cv.imshow("2", fgMask2)
+        #     # cv.imshow("3", fgMask3)
+        #     # cv.waitKey(0)
         # Apply median blur filter to remove salt and pepper noise.
         fgMask = cv.medianBlur(fgMask,7)
 
@@ -241,7 +241,7 @@ class CVModule:
             #     cv.waitKey(0)
 
             # Get centroids from the bounding boxes.                *** LOOK INTO WHAT THIS METHOD IS DOING AND IF IT'S NECESSARY ***
-            objects, deregID = self.cenTrack.update(boundingRect)
+            objects, deregID = self.cenTrack.update(boundingRect, self.frameCount)
             # Update the object positions and vehicle statistics.   *** MAYBE WANT TO SEPARATE THIS INTO TWO METHODS ***
             self.update_tracks()
             # Convert foreground mask back to a 3-channel image.
