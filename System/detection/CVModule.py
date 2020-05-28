@@ -39,7 +39,7 @@ class CVModule:
         self.frameCount = 0                                         # Number of frames of video processed.
         self.video = inputVideo                                     # Video from which to extract information.
         self.subtractor = cv.createBackgroundSubtractorMOG2(
-            history=500, detectShadows=True)                        # Subtractor for procuring the input video's foreground objs.
+            history=250, detectShadows=True)                        # Subtractor for procuring the input video's foreground objs.
         self.width = self.video.get(cv.CAP_PROP_FRAME_WIDTH)        # Width of input video
         self.height = self.video.get(cv.CAP_PROP_FRAME_HEIGHT)      # Height of input video
         self.areaThresh = self.height*self.width/500                # Minimum area a contour must have to count as an object.
@@ -113,17 +113,17 @@ class CVModule:
             # cv.rectangle(image, (int(boxes[i][0]), int(boxes[i][1])), (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
         for (objectID, centroid) in self.cenTrack.centroids.items():
             text = "ID {}".format(objectID)
-            # cv.putText(image, text, (centroid[0] - 10, centroid[1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-            # cv.circle(image, (centroid[0], centroid[1]), 4, (0,355, 0),-1)
+            cv.putText(image, text, (centroid[0] - 10, centroid[1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            cv.circle(image, (centroid[0], centroid[1]), 4, (0,355, 0),-1)
 
         # Draw Rectangle
-        imcopy = image.copy()
-        cv.rectangle(imcopy,(0, 380), (1280, 719), (255, 1, 255), -1)
-        alpha = 0.5
-        cv.addWeighted(imcopy, alpha, image, 1- alpha, 0, image)
-        if self.frameCount == 100:
-            cv.imshow("Image", image)
-            cv.waitKey(0)
+        # imcopy = image.copy()
+        # cv.rectangle(imcopy,(0, 380), (1280, 719), (255, 1, 255), -1)
+        # alpha = 0.5
+        # cv.addWeighted(imcopy, alpha, image, 1- alpha, 0, image)
+        # if self.frameCount == 100:
+        #     cv.imshow("Image", image)
+        #     cv.waitKey(0)
 
 
         # Draw lines
@@ -238,6 +238,14 @@ class CVModule:
             mask = self.subtractor.apply(frame)
             # Apply morphology, threshing and median filter.
             mask = self.filter_frame(mask)
+
+            cv.imshow("original", frame)
+            cv.imshow("mask", mask)
+
+            # if self.frameCount == 1290 or self.frameCount == 1530:
+            #     cv.imshow("frame", frame)
+            #     cv.imshow("mask", mask)
+            #     cv.waitKey(0)
             # Get bounding boxes for the foreground objects.
             contours, boundingRect = define_contours(mask)
 
@@ -261,7 +269,7 @@ class CVModule:
             # Stitch together original image and foreground mask for display.
             combined = np.hstack((frame, mask))
             # Show the result.
-            cv.imshow("Original", combined)
+            # cv.imshow("Original", combined)
             # Updating the frame shared with Flask app.
             globals.image = combined.copy()
             # Increment the number of frames.
@@ -276,7 +284,7 @@ class CVModule:
             timerStart = self.log_stats(timerStart, 3)
 
             # *** TESTING: FOR CONTROLLING SPEED OF VIDEO AND PAUSING VIDEO ***
-            key = cv.waitKey(30)
+            key = cv.waitKey(33)
             if key == 27:
                 break
             if key == ord('n'):
