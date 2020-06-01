@@ -1,7 +1,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces (\subref {fig:fig1}) A Simple 8-bit Image \nobreakspace {}(\subref {fig:fig2}) Array Representation of Image.\relax }}{5}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Surface Plot of Figure 2.1\hbox {}a\hbox {}\relax }}{5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Surface Plot of Figure \G@refundefinedtrue \text {\normalfont \bfseries ??}\GenericWarning { }{LaTeX Warning: Reference `fig:2Darray' on page 5 undefined}\G@refundefinedtrue \text {\normalfont \bfseries ??}\GenericWarning { }{LaTeX Warning: Reference `sub@fig:fig1' on page 5 undefined}\relax }}{5}%
 \contentsline {figure}{\numberline {2.3}{\ignorespaces General Form of a Linear Filter\relax }}{6}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Sobel Filters\relax }}{7}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Application of Sobel filters to exagerate lines.\relax }}{7}%
@@ -24,12 +24,22 @@
 \contentsline {figure}{\numberline {2.22}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{24}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Overall System Design\relax }}{28}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Subprocess that comprise the detection subsystem.\relax }}{28}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Contours outlining foregroung mask objects.\relax }}{31}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Centroids plotted over foreground objects.\relax }}{32}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Vehicle count threshold lines visualized on traffic setting and foreground mask.\relax }}{33}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Visualization of speed measurement region.\relax }}{34}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Stages in the computer vision detection process.\relax }}{35}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Adaptation of stationery vehicles in GMM background cluster. Video by Karol Majek\relax }}{37}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Comparison of morphological closure using a 7x7 rectangular and elliptical structuring element for 3 iterations.\relax }}{38}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Morphological closing using different 7x7 structuring elements and iterations.\relax }}{38}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Raspberry Pi 4 and Pi Cam connected.\relax }}{29}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Subprocess that comprise the detection subsystem.\relax }}{30}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Contours outlining foregroung mask objects.\relax }}{32}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Centroids plotted over foreground objects.\relax }}{34}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Vehicle count threshold lines visualized on traffic setting and foreground mask.\relax }}{35}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Visualization of speed measurement region.\relax }}{36}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Stages in the computer vision detection process.\relax }}{37}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Adaptation of stationery vehicles in GMM background cluster. Images by Karol Majek\relax }}{38}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Comparison of morphological closure using a 7x7 rectangular and elliptical structuring element for 3 iterations.\relax }}{40}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Morphological closing using different 7x7 structuring elements and iterations.\relax }}{40}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Bounding boxes prescribed to irregular shaped blobs.\relax }}{41}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Comparison of centroid generation with and without consolidating centroids based on distance.\relax }}{42}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Entity Relationship Diagram of the system database.\relax }}{45}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces \relax }}{47}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces \relax }}{47}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces \relax }}{47}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces \relax }}{47}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }

@@ -109,8 +109,8 @@ class CVModule:
         """
 
         # Draw on the bounding boxes.
-        # for i in range(len(boxes)):
-            # cv.rectangle(image, (int(boxes[i][0]), int(boxes[i][1])), (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
+        for i in range(len(boxes)):
+            cv.rectangle(image, (int(boxes[i][0]), int(boxes[i][1])), (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
         for (objectID, centroid) in self.cenTrack.centroids.items():
             text = "ID {}".format(objectID)
             cv.putText(image, text, (centroid[0] - 10, centroid[1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
@@ -128,23 +128,23 @@ class CVModule:
 
         # Draw lines
         # cv.line(image, (0, 340), (640, 340), (255, 1, 255), 2)
-        cv.line(image, (0, 380), (1280, 380), (255, 1, 255), 2)
+        # cv.line(image, (0, 380), (1280, 380), (255, 1, 255), 2)
 
 
 
         # Draw on counts
-        textUp = "Up {}".format(self.countUp)
-        textDown = "Down {}".format(self.countDown)
-        cv.putText(image, textUp, (50, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
-        cv.putText(image, textDown, (500, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+        # textUp = "Up {}".format(self.countUp)
+        # textDown = "Down {}".format(self.countDown)
+        # cv.putText(image, textUp, (50, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+        # cv.putText(image, textDown, (500, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
 
 
 
         # Add timestamp to the frames.
-        timestamp = datetime.now()
-        cv.putText(image, timestamp.strftime(
-            "%A %d %B %Y %I:%M:%S%p"), (10, image.shape[0] - 10),
-                   cv.FONT_HERSHEY_SIMPLEX, 0.35, (6, 64, 7), 1)
+        # timestamp = datetime.now()
+        # cv.putText(image, timestamp.strftime(
+        #     "%A %d %B %Y %I:%M:%S%p"), (10, image.shape[0] - 10),
+        #            cv.FONT_HERSHEY_SIMPLEX, 0.35, (6, 64, 7), 1)
 
 
 
@@ -224,7 +224,7 @@ class CVModule:
          -
         :return:
         """
-        # self.train_subtractor()         # Initially, train the subtractor.
+        self.train_subtractor()         # Initially, train the subtractor.
         # Initializing a timer that is used to measure if a statistics interval has passed.
         timerStart = datetime.now()
         # # Make sure the node is in the database. *** HANDLED IN MAIN ***
@@ -238,23 +238,8 @@ class CVModule:
             mask = self.subtractor.apply(frame)
             # Apply morphology, threshing and median filter.
             mask = self.filter_frame(mask)
-
-            cv.imshow("original", frame)
-            cv.imshow("mask", mask)
-
-            # if self.frameCount == 1290 or self.frameCount == 1530:
-            #     cv.imshow("frame", frame)
-            #     cv.imshow("mask", mask)
-            #     cv.waitKey(0)
             # Get bounding boxes for the foreground objects.
             contours, boundingRect = define_contours(mask)
-
-            # if self.frameCount == 100:
-            #     im_contours = cv.cvtColor(mask, cv.COLOR_RGB2BGR)
-            #     cv.drawContours(im_contours,contours,-1, (252, 10, 220), 2)
-            #     cv.imshow("contours",im_contours)
-            #     cv.waitKey(0)
-
             # Get centroids from the bounding boxes.                *** LOOK INTO WHAT THIS METHOD IS DOING AND IF IT'S NECESSARY ***
             objects, deregID = self.cenTrack.update(boundingRect, self.frameCount)
             # Update the object positions and vehicle statistics.   *** MAYBE WANT TO SEPARATE THIS INTO TWO METHODS ***
@@ -263,9 +248,15 @@ class CVModule:
             mask = cv.cvtColor(mask, cv.COLOR_GRAY2RGB)
             # Draw graphics onto mask
             self.draw_info(mask, boundingRect)
-
             # Draw graphics onto original frame
             self.draw_info(frame, boundingRect)
+
+            cv.imshow("frame", frame)
+
+            if self.frameCount == 100:
+                cv.imshow("mask", mask)
+                cv.waitKey(0)
+
             # Stitch together original image and foreground mask for display.
             combined = np.hstack((frame, mask))
             # Show the result.

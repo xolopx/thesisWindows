@@ -12,26 +12,26 @@ The shadows parameter is a boolean setting that tells the model if a cluster for
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.5\linewidth}
-        \centering\includegraphics[width = 0.45\textwidth]{design/detection/calibration/original}
+        \centering\includegraphics[width = \textwidth]{design/detection/calibration/original}
         \caption{}
         \label{fig:}
     \end{subfigure}%
     \begin{subfigure}[b]{0.5\linewidth}
-        \centering\includegraphics[width = 0.45\textwidth]{design/detection/calibration/mask}
+        \centering\includegraphics[width = \textwidth]{design/detection/calibration/mask}
         \caption{}
         \label{fig:}
     \end{subfigure}
     \begin{subfigure}[b]{0.5\linewidth}
-        \centering\includegraphics[width = 0.45\textwidth]{design/detection/calibration/original_adapted}
+        \centering\includegraphics[width = \textwidth]{design/detection/calibration/original_adapted}
         \caption{}
 		\label{fig:}
     \end{subfigure}%
     	\begin{subfigure}[b]{0.5\linewidth}
-        \centering\includegraphics[width = 0.45\textwidth]{design/detection/calibration/mask_adapted}
+        \centering\includegraphics[width = \textwidth]{design/detection/calibration/mask_adapted}
         \caption{}
         \label{fig:}
     \end{subfigure}
-    \caption{Adaptation of stationery vehicles in GMM background cluster. Video by Karol Majek}
+    \caption{Adaptation of stationery vehicles in GMM background cluster. Images by Karol Majek}
     \label{fig:cluster_adaptation}
 \end{figure}
 
@@ -121,4 +121,46 @@ To find the optimal morphological structuring element shape and size, and the nu
 \subsubsection{Bounding and Contours}
 
 
-It's important yoooo....
+In order to reject foreground objects that are too large or small to be a vehicle a bounding box is given only to those blobs which satisfy that size constraint. Width and height are calculated based on pixels at the extremes of a foreground object's contour. The desire therefore is to select dimension ranges that permit the most vehicles and reject the most anomolous blobs that didn't get clean up in previous processes. This condition means that in camera setup where a vehicle's perceived size changed as it moves toward and away from the camera there will be a specific region where they satisfy the size range. Part of the calibration of this system is to select a size range that matches the region of interest where the best foreground blob separation and blob consolidation occurs, furthermore the size range should be designed to admit the most true vehicles and reject the most anomalies. The way that width and height are calculated in this method suits the irregular shaped blobs that former processes yield as it look at only at shape extremities therefore accommodating imperfect background subtraction. In Figure \ref{fig:irreg_blob} though some of the foreground objects that own a bounding box are not clearly shaped like a vehicle their extremities at least match the size of a vehicle.
+
+
+\begin{figure}[H]
+    \centering
+    \centering\includegraphics[width = 0.8\textwidth]{design/detection/calibration/irreg_blob_bound}
+    \caption{Bounding boxes prescribed to irregular shaped blobs.}
+    \label{fig:irreg_blob}
+  \end{figure}
+
+  \subsubsection{Object Tracking}
+
+  Object tracking relies on centroids to observe the history of an object's movement. This method can only be applied in the region of an image where a centroid has been consistently tracked, which is mostly a concern for node setups where the vehicle moves toward and away from the camera distorting its perceived size. Parameters of concern when calibrating object tracking is how close a centroid can be to another before it is consolidated into a single centroid and how long a centroid can be missing for before it should be dismissed. In situations where centroids are closer than the minimum dimensions that are used to recognise a vehicle it can be assumed that some fracturing of the vehicles foreground mask has occurred generating multiple centroids and so those fracture centroids are consolidated into one. Figure \ref{fig:centroids_consolidation} compares two centroid allocations for the same image where one consolidate centroids and the other doesn't. In Figure \ref{fig:consolidateA} the number of centroids is greater thus consuming more computational power and increasing the number of false positive counts. 
+
+  Determination of how long a centroid should be stored while missing is dependent on how frequently vehicles are occluded and for how long. In a situation where there was an obstacle blocking vision of the road for a period then the amount of time a centroid should be stored is proportional to how long a vehicle is occluded by that obstacle on average. If a vehicle's centroid is dismissed erronoesouly it is not terribly disruptive so long as the vehicle is recognised again before it is counted. 
+
+  \begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+              \centering\includegraphics[width = \textwidth]{design/detection/calibration/mask_noconsolidate}
+              \captionsetup{format=hang}
+              \caption{Centroid tracking with no consolidation distance set (16 centroids).}
+              \label{fig:consolidateA}
+		\label{fig:}
+    	\end{subfigure}
+    	\begin{subfigure}[b]{0.45\linewidth}
+              \centering\includegraphics[width = \textwidth]{design/detection/calibration/mask_consolidate}
+              \captionsetup{format=hang}
+      		\caption{Centroid tracking with consolidation distance set (20 centroids).}
+       		\label{fig:consolidateB}
+        \end{subfigure}
+        \captionsetup{format=hang}
+    	\caption{Comparison of centroid generation with and without consolidating centroids based on distance.}
+    	\label{fig:centroids_consolidation}
+\end{figure}
+
+\subsubsection{Speed Estimation and Counting}
+
+The calibration of these two components is critical to the utility of the overall system because if the data that is being collected is not accurate then the system is redundant. Central to this calibration process is the selection of a \emph{region of interest} which is predicated on an area of the image that is returning the best vehicle recognition, i.e. the best vehicle mask separation and consolidation. For vehicle counting a line is placed within the region of interest where if a tracked centroid passes over the line it is counted. Were this line to be placed in a region where many false vehicle recognitions occurred then it would incur many false positive counts and likewise were it placed where vehicles are not recognised it would incur false negatives. This line is calibrated by visually analysing where centroids are being most consistently and correctly tracked and verified by comparing manual counts of traffic in test videos against the counts obtained by the system. 
+
+The speed estimation calibration is two fold, first a conversion from pixels to metres must be determined by knowing some dimnesion of an object in the frame in the realworld and secondly the region over which speed is measured should permit only centroids that have been consistently tracked throughout. 
+
+  

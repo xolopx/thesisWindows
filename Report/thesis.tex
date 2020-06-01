@@ -1,5 +1,11 @@
 \documentclass[a4paper,11pt,twoside]{report}
-% \usepackage[35-48]{pagesel}
+
+% \usepackage[53- 54]{pagesel}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{hhline}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
 \include{thesis.preamble}
 \setlength{\parskip}{1em}
@@ -38,9 +44,7 @@
 \bibliography{bibliography/bibliography}
 
 
-% appendices come here
-
-% \input{appendices/appendix}
+\input{appendices/appendix}
 
 
 \end{document}
