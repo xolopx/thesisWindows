@@ -1,0 +1,16 @@
+history = 500
+shadows = True
+med_size = 3
+morph_shape = None
+morph_size = 0
+morph_iter = 0
+width = 0
+height = 0
+consolidation_distance = 0
+disappeared_duration = 0
+count_line_p1 = (1,1)
+count_line_p2 = (2,2)
+speed_line1_p1 = (3,3)
+speed_line1_p2 = (4,4)
+speed_line2_p1 = (5,5)
+speed_line2_p2 = (6,6)
