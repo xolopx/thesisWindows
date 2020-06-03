@@ -1,54 +1,54 @@
-\section{Computer Vision}
+\section{Vehicle Detection}
 
-The computer vision subsystem is a software component that is designed to recognise and track vehicles in images in order to count them and estimate their speed, henceforth to be referred to as the \emph{detection} component of the system. Each time an image is processed by the detection algorithm several subprocesses are performed in order to manipulate the original image into a state where vehicles have been isolated. These subprocesses can be seen in Figure \ref{fig:detection_design}. The vehicle tracking subprocess was largely influenced by the work of Adrian Rosebrock \cite{adrian_rosebrock_simple_object_tracking}\cite{adrian_rosebrock_vehicle_tracking} of PyImageSearch and the vehicle segmentation subprocess was influenced by the work of Andrey Nikishaev \cite{andrey_nikishaev_traffic_counting}. Much of the functionality of the detection system is provided by the Python open source computer vision library, OpenCV \cite{opencv}.
+The vehicle detection subsystem is a software algorithm designed to recognize and track vehicles from video in order to count them and estimate their speed. The algorithm is comprised of a number of sub-processes which are outlined in Figure \ref{fig:detection_design}. 
 
+The \emph{vehicle tracking} sub-process drew largely on the work of Adrian Rosebrock \cite{adrian_rosebrock_simple_object_tracking}\cite{adrian_rosebrock_vehicle_tracking} of PyImageSearch and the \emph{subtraction} and \emph{morphological} sub-processes were influenced by Andrey Nikishaev's tutorial on traffic counting \cite{andrey_nikishaev_traffic_counting}. Much of the functionality of the detection system is provided by the open source computer vision library, OpenCV \cite{opencv}.
+
+The nature of this algorithm and the image processing techniques used is such that each sub-process requires some calibration to achieve the best results for a given setting. The variability of lighting and camera perspective in particular can completely change the accuracy of the algorithm's results and hence for each subsection the necessary calibrations are detailed.
 
 \begin{figure}[H]
     \includegraphics[width=0.9\columnwidth]{design/detection/detection_design}
-    \caption{Subprocess that comprise the detection subsystem.}
+    \caption{Sub-process that comprise the detection subsystem.}
     \label{fig:detection_design}
 \end{figure}
 
 
 \input{design/detection/background_subtraction}
-\input{design/detection/morphology_filtering}
-\input{design/detection/contours_bounding}
-\input{design/detection/tracking}
-\input{design/detection/counting}
 
-\begin{figure*}[htbp]
+
+\begin{figure}[H]
     \begin{tabular}{c c}
-        \begin{subfigure}[b]{0.45\textwidth}
+        \begin{subfigure}[b]{0.4\textwidth}
             \includegraphics[width=\textwidth]{design/detection/subtractor/original_frame}
             \captionsetup{format = hang}
             \caption{Img: Andrey Nikishaev.}
             \label{fig:original_frame}
         \end{subfigure} & 
-        \begin{subfigure}[b]{0.45\textwidth}
+        \begin{subfigure}[b]{0.4\textwidth}
             \includegraphics[width=\textwidth]{design/detection/subtractor/foreground_mask}
             \captionsetup{format = hang}
             \caption{Background subtractor output.}
             \label{fig:foreground_mask_unfiltered}
         \end{subfigure} \\
-        \begin{subfigure}[b]{0.45\textwidth}
+        \begin{subfigure}[b]{0.4\textwidth}
             \includegraphics[width=\textwidth]{design/detection/subtractor/foreground_thresholded}
             \captionsetup{format = hang}
             \caption{Shadows thresholded.}
             \label{fig:thresh_shadow}
         \end{subfigure} &
-        \begin{subfigure}[b]{0.45\textwidth}
+        \begin{subfigure}[b]{0.4\textwidth}
             \includegraphics[width=\textwidth]{design/detection/morphology/foreground_mask_filtered}
             \captionsetup{format = hang}
             \caption{Median Filtered.}
             \label{fig:mask_saltnpepper}
         \end{subfigure} \\
-        \begin{subfigure}[b]{0.45\textwidth}
+        \begin{subfigure}[b]{0.4\textwidth}
             \includegraphics[width=\textwidth]{design/detection/morphology/rect_3}
             \captionsetup{format = hang}
             \caption{Morphologically altered.}
             \label{fig:morphed}
         \end{subfigure} &
-        \begin{subfigure}[b]{0.45\textwidth}
+        \begin{subfigure}[b]{0.4\textwidth}
             \includegraphics[width=\textwidth]{design/detection/bounding/mask_bound}
             \captionsetup{format = hang}
             \caption{Bounding Boxes.}
@@ -58,7 +58,10 @@ The computer vision subsystem is a software component that is designed to recogn
     \captionsetup{format=hang}
     \caption{Stages in the computer vision detection process.}
     \label{fig:example_subtraction}
-\end{figure*}
+\end{figure}
 
 
-\input{design/detection/calibration}
+\input{design/detection/morphology_filtering}
+\input{design/detection/contours_bounding}
+\input{design/detection/tracking}
+\input{design/detection/counting}

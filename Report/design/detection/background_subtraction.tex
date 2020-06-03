@@ -1,5 +1,41 @@
 \subsection{Background Subtraction}
 \label{subsection:training}
-The background subtractor is reposible for determining which pixels are background and which are foreground objects. The subtractor uses a Mixture of Gaussian model (section \ref{subsection:mog}) to cluster the pixels into those two sets - background and forground. Initially the model is 'trained' on several hundred images - a few seconds of video - so that it's immediate use yields the most accuracte statistics. The software implemntation of a Gaussian mixture model used is OpenCV's BackgroundSubtractorMOG2 function \cite{opencv_mog2}. This implementation is based on the research by Zoran Zivkovic and Ferdinand van der Heijden \cite{zivkovic_pattern_recognition} \cite{zivkovic_heijden_pattern_recognition_letters} in which a method of using a Gaussian Mixture Model (GMM) that improves upon former GMM in both speed and effectiveness at segmenting foreground objects, taking only a pixel's intensity as a feature. The subtraction component of the detection process was by far the most complex and thus the most computationally expensive, requiring each pixel in an image to have it's own probability density distrubtion and then to recalculate that for each new image. It was imperative, however, that the algorithm be fast enough that images could be processed as they arrived in real-time so that traffic data could reflect live conditions. Fortunately the speed of this implementation made it a suitable fit for a low power microcontroller and it's effectiveness ensured it's adoption into the system, as can be seen in Figure \ref{fig:example_subtraction}. This method is particularly effective at picking up moving objects as they cause pixels to have constantly changing intensities and making it easy for the model to determine that they're not a part of the background. 
+Background subtraction is the first step is determining which pixels of an image belong to a vehicle and divides all pixels in an image into two groups, foreground and background. This background subtraction implementation uses a clustering method known as a Mixture of Gaussian or Gaussian Mixture Model (\ref{subsection:mog}). 
 
-Notice in Figure \ref{fig:foreground_mask_filtered} the gray pixels in and around the foreground objects, these are shadows that the OpenCV's GMM implemetation can explicitly detect. They are removed by thresholding (equation \ref{eq:threshold}) values that are not white and converting them to black (background) pixels.
+Background subtraction is the most complex and thus the most computationally expensive part of the detection process. It is imperative, however, that the algorithm be fast enough to process images in real-time, such that traffic data is reflect live conditions. Fortunately the OpenCV's BackgroundSubtractorMOG2 function \cite{opencv_mog2} is both fast and effective making it a suitable choice for a low power microcontroller. OpenCV's implementation is based on the the research by Zoran Zivkovic and Ferdinand van der Heijden \cite{zivkovic_pattern_recognition} \cite{zivkovic_heijden_pattern_recognition_letters} which takes only pixel colours as input.
+
+Figure \ref{fig:example_subtraction} shows the application of the background subtractor on an arbitrary traffic image highlighting its ability to isolate, in particular, moving objects. Movement changes the value of pixels over a short time scale making it easy for the model to detect them as foreground objects. Shadows also register as a foreground objects but fortunately OpenCV's implementation is able to explicitly detect shadows and present them as gray pixels in the resulting foreground mask. In Figure \ref{fig:foreground_mask_filtered} the gray pixels in and around the white foreground objects are shadows which are removed via thresholding (equation \ref{eq:threshold}). 
+
+\subsubsection{Calibration}
+
+OpenCV's Gaussian Mixture Model (GMM) implementation has two important parameters to consider, \emph{history} and \emph{shadows}, where history is an integer and shadows is a Boolean. 
+
+The history parameter determines how many formerly processed images affect the Gaussian Mixture Model, for example, if the subtractor's history is 500 and it processes 501 images then the 1st image no longer has influence on the subtractor's models but the 501st does. For a 30fps video 500 images is only about 16 seconds, therefore if a vehicle stops for that long its presence will be completely reflected in the cluster models. In Figure \ref{fig:cluster_adaptation} the vehicles in the third lane are stationary for sufficiently long to be absorbed into the background by the GMM, this is not an issue as when they move again they are recognized once more. Thus, the history length should be long enough to absorb small but consistent changes in pixel values, like swaying tree branches, into the background but short enough that a slowly moving vehicle registers as a foreground object. In short the longer the history the more insensitive the background model becomes to change.
+
+The shadows parameter tells the model if a cluster for shadows should be specified, if they are they appear as gray, not white, in the foreground mask. In this system's implementation they are set to true as it allows them to be removed from the foreground mask, Figures \ref{fig:foreground_mask_unfiltered} and \ref{fig:thresh_shadow} show their presence and consequent removal via thresholding. 
+
+Finally, the subtractor when initialized hasn't had a chance to develop cluster models for the given traffic scene resulting foreground mask with a lot of anomalies. By 'training' the model on a few seconds of video before using it to collect traffic data any initial erroneous readings are avoided. This simply involves feeding the algorithm a few hundred images before using it to collect data.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.4\linewidth}
+        \centering\includegraphics[width = \textwidth]{design/detection/calibration/original}
+        \caption{Original Frame - vehicles moving.}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.4\linewidth}
+        \centering\includegraphics[width = \textwidth]{design/detection/calibration/mask}
+        \caption{Foreground Mask - vehicles moving.}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\linewidth}
+        \centering\includegraphics[width = \textwidth]{design/detection/calibration/original_adapted}
+        \caption{Original Frame - vehicles stopped.}
+    \end{subfigure}%
+    	\begin{subfigure}[b]{0.4\linewidth}
+        \centering\includegraphics[width = \textwidth]{design/detection/calibration/mask_adapted}
+        \caption{Foreground Mask - vehicles stopped.}
+    \end{subfigure}
+    \caption{Adaptation GMM background cluster. Images by Karol Majek}
+    \label{fig:cluster_adaptation}
+\end{figure}
+
+

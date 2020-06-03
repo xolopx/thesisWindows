@@ -109,21 +109,27 @@ class CVModule:
         """
 
         # Draw on the bounding boxes.
-        for i in range(len(boxes)):
-            cv.rectangle(image, (int(boxes[i][0]), int(boxes[i][1])), (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
-        for (objectID, centroid) in self.cenTrack.centroids.items():
-            text = "ID {}".format(objectID)
-            cv.putText(image, text, (centroid[0] - 10, centroid[1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-            cv.circle(image, (centroid[0], centroid[1]), 4, (0,355, 0),-1)
+        # for i in range(len(boxes)):
+        #     cv.rectangle(image, (int(boxes[i][0]), int(boxes[i][1])), (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
+        # for (objectID, centroid) in self.cenTrack.centroids.items():
+        #     text = "ID {}".format(objectID)
+        #     cv.putText(image, text, (centroid[0] - 10, centroid[1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+        #     cv.circle(image, (centroid[0], centroid[1]), 4, (0,355, 0),-1)
 
         # Draw Rectangle
-        # imcopy = image.copy()
-        # cv.rectangle(imcopy,(0, 380), (1280, 719), (255, 1, 255), -1)
-        # alpha = 0.5
-        # cv.addWeighted(imcopy, alpha, image, 1- alpha, 0, image)
-        # if self.frameCount == 100:
-        #     cv.imshow("Image", image)
-        #     cv.waitKey(0)
+        imcopy = image.copy()
+        cv.rectangle(imcopy,(0, 380), (1280, 719), (255, 1, 255), -1)
+        cv.line(imcopy, (0, 380), (1280, 380), (10, 118, 242), 2)
+        cv.line(imcopy, (0, 465), (1280, 465), (10, 118, 242), 2)
+        cv.line(imcopy, (0, 550), (1280, 550), (10, 118, 242), 2)
+        cv.line(imcopy, (0, 635), (1280, 635), (10, 118, 242), 2)
+        cv.line(imcopy, (0, 719), (1280, 719), (10, 118, 242), 2)
+        alpha = 0.5
+        cv.addWeighted(imcopy, alpha, image, 1- alpha, 0, image)
+
+        if self.frameCount == 100:
+            cv.imshow("Image", image)
+            cv.waitKey(0)
 
 
         # Draw lines
@@ -224,7 +230,7 @@ class CVModule:
          -
         :return:
         """
-        self.train_subtractor()         # Initially, train the subtractor.
+        # self.train_subtractor()         # Initially, train the subtractor.
         # Initializing a timer that is used to measure if a statistics interval has passed.
         timerStart = datetime.now()
         # # Make sure the node is in the database. *** HANDLED IN MAIN ***
@@ -253,9 +259,9 @@ class CVModule:
 
             cv.imshow("frame", frame)
 
-            if self.frameCount == 100:
-                cv.imshow("mask", mask)
-                cv.waitKey(0)
+            # if self.frameCount == 100:
+            #     cv.imshow("mask", mask)
+            #     cv.waitKey(0)
 
             # Stitch together original image and foreground mask for display.
             combined = np.hstack((frame, mask))
