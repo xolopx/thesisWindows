@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  3 JUN 2020 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  3 JUN 2020 18:02
 entering extended mode
 **c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
 (c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
@@ -542,7 +542,38 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 ) (blocked.sty) (uhead.sty) (boxit.sty) (thesis.sty)
 \c@definition=\count285
 \c@theorem=\count286
-) (thesis.aux)
+) (thesis.aux
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -928,40 +959,65 @@ File: ./images/design/networking/network_diagram.png Graphic file (type png)
 <use ./images/design/networking/network_diagram.png>
 Package pdftex.def Info: ./images/design/networking/network_diagram.png  used on input line 16.
 (pdftex.def)             Requested size: 352.81552pt x 285.1491pt.
-) (design/database/database.tex
-<./images/design/database/dragonfly_database_ERD.png, id=148, 271.0125pt x 253.4268pt>
+) (design/database/database.tex [18 <./images/design/networking/network_diagram.png>]
+<./images/design/database/dragonfly_database_ERD.png, id=152, 271.0125pt x 253.4268pt>
 File: ./images/design/database/dragonfly_database_ERD.png Graphic file (type png)
 <use ./images/design/database/dragonfly_database_ERD.png>
-Package pdftex.def Info: ./images/design/database/dragonfly_database_ERD.png  used on input line 8.
+Package pdftex.def Info: ./images/design/database/dragonfly_database_ERD.png  used on input line 7.
 (pdftex.def)             Requested size: 352.81552pt x 329.9343pt.
- [18 <./images/design/networking/network_diagram.png>]) (design/interface/interface.tex [19 <./images/design/database/dragonfly_database_ERD.png>] [20])) (thesis.bbl [21]) (appendices/appendix.tex [22
+) (design/interface/interface.tex [19 <./images/design/database/dragonfly_database_ERD.png>] [20]
+<./images/design/ui/profile.png, id=159, 711.4078pt x 344.03531pt>
+File: ./images/design/ui/profile.png Graphic file (type png)
+<use ./images/design/ui/profile.png>
+Package pdftex.def Info: ./images/design/ui/profile.png  used on input line 10.
+(pdftex.def)             Requested size: 220.50887pt x 106.63934pt.
+File: ./images/design/ui/profile.png Graphic file (type png)
+<use ./images/design/ui/profile.png>
+Package pdftex.def Info: ./images/design/ui/profile.png  used on input line 15.
+(pdftex.def)             Requested size: 220.50887pt x 106.63934pt.
+File: ./images/design/ui/profile.png Graphic file (type png)
+<use ./images/design/ui/profile.png>
+Package pdftex.def Info: ./images/design/ui/profile.png  used on input line 20.
+(pdftex.def)             Requested size: 220.50887pt x 106.63934pt.
+File: ./images/design/ui/profile.png Graphic file (type png)
+<use ./images/design/ui/profile.png>
+Package pdftex.def Info: ./images/design/ui/profile.png  used on input line 25.
+(pdftex.def)             Requested size: 220.50887pt x 106.63934pt.
+File: ./images/design/ui/profile.png Graphic file (type png)
+<use ./images/design/ui/profile.png>
+Package pdftex.def Info: ./images/design/ui/profile.png  used on input line 30.
+(pdftex.def)             Requested size: 220.50887pt x 106.63934pt.
+ [21])) (thesis.bbl [22 <./images/design/ui/profile.png>]) (appendices/appendix.tex [23
 
 ]
 Appendix A.
-[23
+[24
 
 
 ]
 Appendix B.
-) [24
+) [25
 
 ] (thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 16947 strings out of 492484
- 318849 string characters out of 3122506
- 377404 words of memory out of 3000000
- 21005 multiletter control sequences out of 15000+200000
+ 16958 strings out of 492484
+ 319102 string characters out of 3122506
+ 378455 words of memory out of 3000000
+ 21013 multiletter control sequences out of 15000+200000
  542672 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,16n,75p,2221b,537s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (32 pages, 7657883 bytes).
+Output written on thesis.pdf (33 pages, 7666850 bytes).
 PDF statistics:
- 189 PDF objects out of 1000 (max. 8388607)
+ 194 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 

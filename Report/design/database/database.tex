@@ -1,7 +1,6 @@
 \section{Database Management}
 
-A database is an efficient and well organized method of storing the statistics collected by the system. A MySQL database was selected for it's 
-well documented use and easy integration into Python applications via the MySQLConnector class \cite{mysqlconnector}. A single database maintained on a machine on the same network as the nodes is used to store the statistics they transmit. The design of the system can be seen in Figure \ref{fig:erd} and Table \ref{table:entity_attributes}.
+A database is an efficient and well organized method of storing and accessing the statistics collected by the system nodes. A MySQL database was selected for it's clear documentation and easy integration into Python applications via the MySQLConnector class \cite{mysqlconnector}. A single database maintained on a machine on the same network as the nodes is used to store the statistics they transmit. The design of the system can be seen in Figure \ref{fig:erd} and Table \ref{table:entity_attributes} and as can be seen the database is relatively simple with only three entity types. The node entity represents a node in the monitoring system and stores the information important for identifying and locating it. The speed and count record entities each belong to a specific node and have a timestamp, an instance of these records is created every 30 seconds for a node. For a count record the vehicle count for the 30 seconds passed is stored and for the a speed record the average speed for that last 30 seconds is stored. If data needs to be consolidated into different time scales individual 30 second readings are summed and served up by the server-side logic, a small library was written to this end that takes a time range and returns readings from this range compressed into a desired time period. 
 
 \begin{figure}[H]
     \centering
@@ -22,7 +21,7 @@ well documented use and easy integration into Python applications via the MySQLC
         & node id & A number that uniquely identifies the entity. & INT & N\\ \cline{2-5}
         & latitude & Latitude used to locate node. & DECIMAL(10,8) & N\\ \cline{2-5}
         & longitude & Longitude used to locate node. & DECIMAL(10,8) & N\\ \cline{2-5}
-        & location description & A number that uniquely identifies the entity & VARCHAR(120) & Y\\
+        & location description & Information helpful when locating the node in addition to its longitude and latitude. & VARCHAR(120) & Y\\
         \hhline{|=|=|=|=|=|}
         \multirow{5}{*}{Speed Record} 
         & record id & A number that uniquely identifies the entity. & INT & N\\ \cline{2-5}
