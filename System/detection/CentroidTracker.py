@@ -55,7 +55,6 @@ class CentroidTracker:
         :return:
 
         """
-        print(count)
 
         # If there are no bounding boxes.
         if len(rects) == 0:

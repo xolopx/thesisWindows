@@ -81,6 +81,11 @@ if __name__ == '__main__':
     # inputVideo = cv.VideoCapture(r"C:\Users\Tom\Desktop\thesisWindows\System\detection\traffic_short.mp4")
     # inputVideo = cv2.VideoCapture(r"C:\Users\Tom\Desktop\merging.mp4")
     # inputVideo = cv.VideoCapture(0)
+
+    config_parser = ConfigParser.ConfigParser(r"C:\Users\Tom\Desktop\thesisWindows\System\config_files\config1")
+    config_parser.parseConfig()
+    config_parser.print_parser()
+
     inputVideo = cv2.VideoCapture(r"C:\Users\Tom\Desktop\road.mp4")  # Initialize video capture stream.
     process = CVModule.CVModule(inputVideo, id=0, lat=10, long=10)
 
