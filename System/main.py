@@ -84,10 +84,9 @@ if __name__ == '__main__':
 
     config_parser = ConfigParser.ConfigParser(r"C:\Users\Tom\Desktop\thesisWindows\System\config_files\config1")
     config_parser.parseConfig()
-    config_parser.print_parser()
 
     inputVideo = cv2.VideoCapture(r"C:\Users\Tom\Desktop\road.mp4")  # Initialize video capture stream.
-    process = CVModule.CVModule(inputVideo, id=0, lat=10, long=10)
+    process = CVModule.CVModule(inputVideo, config_parser.parameters, id=0, lat=10, long=10)
 
     update_or_add_node()
 

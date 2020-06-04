@@ -5,14 +5,15 @@ import numpy as np
 
 class CentroidTracker:
 
-    def __init__(self, maxDisappeared=25, maxDistance=100, minDistance=30):
+    def __init__(self, maxDisappeared: object = 25, maxDistance: object = 100, minDistance: object = 30) -> object:
         """
         Stores a list of tracked objects, represented as a centroid coordinate and an associated ID number, in an ordered dictionary.
 
-        :param maxDisappeared: Maximum number of frame a centroid can disappear for before being deregistered.
+        :param maxDisappeared: Maximum number of frame a centroid can disappear for before being de-registered.
         :param maxDistance: Maximum distance a centroid can reappear and still be associated with its nearest centroid.
         :param minDistance: Minimum distance a centroid can be to another without getting associated with that centroid.
         """
+
         # Counter for next unique centroid ID.
         self.nextObjectID = 0
         # Ordered Dictionary of current centroids stored as: {ID, centroid(x,y)}.
@@ -55,6 +56,11 @@ class CentroidTracker:
         :return:
 
         """
+
+        # Cleanse the records every 1000 centroids.
+        if self.nextObjectID > 1000:
+            self.nextObjectID = 0
+            self.deregisteredID.clear()
 
         # If there are no bounding boxes.
         if len(rects) == 0:

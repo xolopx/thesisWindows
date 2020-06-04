@@ -3,26 +3,10 @@ import cv2 as cv
 import numpy as np
 from datetime import datetime
 import database_interface as db
-from detection import CentroidTracker, TrackableObject
+from detection import CentroidTracker, TrackableObject, ConfigParser
 
 
-def define_contours(fgMask):
-    # Look for contours in the foreground mask.
-    contours, _ = cv.findContours(fgMask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
-    # Create list to hold contour best rectangle fits.
-    boundRect = []
 
-    # Move through contours list generating enumerated pairs (indice, value).
-    for i, c in enumerate(contours):
-        # Generate bounding rect from the poly-form contrackObject. Returns "Upright Rectangle", i.e. Axis-aligned on bot track Obj edge and whose left edge is vertical.
-        (x, y, w, h) = cv.boundingRect(c)
-        # Thresh bounding box by width and height.
-        if w >= 20 and h >= 25:
-            # Generate bounding rect from the poly-form contrackObject. Returns "Upright Rectangle", i.e. Axis-aligned on bot track Obj edge and whose left edge is vertical.
-            boundRect.append(cv.boundingRect(c))
-    # Return the bounding rectangles.
-
-    return contours, boundRect
 
 
 class CVModule:
@@ -30,63 +14,26 @@ class CVModule:
     Handles the detection, tracking, counting and speed estimation of an object given a
     series of images.
     """
-    def __init__(self, inputVideo, id, lat, long):
+
+    def __init__(self, inputVideo, params, id, lat, long):
         """
-        :param inputVideo: Video input to the module.
+        A CVModule Object controls the configuration of the detection algorithm and executes the
+        algorithm on the input video. It then sends the statistics derived from the input to the
+        database.
+
+        :param inputVideo:
+        :param param: Dictionary of configurations and node info for algorithm instance.
         """
-        self.cenTrack = CentroidTracker.CentroidTracker()           # Object containing centroids detected for a given frame.
-        self.tracks = {}                                            # Dictionary of TrackbleObjects.
-        self.frameCount = 0                                         # Number of frames of video processed.
-        self.video = inputVideo                                     # Video from which to extract information.
-        self.subtractor = cv.createBackgroundSubtractorMOG2(
-            history=250, detectShadows=True)                        # Subtractor for procuring the input video's foreground objs.
-        self.width = self.video.get(cv.CAP_PROP_FRAME_WIDTH)        # Width of input video
-        self.height = self.video.get(cv.CAP_PROP_FRAME_HEIGHT)      # Height of input video
-        self.areaThresh = self.height*self.width/500                # Minimum area a contour must have to count as an object.
-        self.countUp = 0                                            # Number of objects that have moved upward
-        self.countDown = 0                                          # Number of objects that have moved downward
-        self.struct = cv.getStructuringElement(cv.MORPH_ELLIPSE, (2,2)) 			# General purpose kernel.
+        self.tracks = {}
+        self.countUp = 0
+        self.countDown = 0
+        self.frameCount = 0
+        self.params = params
+        self.video = inputVideo
+        self.time = datetime.now()
+        self.cenTrack = CentroidTracker.CentroidTracker(maxDisappeared= int(self.params["missing"]), maxDistance= int(self.params["max_dist"]), minDistance=int(self.params["min_dist"]))
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
-        self.time = datetime.now()                         # Keep the time
-        # Information for database.
-        self.id = id
-        self.latitude = lat
-        self.longitude = long
-
-    def filter_frame(self,fgMask):
-        """
-        Applys morphology and median filtering to subtracted image to consolidate foreground objects
-        and remove salt& pepper noise.
-        :param fgMask: The foreground mask after applying subtractor
-        """
-
-        # struct1 = cv.getStructuringElement(cv.MORPH_ELLIPSE, (5, 5))
-        # struct2 = cv.getStructuringElement(cv.MORPH_CROSS, (5, 5))
-        struct1 = cv.getStructuringElement(cv.MORPH_RECT, (5, 5))
-        iter = 5
-
-        # Threshold out shadows. (They're darker colored than pure foreground).
-        fgMask[fgMask < 240] = 0
-        # if (self.frameCount) == 100:
-        #     cv.imshow("1", fgMask)
-        #     # cv.imshow("2", fgMask2)
-        #     # cv.imshow("3", fgMask3)
-        #     # cv.waitKey(0)
-        # Apply median blur filter to remove salt and pepper noise.
-        fgMask = cv.medianBlur(fgMask,7)
-
-        # Apply a closing to the surviving foreground blobs.
-        fgMask1 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct1, iterations = iter)
-        # fgMask2 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct2, iterations = iter)
-        # fgMask3 = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct3, iterations = iter)
-
-        fgMask1 = cv.dilate(fgMask1, struct1, iterations=4)                    # Apply dilation trackObj bolden the foreground objects.
-        # fgMask2 = cv.dilate(fgMask2, struct2, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
-        # fgMask3 = cv.dilate(fgMask3, struct3, iterations=2)                    # Apply dilation trackObj bolden the foreground objects.
-
-
-
-        return fgMask1
+        self.subtractor = cv.createBackgroundSubtractorMOG2(history = int(params["history"]), detectShadows= bool(params["shadows"]))
 
     def train_subtractor(self, trainNum=500):
         """
@@ -100,6 +47,54 @@ class CVModule:
             _, frame = self.video.read()
             self.subtractor.apply(frame, None, 0.001)
             i += 1
+
+    def filter_frame(self,fgMask):
+        """
+        Applies morphology and median filtering to subtracted image to consolidate foreground objects
+        and remove noise.
+
+        :param fgMask: Binary mask that is the output of the subtractor.
+        """
+        # Get configurations
+        size = int(self.params["morph_size"])
+        shape = int(self.params["morph_shape"])
+        iter = int(self.params["morph_iter"])
+        med_size = int(self.params["med_size"])
+
+        # Structuring element for morphological operations. Rect: 0, Cross:1, Ellipse:2
+        struct = cv.getStructuringElement(shape, (size,size))
+        # Threshold out shadows. (They're darker colored than pure foreground).
+        fgMask[fgMask < 240] = 0
+        # Apply median blur filter to remove salt and pepper noise.
+        fgMask = cv.medianBlur(fgMask,med_size)
+        # Apply a closing to the surviving foreground blobs.
+        fgMask = cv.morphologyEx(fgMask, cv.MORPH_CLOSE, struct, iterations = iter)
+        # Apply dilation trackObj embolden the foreground objects.
+        fgMask = cv.dilate(fgMask, struct, iterations= iter)
+
+        return fgMask
+
+    def define_contours(self, fgMask):
+        # Look for contours in the foreground mask.
+        contours, _ = cv.findContours(fgMask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_NONE)
+        # Create list to hold contour best rectangle fits.
+        boundRect = []
+
+        min_w = int(self.params["min_width"])
+        min_h = int(self.params["min_height"])
+        max_w = int(self.params["max_width"])
+        max_h = int(self.params["max_height"])
+        # Move through contours list generating enumerated pairs (indice, value).
+        for i, c in enumerate(contours):
+            # Generate bounding rect from the poly-form contrackObject. Returns "Upright Rectangle", i.e. Axis-aligned on bot track Obj edge and whose left edge is vertical.
+            (x, y, w, h) = cv.boundingRect(c)
+            # Thresh bounding box by width and height.
+            if max_w >= w >= min_w and max_h >= h >= min_h:
+                # Generate bounding rect from the poly-form contrackObject. Returns "Upright Rectangle", i.e. Axis-aligned on bot track Obj edge and whose left edge is vertical.
+                boundRect.append(cv.boundingRect(c))
+        # Return the bounding rectangles.
+
+        return contours, boundRect
 
     def draw_info(self, image, boxes):
         """
@@ -223,14 +218,8 @@ class CVModule:
 
     def process(self):
         global image
-        """
-        Executes processing on video input. Responsible for:
-         -
-         -
-         -
-        :return:
-        """
-        # self.train_subtractor()         # Initially, train the subtractor.
+
+        # self.train_subtractor()
         # Initializing a timer that is used to measure if a statistics interval has passed.
         timerStart = datetime.now()
         # # Make sure the node is in the database. *** HANDLED IN MAIN ***
@@ -245,9 +234,9 @@ class CVModule:
             # Apply morphology, threshing and median filter.
             mask = self.filter_frame(mask)
             # Get bounding boxes for the foreground objects.
-            contours, boundingRect = define_contours(mask)
+            contours, boundingRect = self.define_contours(mask)
             # Get centroids from the bounding boxes.                *** LOOK INTO WHAT THIS METHOD IS DOING AND IF IT'S NECESSARY ***
-            objects, deregID = self.cenTrack.update(boundingRect, self.frameCount)
+            self.cenTrack.update(boundingRect, self.frameCount)
             # Update the object positions and vehicle statistics.   *** MAYBE WANT TO SEPARATE THIS INTO TWO METHODS ***
             self.update_tracks()
             # Convert foreground mask back to a 3-channel image.
@@ -256,17 +245,8 @@ class CVModule:
             self.draw_info(mask, boundingRect)
             # Draw graphics onto original frame
             self.draw_info(frame, boundingRect)
-
-            cv.imshow("frame", frame)
-
-            # if self.frameCount == 100:
-            #     cv.imshow("mask", mask)
-            #     cv.waitKey(0)
-
             # Stitch together original image and foreground mask for display.
             combined = np.hstack((frame, mask))
-            # Show the result.
-            cv.imshow("Original", combined)
             # Updating the frame shared with Flask app.
             globals.image = frame
             # Increment the number of frames.
@@ -297,6 +277,9 @@ class CVModule:
                 # Reset video cursor.
                 self.video.set(cv.CAP_PROP_POS_FRAMES, 0)
 
+            # Show the result.
+            cv.imshow("Combined", combined)
+
     def log_stats(self, timerStart, interval):
         """ Handles entering vehicle count and speed data into the database.
         :param timerStart: The start time of the timer which is used to measure if an interval has passed.
@@ -307,7 +290,7 @@ class CVModule:
         if (datetime.now() - timerStart).total_seconds() >= interval:
             # Store the readings in the database
             # db.insert.insert_count_minute(self.countUp,timerStart.strftime('%Y-%m-%d %H:%M:%S'),self.id)
-            db.insert.insert_count_minute(self.countUp,timerStart,self.id)
+            db.insert.insert_count_minute(self.countUp,timerStart,0)
             # Reset the count
             self.countUp = 0
             # Return the new time to the timer.
