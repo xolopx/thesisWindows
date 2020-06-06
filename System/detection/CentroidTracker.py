@@ -49,7 +49,7 @@ class CentroidTracker:
         # Use ID to get centroid from list of missing centroids and delete it.
         del self.disappeared[ID]
 
-    def update(self, rects, count):
+    def update(self, rects):
         """
         Checks bounding box state against centroids state.
         :param rects: List of up-right bounding rectangles.
@@ -60,7 +60,7 @@ class CentroidTracker:
         # Cleanse the records every 1000 centroids.
         if self.nextObjectID > 1000:
             self.nextObjectID = 0
-            self.deregisteredID.clear()
+
 
         # If there are no bounding boxes.
         if len(rects) == 0:
@@ -187,7 +187,6 @@ class CentroidTracker:
             for col in range(dim[0]):
                 # Check threshold and ignore self to self distance.
                 if ((D[row][col] < self.minDistance) and (row != col)):
-                    print("Merged input centroids\n")
                     # If either centroids from pair are already consolidated no need to add another.
                     # But if neither already consolidated, deregister column.
                     if keys[row] not in deregID and keys[col] not in deregID:
@@ -196,24 +195,4 @@ class CentroidTracker:
 
         # Deregister the consolidated centroids.
         for key in deregID:
-            self.deregister(key)    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            self.deregister(key)
