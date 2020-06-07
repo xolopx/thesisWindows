@@ -1,5 +1,5 @@
 %% 100
-imtool('C:\Users\Tom\Desktop\thesisWindows\Report\images\design\detection\bounding\centroid_test_2.png')
+imtool('C:\Users\Tom\Desktop\measuring_scene_one.png')
 
 %% 70
 imtool('Desktop/bound_70.png')

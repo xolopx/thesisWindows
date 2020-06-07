@@ -18,7 +18,9 @@ class CentroidTracker:
         self.nextObjectID = 0
         # Ordered Dictionary of current centroids stored as: {ID, centroid(x,y)}.
         self.centroids = OrderedDict()
-        # Ordered Dictionary of IDs for centroids that are not in current frame. Stored as: {ID, missing_frame_count}.00000000
+        # Dictionary of boxes assigned at the same time as centroids.
+        self.boxes = OrderedDict()
+        # Ordered Dictionary of IDs for centroids that are not in current frame. Stored as: {ID, missing_frame_count}.
         self.disappeared = OrderedDict()
         # Number of frames a centroid can go missing for before being removed.
         self.maxDisappeared = maxDisappeared
@@ -28,6 +30,8 @@ class CentroidTracker:
         self.minDistance = minDistance
         # list of centroid ID numbers that have been dismissed.
         self.deregisteredID = []
+
+
 
     def register(self, centroid):
         """ Registers a new centroid to be tracked.

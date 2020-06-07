@@ -6,6 +6,7 @@ from datetime import datetime
 import database_interface as db
 import sympy.geometry as sym
 from detection import CentroidTracker, TrackableObject, ConfigParser, Line, Point
+import keyboard
 
 
 
@@ -39,11 +40,13 @@ class CVModule:
         self.centroidTracker = CentroidTracker.CentroidTracker(maxDisappeared= int(self.params["missing"]), maxDistance= int(self.params["max_dist"]), minDistance=int(self.params["min_dist"]))
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
         self.subtractor = cv.createBackgroundSubtractorMOG2(history = int(params["history"]), detectShadows= bool(params["shadows"]))
+        self.wait = int(self.params["frame_wait"])
 
     def process(self):
         global image
 
-        # self.train_subtractor()
+        if self.params["training"] == "True":
+            self.train_subtractor()
         # Initializing a timer that is used to measure if a statistics interval has passed.
         timerStart = datetime.now()
         # # Make sure the node is in the database. *** HANDLED IN MAIN ***
@@ -60,16 +63,16 @@ class CVModule:
             mask = self.filter_frame(mask)
             # Get bounding boxes for the foreground objects.
             contours, boundingRect = self.define_contours(mask)
-            # Get centroids from the bounding boxes.                *** LOOK INTO WHAT THIS METHOD IS DOING AND IF IT'S NECESSARY ***
+            # Get centroids from the bounding boxes.
             self.centroidTracker.update(boundingRect)
-            # Update the object positions and vehicle statistics.   *** MAYBE WANT TO SEPARATE THIS INTO TWO METHODS ***
-            self.speed_count_check()
+            # Update the object positions and vehicle statistics.
+            self.update_tracked_objects()
             # Convert foreground mask back to a 3-channel image.
             mask = cv.cvtColor(mask, cv.COLOR_GRAY2RGB)
-            # Draw graphics onto mask
-            self.draw_graphics(mask, boundingRect)
-            # Draw graphics onto original frame
-            self.draw_graphics(frame, boundingRect)
+            # Draw graphics
+            if self.params["graphics"] == "True":
+                self.draw_graphics(mask, boundingRect)
+                self.draw_graphics(frame, boundingRect)
             # Stitch together original image and foreground mask for display.
             combined = np.hstack((frame, mask))
             # Updating the frame shared with Flask app.
@@ -85,17 +88,23 @@ class CVModule:
             timerStart = self.log_stats(timerStart, 3)
 
             # *** TESTING: FOR CONTROLLING SPEED OF VIDEO AND PAUSING VIDEO ***
-            key = cv.waitKey(33)
-            if key == 27:
-                break
-            if key == ord('n'):
-                while True:
-                    key = cv.waitKey(50)
-                    if key == ord('n'):
-                        break
+            # key = cv.waitKey(self.wait)
+            # if key == 27:
+            #     break
+            # if key == ord('n'):
+            #     while True:
+            #         key = cv.waitKey(50)
+            #         if key == ord('n'):
+            #             break
+            # if keyboard.is_pressed('+'):
+            #    self.wait += 1
+            # if keyboard.is_pressed('-'):
+            #     self.wait -= 1
+
+
 
             # *** TESTING: LOOPING LOGIC JUST FOR TESTING WITH SHORT VIDEO ***
-            if (self.frameCount >= (self.totalFrames - 600)):
+            if (self.frameCount >= (self.totalFrames - int(self.params["history"]))):
                 # Reset frame count.
                 self.frameCount = 0
                 # Reset video cursor.
@@ -103,6 +112,20 @@ class CVModule:
 
             # Show the result.
             cv.imshow("Combined", combined)
+
+            cv.waitKey(self.wait)
+
+            if self.params["rapid_test"] != "True":
+                while True:
+                    key = cv.waitKey(self.wait)
+                    if key == ord('n'):
+                        break
+
+            if(self.frameCount == 900):
+                while True:
+                    key = cv.waitKey(self.wait)
+                    if key == ord("q"):
+                        break
 
     def train_subtractor(self, trainNum=500):
         """
@@ -166,7 +189,7 @@ class CVModule:
 
         return contours, boundRect
 
-    def speed_count_check(self):
+    def update_tracked_objects(self):
         """ Updates the centroid history of tracked objects and checks if the
             objects have passed speed and count thresholds."""
         # Create a copy of the list of current centroids.
@@ -260,7 +283,9 @@ class CVModule:
             # db.insert.insert_count_minute(self.countUp,timerStart.strftime('%Y-%m-%d %H:%M:%S'),self.id)
             db.insert.insert_count_minute(self.countUp,timerStart,0)
             # Reset the count
-            self.countUp = 0
+            if self.params["refresh_count"] == "True":
+                self.countUp = 0
+                self.countDown = 0
             # Return the new time to the timer.
             return datetime.now()
         else:
@@ -274,13 +299,19 @@ class CVModule:
         :param boxes: Bounding box information.
         """
 
-        # Draw on the bounding boxes.
-        for i in range(len(boxes)):
-            cv.rectangle(image, (int(boxes[i][0]), int(boxes[i][1])), (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
-        for (objectID, centroid) in self.centroidTracker.centroids.items():
-            text = "ID {}".format(objectID)
-            cv.putText(image, text, (centroid[0] - 10, centroid[1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-            cv.circle(image, (centroid[0], centroid[1]), 4, (0,355, 0),-1)
+        if self.params["boxes"] == "True":
+            # Draw bounding boxes.
+            for i in range(len(boxes)):
+                cv.rectangle(image, (int(boxes[i][0]), int(boxes[i][1])), (int(boxes[i][0] + boxes[i][2]), int(boxes[i][1] + boxes[i][3])), (0, 255, 238), 2)
+                text = "({},{})".format(int(boxes[i][2]), int(boxes[i][3]))
+                cv.putText(image, text, (boxes[i][0] - 10, boxes[i][1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+
+        if self.params["centroids"] == "True":
+            # Draw Centroids
+            for i, (objectID, centroid) in enumerate(self.centroidTracker.centroids.items()):
+                text = "ID {}".format(objectID)
+                cv.putText(image, text, (centroid[0] - 10, centroid[1] - 10), cv.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+                cv.circle(image, (centroid[0], centroid[1]), 4, (0,355, 0),-1)
 
         # Draw Rectangle
         # imcopy = image.copy()
@@ -293,23 +324,18 @@ class CVModule:
         # alpha = 0.5
         # cv.addWeighted(imcopy, alpha, image, 1- alpha, 0, image)
 
-        # if self.frameCount == 100:
-        #     cv.imshow("Image", image)
-        #     cv.waitKey(0)
+        if self.params["count_line"] == "True":
+            # Draw lines
+            p1 = self.count_line.p1
+            p2 = self.count_line.p2
+            cv.line(image, (p1.x, p1.y), (p2.x, p2.y), (255, 1, 255), 2)
 
-
-        # Draw lines
-        p1 = self.count_line.p1
-        p2 = self.count_line.p2
-        cv.line(image, (p1.x, p1.y), (p2.x, p2.y), (255, 1, 255), 2)
-
-
-
-        # Draw on counts
-        # textUp = "Up {}".format(self.countUp)
-        # textDown = "Down {}".format(self.countDown)
-        # cv.putText(image, textUp, (50, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
-        # cv.putText(image, textDown, (500, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+        # Draw Counts
+        if self.params["count_graphics"] == "True":
+            textUp = "Up {}".format(self.countUp)
+            textDown = "Down {}".format(self.countDown)
+            cv.putText(image, textUp, (50, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+            cv.putText(image, textDown, (500, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
 
 
 
@@ -330,20 +356,22 @@ class CVModule:
                 textSpeed = "{:4.2f}".format(track.speed)
                 # cv.putText(image, textSpeed, (x-10,y+20), cv.FONT_HERSHEY_SIMPLEX, 0.5, (20, 112, 250), 2)
 
-        # Draw the number of frames
-        cv.putText(image, "Frame: {}".format(self.frameCount), (280, 30),cv.FONT_HERSHEY_SIMPLEX, 0.5, (224, 9, 52, 2))
-        # self.draw_grid(image)
+        if self.params["frame_count"] == "True":
+            cv.putText(image, "Wait: {} Frame: {}".format(self.wait, self.frameCount), (280, 30),cv.FONT_HERSHEY_SIMPLEX, 0.5, (224, 9, 52, 2))
+
+        if self.params["grid"] == "True":
+            self.draw_grid(image)
 
     def draw_grid(self,image):
 
         across = 0
         up = 0
         for i in range(image.shape[0] % 50):
-            cv.line(image,(0,across),(int(self.width),across), (66, 135, 245), 1)
+            cv.line(image,(0,across),(int(image.shape[1]),across), (66, 135, 245), 1)
             across += 50
 
         for i in range(image.shape[1] % 50):
-            cv.line(image,(up,0),(up,int(self.height)), (66, 135, 245), 1)
+            cv.line(image,(up,0),(up,int(image.shape[0])), (66, 135, 245), 1)
             up += 50
 
     def resize_frame(self, img):
@@ -354,3 +382,4 @@ class CVModule:
         dim = (width, height)
         img = cv.resize(img, dim, interpolation=cv.INTER_AREA)
         return img
+
