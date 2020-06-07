@@ -53,7 +53,8 @@ class CVModule:
         # db.insert.insert_node(self.id, "Node001", "West", self.longitude, self.latitude)
 
         """ MAIN LOOP """
-        while True and self.frameCount < (self.totalFrames - int(self.params["history"])):  # Loop will execute until all input processed or user exits.
+        # Loop will execute until all input processed or user exits.
+        while True and self.frameCount < (self.totalFrames - int(self.params["history"])):
             # Read a frame of input video.
             _, frame = self.video.read()
             frame = self.resize_frame(frame)
@@ -113,21 +114,24 @@ class CVModule:
             # Show the result.
             cv.imshow("Combined", combined)
 
-            cv.waitKey(self.wait)
 
             if self.params["rapid_test"] != "True":
                 while True:
-                    key = cv.waitKey(self.wait)
+                    key = cv.waitKey(self.wait-10)
                     if key == ord('n'):
                         break
+            else:
+                cv.waitKey(int(self.params["frame_wait"]))
 
-            if(self.frameCount == 900):
-                while True:
-                    key = cv.waitKey(self.wait)
-                    if key == ord("q"):
-                        break
 
-    def train_subtractor(self, trainNum=500):
+            if int(self.params["test_length"]) > 0:
+                if(self.frameCount == int(self.params["test_length"])):
+                    while True:
+                        key = cv.waitKey(10)
+                        if key == ord("q"):
+                            break
+
+    def train_subtractor(self):
         """
         Trains subtractor on the first N frames of video so it has a better idea
         of what the background consists of.
@@ -135,7 +139,7 @@ class CVModule:
         """
 
         i = 0
-        while i < trainNum:
+        while i < int(self.params["history"]):
             _, frame = self.video.read()
             self.subtractor.apply(frame, None, 0.001)
             i += 1
@@ -208,8 +212,8 @@ class CVModule:
                 else:
                     motion = [c[0] for c in tracked_object.centroids]
                     motion = centroid[0] - np.mean(motion)
-                # Set motion to boolean.
-                if motion > 0:
+
+                if motion > 0:      # X-values get larger left to right.
                     motion = True
                 else:
                     motion = False
@@ -218,13 +222,27 @@ class CVModule:
                 tracked_object.centroids.append(centroid)
 
                 # only record stats for object if it hasn't already been counted.
-                if not tracked_object.counted:
+                if not tracked_object.counted and len(tracked_object.centroids) > int(self.params["history_count"]):
                     if self.check_track_crossing(centroid, motion):
-                        self.countUp += 1
-                        tracked_object.counted = True
-                    elif self.check_track_crossing(centroid, motion):
-                        self.countDown += 1
-                        tracked_object.counted = True
+                        if self.orientation:
+                            if motion :
+                                self.countDown += 1
+                                tracked_object.counted = True
+                                print("Down + ID {}".format(tracked_object.objectID))
+                            else:
+                                self.countUp += 1
+                                tracked_object.counted = True
+                                print("Up + ID {}".format(tracked_object.objectID))
+                        else:
+                            if motion :
+                                self.countUp += 1
+                                tracked_object.counted = True
+                                print("Up + ID {}".format(tracked_object.objectID))
+                            else:
+                                self.countDown += 1
+                                tracked_object.counted = True
+                                print("Down + ID {}".format(tracked_object.objectID))
+
             # Else create a new trackable object for the centroid.l
             else:
                 tracked_object = TrackableObject.TrackableObject(objectID, centroid, self.frameCount)
@@ -237,7 +255,7 @@ class CVModule:
 
     def check_track_crossing(self, centroid, motion):
         """
-        Checks
+        Checks if a vehicle has crossed the count_line.
         :param centroid: The point specifying the centroid's location.
         :param motion: Specifies direction that traffic is moving. True if up and down, False is side to side.
         :return:
@@ -247,7 +265,7 @@ class CVModule:
         # Check points position relative to the line. True is above, False is below.
         pos = self.pt_rel(self.count_line, cen_p)
         # True if position is side matching direction of travel.
-        return (pos != motion)
+        return (pos == motion)
 
     def parse_point(self, pt_string):
         """ Returns a point from a string of the format (x,y)
@@ -255,7 +273,7 @@ class CVModule:
         :return: The Point made of the data extracted from the string.
         """
         # Use regex to parse numbers from string
-        num_list = re.findall("\d",pt_string)
+        num_list = re.findall("\d+",pt_string)
         # Gets the two numbers out of the string
         return Point.Point(int(num_list[0]), int(num_list[1]))
 
