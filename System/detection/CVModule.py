@@ -30,8 +30,6 @@ class CVModule:
         self.params = params
         self.video = inputVideo
         self.time = datetime.now()
-        # Orientation of traffic. True is up/down, False is left/right.
-        self.orientation = bool(self.params["traffic_orientation"])
         self.count_line = Line.Line(self.parse_point(self.params["count_line_p1"]),self.parse_point(self.params["count_line_p2"]))
         self.centroidTracker = CentroidTracker.CentroidTracker(maxDisappeared= int(self.params["missing"]), maxDistance= int(self.params["max_dist"]), minDistance=int(self.params["min_dist"]))
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
@@ -214,14 +212,14 @@ class CVModule:
 
                 # Count vehicle's that haven't been counted and have crossed line with requisite position history length.
                 if not tracked_object.counted and len(tracked_object.centroids) > int(self.params["history_count"]) \
-                    and self.check_track_crossing(centroid, motion):
+                    and self.check_track_crossing(centroid, motion) and self.check_start_pos(motion, tracked_object):
 
                     if motion:
                         self.countPositive += 1
                         tracked_object.counted = True
 
                         if self.params["print_positive"] == "True":
-                            if self.orientation:
+                            if self.params["traffic_orientation"] == "True":
                                 print("Down + ID {}".format(tracked_object.objectID))
                             else:
                                 print("Right + ID {}".format(tracked_object.objectID))
@@ -230,7 +228,7 @@ class CVModule:
                         tracked_object.counted = True
 
                         if self.params["print_negative"] == "True":
-                            if self.orientation:
+                            if self.params["traffic_orientation"] == "True":
                                 print("Up + ID {}".format(tracked_object.objectID))
                             else:
                                 print("Left + ID {}".format(tracked_object.objectID))
@@ -246,13 +244,19 @@ class CVModule:
             del self.tracked_objects[ID]
         self.centroidTracker.deregisteredID.clear()
 
-    def check_start_pos(self, motion, orientation):
+    def check_start_pos(self, motion, trackedObject):
         """
         Checks that an object started on the other side of the count line to where it's being counted.
-        :param orientation: Indicates which axis traffic is travelling in.
+        :param trackedObject: Object that's going to be counted.
         :param motion: Indicates the direction of travel of an object.
         """
-
+        count = 0
+        # Check how many centroids started on the other side of the line.
+        for centroid in trackedObject.centroids:
+            # The motion should be opposite to the side the object started on for it to count.
+            if self.pt_rel(self.count_line, Point.Point(centroid[0],centroid[1])) != motion:
+                count += 1
+        return count > int(self.params["otherside_centroids"])
 
 
     def check_track_crossing(self, centroid, motion):
