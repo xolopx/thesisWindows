@@ -34,12 +34,17 @@ class ConfigParser:
         "max_dist": False,
         "min_dist": False,
         "missing": False,
-        "count_line_p1": False,
-        "count_line_p2": False,
+        "count_line1_p1": False,
+        "count_line1_p2": False,
+        "count_line2_p1": False,
+        "count_line2_p2": False,
         "speed_line1_p1": False,
         "speed_line1_p2": False,
         "speed_line2_p1": False,
-        "speed_line2_p2": False
+        "speed_line2_p2": False,
+        "pos_pos": False,
+        "neg_pos": False,
+        "num_lines": False
     }
 
     def __init__(self, file):
@@ -79,10 +84,15 @@ class ConfigParser:
             "missing": 0,
             "count_line_p1": (0,0),
             "count_line_p2": (0,0),
+            "count_line2_p1": (0,0),
+            "count_line2_p2": (0,0),
             "speed_line1_p1": (0,0),
             "speed_line1_p2": (0,0),
             "speed_line2_p1": (0,0),
-            "speed_line2_p2": (0,0)
+            "speed_line2_p2": (0,0),
+            "pos_pos": (0,0),
+            "neg_pos": (0,0),
+            "num_lines": 0
     }
 
     def parseConfig(self):

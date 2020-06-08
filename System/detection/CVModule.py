@@ -30,7 +30,8 @@ class CVModule:
         self.params = params
         self.video = inputVideo
         self.time = datetime.now()
-        self.count_line = Line.Line(self.parse_point(self.params["count_line_p1"]),self.parse_point(self.params["count_line_p2"]))
+        self.count_line1 = Line.Line(self.parse_point(self.params["count_line1_p1"]),self.parse_point(self.params["count_line1_p2"]))
+        self.count_line2 = Line.Line(self.parse_point(self.params["count_line2_p1"]),self.parse_point(self.params["count_line2_p2"]))
         self.centroidTracker = CentroidTracker.CentroidTracker(maxDisappeared= int(self.params["missing"]), maxDistance= int(self.params["max_dist"]), minDistance=int(self.params["min_dist"]))
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
         self.subtractor = cv.createBackgroundSubtractorMOG2(history = int(params["history"]), detectShadows= bool(params["shadows"]))
@@ -207,12 +208,18 @@ class CVModule:
                 else:
                     motion = False
 
+                # Determine which line object should be checked against.
+                if int(self.params["num_lines"]) > 1:
+                    line = self.which_line(tracked_object)
+                else:
+                    line = True
+
                 # Append new centroid to tracked object history.
                 tracked_object.centroids.append(centroid)
 
                 # Count vehicle's that haven't been counted and have crossed line with requisite position history length.
                 if not tracked_object.counted and len(tracked_object.centroids) > int(self.params["history_count"]) \
-                    and self.check_track_crossing(centroid, motion) and self.check_start_pos(motion, tracked_object):
+                    and self.check_track_crossing(centroid, motion, line) and self.check_start_pos(motion, tracked_object, line):
 
                     if motion:
                         self.countPositive += 1
@@ -244,34 +251,109 @@ class CVModule:
             del self.tracked_objects[ID]
         self.centroidTracker.deregisteredID.clear()
 
-    def check_start_pos(self, motion, trackedObject):
+    def check_start_pos(self, motion, trackedObject, line):
         """
         Checks that an object started on the other side of the count line to where it's being counted.
+        :param line: Determines which line to check against.
         :param trackedObject: Object that's going to be counted.
         :param motion: Indicates the direction of travel of an object.
         """
         count = 0
+        if line:
+            line = self.count_line1
+        else:
+            line = self.count_line2
+
         # Check how many centroids started on the other side of the line.
         for centroid in trackedObject.centroids:
             # The motion should be opposite to the side the object started on for it to count.
-            if self.pt_rel(self.count_line, Point.Point(centroid[0],centroid[1])) != motion:
+            if self.pt_rel(line, Point.Point(centroid[0],centroid[1])) != motion:
                 count += 1
         return count > int(self.params["otherside_centroids"])
 
-
-    def check_track_crossing(self, centroid, motion):
+    def check_track_crossing(self, centroid, motion, line):
         """
-        Checks if a vehicle has crossed the count_line.
+        Checks if a vehicle has crossed the count_line. Determines which count line by looking at orientation and line end
+        points to see if object lays between them.
+        :param line: True if use line one, False if use line two.
         :param centroid: The point specifying the centroid's location.
         :param motion: Specifies direction that traffic is moving. True if up and down, False is side to side.
         :return:
         """
+        if line:
+            line = self.count_line1
+        else:
+            line = self.count_line2
+
         # Create a point for the centroid
         cen_p = Point.Point(centroid[0], centroid[1])
         # Check points position relative to the line. True is above, False is below.
-        pos = self.pt_rel(self.count_line, cen_p)
+        pos = self.pt_rel(line, cen_p)
         # True if position is side matching direction of travel.
         return (pos == motion)
+
+    def which_line(self, tracked_object):
+        """
+        Determines which line a tracked object should be measured against by checking it's average position.
+        :return: True for line1 and False for line2
+        """
+
+        # If orientation True check between x values. If orientation False check between y values.
+        # Get average position of tracked_object in axis according to orientation.
+        if self.params["traffic_orientation"] == "True":
+            av_x = np.mean([c[0] for c in tracked_object.centroids])
+
+            # Protecting against weird order of points in config_file.
+            if self.count_line1.p1.x <= self.count_line1.p2.x:
+                l1_x1 = self.count_line1.p1.x
+                l1_x2 = self.count_line1.p2.x
+            else:
+                l1_x1 = self.count_line1.p2.x
+                l1_x2 = self.count_line1.p1.x
+
+            if self.count_line2.p1.x <= self.count_line2.p2.x:
+                l2_x1 = self.count_line2.p1.x
+                l2_x2 = self.count_line2.p2.x
+            else:
+                l2_x1 = self.count_line2.p2.x
+                l2_x2 = self.count_line2.p1.x
+
+            # Blob is between line one.
+            if l1_x1 <= av_x <= l1_x2:
+                return True
+            # Blob is between line two.
+            elif l2_x1 <= av_x <= l2_x2:
+                return False
+            # Houston we have a problem.
+            else:
+                raise(Exception("Your vehicles don't lay between your lines somehow, panic!"))
+
+        else:
+            av_y = np.mean([c[1] for c in tracked_object.centroids])
+            # Protecting against weird order of points in config_file.
+            if self.count_line1.p1.y <= self.count_line1.p2.y:
+                l1_y1 = self.count_line1.p1.y
+                l1_y2 = self.count_line1.p2.y
+            else:
+                l1_y1 = self.count_line1.p2.y
+                l1_y2 = self.count_line1.p1.y
+
+            if self.count_line2.p1.y <= self.count_line2.p2.y:
+                l2_y1 = self.count_line2.p1.y
+                l2_y2 = self.count_line2.p2.y
+            else:
+                l2_y1 = self.count_line2.p2.y
+                l2_y2 = self.count_line2.p1.y
+
+            # Blob is between line one.
+            if l1_y1 <= av_y <= l1_y2:
+                return True
+            # Blob in between line two.
+            elif l2_y1 <= av_y <= l2_y2:
+                return False
+            # Houston we have a problem.
+            else:
+                raise (Exception("Your vehicles don't lay between your lines somehow, panic!"))
 
     def parse_point(self, pt_string):
         """ Returns a point from a string of the format (x,y)
@@ -290,7 +372,7 @@ class CVModule:
         :param pt: Point
         :return: True if point is on or below the line, False otherwise.
         """
-        if pt.y >= l.m + l.b:
+        if pt.y >= l.m*pt.x + l.b:
             return True
         else:
             return False
@@ -349,17 +431,37 @@ class CVModule:
         # cv.addWeighted(imcopy, alpha, image, 1- alpha, 0, image)
 
         if self.params["count_line"] == "True":
-            # Draw lines
-            p1 = self.count_line.p1
-            p2 = self.count_line.p2
-            cv.line(image, (p1.x, p1.y), (p2.x, p2.y), (255, 1, 255), 2)
+            if int(self.params["num_lines"]) == 1:
+                # Draw lines
+                p1 = self.count_line1.p1
+                p2 = self.count_line1.p2
+                cv.line(image, (p1.x, p1.y), (p2.x, p2.y), (255, 1, 255), 2)
+            else:
+                # Draw lines
+                l1_p1 = self.count_line1.p1
+                l1_p2 = self.count_line1.p2
+                l2_p1 = self.count_line2.p1
+                l2_p2 = self.count_line2.p2
+                cv.line(image, (l1_p1.x, l1_p1.y), (l1_p2.x, l1_p2.y), (255, 1, 255), 2)
+                cv.line(image, (l2_p1.x, l2_p1.y), (l2_p2.x, l2_p2.y), (255, 1, 255), 2)
 
         # Draw Counts
         if self.params["count_graphics"] == "True":
-            textUp = "Up {}".format(self.countNegative)
-            textDown = "Down {}".format(self.countPositive)
-            cv.putText(image, textUp, (50, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
-            cv.putText(image, textDown, (500, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+
+            if self.params["traffic_orientation"] == "True":
+                str1 = "Up {}"
+                str2 = "Down {}"
+            else:
+                str1 = "Left {}"
+                str1 = "Right {}"
+
+            p1 = self.parse_point(self.params["pos_pos"])
+            p2 = self.parse_point(self.params["neg_pos"])
+
+            textUp = str1.format(self.countNegative)
+            textDown = str2.format(self.countPositive)
+            cv.putText(image, textUp, (p1.x, p1.y), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
+            cv.putText(image, textDown, (p2.x, p2.y), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
 
 
 

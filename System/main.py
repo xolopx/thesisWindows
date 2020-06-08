@@ -82,10 +82,11 @@ if __name__ == '__main__':
     # inputVideo = cv2.VideoCapture(r"C:\Users\Tom\Desktop\merging.mp4")
     # inputVideo = cv.VideoCapture(0)
 
-    config_parser = ConfigParser.ConfigParser(r"C:\Users\Tom\Desktop\thesisWindows\System\config_files\config1")
+    config_parser = ConfigParser.ConfigParser(r"C:\Users\Tom\Desktop\thesisWindows\System\config_files\2.txt")
     config_parser.parseConfig()
 
-    inputVideo = cv2.VideoCapture(r"C:\Users\Tom\Desktop\road.mp4")  # Initialize video capture stream.
+    inputVideo = cv2.VideoCapture(r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\2"
+                                  r".mp4")  # Initialize video capture stream.
     process = CVModule.CVModule(inputVideo, config_parser.parameters, id=0, lat=10, long=10)
 
     update_or_add_node()

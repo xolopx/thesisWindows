@@ -1,6 +1,5 @@
 %% 100
-imtool('C:\Users\Tom\Desktop\measuring_scene_one.png')
-
+imtool('C:\Users\Tom\Desktop\video_data\2_measure.png')
 %% 70
 imtool('Desktop/bound_70.png')
 

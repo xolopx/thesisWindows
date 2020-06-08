@@ -1,5 +1,4 @@
 \contentsline {chapter}{Abstract}{i}%
-\contentsline {chapter}{Acknowledgements}{iii}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}%
 \contentsline {chapter}{\numberline {2}Theoretical Background}{4}%
 \contentsline {section}{\numberline {2.1}Digital Images}{4}%
