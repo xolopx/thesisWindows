@@ -8,10 +8,6 @@ import sympy.geometry as sym
 from detection import CentroidTracker, TrackableObject, ConfigParser, Line, Point
 import keyboard
 
-
-
-
-
 class CVModule:
     """
     Handles the detection, tracking, counting and speed estimation of an object given a
@@ -28,8 +24,8 @@ class CVModule:
         :param param: Dictionary of configurations and node info for algorithm instance.
         """
         self.tracked_objects = {}
-        self.countUp = 0
-        self.countDown = 0
+        self.countNegative = 0
+        self.countPositive = 0
         self.frameCount = 0
         self.params = params
         self.video = inputVideo
@@ -205,13 +201,8 @@ class CVModule:
             # If there's a tracked object for the centroid then check if it can be counted.
             if tracked_object is not None:
                 # If camera orientation portrait check y-direction.
-                if self.orientation:
-                    motion = [c[1] for c in tracked_object.centroids]
-                    motion = centroid[1] - np.mean(motion)
-                # Else check x direction.
-                else:
-                    motion = [c[0] for c in tracked_object.centroids]
-                    motion = centroid[0] - np.mean(motion)
+                motion = [c[1] for c in tracked_object.centroids]
+                motion = centroid[1] - np.mean(motion)
 
                 if motion > 0:      # X-values get larger left to right.
                     motion = True
@@ -221,27 +212,29 @@ class CVModule:
                 # Append new centroid to tracked object history.
                 tracked_object.centroids.append(centroid)
 
-                # only record stats for object if it hasn't already been counted.
-                if not tracked_object.counted and len(tracked_object.centroids) > int(self.params["history_count"]):
-                    if self.check_track_crossing(centroid, motion):
-                        if self.orientation:
-                            if motion :
-                                self.countDown += 1
-                                tracked_object.counted = True
+                # Count vehicle's that haven't been counted and have crossed line with requisite position history length.
+                if not tracked_object.counted and len(tracked_object.centroids) > int(self.params["history_count"]) \
+                    and self.check_track_crossing(centroid, motion):
+
+                    if motion:
+                        self.countPositive += 1
+                        tracked_object.counted = True
+
+                        if self.params["print_positive"] == "True":
+                            if self.orientation:
                                 print("Down + ID {}".format(tracked_object.objectID))
                             else:
-                                self.countUp += 1
-                                tracked_object.counted = True
-                                print("Up + ID {}".format(tracked_object.objectID))
-                        else:
-                            if motion :
-                                self.countUp += 1
-                                tracked_object.counted = True
+                                print("Right + ID {}".format(tracked_object.objectID))
+                    else:
+                        self.countNegative += 1
+                        tracked_object.counted = True
+
+                        if self.params["print_negative"] == "True":
+                            if self.orientation:
                                 print("Up + ID {}".format(tracked_object.objectID))
                             else:
-                                self.countDown += 1
-                                tracked_object.counted = True
-                                print("Down + ID {}".format(tracked_object.objectID))
+                                print("Left + ID {}".format(tracked_object.objectID))
+
 
             # Else create a new trackable object for the centroid.l
             else:
@@ -252,6 +245,15 @@ class CVModule:
         for ID in self.centroidTracker.deregisteredID:
             del self.tracked_objects[ID]
         self.centroidTracker.deregisteredID.clear()
+
+    def check_start_pos(self, motion, orientation):
+        """
+        Checks that an object started on the other side of the count line to where it's being counted.
+        :param orientation: Indicates which axis traffic is travelling in.
+        :param motion: Indicates the direction of travel of an object.
+        """
+
+
 
     def check_track_crossing(self, centroid, motion):
         """
@@ -298,12 +300,12 @@ class CVModule:
         # If time interval has passed.
         if (datetime.now() - timerStart).total_seconds() >= interval:
             # Store the readings in the database
-            # db.insert.insert_count_minute(self.countUp,timerStart.strftime('%Y-%m-%d %H:%M:%S'),self.id)
-            db.insert.insert_count_minute(self.countUp,timerStart,0)
+            # db.insert.insert_count_minute(self.countNegative,timerStart.strftime('%Y-%m-%d %H:%M:%S'),self.id)
+            db.insert.insert_count_minute(self.countNegative,timerStart,0)
             # Reset the count
             if self.params["refresh_count"] == "True":
-                self.countUp = 0
-                self.countDown = 0
+                self.countNegative = 0
+                self.countPositive = 0
             # Return the new time to the timer.
             return datetime.now()
         else:
@@ -350,8 +352,8 @@ class CVModule:
 
         # Draw Counts
         if self.params["count_graphics"] == "True":
-            textUp = "Up {}".format(self.countUp)
-            textDown = "Down {}".format(self.countDown)
+            textUp = "Up {}".format(self.countNegative)
+            textDown = "Down {}".format(self.countPositive)
             cv.putText(image, textUp, (50, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
             cv.putText(image, textDown, (500, 50), cv.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 255), 2)
 

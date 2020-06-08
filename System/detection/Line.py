@@ -1,4 +1,5 @@
 from detection import Point
+import math
 
 class Line:
 
@@ -9,6 +10,10 @@ class Line:
         self.b = self.getIntercept()
 
     def getGradient(self):
+        # Vertical line, gradient infinite.
+        if self.p1.x == self.p2.x:
+            return math.inf
+
         m = (self.p1.y - self.p2.y)/ (self.p1.x - self.p2.x)
         return m
 
