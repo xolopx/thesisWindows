@@ -7,6 +7,24 @@ import database_interface as db
 import sympy.geometry as sym
 from detection import CentroidTracker, TrackableObject, ConfigParser, Line, Point
 import keyboard
+import ffmpeg
+
+import ffmpeg
+
+
+
+def correct_rotation(frame, rotate_code):
+
+    if int(meta_dict['streams'][0]['tags']['rotate']) == 90:
+        rotateCode = cv.ROTATE_90_CLOCKWISE
+    elif int(meta_dict['streams'][0]['tags']['rotate']) == 180:
+        rotateCode = cv.ROTATE_180
+    elif int(meta_dict['streams'][0]['tags']['rotate']) == 270:
+        rotateCode = cv.ROTATE_90_COUNTERCLOCKWISE
+
+    return cv.rotate(frame, rotate_code)
+
+
 
 class CVModule:
     """
@@ -14,7 +32,7 @@ class CVModule:
     series of images.
     """
 
-    def __init__(self, inputVideo, params, id, lat, long):
+    def __init__(self,rotate_code, inputVideo, params, id, lat, long):
         """
         A CVModule Object controls the configuration of the detection algorithm and executes the
         algorithm on the input video. It then sends the statistics derived from the input to the
@@ -29,6 +47,7 @@ class CVModule:
         self.frameCount = 0
         self.params = params
         self.video = inputVideo
+        self.rotate_code = rotate_code
         self.time = datetime.now()
         self.count_line1 = Line.Line(self.parse_point(self.params["count_line1_p1"]),self.parse_point(self.params["count_line1_p2"]))
         self.count_line2 = Line.Line(self.parse_point(self.params["count_line2_p1"]),self.parse_point(self.params["count_line2_p2"]))
@@ -46,12 +65,16 @@ class CVModule:
         timerStart = datetime.now()
         # # Make sure the node is in the database. *** HANDLED IN MAIN ***
         # db.insert.insert_node(self.id, "Node001", "West", self.longitude, self.latitude)
-
         """ MAIN LOOP """
         # Loop will execute until all input processed or user exits.
         while True and self.frameCount < (self.totalFrames - int(self.params["history"])):
             # Read a frame of input video.
             _, frame = self.video.read()
+
+            # check if the frame needs to be rotated
+            if self.rotate_code == 180:
+                frame = cv.rotate(frame, cv.ROTATE_180)
+
             frame = self.resize_frame(frame)
             # Apply the subtractor to the frame to get foreground objects.
             mask = self.subtractor.apply(frame)
@@ -136,6 +159,11 @@ class CVModule:
         i = 0
         while i < int(self.params["history"]):
             _, frame = self.video.read()
+
+            # check if the frame needs to be rotated
+            if self.rotate_code == 180:
+                frame = cv.rotate(frame, cv.ROTATE_180)
+
             self.subtractor.apply(frame, None, 0.001)
             i += 1
 
@@ -453,7 +481,7 @@ class CVModule:
                 str2 = "Down {}"
             else:
                 str1 = "Left {}"
-                str1 = "Right {}"
+                str2 = "Right {}"
 
             p1 = self.parse_point(self.params["pos_pos"])
             p2 = self.parse_point(self.params["neg_pos"])

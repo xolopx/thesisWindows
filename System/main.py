@@ -9,7 +9,7 @@ import argparse
 import datetime
 import globals
 import database_interface as db
-
+import ffmpeg
 
 globals.initialize()
 # outputFrame = None
@@ -71,7 +71,6 @@ def update_or_add_node():
         print('Entry Not Found So Create New')
         db.insert.insert_node(id, node_name, perspective, longitude, latitude)
 
-
 if __name__ == '__main__':
 
     globals.initialize()
@@ -82,12 +81,16 @@ if __name__ == '__main__':
     # inputVideo = cv2.VideoCapture(r"C:\Users\Tom\Desktop\merging.mp4")
     # inputVideo = cv.VideoCapture(0)
 
-    config_parser = ConfigParser.ConfigParser(r"C:\Users\Tom\Desktop\thesisWindows\System\config_files\3.txt")
-    config_parser.parseConfig()
 
-    inputVideo = cv2.VideoCapture(r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\3"
-                                  r".mp4")  # Initialize video capture stream.
-    process = CVModule.CVModule(inputVideo, config_parser.parameters, id=0, lat=10, long=10)
+    video_path = r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\7.mp4"
+    config_path = r"C:\Users\Tom\Desktop\thesisWindows\System\config_files\7.txt"
+
+    config_parser = ConfigParser.ConfigParser(config_path)
+    config_parser.parseConfig()
+    rotate = int(config_parser.parameters["rotate"])
+
+    inputVideo = cv2.VideoCapture(video_path)  # Initialize video capture stream.
+    process = CVModule.CVModule(rotate, inputVideo, config_parser.parameters, id=0, lat=10, long=10)
 
     update_or_add_node()
 
