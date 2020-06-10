@@ -82,8 +82,11 @@ if __name__ == '__main__':
     # inputVideo = cv.VideoCapture(0)
 
 
-    video_path = r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\7.mp4"
-    config_path = r"C:\Users\Tom\Desktop\thesisWindows\System\config_files\7.txt"
+    # video_path = r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\7.mp4"
+    # config_path = r"C:\Users\Tom\Desktop\thesisWindows\System\config_files\7.txt"
+
+    video_path = r"C:\Users\c3175\OneDrive - The University Of Newcastle\FYP\video_data\7.mp4"
+    config_path = r"C:\Users\c3175\Desktop\thesisWindows\System\config_files\7.txt"
 
     config_parser = ConfigParser.ConfigParser(config_path)
     config_parser.parseConfig()

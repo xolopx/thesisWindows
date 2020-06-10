@@ -6,3 +6,4 @@
 .~lock.Time.xlsx#
 
 System/venv/
+System/__pycache__/
