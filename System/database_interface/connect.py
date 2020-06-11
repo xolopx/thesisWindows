@@ -9,7 +9,7 @@ def connect():
     conn = None
     # Try to connect to the database
     try:
-        print(' Connecting to MySQL databas ...')
+        print(' Connecting to MySQL database ...')
         # ** unpacks the dictionary returned by the method into keyword arguments
         conn = MySQLConnection(**db_config)
 

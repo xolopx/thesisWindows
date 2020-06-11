@@ -10,6 +10,7 @@ import datetime
 import globals
 import database_interface as db
 import ffmpeg
+import os
 
 globals.initialize()
 # outputFrame = None
@@ -82,11 +83,11 @@ if __name__ == '__main__':
     # inputVideo = cv.VideoCapture(0)
 
 
-    # video_path = r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\7.mp4"
-    # config_path = r"C:\Users\Tom\Desktop\thesisWindows\System\config_files\7.txt"
+    dirname = os.path.dirname(__file__)
+    config_path = os.path.join(dirname, r'config_files\2.txt')
 
-    video_path = r"C:\Users\c3175\OneDrive - The University Of Newcastle\FYP\video_data\7.mp4"
-    config_path = r"C:\Users\c3175\Desktop\thesisWindows\System\config_files\7.txt"
+    video_path = r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\2.mp4"
+    # video_path = r"C:\Users\c3175\OneDrive - The University Of Newcastle\FYP\video_data\7.mp4"
 
     config_parser = ConfigParser.ConfigParser(config_path)
     config_parser.parseConfig()

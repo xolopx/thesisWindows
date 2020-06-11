@@ -40,3 +40,4 @@ speed_line2_p1 = (5,5)
 speed_line2_p2 = (6,6)
 pos_pos = (350,50)
 neg_pos = (350,75)
+rotate = 0
