@@ -11,21 +11,6 @@ import ffmpeg
 
 import ffmpeg
 
-
-
-def correct_rotation(frame, rotate_code):
-
-    if int(meta_dict['streams'][0]['tags']['rotate']) == 90:
-        rotateCode = cv.ROTATE_90_CLOCKWISE
-    elif int(meta_dict['streams'][0]['tags']['rotate']) == 180:
-        rotateCode = cv.ROTATE_180
-    elif int(meta_dict['streams'][0]['tags']['rotate']) == 270:
-        rotateCode = cv.ROTATE_90_COUNTERCLOCKWISE
-
-    return cv.rotate(frame, rotate_code)
-
-
-
 class CVModule:
     """
     Handles the detection, tracking, counting and speed estimation of an object given a
@@ -55,6 +40,8 @@ class CVModule:
         self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
         self.subtractor = cv.createBackgroundSubtractorMOG2(history = int(params["history"]), detectShadows= bool(params["shadows"]))
         self.wait = int(self.params["frame_wait"])
+        self.countNegativeCurrent = 0
+        self.countPositiveCurrent = 0
 
     def process(self):
         global image
@@ -104,7 +91,7 @@ class CVModule:
                     objs.calc_speed()
 
             # Log statistics   *** CURRENTLY TURNED OFF ***
-            timerStart = self.log_stats(timerStart, 3)
+            timerStart = self.log_stats(timerStart, int(self.params["storage_interval"]))
 
             # *** TESTING: FOR CONTROLLING SPEED OF VIDEO AND PAUSING VIDEO ***
             # key = cv.waitKey(self.wait)
@@ -251,6 +238,7 @@ class CVModule:
 
                     if motion:
                         self.countPositive += 1
+                        self.countPositiveCurrent += 1
                         tracked_object.counted = True
 
                         if self.params["print_positive"] == "True":
@@ -260,6 +248,7 @@ class CVModule:
                                 print("Right + ID {}".format(tracked_object.objectID))
                     else:
                         self.countNegative += 1
+                        self.countNegativeCurrent += 1
                         tracked_object.counted = True
 
                         if self.params["print_negative"] == "True":
@@ -413,10 +402,22 @@ class CVModule:
 
         # If time interval has passed.
         if (datetime.now() - timerStart).total_seconds() >= interval:
-            # Store the readings in the database
-            # db.insert.insert_count_minute(self.countNegative,timerStart.strftime('%Y-%m-%d %H:%M:%S'),self.id)
-            db.insert.insert_count_minute(self.countNegative,timerStart,0)
-            # Reset the count
+
+            if self.params["multilane"] == "True":
+                db.insert.insert_count_minute(self.countNegativeCurrent,timerStart, 0, 0)
+                db.insert.insert_count_minute(self.countPositiveCurrent,timerStart, 0, 1)
+            else:
+                # Direction True means positive
+                if self.params["singlelane"] == "True":
+                    db.insert.insert_count_minute(self.countPositiveCurrent, timerStart, 0, 1)
+                # Else direction is negative.
+                else:
+                    db.insert.insert_count_minute(self.countNegativeCurrent, timerStart, 0, 0)
+
+            self.countNegativeCurrent = 0
+            self.countPositiveCurrent = 0
+
+            # Reset the displayed count.
             if self.params["refresh_count"] == "True":
                 self.countNegative = 0
                 self.countPositive = 0

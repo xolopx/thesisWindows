@@ -27,16 +27,16 @@ def insert_node(id, node_name, perspective, longitude, latitude):
         cursor.close()
         conn.close()
 
-def insert_count_minute(vehicle_count, record_time, node_id):
+def insert_count_minute(vehicle_count, record_time, node_id, direction):
     """ Creates a new entry for a count reading for a minute. """
 
     # define the query
     query = """
-            INSERT INTO count_minute(vehicle_count, record_time, node_id) 
-                VALUES(%s,%s,%s)
+            INSERT INTO count_minute(vehicle_count, record_time, node_id, direction) 
+                VALUES(%s,%s,%s,%s)
             """
     # Specify the arguments for the placeholders
-    args = (vehicle_count, record_time, node_id)
+    args = (vehicle_count, record_time, node_id,direction)
 
     try:
         # Read out the database configurations

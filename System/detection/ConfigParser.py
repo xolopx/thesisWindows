@@ -3,6 +3,9 @@ import re
 class ConfigParser:
     """ Reads a configuration file to determine the parameter calibrations for a node. """
     check_list = {
+        "storage_interval": False,
+        "singlelane": False,
+        "multilane": False,
         "rotate": False,
         "otherside_centroids": False,
         "print_negative": False,
@@ -51,6 +54,9 @@ class ConfigParser:
     def __init__(self, file):
         self.file = file
         self.parameters = {
+            "storage_interval": False,
+            "singlelane": False,
+            "multilane": False,
             "rotate": 0,
             "otherside_centroids": False,
             "print_negative": False,
