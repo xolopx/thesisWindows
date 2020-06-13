@@ -1,3 +1,4 @@
+import math
 import re
 import globals
 import cv2 as cv
@@ -215,8 +216,12 @@ class CVModule:
             # If there's a tracked object for the centroid then check if it can be counted.
             if tracked_object is not None:
                 # If camera orientation portrait check y-direction.
-                motion = [c[1] for c in tracked_object.centroids]
-                motion = centroid[1] - np.mean(motion)
+                if self.params["traffic_orientation"] == "True":
+                    motion = [c[1] for c in tracked_object.centroids]
+                    motion = centroid[1] - np.mean(motion)
+                else:
+                    motion = [c[0] for c in tracked_object.centroids]
+                    motion = centroid[0] - np.mean(motion)
 
                 if motion > 0:      # X-values get larger left to right.
                     motion = True
@@ -389,10 +394,16 @@ class CVModule:
         :param pt: Point
         :return: True if point is on or below the line, False otherwise.
         """
-        if pt.y >= l.m*pt.x + l.b:
-            return True
+        if math.isinf(l.m):
+            if pt.x >= l.p1.x:
+                return True
+            else:
+                return False
         else:
-            return False
+            if pt.y >= l.m*pt.x + l.b:
+                return True
+            else:
+                return False
 
     def log_stats(self, timerStart, interval):
         """ Handles entering vehicle count and speed data into the database.
@@ -537,4 +548,3 @@ class CVModule:
         dim = (width, height)
         img = cv.resize(img, dim, interpolation=cv.INTER_AREA)
         return img
-
