@@ -1,6 +1,6 @@
 training = True
 history = 500
-rapid_test = False
+rapid_test = True
 otherside_centroids = 3
 print_positive = True
 print_negative = False
@@ -40,3 +40,7 @@ speed_line2_p1 = (5,5)
 speed_line2_p2 = (6,6)
 pos_pos = (350,50)
 neg_pos = (350,75)
+storage_interval = 10
+singlelane = True
+multilane = True
+rotate = 0

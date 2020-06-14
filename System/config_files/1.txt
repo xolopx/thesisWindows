@@ -1,10 +1,10 @@
-rapid_test = False
+rapid_test = True
 otherside_centroids = 3
 print_positive = True
 print_negative = False
 history_count = 20
 test_length = 900
-refresh_count = True
+refresh_count = False
 training = True
 grid = False
 frame_count = True
