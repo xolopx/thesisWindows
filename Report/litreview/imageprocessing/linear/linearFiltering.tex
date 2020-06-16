@@ -1,0 +1,28 @@
+\subsection{Linear Filtering}
+
+Linear filtering of an image is an operation that outputs a weighted average of the pixels in a neighborhood specified by the location and size of the filter. A filter is characterised by a matrix known as the filter's kernel, K, the kernel is comprised of coefficients, or weights, that affect the output of the filter. The mathematical operation that describes the weighted average produced by the interaction of a linear filter with an image is called convolution (see sections \ref{subsection:corr} \& \ref{subsection:conv}). Convolution multiplies each the filter coefficients with its corresponding pixel and sums the results of all multiplications storing it at the location under the filter's origin in the output image (see Figure \ref{fig:kernel_graphics}) \cite{alg_apps}. Figure \ref{fig:generalForm} shows the general form of a linear filter kernel and that the divisor that determines the value of the result is the sum of all coefficients in the filter kernel.
+
+\begin{figure}[h]
+  
+   \[ 
+     K  = \frac{1}{\sum\limits_{i=0}^{M}\sum\limits_{j=0}^{N}c_{i,j}}
+    \begin{bmatrix}
+      c_{0,0} & c_{0,1} & \dots & c_{0,n} \\
+      c_{1,0} & c_{1,1} & \dots & c_{1,n} \\
+      \vdots & \vdots & \ddots & \vdots \\
+      c_{m,0} & c_{m,1} & \dots & c_{m,n}
+    \end{bmatrix}
+  \]
+  \caption{General Form of a Linear Filter}
+  \label{fig:generalForm}
+\end{figure}
+
+\input{litreview/imageprocessing/linear/correlation}
+\input{litreview/imageprocessing/linear/convolution}
+\input{litreview/imageprocessing/linear/kernels}
+
+
+
+
+
+

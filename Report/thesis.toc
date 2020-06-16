@@ -1,51 +1,28 @@
-\contentsline {chapter}{Abstract}{i}%
-\contentsline {chapter}{\numberline {1}Introduction}{1}%
-\contentsline {chapter}{\numberline {2}Theoretical Background}{4}%
-\contentsline {section}{\numberline {2.1}Digital Images}{4}%
-\contentsline {section}{\numberline {2.2}Linear Filtering}{6}%
-\contentsline {subsection}{\numberline {2.2.1}Correlation}{6}%
-\contentsline {subsection}{\numberline {2.2.2}Convolution}{8}%
-\contentsline {subsection}{\numberline {2.2.3}Kernels}{9}%
-\contentsline {subsubsection}{Box Filter}{10}%
-\contentsline {subsubsection}{Gaussian Kernel}{11}%
-\contentsline {section}{\numberline {2.3}Non-Linear Filters}{12}%
-\contentsline {subsection}{\numberline {2.3.1}The Median Filter}{13}%
-\contentsline {section}{\numberline {2.4}Morphology}{13}%
+\contentsline {chapter}{\numberline {1}Theoretical Background}{1}%
+\contentsline {section}{\numberline {1.1}Digital Images}{1}%
+\contentsline {section}{\numberline {1.2}The Gaussian}{4}%
+\contentsline {section}{\numberline {1.3}Image Processing}{6}%
+\contentsline {subsection}{\numberline {1.3.1}Thresholding}{6}%
+\contentsline {subsection}{\numberline {1.3.2}Linear Filtering}{7}%
+\contentsline {subsubsection}{Correlation}{7}%
+\contentsline {subsubsection}{Convolution}{9}%
+\contentsline {subsubsection}{Kernels}{10}%
+\contentsline {subsubsection}{Box Filter}{11}%
+\contentsline {subsubsection}{Gaussian Kernel}{12}%
+\contentsline {subsection}{\numberline {1.3.3}Non-Linear Filtering}{13}%
+\contentsline {subsubsection}{The Median Filter}{13}%
+\contentsline {subsubsection}{Morphology}{14}%
 \contentsline {subsubsection}{Dilation}{14}%
-\contentsline {subsubsection}{Erosion}{14}%
-\contentsline {subsubsection}{Opening and Closing}{15}%
-\contentsline {section}{\numberline {2.5}The Gaussian}{16}%
-\contentsline {section}{\numberline {2.6}Clustering}{18}%
-\contentsline {subsection}{\numberline {2.6.1}K-Means}{19}%
-\contentsline {subsection}{\numberline {2.6.2}Mixtures of Gaussians}{21}%
-\contentsline {subsubsection}{Expectation Maximization}{24}%
-\contentsline {chapter}{\numberline {3}Design}{27}%
-\contentsline {subsubsection}{System Overview}{27}%
-\contentsline {section}{\numberline {3.1}Hardware}{28}%
-\contentsline {subsubsection}{Node Hardware}{28}%
-\contentsline {section}{\numberline {3.2}Vehicle Detection}{29}%
-\contentsline {subsection}{\numberline {3.2.1}Background Subtraction}{30}%
-\contentsline {subsubsection}{Calibration}{31}%
-\contentsline {subsection}{\numberline {3.2.2}Morphology and Filtering}{33}%
-\contentsline {subsubsection}{Filtering}{33}%
-\contentsline {subsubsection}{Morphology}{33}%
-\contentsline {subsubsection}{Calibration}{34}%
-\contentsline {subsection}{\numberline {3.2.3}Contours and Bounding Boxes}{35}%
-\contentsline {subsubsection}{Calibration}{36}%
-\contentsline {subsection}{\numberline {3.2.4}Tracking}{37}%
-\contentsline {subsubsection}{Calibration}{38}%
-\contentsline {subsection}{\numberline {3.2.5}Speed Estimation and Counting}{39}%
-\contentsline {subsubsection}{Counting}{40}%
-\contentsline {subsubsection}{Speed Estimation}{40}%
-\contentsline {subsubsection}{Calibration}{41}%
-\contentsline {section}{\numberline {3.3}Data Transfer}{42}%
-\contentsline {subsection}{\numberline {3.3.1}Video Feed}{42}%
-\contentsline {subsection}{\numberline {3.3.2}Traffic Statistics}{43}%
-\contentsline {section}{\numberline {3.4}Database Management}{43}%
-\contentsline {section}{\numberline {3.5}User Interface}{46}%
-\contentsline {chapter}{Bibliography}{47}%
-\contentsline {chapter}{Appendices}{50}%
-\contentsline {chapter}{\numberline {A}Hardware Specifications}{50}%
-\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{50}%
-\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{50}%
-\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{51}%
+\contentsline {subsubsection}{Erosion}{15}%
+\contentsline {subsubsection}{Opening and Closing}{16}%
+\contentsline {section}{\numberline {1.4}Computer Vision}{18}%
+\contentsline {subsection}{\numberline {1.4.1}Clustering}{18}%
+\contentsline {subsubsection}{K-Means}{18}%
+\contentsline {subsubsection}{Mixtures of Gaussians}{20}%
+\contentsline {subsubsection}{Expectation Maximization}{23}%
+\contentsline {chapter}{Bibliography}{25}%
+\contentsline {chapter}{Appendices}{26}%
+\contentsline {chapter}{\numberline {A}Hardware Specifications}{26}%
+\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{26}%
+\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{26}%
+\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{27}%

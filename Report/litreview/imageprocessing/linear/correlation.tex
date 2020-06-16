@@ -1,0 +1,120 @@
+% CORRELATION
+\subsubsection{Correlation}
+\label{subsection:corr}
+
+The correlation of a linear filter $h(u,v)$ to an image $f(i,j)$ with the output $g(i,j)$ may be described mathematically as in Equation \ref{eq:1} but denoted more succinctly as in Equation \ref{eq:correlation_operator}
+
+\begin{equation} \label{eq:1}
+g(i,j) = \sum_{u=-k}^{k}\sum_{v = -l}^{l}f(i+u,j+v)h(u,v)
+\end{equation}
+
+\begin{equation} \label{eq:correlation_operator}
+g = f \otimes h
+\end{equation}
+
+Correlation measures the \emph{similarity} between two signals and is used in image processing to measure the similarity between digital images and linear filters. When correlating an image and a linear filter, regions of high similarity will produce high output values \cite{optimalKernel}, this phenomenon can be used to isolate features in an image by correlating a filter that describes the desired feature. A feature could be as simple as a straight line as in a Sobel filter (Figure \ref{fig:sobel_filters}) or as specific as the outline of a car wheel. This method of feature detection is called \emph{template matching} \cite{oreilly_python}. In Figure \ref{fig:sobel_apply} vertical and horizontal Sobel filters \cite{cv_matlab} are correlated with an image a building wall and produce images that emphasize lines that match the orientation of the respective filter. The result is a binary image the output has been thresholded (see section \ref{subsection:thresholding}) to isolate high intensity regions where similarity is greatest.
+
+% SOBEL MASKS
+\begin{figure}[H]
+  \begin{subfigure}[b]{0.49\textwidth}
+    \[k =
+    \begin{bmatrix*}[l]
+     -1 & -1 & -1 \\
+      \phantom{-}2 & \phantom{-}2 & \phantom{-}2 \\
+      -1 & -1 & -1 
+    \end{bmatrix*}
+    \]
+    \caption{Horizontal Sobel-Feldman Filter Mask}
+    \label{rfidtest_xaxis}
+\end{subfigure}
+\begin{subfigure}[b]{0.49\textwidth}
+  \[ k = 
+    \begin{bmatrix}
+      -1 & 2 & -1 \\
+      -1 & 2 & -1 \\
+      -1 & 2 & -1
+    \end{bmatrix}
+    \]
+    \caption{Vertical Sobel-Feldman Filter Mask}  
+\end{subfigure}
+    \caption{Sobel Filters}
+    \label{fig:sobel_filters}
+\end{figure}
+
+% SOBEL FILTER APPLICATION
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.3\textwidth}
+      \includegraphics[width=\textwidth]{im_color}
+      \caption{Grayscale image. Img: Simone Hutsch}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.3\textwidth}
+      \includegraphics[width=\textwidth]{gv}
+      \caption{Binary vertical similarity.}
+      \label{fig:vert}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.3\textwidth}
+      \includegraphics[width=\textwidth]{gh}
+      \caption{Binary horizontal similarity.}
+      \label{fig:hoz}
+  \end{subfigure}
+  \caption{Application of Sobel filters to exaggerate lines.}
+  \label{fig:sobel_apply}
+\end{figure}
+
+Correlation is \emph{shift invariant}, which means that it does the same thing no matter where in an image it is applied. To satisfy this property correlation may be super-positioned 
+
+\[a(f_1 + f_2) = af_1 + af_2\]
+
+and abides by the shift invariance principle
+
+\[g(i,j)=f(i+k,j+l) \Leftrightarrow\ (h\circ g)(i,j)=(h\circ f)(i+k,j+l)\]
+
+Correlation has the side effect of flipping both horizontally and vertically the location of output points relative to the center point (\emph{reference point}) in the original image which may be undesirable as can be observed in Figure \ref{fig:correlation}.
+
+% CORRELATION EXAMPLE  %
+\begin{figure}[H] 
+  \centering
+  \begin{tabular}{ccccc}
+      \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 1 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      \end{tabular}%
+    & $\otimes$ &
+    \begin{tabular}{|c|c|c|}
+      \hline
+      a & b & c \\
+      \hline
+      d & e & f \\
+      \hline
+      g & h & i \\
+      \hline 
+    \end{tabular}
+    & $=$ &
+    \begin{tabular}{|c|c|c|c|c|}
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+      0 & \textbf{i} & \textbf{h} & \textbf{g} & 0 \\[1pt]
+      \hline
+      0 & \textbf{f} & \textbf{e} & \textbf{d} & 0 \\[1pt]
+      \hline
+      0 & \textbf{c} & \textbf{b} & \textbf{a} & 0 \\[1pt]
+      \hline
+      0 & 0 & 0 & 0 & 0 \\[1pt]
+      \hline
+    \end{tabular} \\
+    $F(x,y)$ & & $H(u,v)$& & $G(x,y)$ \\
+  \end{tabular}
+  \caption{Correlation of a filter and an image.}
+  \label{fig:correlation}
+\end{figure}

@@ -1,0 +1,36 @@
+\subsection{Clustering}
+Clustering is a method of segmenting an image into disjoint sets known as classes. This is useful for separating types of features or objects in an image. For example in Figure \ref{fig:toycar} the toy car has been segmented from the background.
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.5\linewidth}
+      		\centering\includegraphics[width=220pt]{toyCar}
+      		\caption{Image by Gustavo, Upsplash.}
+		    \label{fig:toycarA}
+    	\end{subfigure}%
+    	\begin{subfigure}[b]{0.5\linewidth}
+      		\centering\includegraphics[width=220pt]{toycarseg}
+      		\caption{Segmentation of car from background.}
+       		\label{fig:toycarB}
+    	\end{subfigure}
+    	\caption{Segmentation of toy cars using K-Means Clustering.}
+    	\label{fig:toycar}
+\end{figure} 
+
+In an image every pixel can be individually classified or groups of pixels known as superpixels may be treated as single entities. Entities are sorted based on their similarity. For example, a pixel's intensity is a feature that could be used to cluster it with other pixels of similar intensity. As seen in (\ref{eq:featurevector}) an entity's comparable traits may be represented by a feature vector. An entity may have any number of features which as also regarded as dimensions, $d$. 
+
+\begin{equation}
+    \vec{v} = 
+    \begin{bmatrix}
+        d_1 \\
+        d_2 \\
+        \vdots \\ 
+        d_n
+    \end{bmatrix}
+    \label{eq:featurevector}
+\end{equation}
+
+
+
+\input{litreview/computervision/clustering/kmeans}
+\input{litreview/computervision/clustering/mog}

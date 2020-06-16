@@ -1,44 +1,27 @@
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces (\subref {fig:fig1}) A Simple 8-bit Image \nobreakspace {}(\subref {fig:fig2}) Array Representation of Image.\relax }}{5}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Surface Plot of Figure 2.1\hbox {}a\hbox {}\relax }}{5}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces General Form of a Linear Filter\relax }}{6}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Sobel Filters\relax }}{7}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Application of Sobel filters to exagerate lines.\relax }}{7}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Correlation of a filter and an image.\relax }}{8}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Convolution of a filter and an image.\relax }}{9}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Visualization of a Filter Kernel Application\relax }}{10}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Application of a 17x17 Box filter to blur image.\relax }}{10}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces 3x3 Box Filter Kernel\relax }}{11}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Application of a 7x7 Gaussian filter to denoise image.\relax }}{12}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces 7x7 Gaussian Filter Kernel, Sigma = 0.5\relax }}{12}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Filtering out salt and pepper noise with Gaussian and median filter. Original image by Grant Durr.\relax }}{13}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Conversion of an RGB image to a binary image. Original image by Adam Birkett\relax }}{14}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Effect of morphological operations on a binary image using a 9x9 square structuring element. Original image by \relax }}{16}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces The Gaussian Function in 2D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{17}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces The Gaussian Function in 1D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{17}%
-\contentsline {figure}{\numberline {2.18}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{19}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces K-Means clustering performed on random data.\relax }}{21}%
-\contentsline {figure}{\numberline {2.20}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{22}%
-\contentsline {figure}{\numberline {2.21}{\ignorespaces Clustering using GMM. X marks cluster mean.\relax }}{23}%
-\contentsline {figure}{\numberline {2.22}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{24}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces High level system design and data flow.\relax }}{28}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Raspberry Pi 4 and Pi Cam connected.\relax }}{29}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Sub-process that comprise the detection subsystem.\relax }}{30}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Adaptation GMM background cluster. Images by Karol Majek\relax }}{32}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Stages in the computer vision detection process.\relax }}{32}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Comparison of morphological closure using a 7x7 rectangular and elliptical structuring element for 3 iterations.\relax }}{35}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Morphological closing using different 7x7 structuring elements and iterations.\relax }}{35}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Contours outlining foreground mask objects.\relax }}{36}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Bounding boxes prescribed to irregular shaped blobs.\relax }}{37}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Centroids plotted over foreground objects.\relax }}{38}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Comparison of centroid generation with and without consolidating centroids based on distance.\relax }}{39}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Vehicle count threshold lines visualized on traffic setting and foreground mask.\relax }}{40}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Visualization of speed measurement region.\relax }}{41}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Visualization of four speed sectors of a speed region.\relax }}{42}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces High level operation of system network.\relax }}{43}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Entity Relationship Diagram of the system database.\relax }}{44}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Web Application - User Interface Panes\relax }}{47}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Grayscale value and colour range. Img: Learning Processing - Daniel Shiffman\relax }}{2}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces (\subref {fig:fig1}) A simple 8-bit grayscale image \nobreakspace {}(\subref {fig:fig2}) Array representation of a grayscale image.\relax }}{3}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Surface Plot of Figure \G@refundefinedtrue \text {\normalfont \bfseries ??}\GenericWarning { }{LaTeX Warning: Reference `fig:2Darray' on page 3 undefined}\G@refundefinedtrue \text {\normalfont \bfseries ??}\GenericWarning { }{LaTeX Warning: Reference `sub@fig:fig1' on page 3 undefined}\relax }}{3}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces The Gaussian Function in 2D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{4}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The Gaussian Function in 1D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{5}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Performing thresholding on a grayscale image to isolate a white horse.\relax }}{6}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces General Form of a Linear Filter\relax }}{7}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Sobel Filters\relax }}{8}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Application of Sobel filters to exaggerate lines.\relax }}{8}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Correlation of a filter and an image.\relax }}{9}%
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Convolution of a filter and an image.\relax }}{10}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Visualization of a Filter Kernel Application\relax }}{11}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Application of a 17x17 Box filter to blur image.\relax }}{11}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces 3x3 Box Filter Kernel\relax }}{12}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Application of a 7x7 Gaussian filter to denoise image.\relax }}{12}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces 7x7 Gaussian Filter Kernel, Sigma = 0.5\relax }}{13}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Filtering out salt and pepper noise with Gaussian and median filter. Original image by Grant Durr.\relax }}{14}%
+\contentsline {figure}{\numberline {1.18}{\ignorespaces Conversion of an RGB image to a binary image. Original image by Adam Birkett\relax }}{15}%
+\contentsline {figure}{\numberline {1.19}{\ignorespaces Effect of morphological operations on a binary image using a 9x9 square structuring element. Original image by \relax }}{17}%
+\contentsline {figure}{\numberline {1.20}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{18}%
+\contentsline {figure}{\numberline {1.21}{\ignorespaces K-Means clustering performed on random data.\relax }}{20}%
+\contentsline {figure}{\numberline {1.22}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{21}%
+\contentsline {figure}{\numberline {1.23}{\ignorespaces Clustering using GMM. X marks cluster mean.\relax }}{22}%
+\contentsline {figure}{\numberline {1.24}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{23}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
