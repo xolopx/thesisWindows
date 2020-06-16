@@ -1,0 +1,11 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+The style file: unsrt.bst
+Database file #1: bibliography/bibliography.bib
+Warning--entry type for "optimalKernel" isn't style-file defined
+--line 34 of file bibliography/bibliography.bib
+Warning--can't use both author and editor fields in learnproc
+Warning--can't use both author and editor fields in alg_apps
+Warning--can't use both author and editor fields in oreilly_python
+Warning--can't use both author and editor fields in realtimerendering
+Warning--can't use both author and editor fields in cv_matlab
+(There were 6 warnings)

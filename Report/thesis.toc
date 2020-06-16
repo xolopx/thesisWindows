@@ -4,25 +4,25 @@
 \contentsline {section}{\numberline {1.3}Image Processing}{6}%
 \contentsline {subsection}{\numberline {1.3.1}Thresholding}{6}%
 \contentsline {subsection}{\numberline {1.3.2}Linear Filtering}{7}%
-\contentsline {subsubsection}{Correlation}{7}%
-\contentsline {subsubsection}{Convolution}{9}%
-\contentsline {subsubsection}{Kernels}{10}%
-\contentsline {subsubsection}{Box Filter}{11}%
-\contentsline {subsubsection}{Gaussian Kernel}{12}%
-\contentsline {subsection}{\numberline {1.3.3}Non-Linear Filtering}{13}%
-\contentsline {subsubsection}{The Median Filter}{13}%
-\contentsline {subsubsection}{Morphology}{14}%
-\contentsline {subsubsection}{Dilation}{14}%
-\contentsline {subsubsection}{Erosion}{15}%
-\contentsline {subsubsection}{Opening and Closing}{16}%
-\contentsline {section}{\numberline {1.4}Computer Vision}{18}%
-\contentsline {subsection}{\numberline {1.4.1}Clustering}{18}%
-\contentsline {subsubsection}{K-Means}{18}%
-\contentsline {subsubsection}{Mixtures of Gaussians}{20}%
-\contentsline {subsubsection}{Expectation Maximization}{23}%
-\contentsline {chapter}{Bibliography}{25}%
-\contentsline {chapter}{Appendices}{26}%
-\contentsline {chapter}{\numberline {A}Hardware Specifications}{26}%
-\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{26}%
-\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{26}%
-\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{27}%
+\contentsline {subsubsection}{Correlation}{8}%
+\contentsline {subsubsection}{Convolution}{11}%
+\contentsline {subsubsection}{Some Important Kernels}{12}%
+\contentsline {subsubsection}{Box Filter}{12}%
+\contentsline {subsubsection}{Gaussian Kernel}{13}%
+\contentsline {subsection}{\numberline {1.3.3}Non-Linear Filtering}{14}%
+\contentsline {subsubsection}{The Median Filter}{15}%
+\contentsline {subsubsection}{Morphology}{15}%
+\contentsline {subsubsection}{Dilation}{16}%
+\contentsline {subsubsection}{Erosion}{16}%
+\contentsline {subsubsection}{Opening and Closing}{17}%
+\contentsline {section}{\numberline {1.4}Computer Vision}{19}%
+\contentsline {subsection}{\numberline {1.4.1}Clustering}{19}%
+\contentsline {subsubsection}{K-Means}{19}%
+\contentsline {subsubsection}{Mixtures of Gaussians}{21}%
+\contentsline {subsubsection}{Expectation Maximization}{24}%
+\contentsline {chapter}{Bibliography}{26}%
+\contentsline {chapter}{Appendices}{28}%
+\contentsline {chapter}{\numberline {A}Hardware Specifications}{28}%
+\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{28}%
+\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{28}%
+\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{29}%

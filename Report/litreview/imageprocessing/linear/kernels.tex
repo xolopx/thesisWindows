@@ -1,14 +1,6 @@
-\subsubsection{Kernels}
+\subsubsection{Some Important Kernels}
 \label{subsubsection:kernels}
 Kernels are just the weightings that define the characteristics of a filter, also known as a filter's mask. A filter kernel is nearly always square so as to have a center cell which sits atop a reference pixel. The result of the filter's application at that reference pixel will be stored in the output image at the location of the reference pixel. Notice in Figure \ref{fig:kernel_graphics} how the mask sits over the reference pixel.
-
-% TREE %
-\begin{figure}[H]
- \centering
- \centering\includegraphics[width=350pt]{kernel_graphics}
- \caption{Visualization of a Filter Kernel Application}
- \label{fig:kernel_graphics}
-\end{figure}
 
 \subsubsection{Box Filter}
 \label{subsubsection:boxfilter}
@@ -62,7 +54,7 @@ The Gaussian addresses both of these qualities by having high value coefficients
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
         \includegraphics[width=\textwidth]{pug_noise}
-        \caption{Noisey pug}
+        \caption{Noisy pug}
         \label{fig:pug_noise}
     \end{subfigure}
     \begin{subfigure}[b]{0.3\textwidth}

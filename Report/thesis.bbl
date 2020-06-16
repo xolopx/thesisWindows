@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+
+\bibitem{learnproc}
+Daniel Shiffman.
+\newblock {\em Learning Processing}.
+\newblock Elsevier Inc., 2008.
+
+\bibitem{alg_apps}
+Richard Szeliski.
+\newblock {\em Computer Vision - Algorithms and Applications}.
+\newblock Springer, 2011.
+
+\bibitem{optimalKernel}
+Sabyasachi Sahoo.
+\newblock Deciding optimal kernel size for cnn.
+
+\bibitem{udacity_cv}
+Aaron Bobick.
+\newblock Introduction to computer vision.
+\newblock Udacity, 2018.
+
+\bibitem{oreilly_python}
+Jan~Erik Solem.
+\newblock {\em Computer Vision with Python}.
+\newblock O'Reilly, 2012.
+
+\bibitem{realtimerendering}
+Tomas Akenine-Möller and Eric Haines.
+\newblock {\em Real-Time Rendering}.
+\newblock CRC Press, 2004.
+
+\bibitem{cv_matlab}
+Richard E.~Woods Rafael C.~Gonzalez and Steven~L. Eddins.
+\newblock {\em Digital Image Processing using MATLAB}.
+\newblock Gatesmark, 2009.
+
+\bibitem{cormen_2001}
+Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT Press Ltd, 2009.
+
+\end{thebibliography}

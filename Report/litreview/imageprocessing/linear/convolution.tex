@@ -4,7 +4,7 @@ Convolution is also a linear operation that is shift invariant. It is very simil
 
 \[ g(i,j) = \sum_{u=-k}^{k}\sum_{v = -l}^{l}f(u,v)h(i-u,j-v)\]
 
-Notice that the filter $h(i,j)$ is rotated  180 degrees. This causes the output's orientation to match the original image. Convolution may be notated as follows,
+Notice that the filter $h(i,j)$ is flipped 180 degrees in both dimensions as compared to equation \ref{eq:correlation}, this causes the output to match the orientation of the original image. Convolution may be denoted as follows,
 
 \[g = f \ast h\]
 
