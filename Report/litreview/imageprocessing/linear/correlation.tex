@@ -14,34 +14,7 @@ g = f \otimes h
 
 Correlation measures the \emph{similarity} between two signals and is used in image processing to measure the similarity between digital images and linear filters. Correlation produces output spikes not just where the image value is greatest because digital images and filters can contain negative values. For example a byte encoded grayscale image could be represented by [-127,128]. The significance of this is that when negative intensities are multiplied with other negative intensities they produce positive values and when negative values are multiplied with positive values they produce a negative, thus wherever a filter has the best match with the image a spike in positive values will occur and where the signals are dissimilar the output will be diminished \cite{optimalKernel}\cite{udacity_cv}. 
 
-This simple method can be used to isolate features in an image by correlating an image with a filter that matches the desired feature. A feature could be as simple as a straight line as in a Sobel filter (Figure \ref{fig:sobel_filters}) or as specific as the outline of a car wheel. This method of feature detection is called \emph{template matching} \cite{oreilly_python}. In Figure \ref{fig:sobel_apply} vertical and horizontal Sobel filters are correlated with an image a building wall and produce images that emphasize lines that match the orientation of the respective filter. The result is a binary image the output has been thresholded (see section \ref{subsection:thresholding}) to isolate high intensity regions where similarity is greatest.
-
-% SOBEL MASKS
-\begin{figure}[H]
-  \begin{subfigure}[b]{0.49\textwidth}
-    \[k =
-    \begin{bmatrix*}[l]
-     -1 & -1 & -1 \\
-      \phantom{-}2 & \phantom{-}2 & \phantom{-}2 \\
-      -1 & -1 & -1 
-    \end{bmatrix*}
-    \]
-    \caption{Horizontal Sobel-Feldman Filter Mask}
-    \label{rfidtest_xaxis}
-\end{subfigure}
-\begin{subfigure}[b]{0.49\textwidth}
-  \[ k = 
-    \begin{bmatrix}
-      -1 & 2 & -1 \\
-      -1 & 2 & -1 \\
-      -1 & 2 & -1
-    \end{bmatrix}
-    \]
-    \caption{Vertical Sobel-Feldman Filter Mask}  
-\end{subfigure}
-    \caption{Sobel Filters}
-    \label{fig:sobel_filters}
-\end{figure}
+This simple method can be used to isolate features in an image by correlating an image with a filter that matches the desired feature. A feature could be as simple as a straight line or as specific as the outline of a car wheel. This method of feature detection is called \emph{template matching} \cite{oreilly_python}. In Figure \ref{fig:sobel_apply} vertical and horizontal Sobel filters are correlated with an image a building wall and produce images that emphasize lines that match the orientation of the respective filter (see section \ref{subsubsection:kernels}). The result is a binary image the output has been thresholded (see section \ref{subsection:thresholding}) to isolate high intensity regions where similarity is greatest.
 
 % SOBEL FILTER APPLICATION
 \begin{figure}[H]

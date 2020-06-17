@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{learnproc}
 Daniel Shiffman.
@@ -12,7 +12,7 @@ Richard Szeliski.
 
 \bibitem{optimalKernel}
 Sabyasachi Sahoo.
-\newblock Deciding optimal kernel size for cnn.
+\newblock Deciding optimal kernel size for cnn, 2020.
 
 \bibitem{udacity_cv}
 Aaron Bobick.
@@ -34,9 +34,30 @@ Richard E.~Woods Rafael C.~Gonzalez and Steven~L. Eddins.
 \newblock {\em Digital Image Processing using MATLAB}.
 \newblock Gatesmark, 2009.
 
+\bibitem{sobel}
+Irwin Sobel and Gary Feldman.
+\newblock Isotropic 3x3 image gradient operator.
+\newblock Standford Artificial Intelligence Labratory, 1968.
+
 \bibitem{cormen_2001}
 Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
 \newblock {\em Introduction to Algorithms}.
 \newblock MIT Press Ltd, 2009.
+
+\bibitem{median_filter_new}
+Joungeun Bae and Hoon Yoo.
+\newblock Fast median filtering by use of fast localization of median value.
+\newblock {\em International Journal of Applied Engineering Research}, 13(12),
+  2018.
+
+\bibitem{median_filter_3}
+James Church, Dr.~Yixin Chen, , and Dr.~Stephen Rice.
+\newblock A spatial median filter for noise removal in digital images.
+\newblock {\em IEEE}, 3(6), 2008.
+
+\bibitem{median_filter_old}
+George J.~Yang Thomas S.~Huang and Gregory~Y. Tang.
+\newblock A fast two-dimensional median filtering algorithm.
+\newblock {\em IEEE}, 27(1), 1979.
 
 \end{thebibliography}

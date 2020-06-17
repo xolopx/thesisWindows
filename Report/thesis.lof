@@ -7,21 +7,22 @@
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Performing thresholding on a grayscale image to isolate a white horse.\relax }}{7}%
 \contentsline {figure}{\numberline {1.7}{\ignorespaces General form of a linear filter.\relax }}{7}%
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Visualization of a filter kernel application.\relax }}{8}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Sobel Filters\relax }}{9}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Application of Sobel filters to exaggerate lines.\relax }}{9}%
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Correlation of a filter and an image.\relax }}{11}%
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Convolution of a filter and an image.\relax }}{12}%
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Application of a 17x17 Box filter to blur image.\relax }}{13}%
-\contentsline {figure}{\numberline {1.14}{\ignorespaces 3x3 Box Filter Kernel\relax }}{13}%
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Application of a 7x7 Gaussian filter to denoise image.\relax }}{14}%
-\contentsline {figure}{\numberline {1.16}{\ignorespaces 7x7 Gaussian Filter Kernel, Sigma = 0.5\relax }}{14}%
-\contentsline {figure}{\numberline {1.17}{\ignorespaces Filtering out salt and pepper noise with Gaussian and median filter. Original image by Grant Durr.\relax }}{15}%
-\contentsline {figure}{\numberline {1.18}{\ignorespaces Conversion of an RGB image to a binary image. Original image by Adam Birkett\relax }}{16}%
-\contentsline {figure}{\numberline {1.19}{\ignorespaces Effect of morphological operations on a binary image using a 9x9 square structuring element. Original image by \relax }}{18}%
-\contentsline {figure}{\numberline {1.20}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{19}%
-\contentsline {figure}{\numberline {1.21}{\ignorespaces K-Means clustering performed on random data.\relax }}{21}%
-\contentsline {figure}{\numberline {1.22}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{22}%
-\contentsline {figure}{\numberline {1.23}{\ignorespaces Clustering using GMM. X marks cluster mean.\relax }}{23}%
-\contentsline {figure}{\numberline {1.24}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{24}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Application of Sobel filters to exaggerate lines.\relax }}{9}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Correlation of a filter and an image.\relax }}{10}%
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Convolution of a filter and an image.\relax }}{11}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces 3x3 Box Filter Kernel\relax }}{12}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Application of a 17x17 Box filter to blur image.\relax }}{12}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Application of a 7x7 Gaussian filter to denoise image.\relax }}{13}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces 7x7 Gaussian Filter Kernel, Sigma = 0.5\relax }}{13}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Sobel Filters\relax }}{14}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Application of Sobel filters to find gradient magnitude of an image.\relax }}{15}%
+\contentsline {figure}{\numberline {1.18}{\ignorespaces Filtering out salt and pepper noise with Gaussian and median filter. Original image by Grant Durr.\relax }}{16}%
+\contentsline {figure}{\numberline {1.19}{\ignorespaces Conversion of an RGB image to a binary image. Original image by Adam Birkett\relax }}{18}%
+\contentsline {figure}{\numberline {1.20}{\ignorespaces Effect of morphological operations on a binary image using a 9x9 square structuring element. Original image by \relax }}{20}%
+\contentsline {figure}{\numberline {1.21}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{21}%
+\contentsline {figure}{\numberline {1.22}{\ignorespaces K-Means clustering performed on random data.\relax }}{23}%
+\contentsline {figure}{\numberline {1.23}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{24}%
+\contentsline {figure}{\numberline {1.24}{\ignorespaces Clustering using GMM. X marks cluster mean.\relax }}{25}%
+\contentsline {figure}{\numberline {1.25}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{26}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

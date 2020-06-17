@@ -4,6 +4,7 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Theoretical Background}{1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Digital Images}{1}\protected@file@percent }
 \newlabel{section:digital_image}{{1.1}{1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Grayscale value and colour range. Img: Learning Processing - Daniel Shiffman\relax }}{2}\protected@file@percent }
@@ -49,128 +50,137 @@
 \newlabel{eq:correlation_operator}{{1.8}{8}}
 \citation{oreilly_python}
 \citation{realtimerendering}
-\newlabel{rfidtest_xaxis}{{1.9a}{9}}
-\newlabel{sub@rfidtest_xaxis}{{a}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces Sobel Filters\relax }}{9}\protected@file@percent }
-\newlabel{fig:sobel_filters}{{1.9}{9}}
-\newlabel{fig:vert}{{1.10b}{9}}
-\newlabel{sub@fig:vert}{{b}{9}}
-\newlabel{fig:hoz}{{1.10c}{9}}
-\newlabel{sub@fig:hoz}{{c}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces Application of Sobel filters to exaggerate lines.\relax }}{9}\protected@file@percent }
-\newlabel{fig:sobel_apply}{{1.10}{9}}
 \citation{cv_matlab}
+\newlabel{fig:vert}{{1.9b}{9}}
+\newlabel{sub@fig:vert}{{b}{9}}
+\newlabel{fig:hoz}{{1.9c}{9}}
+\newlabel{sub@fig:hoz}{{c}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces Application of Sobel filters to exaggerate lines.\relax }}{9}\protected@file@percent }
+\newlabel{fig:sobel_apply}{{1.9}{9}}
 \citation{udacity_cv}
 \newlabel{eq:superpos}{{1.9}{10}}
 \newlabel{eq:shiftinvariance}{{1.10}{10}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces Correlation of a filter and an image.\relax }}{11}\protected@file@percent }
-\newlabel{fig:correlation}{{1.11}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces Correlation of a filter and an image.\relax }}{10}\protected@file@percent }
+\newlabel{fig:correlation}{{1.10}{10}}
 \@writefile{toc}{\contentsline {subsubsection}{Convolution}{11}\protected@file@percent }
 \newlabel{subsection:conv}{{1.3.2}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.12}{\ignorespaces Convolution of a filter and an image.\relax }}{12}\protected@file@percent }
-\newlabel{fig:convolution}{{1.12}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{Some Important Kernels}{12}\protected@file@percent }
-\newlabel{subsubsection:kernels}{{1.3.2}{12}}
-\@writefile{toc}{\contentsline {subsubsection}{Box Filter}{12}\protected@file@percent }
-\newlabel{subsubsection:boxfilter}{{1.3.2}{12}}
-\newlabel{fig:pug_noise}{{1.13a}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces Convolution of a filter and an image.\relax }}{11}\protected@file@percent }
+\newlabel{fig:convolution}{{1.11}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{Some Important Linear Filters}{11}\protected@file@percent }
+\newlabel{subsubsection:kernels}{{1.3.2}{11}}
+\citation{udacity_cv}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.12}{\ignorespaces 3x3 Box Filter Kernel\relax }}{12}\protected@file@percent }
+\newlabel{fig:box_kernel}{{1.12}{12}}
+\newlabel{fig:pug_noise}{{1.13a}{12}}
+\newlabel{sub@fig:pug_noise}{{a}{12}}
+\newlabel{fig:pug_denoised}{{1.13b}{12}}
+\newlabel{sub@fig:pug_denoised}{{b}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces Application of a 17x17 Box filter to blur image.\relax }}{12}\protected@file@percent }
+\newlabel{fig:pug_blur}{{1.13}{12}}
+\citation{sobel}
+\newlabel{fig:pug_noise}{{1.14a}{13}}
 \newlabel{sub@fig:pug_noise}{{a}{13}}
-\newlabel{fig:pug_denoised}{{1.13b}{13}}
+\newlabel{fig:pug_denoised}{{1.14b}{13}}
 \newlabel{sub@fig:pug_denoised}{{b}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces Application of a 17x17 Box filter to blur image.\relax }}{13}\protected@file@percent }
-\newlabel{fig:pug_blur}{{1.13}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.14}{\ignorespaces 3x3 Box Filter Kernel\relax }}{13}\protected@file@percent }
-\newlabel{fig:box_kernel}{{1.14}{13}}
-\@writefile{toc}{\contentsline {subsubsection}{Gaussian Kernel}{13}\protected@file@percent }
-\newlabel{subsubsection:gauss_kernel}{{1.3.2}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.14}{\ignorespaces Application of a 7x7 Gaussian filter to denoise image.\relax }}{13}\protected@file@percent }
+\newlabel{fig:pug_noise}{{1.14}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.15}{\ignorespaces 7x7 Gaussian Filter Kernel, Sigma = 0.5\relax }}{13}\protected@file@percent }
+\newlabel{fig:gauss_kernel}{{1.15}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.16}{\ignorespaces Sobel Filters\relax }}{14}\protected@file@percent }
+\newlabel{fig:sobel_filters}{{1.16}{14}}
 \citation{cormen_2001}
-\newlabel{fig:pug_noise}{{1.15a}{14}}
-\newlabel{sub@fig:pug_noise}{{a}{14}}
-\newlabel{fig:pug_denoised}{{1.15b}{14}}
-\newlabel{sub@fig:pug_denoised}{{b}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.15}{\ignorespaces Application of a 7x7 Gaussian filter to denoise image.\relax }}{14}\protected@file@percent }
-\newlabel{fig:pug_noise}{{1.15}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.16}{\ignorespaces 7x7 Gaussian Filter Kernel, Sigma = 0.5\relax }}{14}\protected@file@percent }
-\newlabel{fig:gauss_kernel}{{1.16}{14}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Non-Linear Filtering}{14}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{The Median Filter}{15}\protected@file@percent }
-\newlabel{subsubsection:median_filter}{{1.3.3}{15}}
-\newlabel{fig:emu_noise}{{1.17a}{15}}
-\newlabel{sub@fig:emu_noise}{{a}{15}}
-\newlabel{fig:emu_gauss}{{1.17b}{15}}
-\newlabel{sub@fig:emu_gauss}{{b}{15}}
-\newlabel{fig:emu_median}{{1.17c}{15}}
-\newlabel{sub@fig:emu_median}{{c}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.17}{\ignorespaces Filtering out salt and pepper noise with Gaussian and median filter. Original image by Grant Durr.\relax }}{15}\protected@file@percent }
-\newlabel{fig:shot_noise}{{1.17}{15}}
-\@writefile{toc}{\contentsline {subsubsection}{Morphology}{15}\protected@file@percent }
-\newlabel{subsubsection:morphology}{{1.3.3}{15}}
+\newlabel{fig:vert}{{1.17b}{15}}
+\newlabel{sub@fig:vert}{{b}{15}}
+\newlabel{fig:hoz}{{1.17c}{15}}
+\newlabel{sub@fig:hoz}{{c}{15}}
+\newlabel{fig:hoz}{{1.17d}{15}}
+\newlabel{sub@fig:hoz}{{d}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.17}{\ignorespaces Application of Sobel filters to find gradient magnitude of an image.\relax }}{15}\protected@file@percent }
+\newlabel{fig:sobel_apply2}{{1.17}{15}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Nonlinear Filtering}{15}\protected@file@percent }
+\citation{median_filter_new}
+\citation{median_filter_3}
+\citation{median_filter_old}
+\@writefile{toc}{\contentsline {subsubsection}{The Median Filter}{16}\protected@file@percent }
+\newlabel{subsubsection:median_filter}{{1.3.3}{16}}
 \newlabel{fig:emu_noise}{{1.18a}{16}}
 \newlabel{sub@fig:emu_noise}{{a}{16}}
 \newlabel{fig:emu_gauss}{{1.18b}{16}}
 \newlabel{sub@fig:emu_gauss}{{b}{16}}
 \newlabel{fig:emu_median}{{1.18c}{16}}
 \newlabel{sub@fig:emu_median}{{c}{16}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.18}{\ignorespaces Conversion of an RGB image to a binary image. Original image by Adam Birkett\relax }}{16}\protected@file@percent }
-\newlabel{fig:thresholding}{{1.18}{16}}
-\@writefile{toc}{\contentsline {subsubsection}{Dilation}{16}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Erosion}{16}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Opening and Closing}{17}\protected@file@percent }
-\newlabel{fig:ice_binary}{{1.19a}{18}}
-\newlabel{sub@fig:ice_binary}{{a}{18}}
-\newlabel{fig:ice_dilation}{{1.19b}{18}}
-\newlabel{sub@fig:ice_dilation}{{b}{18}}
-\newlabel{fig:ice_erosion}{{1.19c}{18}}
-\newlabel{sub@fig:ice_erosion}{{c}{18}}
-\newlabel{fig:ice_open}{{1.19d}{18}}
-\newlabel{sub@fig:ice_open}{{d}{18}}
-\newlabel{fig:ice_close}{{1.19e}{18}}
-\newlabel{sub@fig:ice_close}{{e}{18}}
-\newlabel{fig:structuring_element}{{1.19f}{18}}
-\newlabel{sub@fig:structuring_element}{{f}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.19}{\ignorespaces Effect of morphological operations on a binary image using a 9x9 square structuring element. Original image by \relax }}{18}\protected@file@percent }
-\newlabel{fig:morphology}{{1.19}{18}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.4}Computer Vision}{19}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}Clustering}{19}\protected@file@percent }
-\newlabel{fig:toycarA}{{1.20a}{19}}
-\newlabel{sub@fig:toycarA}{{a}{19}}
-\newlabel{fig:toycarB}{{1.20b}{19}}
-\newlabel{sub@fig:toycarB}{{b}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.20}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{19}\protected@file@percent }
-\newlabel{fig:toycar}{{1.20}{19}}
-\newlabel{eq:featurevector}{{1.11}{19}}
-\@writefile{toc}{\contentsline {subsubsection}{K-Means}{19}\protected@file@percent }
-\newlabel{eq:euclid}{{1.12}{20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.21}{\ignorespaces K-Means clustering performed on random data.\relax }}{21}\protected@file@percent }
-\newlabel{fig:clusters}{{1.21}{21}}
-\@writefile{toc}{\contentsline {subsubsection}{Mixtures of Gaussians}{21}\protected@file@percent }
-\newlabel{subsection:mog}{{1.4.1}{21}}
-\newlabel{fig:histGauss}{{1.22a}{22}}
-\newlabel{sub@fig:histGauss}{{a}{22}}
-\newlabel{fig:histCurve}{{1.22b}{22}}
-\newlabel{sub@fig:histCurve}{{b}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.22}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{22}\protected@file@percent }
-\newlabel{fig:mixture}{{1.22}{22}}
-\newlabel{eq:cov}{{1.13}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.23}{\ignorespaces Clustering using GMM. X marks cluster mean.\relax }}{23}\protected@file@percent }
-\newlabel{fig:mogcov}{{1.23}{23}}
-\newlabel{eq:gauss_weight1}{{1.14}{23}}
-\newlabel{eq:gauss_weight2}{{1.15}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.24}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{24}\protected@file@percent }
-\newlabel{fig:histScale}{{1.24}{24}}
-\@writefile{toc}{\contentsline {subsubsection}{Expectation Maximization}{24}\protected@file@percent }
-\newlabel{eq:likelihood}{{1.16}{24}}
-\newlabel{eq:marginalk}{{1.17}{25}}
-\newlabel{eq:cond}{{1.18}{25}}
-\newlabel{eq:gamma2}{{1.19}{25}}
-\newlabel{eq:gamma3}{{1.20}{25}}
-\newlabel{eq:log}{{1.21}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.18}{\ignorespaces Filtering out salt and pepper noise with Gaussian and median filter. Original image by Grant Durr.\relax }}{16}\protected@file@percent }
+\newlabel{fig:shot_noise}{{1.18}{16}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Huang's Median Filtering Algorithm \cite  {median_filter_old}\relax }}{17}\protected@file@percent }
+\newlabel{algorithm:median_filter}{{1}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{Morphology}{17}\protected@file@percent }
+\newlabel{subsubsection:morphology}{{1.3.3}{17}}
+\@writefile{toc}{\contentsline {subsubsection}{Dilation}{17}\protected@file@percent }
+\newlabel{fig:emu_noise}{{1.19a}{18}}
+\newlabel{sub@fig:emu_noise}{{a}{18}}
+\newlabel{fig:emu_gauss}{{1.19b}{18}}
+\newlabel{sub@fig:emu_gauss}{{b}{18}}
+\newlabel{fig:emu_median}{{1.19c}{18}}
+\newlabel{sub@fig:emu_median}{{c}{18}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.19}{\ignorespaces Conversion of an RGB image to a binary image. Original image by Adam Birkett\relax }}{18}\protected@file@percent }
+\newlabel{fig:thresholding}{{1.19}{18}}
+\@writefile{toc}{\contentsline {subsubsection}{Erosion}{18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Opening and Closing}{19}\protected@file@percent }
+\newlabel{fig:ice_binary}{{1.20a}{20}}
+\newlabel{sub@fig:ice_binary}{{a}{20}}
+\newlabel{fig:ice_dilation}{{1.20b}{20}}
+\newlabel{sub@fig:ice_dilation}{{b}{20}}
+\newlabel{fig:ice_erosion}{{1.20c}{20}}
+\newlabel{sub@fig:ice_erosion}{{c}{20}}
+\newlabel{fig:ice_open}{{1.20d}{20}}
+\newlabel{sub@fig:ice_open}{{d}{20}}
+\newlabel{fig:ice_close}{{1.20e}{20}}
+\newlabel{sub@fig:ice_close}{{e}{20}}
+\newlabel{fig:structuring_element}{{1.20f}{20}}
+\newlabel{sub@fig:structuring_element}{{f}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.20}{\ignorespaces Effect of morphological operations on a binary image using a 9x9 square structuring element. Original image by \relax }}{20}\protected@file@percent }
+\newlabel{fig:morphology}{{1.20}{20}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Computer Vision}{21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}Clustering}{21}\protected@file@percent }
+\newlabel{fig:toycarA}{{1.21a}{21}}
+\newlabel{sub@fig:toycarA}{{a}{21}}
+\newlabel{fig:toycarB}{{1.21b}{21}}
+\newlabel{sub@fig:toycarB}{{b}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.21}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{21}\protected@file@percent }
+\newlabel{fig:toycar}{{1.21}{21}}
+\newlabel{eq:featurevector}{{1.12}{21}}
+\@writefile{toc}{\contentsline {subsubsection}{K-Means}{21}\protected@file@percent }
+\newlabel{eq:euclid}{{1.13}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.22}{\ignorespaces K-Means clustering performed on random data.\relax }}{23}\protected@file@percent }
+\newlabel{fig:clusters}{{1.22}{23}}
+\@writefile{toc}{\contentsline {subsubsection}{Mixtures of Gaussians}{23}\protected@file@percent }
+\newlabel{subsection:mog}{{1.4.1}{23}}
+\newlabel{fig:histGauss}{{1.23a}{24}}
+\newlabel{sub@fig:histGauss}{{a}{24}}
+\newlabel{fig:histCurve}{{1.23b}{24}}
+\newlabel{sub@fig:histCurve}{{b}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.23}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{24}\protected@file@percent }
+\newlabel{fig:mixture}{{1.23}{24}}
+\newlabel{eq:cov}{{1.14}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.24}{\ignorespaces Clustering using GMM. X marks cluster mean.\relax }}{25}\protected@file@percent }
+\newlabel{fig:mogcov}{{1.24}{25}}
+\newlabel{eq:gauss_weight1}{{1.15}{25}}
+\newlabel{eq:gauss_weight2}{{1.16}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.25}{\ignorespaces Individual Gaussians with scaled weightings.\relax }}{26}\protected@file@percent }
+\newlabel{fig:histScale}{{1.25}{26}}
+\@writefile{toc}{\contentsline {subsubsection}{Expectation Maximization}{26}\protected@file@percent }
+\newlabel{eq:likelihood}{{1.17}{26}}
+\newlabel{eq:marginalk}{{1.18}{27}}
+\newlabel{eq:cond}{{1.19}{27}}
+\newlabel{eq:gamma2}{{1.20}{27}}
+\newlabel{eq:gamma3}{{1.21}{27}}
+\newlabel{eq:log}{{1.22}{27}}
 \bibstyle{unsrt}
 \bibdata{bibliography/bibliography}
-\newlabel{eq:mean}{{1.23}{26}}
-\newlabel{eq:covariance}{{1.24}{26}}
-\newlabel{eq:ratio}{{1.25}{26}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{26}\protected@file@percent }
+\newlabel{eq:mean}{{1.24}{28}}
+\newlabel{eq:covariance}{{1.25}{28}}
+\newlabel{eq:ratio}{{1.26}{28}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{28}\protected@file@percent }
 \bibcite{learnproc}{1}
 \bibcite{alg_apps}{2}
 \bibcite{optimalKernel}{3}
@@ -178,14 +188,20 @@
 \bibcite{oreilly_python}{5}
 \bibcite{realtimerendering}{6}
 \bibcite{cv_matlab}{7}
-\bibcite{cormen_2001}{8}
-\@writefile{toc}{\contentsline {chapter}{Appendices}{28}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Hardware Specifications}{28}\protected@file@percent }
+\bibcite{sobel}{8}
+\bibcite{cormen_2001}{9}
+\bibcite{median_filter_new}{10}
+\bibcite{median_filter_3}{11}
+\bibcite{median_filter_old}{12}
+\@writefile{toc}{\contentsline {chapter}{Appendices}{30}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Hardware Specifications}{30}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appendices:hardware_specs}{{A}{28}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{28}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{28}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{29}\protected@file@percent }
+\@writefile{loa}{\addvspace {10\p@ }}
+\newlabel{appendices:hardware_specs}{{A}{30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{30}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{30}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{31}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}

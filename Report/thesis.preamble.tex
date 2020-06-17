@@ -19,6 +19,13 @@
 \usepackage{bm}
 \usepackage{array}
 \usepackage{makecell}
+\usepackage{amssymb}
+\usepackage{tabto}
+\usepackage{algorithmic}
+\usepackage[]{algorithm2e}
+\SetKwInput{KwInput}{Input}                % Set the Input
+\SetKwInput{KwOutput}{Output}              % set the Output
+
 
 \input{blocked.sty}
 \input{uhead.sty}
@@ -26,6 +33,10 @@
 \input{thesis.sty}
 
 \raggedbottom
+
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
+% \setcounter{secnumdepth}{4}
+% \setcounter{tocdepth}{4}
 
 \newcommand{\ipc}{{\sf ipc}}
 
@@ -93,7 +104,7 @@
 \newcommand{\Leftbrace}[1]{\left(\raisebox{0mm}[#1][#1]{}\right.}
 \newcommand{\Rightbrace}[1]{\left.\raisebox{0mm}[#1][#1]{}\right)}
 
-% Funky symobols for footnotes
+% Funky symbols for footnotes
 \newcommand{\symbolfootnote}{\renewcommand{\thefootnote}{\fnsymbol{footnote}}}
 % now add \symbolfootnote to the beginning of the document...
 

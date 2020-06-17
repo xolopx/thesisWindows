@@ -6,23 +6,21 @@
 \contentsline {subsection}{\numberline {1.3.2}Linear Filtering}{7}%
 \contentsline {subsubsection}{Correlation}{8}%
 \contentsline {subsubsection}{Convolution}{11}%
-\contentsline {subsubsection}{Some Important Kernels}{12}%
-\contentsline {subsubsection}{Box Filter}{12}%
-\contentsline {subsubsection}{Gaussian Kernel}{13}%
-\contentsline {subsection}{\numberline {1.3.3}Non-Linear Filtering}{14}%
-\contentsline {subsubsection}{The Median Filter}{15}%
-\contentsline {subsubsection}{Morphology}{15}%
-\contentsline {subsubsection}{Dilation}{16}%
-\contentsline {subsubsection}{Erosion}{16}%
-\contentsline {subsubsection}{Opening and Closing}{17}%
-\contentsline {section}{\numberline {1.4}Computer Vision}{19}%
-\contentsline {subsection}{\numberline {1.4.1}Clustering}{19}%
-\contentsline {subsubsection}{K-Means}{19}%
-\contentsline {subsubsection}{Mixtures of Gaussians}{21}%
-\contentsline {subsubsection}{Expectation Maximization}{24}%
-\contentsline {chapter}{Bibliography}{26}%
-\contentsline {chapter}{Appendices}{28}%
-\contentsline {chapter}{\numberline {A}Hardware Specifications}{28}%
-\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{28}%
-\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{28}%
-\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{29}%
+\contentsline {subsubsection}{Some Important Linear Filters}{11}%
+\contentsline {subsection}{\numberline {1.3.3}Nonlinear Filtering}{15}%
+\contentsline {subsubsection}{The Median Filter}{16}%
+\contentsline {subsubsection}{Morphology}{17}%
+\contentsline {subsubsection}{Dilation}{17}%
+\contentsline {subsubsection}{Erosion}{18}%
+\contentsline {subsubsection}{Opening and Closing}{19}%
+\contentsline {section}{\numberline {1.4}Computer Vision}{21}%
+\contentsline {subsection}{\numberline {1.4.1}Clustering}{21}%
+\contentsline {subsubsection}{K-Means}{21}%
+\contentsline {subsubsection}{Mixtures of Gaussians}{23}%
+\contentsline {subsubsection}{Expectation Maximization}{26}%
+\contentsline {chapter}{Bibliography}{28}%
+\contentsline {chapter}{Appendices}{30}%
+\contentsline {chapter}{\numberline {A}Hardware Specifications}{30}%
+\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{30}%
+\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{30}%
+\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{31}%

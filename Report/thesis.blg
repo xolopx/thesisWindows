@@ -1,11 +1,52 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+This is BibTeX, Version 0.99d (MiKTeX 2.9.7350 64-bit)
+Capacity: max_strings=4000, hash_size=5000, hash_prime=4253
+The top-level auxiliary file: thesis.aux
 The style file: unsrt.bst
 Database file #1: bibliography/bibliography.bib
-Warning--entry type for "optimalKernel" isn't style-file defined
---line 34 of file bibliography/bibliography.bib
 Warning--can't use both author and editor fields in learnproc
 Warning--can't use both author and editor fields in alg_apps
 Warning--can't use both author and editor fields in oreilly_python
 Warning--can't use both author and editor fields in realtimerendering
 Warning--can't use both author and editor fields in cv_matlab
-(There were 6 warnings)
+You've used 12 entries,
+            1791 wiz_defined-function locations,
+            509 strings with 4845 characters,
+and the built_in function-call counts, 1891 in all, are:
+= -- 145
+> -- 88
+< -- 0
++ -- 35
+- -- 23
+* -- 83
+:= -- 314
+add.period$ -- 35
+call.type$ -- 12
+change.case$ -- 6
+chr.to.int$ -- 0
+cite$ -- 17
+duplicate$ -- 99
+empty$ -- 214
+format.name$ -- 23
+if$ -- 427
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 15
+newline$ -- 62
+num.names$ -- 12
+pop$ -- 59
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 38
+stack$ -- 0
+substring$ -- 0
+swap$ -- 17
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 5
+while$ -- 12
+width$ -- 14
+write$ -- 123
+(There were 5 warnings)
