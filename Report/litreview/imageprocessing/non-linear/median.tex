@@ -29,6 +29,7 @@ The median filter is useful for denoising an image, much like the linear box fil
 Huang's Algorithm \ref{algorithm:median_filter} is one possible implementation \cite{median_filter_new}\cite{median_filter_3} of a median filter for a 2D image and is simple and of linear computational complexity, O(n). In this algorithm the histogram $H$ refers to the neighbourhood under the filter's mask. Each time the filter is moved the the histogram's leftmost column is removed and the rightmost column is added. The median is calculated for the first window position thereafter a count of the number of picture elements (pels) in a window having a value less than the current window's median is maintained. If more than half of the window's pels have a value are less than the last window's median then the median value is reduced until the number of pels with a value less than the median is greater than or equal to half of the total window pels, in this way the median value is selected. Finally the median is stored in the output image $Y$ at location $(i,j)$. 
 
 \begin{algorithm}[H]
+    \SetAlgoLined
     \KwInput{Image X of size MxN, filter size n} 
     \KwOutput{Image Y of the same size as X}
     Initialize histogram H\;

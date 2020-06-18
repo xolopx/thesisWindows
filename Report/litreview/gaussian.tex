@@ -1,8 +1,33 @@
 \section{The Gaussian}
 \label{section:gaussian}
 
+Given a sufficiently large numerical population in many cases this population's distribution of values will converge toward the the same shape, the Gaussian distribution, also known as the Normal Distribution or bell curve. Common examples of this are a human population's height, weight and blood pressure \cite{modern_statistics}. This distribution is useful in image processing and computer vision because it can be used to predict the distribution of numerical measures of an image, like the distribution of colours in am image. \emph{The Central Limit Theorem}, the Normal Distribution's accompanying theorem, states that even when an individual random variable doesn't converge to the normal distribution, sums and averages of the variable will converge to some approximation of the distribution \cite{modern_statistics}. 
 
-The Gaussian provides a consistent model for normal distributions, aka the bell curve, as in Figure \ref{fig:gauss} \& \ref{fig:gausssurf}. Normal distributions follow the \emph{central limit theorem} where in if a histogram is taken of a sufficiently large number of independent random variables they will distribute with a central most probable value and symmetrically fall away either side of this value. Many datasets follow this trend closely enough that the Gaussian can be used to approximate a probability distribution for them. 
+\textbf{The Gaussian distribution function} models the shape of the Gaussian distribution and is described by the equation \ref{eq:gauss}. A continuous random variable X is said to be distributed normally if it's probability density function is modelled by equation \ref{eq:gauss} if $-\inf < \mu < \inf$ and $0 < \sigma$.
+
+
+\begin{equation}
+  f(x; \mu, \sigma) = \frac{A}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
+\label{eq:gauss}
+\end{equation}
+
+The Gaussian function is a probability density function meaning that if it can be used to determine the probability that a random variables value lies between some range. This is calculated by taking the integral of the Gaussian function with the range of values as an interval, say for the range of values between $a$ and $b$ for random variable X this is described as in equation \ref{eq:gauss_probability}. Note that the integral of the Gaussian function can only be calculated numerically as it does not have an anti-derivative, also known as indefinite integral \cite{antiderivates}.
+
+
+
+\begin{equation}
+  f(x; \mu, \sigma) = \frac{A}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
+\label{eq:gauss_probability}
+\end{equation}
+
+
+
+
+
+
+
+
+as in Figure \ref{fig:gauss} \& \ref{fig:gausssurf}. Normal distributions follow the \emph{central limit theorem} where in if a histogram is taken of a sufficiently large number of independent random variables they will distribute with a central most probable value and symmetrically fall away either side of this value. Many datasets follow this trend closely enough that the Gaussian can be used to approximate a probability distribution for them. 
 
 The Gaussian function  is defined by three parameters, its mean $\mu$, standard deviation $\sigma$ and amplitude $A$.
 
@@ -24,10 +49,6 @@ The Gaussian function  is defined by three parameters, its mean $\mu$, standard 
   
   The general one dimensional Gaussian is described:  
 
-\begin{equation}
-    f(x) = \frac{A}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
-\label{eq:gauss}
-\end{equation}
 
   The mean value, the central limit, of the sample distribution is the value that has the greatest likelihood\footnote{Likelihood is the value of the distribution given a fixed sample. Probability is the value of a sample given a fixed distribution.} in the distribution. The standard deviation is how much the distribution is spread out, the greater the standard deviation the fatter the distribution. The amplitude is the likelihood at the mean of the distribution. In Figure \ref{fig:gauss}, for example, the likelihood of a value being 0 is 2. Generally, the curve is used to determine a sample's probability density within a value range. This is the area under the distribution given an interval and is calculated using integration, as shown in \ref{eq:gausseg}.
   

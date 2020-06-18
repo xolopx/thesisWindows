@@ -5,6 +5,11 @@ Daniel Shiffman.
 \newblock {\em Learning Processing}.
 \newblock Elsevier Inc., 2008.
 
+\bibitem{modern_statistics}
+Jay~L. Devore and Kenneth~N. Berk.
+\newblock {\em Modern Mathematical Statistics with Applications}.
+\newblock Springer, 2018.
+
 \bibitem{alg_apps}
 Richard Szeliski.
 \newblock {\em Computer Vision - Algorithms and Applications}.
@@ -59,5 +64,10 @@ James Church, Dr.~Yixin Chen, , and Dr.~Stephen Rice.
 George J.~Yang Thomas S.~Huang and Gregory~Y. Tang.
 \newblock A fast two-dimensional median filtering algorithm.
 \newblock {\em IEEE}, 27(1), 1979.
+
+\bibitem{morph_textbook}
+Gerhard~X. Ritter and Joseph~N. Wilson.
+\newblock {\em Handbook of Computer Vision Algorithms in Algerbra}.
+\newblock CRC Press, 2000.
 
 \end{thebibliography}
