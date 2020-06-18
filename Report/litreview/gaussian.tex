@@ -7,62 +7,44 @@ Given a sufficiently large numerical population in many cases this population's 
 
 
 \begin{equation}
-  f(x; \mu, \sigma) = \frac{A}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
+  f(x) = \frac{A}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
 \label{eq:gauss}
 \end{equation}
 
-The Gaussian function is a probability density function meaning that if it can be used to determine the probability that a random variables value lies between some range. This is calculated by taking the integral of the Gaussian function with the range of values as an interval, say for the range of values between $a$ and $b$ for random variable X this is described as in equation \ref{eq:gauss_probability}. Note that the integral of the Gaussian function can only be calculated numerically as it does not have an anti-derivative, also known as indefinite integral \cite{antiderivates}.
-
-
+The Gaussian function is a probability density function meaning that if it can be used to determine the probability that a random variables value lies between some range. This is calculated by taking the integral of the Gaussian function with the range of values as an interval, say for the range of values between $a$ and $b$ for random variable X, which described mathematically in equation \ref{eq:gauss_probability}, hence the total area under the normal distribution is equal to 1, at the probably of the random variable X having a value between $-\inf$ and $\inf$ must be certain. Note that the integral of the Gaussian function can only be calculated numerically as it does not have an anti-derivative, also known as indefinite integral \cite{antiderivatives}. 
 
 \begin{equation}
-  f(x; \mu, \sigma) = \frac{A}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}
+  P(a \leq X \leq b) = \frac{A}{\sqrt{2\pi}\sigma}\int_{a}^{b}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}dx
 \label{eq:gauss_probability}
 \end{equation}
 
+The variables $\mu$, $A$ and $\sigma$ represent the mean, amplitude and standard deviation of the distribution respectively. The mean, $\mu$, is the average value of all samples, it is also the distributions middle value, median, and most common value, mode. Half of all samples have a value greater than the mean, and half of all values have a values less than the mean. The amplitude, $A$, is the value of the \emph{distribution} at the mean, it is the largest value of the distribution because the mean is the value with the greatest \emph{likelihood}, where likelihood is the probability that given a distribution of data $x$, a piece of data $x_i$ has a specific value. The standard deviation, $\sigma$ is a measure of the distributions spread and is calculated as in equation \ref{eq:standard_deviation}. Figure \ref{fig:gauss} shows the shape of a Gaussian distribution and indicates where the mean, amplitude and standard deviation are.
 
-
-
-
-
-
-
-as in Figure \ref{fig:gauss} \& \ref{fig:gausssurf}. Normal distributions follow the \emph{central limit theorem} where in if a histogram is taken of a sufficiently large number of independent random variables they will distribute with a central most probable value and symmetrically fall away either side of this value. Many datasets follow this trend closely enough that the Gaussian can be used to approximate a probability distribution for them. 
-
-The Gaussian function  is defined by three parameters, its mean $\mu$, standard deviation $\sigma$ and amplitude $A$.
+\begin{equation}
+  \sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_i - \mu)^2}
+  \label{eq:standard_deviation}
+\end{equation}
 
 \begin{figure}[H]
-    \centering
-    \centering\includegraphics[width=450pt]{bellcurve}
-    \caption{The Gaussian Function in 2D with $\mu$=0, $\sigma$=0.2 and $A$ = 2.}
-    \label{fig:gauss}
-  \end{figure}
+  \centering
+  \centering\includegraphics[width=0.95\textwidth]{gauss/bell_curve}
+  \caption{One dimensional Gaussian Distribution, $\mu$=0, $\sigma$=0.2 and $A$ = 2}
+  \label{fig:gauss}
+\end{figure}
 
-  \begin{figure}[H]
-    \centering
-    \centering\includegraphics[width=300pt]{gauss2D}
-    \caption{The Gaussian Function in 1D with $\mu$=0, $\sigma$=0.2 and $A$ = 2.}
-    \label{fig:gausssurf}
-  \end{figure}
-
-  
-  
-  The general one dimensional Gaussian is described:  
-
-
-  The mean value, the central limit, of the sample distribution is the value that has the greatest likelihood\footnote{Likelihood is the value of the distribution given a fixed sample. Probability is the value of a sample given a fixed distribution.} in the distribution. The standard deviation is how much the distribution is spread out, the greater the standard deviation the fatter the distribution. The amplitude is the likelihood at the mean of the distribution. In Figure \ref{fig:gauss}, for example, the likelihood of a value being 0 is 2. Generally, the curve is used to determine a sample's probability density within a value range. This is the area under the distribution given an interval and is calculated using integration, as shown in \ref{eq:gausseg}.
-  
-\begin{equation}
-    P(x) = \int_{a}^{b}\frac{A}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}dx
-    \label{eq:gausseg}
-\end{equation}
-
-Data sets can have many dimensions and distributions need to be able to express all of them. The notation for a multi-variate Gaussian distribution, for a k-dimensional random vector $ \bm{X} = (X_1,\hdots,X_k)^T$, is
+The Gaussian distribution may be expressed in more dimensions than one, as it has been expressed thus far. It may be useful to model the distribution in more than one dimension as data sets may be comprised entries of more than one dimension. For example a digital image is specified by two dimensions in the x and y direction. Equation \ref{eq:gauss_2D} describes the Circular Gaussian distribution function, circular meaning the standard deviation for both random variables is the same, for the independent random variables X and Y. Figure \ref{fig:gauss_2D} visualizes the two dimensional distribution, anything beyond 2D cannot be easily visualized. 
 
 \begin{equation}
-    \bm{X} \sim \mathcal{N}_k(\mu,\,\sigma^{2})
-\label{eq:multigauss}
+f(x,y) = \frac{1}{2\pi\sigma}e^\frac{{-\big[(x-\mu_x)^2 + (y-\mu_y)^2\big]}}{2\sigma^2}
+\label{eq:gauss_2D}
 \end{equation}
+
+\begin{figure}[H]
+  \centering
+  \centering\includegraphics[width=0.9\textwidth]{gauss2D}
+  \caption{The 2D Gaussian Distribution Function, $\mu_x$= 0, $\mu_y$= 0, $\sigma$= 0.2 and $A$ = 2.}
+  \label{fig:gauss_2D}
+\end{figure}
 
 
 

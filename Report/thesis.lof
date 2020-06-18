@@ -2,8 +2,8 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Grayscale value and colour range. Img: Learning Processing - Daniel Shiffman\relax }}{2}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces (\subref {fig:fig1}) A simple 8-bit grayscale image \nobreakspace {}(\subref {fig:fig2}) Array representation of a grayscale image.\relax }}{3}%
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Surface Plot of Figure 1.2\hbox {}a\hbox {}\relax }}{3}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces The Gaussian Function in 2D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{5}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces The Gaussian Function in 1D with $\mu $=0, $\sigma $=0.2 and $A$ = 2.\relax }}{5}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces One dimensional Gaussian Distribution, $\mu $=0, $\sigma $=0.2 and $A$ = 2\relax }}{5}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The 2D Gaussian Distribution Function, $\mu _x$= 0, $\mu _y$= 0, $\sigma $= 0.2 and $A$ = 2.\relax }}{6}%
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Performing thresholding on a grayscale image to isolate a white horse.\relax }}{7}%
 \contentsline {figure}{\numberline {1.7}{\ignorespaces General form of a linear filter.\relax }}{8}%
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Visualization of a filter kernel application.\relax }}{8}%
