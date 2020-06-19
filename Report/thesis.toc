@@ -13,11 +13,14 @@
 \contentsline {subsubsection}{Structuring Elements}{18}%
 \contentsline {subsubsection}{Performing a morphological operation}{19}%
 \contentsline {subsubsection}{Fundamental Morphological Operations}{20}%
-\contentsline {section}{\numberline {1.4}Computer Vision}{23}%
-\contentsline {subsection}{\numberline {1.4.1}Clustering}{23}%
-\contentsline {subsubsection}{K-Means}{23}%
-\contentsline {subsubsection}{Mixtures of Gaussians}{25}%
+\contentsline {section}{\numberline {1.4}Computer Vision}{22}%
+\contentsline {subsection}{\numberline {1.4.1}Neural Networks}{23}%
+\contentsline {subsection}{\numberline {1.4.2}Clustering}{23}%
+\contentsline {subsubsection}{K-Means}{24}%
+\contentsline {subsection}{\numberline {1.4.3}Mixtures of Gaussians}{25}%
 \contentsline {subsubsection}{Expectation Maximization}{28}%
+\contentsline {subsection}{\numberline {1.4.4}Contours}{30}%
+\contentsline {subsection}{\numberline {1.4.5}Tracking}{30}%
 \contentsline {chapter}{\numberline {2}System Calibrations}{31}%
 \contentsline {section}{\numberline {2.1}Calibration File}{31}%
 \contentsline {chapter}{Bibliography}{31}%

@@ -19,7 +19,7 @@
 \contentsline {figure}{\numberline {1.18}{\ignorespaces Filtering out salt and pepper noise with Gaussian and median filter. Original image by Grant Durr.\relax }}{17}%
 \contentsline {figure}{\numberline {1.19}{\ignorespaces Conversion of an RGB image to a binary image. Original image by Adam Birkett\relax }}{19}%
 \contentsline {figure}{\numberline {1.20}{\ignorespaces \relax }}{19}%
-\contentsline {figure}{\numberline {1.21}{\ignorespaces Fundamental morphological operations performed on a binary image using a 9x9 square structuring element.\relax }}{22}%
+\contentsline {figure}{\numberline {1.21}{\ignorespaces Fundamental morphological operations performed on a binary image using a 9x9 rectangular structuring element.\relax }}{22}%
 \contentsline {figure}{\numberline {1.22}{\ignorespaces Segmentation of toy cars using K-Means Clustering.\relax }}{23}%
 \contentsline {figure}{\numberline {1.23}{\ignorespaces K-Means clustering performed on random data.\relax }}{25}%
 \contentsline {figure}{\numberline {1.24}{\ignorespaces Formulation of Mixture of Gaussians.\relax }}{26}%
