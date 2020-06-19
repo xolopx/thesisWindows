@@ -1,33 +1,34 @@
 \contentsline {chapter}{\numberline {1}Theoretical Background}{1}%
 \contentsline {section}{\numberline {1.1}Digital Images}{1}%
 \contentsline {section}{\numberline {1.2}The Gaussian}{4}%
-\contentsline {section}{\numberline {1.3}Artificial Neural Networks}{6}%
+\contentsline {section}{\numberline {1.3}Machine Learning}{6}%
+\contentsline {subsection}{\numberline {1.3.1}Artificial Neural Networks}{7}%
 \contentsline {subsubsection}{Neurons}{7}%
 \contentsline {subsubsection}{Data Aqcuisition and Training}{8}%
-\contentsline {section}{\numberline {1.4}Image Processing}{8}%
-\contentsline {subsection}{\numberline {1.4.1}Thresholding}{9}%
-\contentsline {subsection}{\numberline {1.4.2}Linear Filtering}{10}%
-\contentsline {subsubsection}{Correlation}{11}%
-\contentsline {subsubsection}{Convolution}{14}%
-\contentsline {subsubsection}{Some Important Linear Filters}{14}%
-\contentsline {subsection}{\numberline {1.4.3}Nonlinear Filtering}{18}%
-\contentsline {subsubsection}{The Median Filter}{19}%
-\contentsline {subsubsection}{Morphology}{20}%
-\contentsline {subsubsection}{Structuring Elements}{20}%
-\contentsline {subsubsection}{Performing a morphological operation}{21}%
-\contentsline {subsubsection}{Fundamental Morphological Operations}{22}%
-\contentsline {section}{\numberline {1.5}Computer Vision}{24}%
-\contentsline {subsection}{\numberline {1.5.1}Clustering}{25}%
-\contentsline {subsubsection}{K-Means}{26}%
-\contentsline {subsection}{\numberline {1.5.2}Mixtures of Gaussians}{27}%
-\contentsline {subsubsection}{Expectation Maximization}{30}%
-\contentsline {subsection}{\numberline {1.5.3}Contours}{32}%
-\contentsline {subsection}{\numberline {1.5.4}Tracking}{32}%
+\contentsline {section}{\numberline {1.4}Clustering}{9}%
+\contentsline {subsection}{\numberline {1.4.1}K-Means}{9}%
+\contentsline {section}{\numberline {1.5}Image Processing}{11}%
+\contentsline {subsection}{\numberline {1.5.1}Thresholding}{11}%
+\contentsline {subsection}{\numberline {1.5.2}Linear Filtering}{12}%
+\contentsline {subsubsection}{Correlation}{13}%
+\contentsline {subsubsection}{Convolution}{16}%
+\contentsline {subsubsection}{Some Important Linear Filters}{17}%
+\contentsline {subsection}{\numberline {1.5.3}Nonlinear Filtering}{21}%
+\contentsline {subsubsection}{The Median Filter}{21}%
+\contentsline {subsubsection}{Morphology}{22}%
+\contentsline {subsubsection}{Structuring Elements}{23}%
+\contentsline {subsubsection}{Performing a morphological operation}{24}%
+\contentsline {subsubsection}{Fundamental Morphological Operations}{24}%
+\contentsline {section}{\numberline {1.6}Computer Vision}{26}%
+\contentsline {subsection}{\numberline {1.6.1}Mixtures of Gaussians}{27}%
+\contentsline {subsubsection}{Expectation Maximization}{29}%
+\contentsline {subsection}{\numberline {1.6.2}Contours}{32}%
+\contentsline {subsection}{\numberline {1.6.3}Tracking}{32}%
 \contentsline {chapter}{\numberline {2}System Calibrations}{33}%
 \contentsline {section}{\numberline {2.1}Calibration File}{33}%
 \contentsline {chapter}{Bibliography}{33}%
-\contentsline {chapter}{Appendices}{36}%
-\contentsline {chapter}{\numberline {A}Hardware Specifications}{36}%
-\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{36}%
-\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{36}%
-\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{37}%
+\contentsline {chapter}{Appendices}{34}%
+\contentsline {chapter}{\numberline {A}Hardware Specifications}{34}%
+\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{34}%
+\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{34}%
+\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{35}%

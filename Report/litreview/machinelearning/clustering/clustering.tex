@@ -1,0 +1,16 @@
+\section{Clustering}
+
+Clustering is a type of unsupervised learning that seeks to group datasets into cluster of samples that share some commonality. Clustering algorithms do not require training as they're unsupervised learning algorithms and so can be implemented immediately. Clustering algorithms can be designed to produce two or more clusters and often this is specified during the algorithms instantiation. Often a data sample's characteristics are quantified in a structure called a \emph{feature vector}, the size of which depends on the dimentionality of the data. Equation \ref{eq:featurevector} describes the general form of a feature vector, where $d$ represents a single dimension of a data sample. 
+
+\begin{equation}
+    \vec{v} = 
+    \begin{bmatrix}
+        d_1 \\
+        d_2 \\
+        \vdots \\ 
+        d_n
+    \end{bmatrix}
+    \label{eq:featurevector}
+\end{equation}
+
+\input{litreview/machinelearning/clustering/kmeans}

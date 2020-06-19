@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.19)  19 JUN 2020 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.19)  19 JUN 2020 19:11
 entering extended mode
 **"//zfssa0/home_student/c3175353/Profile/My Documents/thesisWindows/Report/thesis.tex"
 ("//zfssa0/home_student/c3175353/Profile/My Documents/thesisWindows/Report/thesis.tex"
@@ -456,62 +456,8 @@ Package: relsize 2013/03/29 ver 4.1
 ) (blocked.sty) (uhead.sty) (boxit.sty) (thesis.sty)
 \c@definition=\count294
 \c@theorem=\count295
-) (thesis.aux
-
-LaTeX Warning: Label `fig:fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig:pug_noise' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:pug_noise' multiply defined.
-
-
-LaTeX Warning: Label `fig:pug_denoised' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:pug_denoised' multiply defined.
-
-
-LaTeX Warning: Label `fig:pug_noise' multiply defined.
-
-
-LaTeX Warning: Label `fig:vert' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:vert' multiply defined.
-
-
-LaTeX Warning: Label `fig:hoz' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:hoz' multiply defined.
-
-
-LaTeX Warning: Label `fig:hoz' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:hoz' multiply defined.
-
-
-LaTeX Warning: Label `fig:emu_noise' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:emu_noise' multiply defined.
-
-
-LaTeX Warning: Label `fig:emu_gauss' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:emu_gauss' multiply defined.
-
-
-LaTeX Warning: Label `fig:emu_median' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:emu_median' multiply defined.
-
 )
+No file thesis.aux.
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -528,7 +474,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
- ("C:\Users\c3175353\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+("C:\Users\c3175353\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count296
 \scratchdimen=\dimen188
@@ -615,256 +561,643 @@ Overfull \vbox (41.91588pt too high) detected at line 24
 
 {C:/Users/c3175353/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/uon.png>] [2
 
-] (thesis.toc [1
-
-
-])
+]
+No file thesis.toc.
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [2] (thesis.lot)
+[1
+
+
+] [2
+
+]
+No file thesis.lot.
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
- [3
-
+[3
 
 ] [4
 
-] (thesis.lof [5
-
-])
+]
+No file thesis.lof.
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
- [6] (litreview/litreview.tex
-Chapter 1.
-(litreview/digital.tex [1
+[5
 
+] [6
+
+] (litreview/litreview.tex
+Chapter 1.
+(litreview/digital.tex
+
+LaTeX Warning: Reference `fig:grayscale' on page 1 undefined on input line 11.
+
+
+LaTeX Warning: Citation `learnproc' on page 1 undefined on input line 11.
+
+[1
 
 ]
-<./images/litreview/digital/grayscale.png, id=38, 1151.05031pt x 362.10281pt>
+<./images/litreview/digital/grayscale.png, id=37, 1151.05031pt x 362.10281pt>
 File: ./images/litreview/digital/grayscale.png Graphic file (type png)
 <use ./images/litreview/digital/grayscale.png>
 Package pdftex.def Info: ./images/litreview/digital/grayscale.png  used on input line 15.
 (pdftex.def)             Requested size: 352.81552pt x 110.99095pt.
-<./images/chessboard.jpg, id=40, 120.45pt x 120.45pt>
+
+
+LaTeX Warning: Reference `fig:2Darray' on page 2 undefined on input line 20.
+
+<./images/chessboard.jpg, id=39, 120.45pt x 120.45pt>
 File: ./images/chessboard.jpg Graphic file (type jpg)
 <use ./images/chessboard.jpg>
 Package pdftex.def Info: ./images/chessboard.jpg  used on input line 25.
 (pdftex.def)             Requested size: 150.0pt x 150.0144pt.
-<./images/array2.png, id=41, 153.4533pt x 146.7081pt>
+<./images/array2.png, id=40, 153.4533pt x 146.7081pt>
 File: ./images/array2.png Graphic file (type png)
 <use ./images/array2.png>
 Package pdftex.def Info: ./images/array2.png  used on input line 29.
 (pdftex.def)             Requested size: 150.0pt x 143.41925pt.
- [2 <./images/litreview/digital/grayscale.png>]
-<./images/3Dchess.png, id=49, 422.57875pt x 376.40625pt>
+
+LaTeX Warning: Reference `sub@fig:fig1' on page 2 undefined on input line 32.
+
+
+LaTeX Warning: Reference `sub@fig:fig2' on page 2 undefined on input line 32.
+
+
+LaTeX Warning: Reference `sub@fig:fig1' on page 2 undefined on input line 32.
+
+
+LaTeX Warning: Reference `sub@fig:fig2' on page 2 undefined on input line 32.
+
+[2 <./images/litreview/digital/grayscale.png>]
+
+LaTeX Warning: Reference `fig:3Dplot' on page 3 undefined on input line 44.
+
+<./images/3Dchess.png, id=48, 422.57875pt x 376.40625pt>
 File: ./images/3Dchess.png Graphic file (type png)
 <use ./images/3Dchess.png>
 Package pdftex.def Info: ./images/3Dchess.png  used on input line 48.
 (pdftex.def)             Requested size: 150.0pt x 133.61078pt.
-) (litreview/gaussian.tex [3 <./images/chessboard.jpg> <./images/array2.png> <./images/3Dchess.png>] [4]
+
+LaTeX Warning: Reference `fig:2Darray' on page 3 undefined on input line 49.
+
+
+LaTeX Warning: Reference `sub@fig:fig1' on page 3 undefined on input line 49.
+
+
+LaTeX Warning: Reference `fig:2Darray' on page 3 undefined on input line 49.
+
+
+LaTeX Warning: Reference `sub@fig:fig1' on page 3 undefined on input line 49.
+
+) (litreview/gaussian.tex
+
+LaTeX Warning: Citation `modern_statistics' on page 3 undefined on input line 4.
+
+
+LaTeX Warning: Citation `modern_statistics' on page 3 undefined on input line 4.
+
+[3 <./images/chessboard.jpg> <./images/array2.png> <./images/3Dchess.png>]
+
+LaTeX Warning: Reference `eq:gauss' on page 4 undefined on input line 6.
+
+
+LaTeX Warning: Reference `eq:gauss' on page 4 undefined on input line 6.
+
+
+LaTeX Warning: Reference `eq:gauss_probability' on page 4 undefined on input line 14.
+
+
+LaTeX Warning: Citation `antiderivatives' on page 4 undefined on input line 14.
+
+
+LaTeX Warning: Reference `eq:standard_deviation' on page 4 undefined on input line 21.
+
+
+LaTeX Warning: Reference `fig:gauss' on page 4 undefined on input line 21.
+
+[4]
 <./images/gauss/bell_curve.jpg, id=63, 1927.2pt x 966.61125pt>
 File: ./images/gauss/bell_curve.jpg Graphic file (type jpg)
 <use ./images/gauss/bell_curve.jpg>
 Package pdftex.def Info: ./images/gauss/bell_curve.jpg  used on input line 30.
 (pdftex.def)             Requested size: 418.96548pt x 210.13301pt.
- [5 <./images/gauss/bell_curve.jpg>]
+
+
+LaTeX Warning: Reference `eq:gauss_2D' on page 5 undefined on input line 35.
+
+
+LaTeX Warning: Reference `fig:gauss_2D' on page 5 undefined on input line 35.
+
+[5 <./images/gauss/bell_curve.jpg>]
 <./images/gauss2D.jpg, id=68, 1927.2pt x 976.64874pt>
 File: ./images/gauss2D.jpg Graphic file (type jpg)
 <use ./images/gauss2D.jpg>
 Package pdftex.def Info: ./images/gauss2D.jpg  used on input line 44.
 (pdftex.def)             Requested size: 396.91325pt x 201.13823pt.
-) (litreview/neuralnets.tex
-<./images/litreview/computervision/neuralnetworks/neural_network_basic_structure.jpeg, id=69, 589.4823pt x 90.3375pt>
+) (litreview/machinelearning/machinelearning.tex
+
+LaTeX Warning: Citation `patterns_machine_learning' on page 6 undefined on input line 3.
+
+(litreview/machinelearning/neuralnets.tex
+
+LaTeX Warning: Reference `fig:neural_network' on page 6 undefined on input line 3.
+
+
+LaTeX Warning: Citation `statistical_pattern_recognition' on page 6 undefined on input line 3.
+
+[6 <./images/gauss2D.jpg>]
+<./images/litreview/computervision/neuralnetworks/neural_network_basic_structure.jpeg, id=72, 589.4823pt x 90.3375pt>
 File: ./images/litreview/computervision/neuralnetworks/neural_network_basic_structure.jpeg Graphic file (type jpg)
 <use ./images/litreview/computervision/neuralnetworks/neural_network_basic_structure.jpeg>
 Package pdftex.def Info: ./images/litreview/computervision/neuralnetworks/neural_network_basic_structure.jpeg  used on input line 8.
 (pdftex.def)             Requested size: 396.91325pt x 60.82767pt.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Citation `neural_networks' on page 7 undefined on input line 9.
 
-[6 <./images/gauss2D.jpg>]
+
+LaTeX Warning: Citation `neural_networks' on page 7 undefined on input line 9.
+
+
+LaTeX Warning: Citation `machine_learning_dictionary' on page 7 undefined on input line 15.
+
+
+LaTeX Warning: Citation `neural_networks' on page 7 undefined on input line 15.
+
+
+LaTeX Warning: Reference `fig:neuron' on page 7 undefined on input line 15.
+
 <./images/litreview/computervision/neuralnetworks/neuron.jpg, id=73, 1505.625pt x 714.67pt>
 File: ./images/litreview/computervision/neuralnetworks/neuron.jpg Graphic file (type jpg)
 <use ./images/litreview/computervision/neuralnetworks/neuron.jpg>
 Package pdftex.def Info: ./images/litreview/computervision/neuralnetworks/neuron.jpg  used on input line 20.
 (pdftex.def)             Requested size: 352.81552pt x 167.46765pt.
- [7 <./images/litreview/computervision/neuralnetworks/neural_network_basic_structure.jpeg> <./images/litreview/computervision/neuralnetworks/neuron.jpg>]) (litreview/imageprocessing/imageprocessing.tex (litreview/imageprocessing/thresholding.tex [8]
-<./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg, id=80, 793.46437pt x 530.73282pt>
+
+LaTeX Warning: Citation `ann_handbook' on page 7 undefined on input line 21.
+
+
+LaTeX Warning: Citation `ann_handbook' on page 7 undefined on input line 21.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <./images/litreview/computervision/neuralnetworks/neural_network_basic_structure.jpeg>]
+
+LaTeX Warning: Citation `large_data_neural_network' on page 8 undefined on input line 29.
+
+
+LaTeX Warning: Citation `patterns_machine_learning' on page 8 undefined on input line 29.
+
+
+LaTeX Warning: Citation `supervised_neural_networks' on page 8 undefined on input line 29.
+
+
+LaTeX Warning: Citation `data_labelling' on page 8 undefined on input line 29.
+
+
+LaTeX Warning: Citation `computations_neural_network' on page 8 undefined on input line 31.
+
+
+LaTeX Warning: Citation `neural_networks' on page 8 undefined on input line 33.
+
+[8 <./images/litreview/computervision/neuralnetworks/neuron.jpg>]) (litreview/machinelearning/clustering/clustering.tex
+
+LaTeX Warning: Reference `eq:featurevector' on page 9 undefined on input line 3.
+
+(litreview/machinelearning/clustering/kmeans.tex
+
+LaTeX Warning: Reference `eq:euclid' on page 9 undefined on input line 2.
+
+
+LaTeX Warning: Reference `algorithm:k_means' on page 9 undefined on input line 2.
+
+[9]
+litreview/machinelearning/clustering/kmeans.tex:31: Missing $ inserted.
+<inserted text> 
+                $
+l.31     \caption
+                 {K-Means Clustering \cite{oreilly_python}}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+litreview/machinelearning/clustering/kmeans.tex:31: Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.31     \caption
+                 {K-Means Clustering \cite{oreilly_python}}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+litreview/machinelearning/clustering/kmeans.tex:31: Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.31     \caption
+                 {K-Means Clustering \cite{oreilly_python}}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+litreview/machinelearning/clustering/kmeans.tex:31: Missing $ inserted.
+<inserted text> 
+                $
+l.31     \caption
+                 {K-Means Clustering \cite{oreilly_python}}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Citation `oreilly_python' on page 10 undefined on input line 31.
+
+litreview/machinelearning/clustering/kmeans.tex:33: Missing } inserted.
+<inserted text> 
+                }
+l.33 \end{algorithm}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) detected at line 33
+[][]
+ []
+
+litreview/machinelearning/clustering/kmeans.tex:33: Missing } inserted.
+<inserted text> 
+                }
+l.33 \end{algorithm}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Reference `fig:clusters' on page 10 undefined on input line 35.
+
+<./images/kmeans_clusters.jpg, id=83, 562.1pt x 421.575pt>
+File: ./images/kmeans_clusters.jpg Graphic file (type jpg)
+<use ./images/kmeans_clusters.jpg>
+Package pdftex.def Info: ./images/kmeans_clusters.jpg  used on input line 41.
+(pdftex.def)             Requested size: 300.0pt x 224.99683pt.
+))) (litreview/imageprocessing/imageprocessing.tex [10] (litreview/imageprocessing/thresholding.tex
+
+LaTeX Warning: Reference `section:digital_image' on page 11 undefined on input line 3.
+
+
+LaTeX Warning: Reference `eq:threshold' on page 11 undefined on input line 3.
+
+
+LaTeX Warning: Citation `alg_apps' on page 11 undefined on input line 3.
+
+
+LaTeX Warning: Reference `fig:threshex' on page 11 undefined on input line 3.
+
+[11 <./images/kmeans_clusters.jpg>]
+<./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg, id=91, 793.46437pt x 530.73282pt>
 File: ./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg  used on input line 17.
 (pdftex.def)             Requested size: 198.45662pt x 132.73956pt.
-<./images/litreview/imageprocessing/thresholding/horses_binary.jpg, id=81, 793.46437pt x 519.44063pt>
+<./images/litreview/imageprocessing/thresholding/horses_binary.jpg, id=92, 793.46437pt x 519.44063pt>
 File: ./images/litreview/imageprocessing/thresholding/horses_binary.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/thresholding/horses_binary.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/thresholding/horses_binary.jpg  used on input line 21.
 (pdftex.def)             Requested size: 198.45662pt x 129.91531pt.
-) (litreview/imageprocessing/linear/linearFiltering.tex [9 <./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg> <./images/litreview/imageprocessing/thresholding/horses_binary.jpg>]
-<./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg, id=85, 956.82469pt x 662.475pt>
+) (litreview/imageprocessing/linear/linearFiltering.tex
+
+LaTeX Warning: Reference `subsection:corr' on page 12 undefined on input line 3.
+
+
+LaTeX Warning: Reference `subsection:conv' on page 12 undefined on input line 3.
+
+
+LaTeX Warning: Reference `fig:kernel_graphics' on page 12 undefined on input line 3.
+
+
+LaTeX Warning: Citation `alg_apps' on page 12 undefined on input line 3.
+
+
+LaTeX Warning: Reference `fig:generalForm' on page 12 undefined on input line 3.
+
+[12 <./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg> <./images/litreview/imageprocessing/thresholding/horses_binary.jpg>]
+<./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg, id=96, 956.82469pt x 662.475pt>
 File: ./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg  used on input line 20.
 (pdftex.def)             Requested size: 352.81552pt x 244.2729pt.
- [10] (litreview/imageprocessing/linear/correlation.tex [11 <./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg>]
-<./images/im_color.png, id=93, 488.0634pt x 602.25pt>
+ (litreview/imageprocessing/linear/correlation.tex
+
+LaTeX Warning: Reference `eq:correlation' on page 13 undefined on input line 5.
+
+
+LaTeX Warning: Reference `eq:correlation_operator' on page 13 undefined on input line 5.
+
+[13 <./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg>]
+
+LaTeX Warning: Citation `optimalKernel' on page 14 undefined on input line 15.
+
+
+LaTeX Warning: Citation `udacity_cv' on page 14 undefined on input line 15.
+
+
+LaTeX Warning: Citation `oreilly_python' on page 14 undefined on input line 17.
+
+
+LaTeX Warning: Reference `fig:sobel_apply' on page 14 undefined on input line 17.
+
+
+LaTeX Warning: Reference `subsubsection:kernels' on page 14 undefined on input line 17.
+
+
+LaTeX Warning: Reference `subsection:thresholding' on page 14 undefined on input line 17.
+
+<./images/im_color.png, id=100, 488.0634pt x 602.25pt>
 File: ./images/im_color.png Graphic file (type png)
 <use ./images/im_color.png>
 Package pdftex.def Info: ./images/im_color.png  used on input line 23.
 (pdftex.def)             Requested size: 132.30666pt x 163.26213pt.
-<./images/gv.jpg, id=94, 1016.79875pt x 1254.6875pt>
+<./images/gv.jpg, id=101, 1016.79875pt x 1254.6875pt>
 File: ./images/gv.jpg Graphic file (type jpg)
 <use ./images/gv.jpg>
 Package pdftex.def Info: ./images/gv.jpg  used on input line 27.
 (pdftex.def)             Requested size: 132.30666pt x 163.24911pt.
-<./images/gh.jpg, id=95, 1016.79875pt x 1254.6875pt>
+<./images/gh.jpg, id=102, 1016.79875pt x 1254.6875pt>
 File: ./images/gh.jpg Graphic file (type jpg)
 <use ./images/gh.jpg>
 Package pdftex.def Info: ./images/gh.jpg  used on input line 32.
 (pdftex.def)             Requested size: 132.30666pt x 163.24911pt.
- [12 <./images/im_color.png (PNG copy)> <./images/gv.jpg> <./images/gh.jpg>]) (litreview/imageprocessing/linear/convolution.tex [13]) (litreview/imageprocessing/linear/kernels.tex [14]
-<./images/pug_resized.jpg, id=105, 639.38875pt x 740.7675pt>
+
+LaTeX Warning: Citation `realtimerendering' on page 14 undefined on input line 40.
+
+[14 <./images/im_color.png (PNG copy)> <./images/gv.jpg> <./images/gh.jpg>]
+
+LaTeX Warning: Citation `cv_matlab' on page 15 undefined on input line 42.
+
+
+LaTeX Warning: Reference `eq:superpos' on page 15 undefined on input line 42.
+
+
+LaTeX Warning: Reference `eq:shiftinvariance' on page 15 undefined on input line 49.
+
+
+LaTeX Warning: Reference `fig:correlation' on page 15 undefined on input line 56.
+
+
+LaTeX Warning: Citation `udacity_cv' on page 15 undefined on input line 56.
+
+) (litreview/imageprocessing/linear/convolution.tex [15]
+
+LaTeX Warning: Reference `eq:correlation' on page 16 undefined on input line 7.
+
+
+LaTeX Warning: Reference `fig:convolution' on page 16 undefined on input line 11.
+
+) (litreview/imageprocessing/linear/kernels.tex [16]
+
+LaTeX Warning: Reference `fig:box_kernel' on page 17 undefined on input line 6.
+
+
+LaTeX Warning: Reference `fig:pug_blur' on page 17 undefined on input line 6.
+
+<./images/pug_resized.jpg, id=112, 639.38875pt x 740.7675pt>
 File: ./images/pug_resized.jpg Graphic file (type jpg)
 <use ./images/pug_resized.jpg>
 Package pdftex.def Info: ./images/pug_resized.jpg  used on input line 26.
 (pdftex.def)             Requested size: 132.30666pt x 153.28252pt.
-<./images/pug_blur.jpg, id=106, 639.38875pt x 740.7675pt>
+<./images/pug_blur.jpg, id=113, 639.38875pt x 740.7675pt>
 File: ./images/pug_blur.jpg Graphic file (type jpg)
 <use ./images/pug_blur.jpg>
 Package pdftex.def Info: ./images/pug_blur.jpg  used on input line 31.
 (pdftex.def)             Requested size: 132.30666pt x 153.28252pt.
- [15 <./images/pug_resized.jpg> <./images/pug_blur.jpg>]
-<./images/pug_noise.jpg, id=110, 639.38875pt x 740.7675pt>
+[17]
+
+LaTeX Warning: Reference `section:gaussian' on page 18 undefined on input line 39.
+
+
+LaTeX Warning: Citation `udacity_cv' on page 18 undefined on input line 39.
+
+
+LaTeX Warning: Reference `fig:gauss_kernel' on page 18 undefined on input line 46.
+
+
+LaTeX Warning: Reference `fig:pug_noise' on page 18 undefined on input line 46.
+
+
+LaTeX Warning: Reference `section:gaussian' on page 18 undefined on input line 46.
+
+
+LaTeX Warning: Reference `fig:gauss_kernel' on page 18 undefined on input line 46.
+
+<./images/pug_noise.jpg, id=118, 639.38875pt x 740.7675pt>
 File: ./images/pug_noise.jpg Graphic file (type jpg)
 <use ./images/pug_noise.jpg>
 Package pdftex.def Info: ./images/pug_noise.jpg  used on input line 52.
 (pdftex.def)             Requested size: 132.30666pt x 153.28252pt.
-<./images/pug_denoised.jpg, id=111, 639.38875pt x 740.7675pt>
+<./images/pug_denoised.jpg, id=119, 639.38875pt x 740.7675pt>
 File: ./images/pug_denoised.jpg Graphic file (type jpg)
 <use ./images/pug_denoised.jpg>
 Package pdftex.def Info: ./images/pug_denoised.jpg  used on input line 57.
 (pdftex.def)             Requested size: 132.30666pt x 153.28252pt.
- [16 <./images/pug_noise.jpg> <./images/pug_denoised.jpg>]
-<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png, id=115, 501.072pt x 335.45325pt>
+[18 <./images/pug_resized.jpg> <./images/pug_blur.jpg>]
+
+LaTeX Warning: Citation `sobel' on page 19 undefined on input line 83.
+
+
+LaTeX Warning: Reference `fig:sobel_filters' on page 19 undefined on input line 83.
+
+
+LaTeX Warning: Reference `fig:sobel_apply2' on page 19 undefined on input line 85.
+
+[19 <./images/pug_noise.jpg> <./images/pug_denoised.jpg>]
+<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png, id=126, 501.072pt x 335.45325pt>
 File: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png Graphic file (type png)
 <use ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png>
 Package pdftex.def Info: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png  used on input line 122.
 (pdftex.def)             Requested size: 198.45662pt x 132.8583pt.
-<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png, id=116, 499.8675pt x 334.851pt>
+<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png, id=127, 499.8675pt x 334.851pt>
 File: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png Graphic file (type png)
 <use ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png>
 Package pdftex.def Info: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png  used on input line 126.
 (pdftex.def)             Requested size: 198.45662pt x 132.94168pt.
-<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png, id=117, 498.06075pt x 332.442pt>
+<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png, id=128, 498.06075pt x 332.442pt>
 File: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png Graphic file (type png)
 <use ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png>
 Package pdftex.def Info: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png  used on input line 131.
 (pdftex.def)             Requested size: 198.45662pt x 132.46716pt.
-<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png, id=118, 471.56175pt x 311.36325pt>
+<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png, id=129, 471.56175pt x 311.36325pt>
 File: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png Graphic file (type png)
 <use ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png>
 Package pdftex.def Info: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png  used on input line 136.
 (pdftex.def)             Requested size: 198.45662pt x 131.03772pt.
-) [17]) (litreview/imageprocessing/non-linear/nonlinear_filters.tex (litreview/imageprocessing/non-linear/median.tex [18 <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png>]
-<./images/emu_noise.jpg, id=131, 676.5275pt x 846.16125pt>
+)) (litreview/imageprocessing/non-linear/nonlinear_filters.tex [20 <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png>] (litreview/imageprocessing/non-linear/median.tex
+
+LaTeX Warning: Reference `subsubsection:kernels' on page 21 undefined on input line 5.
+
+
+LaTeX Warning: Citation `cormen_2001' on page 21 undefined on input line 5.
+
+
+LaTeX Warning: Reference `fig:shot_noise' on page 21 undefined on input line 5.
+
+<./images/emu_noise.jpg, id=138, 676.5275pt x 846.16125pt>
 File: ./images/emu_noise.jpg Graphic file (type jpg)
 <use ./images/emu_noise.jpg>
 Package pdftex.def Info: ./images/emu_noise.jpg  used on input line 10.
 (pdftex.def)             Requested size: 132.30666pt x 165.47205pt.
-<./images/emu_gauss.jpg, id=132, 676.5275pt x 846.16125pt>
+<./images/emu_gauss.jpg, id=139, 676.5275pt x 846.16125pt>
 File: ./images/emu_gauss.jpg Graphic file (type jpg)
 <use ./images/emu_gauss.jpg>
 Package pdftex.def Info: ./images/emu_gauss.jpg  used on input line 15.
 (pdftex.def)             Requested size: 132.30666pt x 165.47205pt.
-<./images/emu_median.jpg, id=133, 676.5275pt x 846.16125pt>
+<./images/emu_median.jpg, id=140, 676.5275pt x 846.16125pt>
 File: ./images/emu_median.jpg Graphic file (type jpg)
 <use ./images/emu_median.jpg>
 Package pdftex.def Info: ./images/emu_median.jpg  used on input line 20.
 (pdftex.def)             Requested size: 132.30666pt x 165.47205pt.
-) (litreview/imageprocessing/non-linear/morphology.tex [19 <./images/emu_noise.jpg> <./images/emu_gauss.jpg> <./images/emu_median.jpg>]
-<./images/palms_resized.jpg, id=137, 1056.94875pt x 1321.93875pt>
+
+LaTeX Warning: Reference `algorithm:median_filter' on page 21 undefined on input line 29.
+
+
+LaTeX Warning: Citation `median_filter_new' on page 21 undefined on input line 29.
+
+
+LaTeX Warning: Citation `median_filter_3' on page 21 undefined on input line 29.
+
+[21 <./images/emu_noise.jpg> <./images/emu_gauss.jpg> <./images/emu_median.jpg>]
+
+LaTeX Warning: Citation `median_filter_old' on page 22 undefined on input line 49.
+
+) (litreview/imageprocessing/non-linear/morphology.tex
+
+LaTeX Warning: Reference `subsection:thresholding' on page 22 undefined on input line 3.
+
+
+LaTeX Warning: Reference `fig:thresholding' on page 22 undefined on input line 3.
+
+
+LaTeX Warning: Citation `morph_textbook' on page 22 undefined on input line 3.
+
+[22]
+<./images/palms_resized.jpg, id=147, 1056.94875pt x 1321.93875pt>
 File: ./images/palms_resized.jpg Graphic file (type jpg)
 <use ./images/palms_resized.jpg>
 Package pdftex.def Info: ./images/palms_resized.jpg  used on input line 8.
 (pdftex.def)             Requested size: 132.30666pt x 165.46382pt.
-<./images/palms_grayscale.jpg, id=138, 676.5275pt x 846.16125pt>
+<./images/palms_grayscale.jpg, id=148, 676.5275pt x 846.16125pt>
 File: ./images/palms_grayscale.jpg Graphic file (type jpg)
 <use ./images/palms_grayscale.jpg>
 Package pdftex.def Info: ./images/palms_grayscale.jpg  used on input line 13.
 (pdftex.def)             Requested size: 132.30666pt x 165.47205pt.
-<./images/palms_binary.jpg, id=139, 676.5275pt x 846.16125pt>
+<./images/palms_binary.jpg, id=149, 676.5275pt x 846.16125pt>
 File: ./images/palms_binary.jpg Graphic file (type jpg)
 <use ./images/palms_binary.jpg>
 Package pdftex.def Info: ./images/palms_binary.jpg  used on input line 18.
 (pdftex.def)             Requested size: 132.30666pt x 165.47205pt.
- [20] [21 <./images/palms_resized.jpg> <./images/palms_grayscale.jpg> <./images/palms_binary.jpg>]
 
-LaTeX Warning: Reference `ref:ice_open' on page 22 undefined on input line 103.
 
-[22]
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg, id=149, 922.94812pt x 615.0478pt>
+LaTeX Warning: Reference `fig:structuring_elements' on page 23 undefined on input line 29.
+
+
+LaTeX Warning: Citation `alg_apps' on page 23 undefined on input line 74.
+
+
+LaTeX Warning: Reference `algorithm:morphological_operation' on page 23 undefined on input line 74.
+
+[23 <./images/palms_resized.jpg> <./images/palms_grayscale.jpg> <./images/palms_binary.jpg>]
+
+LaTeX Warning: Reference `fig:ice_dilation' on page 24 undefined on input line 99.
+
+
+LaTeX Warning: Reference `algorithm:morphological_operation' on page 24 undefined on input line 99.
+
+[24]
+
+LaTeX Warning: Reference `algorithm:morphological_operation' on page 25 undefined on input line 101.
+
+
+LaTeX Warning: Reference `fig:ice_erosion' on page 25 undefined on input line 101.
+
+
+LaTeX Warning: Reference `ref:ice_open' on page 25 undefined on input line 103.
+
+
+LaTeX Warning: Reference `fig:ice_close' on page 25 undefined on input line 105.
+
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg, id=157, 922.94812pt x 615.0478pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg  used on input line 111.
 (pdftex.def)             Requested size: 216.1011pt x 144.00131pt.
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg, id=150, 925.95938pt x 615.0478pt>
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg, id=158, 925.95938pt x 615.0478pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg  used on input line 116.
 (pdftex.def)             Requested size: 216.1011pt x 143.53207pt.
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg, id=151, 922.94812pt x 613.54219pt>
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg, id=159, 922.94812pt x 613.54219pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg  used on input line 121.
 (pdftex.def)             Requested size: 216.1011pt x 143.6488pt.
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg, id=152, 924.45375pt x 606.76688pt>
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg, id=160, 924.45375pt x 606.76688pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg  used on input line 126.
 (pdftex.def)             Requested size: 216.1011pt x 141.84029pt.
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg, id=153, 929.72343pt x 611.28375pt>
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg, id=161, 929.72343pt x 611.28375pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg  used on input line 131.
 (pdftex.def)             Requested size: 216.1011pt x 142.07536pt.
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg, id=154, 928.97063pt x 611.28375pt>
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg, id=162, 928.97063pt x 611.28375pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg  used on input line 136.
 (pdftex.def)             Requested size: 216.1011pt x 142.19662pt.
- [23]))) (litreview/computervision/computervision.tex [24 <./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg>] (litreview/computervision/clustering/clustering.tex
-<./images/toyCar.jpg, id=162, 1036.87375pt x 739.76375pt>
-File: ./images/toyCar.jpg Graphic file (type jpg)
-<use ./images/toyCar.jpg>
-Package pdftex.def Info: ./images/toyCar.jpg  used on input line 7.
-(pdftex.def)             Requested size: 220.0pt x 156.95784pt.
-<./images/toycarseg.jpg, id=163, 1036.87375pt x 739.76375pt>
-File: ./images/toycarseg.jpg Graphic file (type jpg)
-<use ./images/toycarseg.jpg>
-Package pdftex.def Info: ./images/toycarseg.jpg  used on input line 12.
-(pdftex.def)             Requested size: 220.0pt x 156.95784pt.
- [25 <./images/toyCar.jpg> <./images/toycarseg.jpg>] (litreview/computervision/clustering/kmeans.tex [26]
-<./images/kmeans_clusters.jpg, id=170, 562.1pt x 421.575pt>
-File: ./images/kmeans_clusters.jpg Graphic file (type jpg)
-<use ./images/kmeans_clusters.jpg>
-Package pdftex.def Info: ./images/kmeans_clusters.jpg  used on input line 26.
-(pdftex.def)             Requested size: 300.0pt x 224.99683pt.
-)) (litreview/computervision/mog/mog.tex
-<./images/histGauss.jpg, id=171, 562.1pt x 421.575pt>
+[25]))) (litreview/computervision/computervision.tex
+
+LaTeX Warning: Citation `alg_apps' on page 26 undefined on input line 3.
+
+[26 <./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg>] (litreview/computervision/mog/mog.tex
+
+LaTeX Warning: Reference `fig:histGauss' on page 27 undefined on input line 5.
+
+
+LaTeX Warning: Reference `fig:histCurve' on page 27 undefined on input line 5.
+
+<./images/histGauss.jpg, id=169, 562.1pt x 421.575pt>
 File: ./images/histGauss.jpg Graphic file (type jpg)
 <use ./images/histGauss.jpg>
 Package pdftex.def Info: ./images/histGauss.jpg  used on input line 10.
 (pdftex.def)             Requested size: 215.0pt x 161.24869pt.
-<./images/hist_gauss_curve.jpg, id=172, 562.1pt x 421.575pt>
+<./images/hist_gauss_curve.jpg, id=170, 562.1pt x 421.575pt>
 File: ./images/hist_gauss_curve.jpg Graphic file (type jpg)
 <use ./images/hist_gauss_curve.jpg>
 Package pdftex.def Info: ./images/hist_gauss_curve.jpg  used on input line 15.
 (pdftex.def)             Requested size: 215.0pt x 161.24869pt.
- [27 <./images/kmeans_clusters.jpg>]
-<./images/mog.jpg, id=176, 562.1pt x 421.575pt>
+
+LaTeX Warning: Reference `eq:cov' on page 27 undefined on input line 23.
+
+[27 <./images/histGauss.jpg> <./images/hist_gauss_curve.jpg>]
+
+LaTeX Warning: Reference `fig:mogcov' on page 28 undefined on input line 32.
+
+
+LaTeX Warning: Reference `fig:clusters' on page 28 undefined on input line 32.
+
+<./images/mog.jpg, id=174, 562.1pt x 421.575pt>
 File: ./images/mog.jpg Graphic file (type jpg)
 <use ./images/mog.jpg>
 Package pdftex.def Info: ./images/mog.jpg  used on input line 36.
@@ -874,8 +1207,20 @@ Overfull \hbox (8.98227pt too wide) in paragraph at lines 36--37
  [][] 
  []
 
-[28 <./images/histGauss.jpg> <./images/hist_gauss_curve.jpg>]
-<./images/gauss_mix_scale.jpg, id=182, 1927.2pt x 976.64874pt>
+
+LaTeX Warning: Reference `fig:histScale' on page 28 undefined on input line 41.
+
+
+LaTeX Warning: Reference `fig:histCurve' on page 28 undefined on input line 41.
+
+
+LaTeX Warning: Reference `eq:gauss_weight1' on page 28 undefined on input line 41.
+
+
+LaTeX Warning: Reference `eq:gauss_weight2' on page 28 undefined on input line 41.
+
+[28 <./images/mog.jpg>]
+<./images/gauss_mix_scale.jpg, id=180, 1927.2pt x 976.64874pt>
 File: ./images/gauss_mix_scale.jpg Graphic file (type jpg)
 <use ./images/gauss_mix_scale.jpg>
 Package pdftex.def Info: ./images/gauss_mix_scale.jpg  used on input line 55.
@@ -885,46 +1230,56 @@ Overfull \hbox (8.98227pt too wide) in paragraph at lines 55--56
  [][] 
  []
 
-[29 <./images/mog.jpg>] [30 <./images/gauss_mix_scale.jpg>] [31]
+
+LaTeX Warning: Reference `eq:likelihood' on page 29 undefined on input line 64.
+
+[29 <./images/gauss_mix_scale.jpg>]
+
+LaTeX Warning: Reference `eq:likelihood' on page 30 undefined on input line 95.
+
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 129--131
 
  []
 
-) (litreview/computervision/contours/contours.tex) (litreview/computervision/tracking/tracking.tex))) (calibration/calibration.tex [32]
+
+LaTeX Warning: Reference `eq:likelihood' on page 31 undefined on input line 132.
+
+) (litreview/computervision/contours/contours.tex) (litreview/computervision/tracking/tracking.tex))) (calibration/calibration.tex [31] [32]
 Chapter 2.
-) (thesis.bbl [33
+)
+No file thesis.bbl.
+(appendices/appendix.tex [33
 
-] [34
-
-]) (appendices/appendix.tex [35]
+]
 Appendix A.
-[36
+[34
 
 
 ]
 Appendix B.
-) [37
+) [35
 
 ] (thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 9251 strings out of 480797
- 164715 string characters out of 2894168
- 427721 words of memory out of 3000000
- 24909 multiletter control sequences out of 15000+200000
- 545574 words of font info for 74 fonts, out of 3000000 for 9000
+ 9208 strings out of 480797
+ 163949 string characters out of 2894168
+ 425475 words of memory out of 3000000
+ 24869 multiletter control sequences out of 15000+200000
+ 546275 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,18n,54p,1614b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,19n,54p,1614b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/c3175353/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on thesis.pdf (45 pages, 5541870 bytes).
+Output written on thesis.pdf (43 pages, 5399035 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
+ 259 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 211 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
