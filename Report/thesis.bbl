@@ -15,6 +15,42 @@ Brian Conrad.
 \newblock Impossibility theorems for elementary integration.
 \newblock {\em Clay Mathematics Institute}, 2005.
 
+\bibitem{statistical_pattern_recognition}
+Keinosuke Fukunaga.
+\newblock {\em Introduction to Statistical Pattern Recognition}.
+\newblock Boston Academic Press, 1990.
+
+\bibitem{neural_networks}
+Jeff Heaton.
+\newblock {\em Artificial Intelligence for Humans Volume 3: Deep Learning and
+  Neural Networks}.
+\newblock Heaton Research, Inc, 2015.
+
+\bibitem{machine_learning_dictionary}
+Bil Wilson.
+\newblock {\em The Machine Learning Dictionary}.
+\newblock University of New South Wales, 2020.
+
+\bibitem{ann_handbook}
+Jayesh~Bapu Ahire.
+\newblock {\em The Artificial Neural Networks Handbook: Part 4}.
+
+\bibitem{large_data_neural_network}
+Anuj~Sharma Yaw Okyere Adu-Gyamfi, Sampson Kwasi~Asare and Tienaah Titus.
+\newblock Automated vehicle recognition with deep convolutional neural
+  networks.
+\newblock {\em Sage Journals}, 2645(1), 2017.
+
+\bibitem{data_labelling}
+Cognilytica.
+\newblock Data engineering, preparation, and labeling for ai 2019.
+\newblock Technical report, Cognilytica, 2019.
+
+\bibitem{computations_neural_network}
+Shai Shalev-Shwartz Roi~Livni and Ohad Shamir.
+\newblock On the computational efficiency of training neural networks.
+\newblock 2014.
+
 \bibitem{alg_apps}
 Richard Szeliski.
 \newblock {\em Computer Vision - Algorithms and Applications}.
