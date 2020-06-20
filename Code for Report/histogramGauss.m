@@ -39,4 +39,6 @@ plot(m,y3,'LineWidth',2);
 %% Plot super
 
 y = y1 + y2 + y3;
+figure(); hold on;
+axis([-1 3.5 0 0.55])
 plot(m,y,'LineWidth',2);
