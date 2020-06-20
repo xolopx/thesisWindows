@@ -12,6 +12,16 @@ hold on
 plot(C(:,1),C(:,2),'kx')
 legend('Cluster 1','Cluster 2','Cluster 3','Cluster Centroid')
 
+
+%% Create superposition
+
+
+
+X_s = X[1] + X[2] + X[3];
+
+
+
+
 %%
 load fisheriris;
 X = meas(:,1:2);

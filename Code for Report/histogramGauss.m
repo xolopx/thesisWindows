@@ -34,3 +34,9 @@ text(2,0.2,text3,'HorizontalAlignment','right','FontSize',14);
 plot(m,y1,'LineWidth',2);
 plot(m,y2,'LineWidth',2);
 plot(m,y3,'LineWidth',2);
+
+
+%% Plot super
+
+y = y1 + y2 + y3;
+plot(m,y,'LineWidth',2);

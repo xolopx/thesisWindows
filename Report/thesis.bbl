@@ -10,15 +10,15 @@ Jay~L. Devore and Kenneth~N. Berk.
 \newblock {\em Modern Mathematical Statistics with Applications}.
 \newblock Springer, 2018.
 
-\bibitem{antiderivatives}
-Brian Conrad.
-\newblock Impossibility theorems for elementary integration.
-\newblock {\em Clay Mathematics Institute}, 2005.
-
 \bibitem{patterns_machine_learning}
 Christopher~M. Bishop.
 \newblock {\em Pattern Recognition and Machine Learning}.
 \newblock Springer, 2006.
+
+\bibitem{antiderivatives}
+Brian Conrad.
+\newblock Impossibility theorems for elementary integration.
+\newblock {\em Clay Mathematics Institute}, 2005.
 
 \bibitem{statistical_pattern_recognition}
 Keinosuke Fukunaga.
@@ -74,6 +74,11 @@ Jan~Erik Solem.
 Mathworks.
 \newblock {\em Matlab Clustering Tutorial}.
 
+\bibitem{mog_seminal}
+Peter E.~Hart Richard O.~Duda and David~G. Stork.
+\newblock {\em Pattern Classification and Scene Analysis}.
+\newblock Wiley-Interscience, 1973.
+
 \bibitem{alg_apps}
 Richard Szeliski.
 \newblock {\em Computer Vision - Algorithms and Applications}.
@@ -128,10 +133,5 @@ George J.~Yang Thomas S.~Huang and Gregory~Y. Tang.
 Gerhard~X. Ritter and Joseph~N. Wilson.
 \newblock {\em Handbook of Computer Vision Algorithms in Algerbra}.
 \newblock CRC Press, 2000.
-
-\bibitem{mog_seminal}
-Peter E.~Hart Richard O.~Duda and David~G. Stork.
-\newblock {\em Pattern Classification and Scene Analysis}.
-\newblock Wiley-Interscience, 1973.
 
 \end{thebibliography}
