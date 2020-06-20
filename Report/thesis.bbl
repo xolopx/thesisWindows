@@ -1,0 +1,137 @@
+\begin{thebibliography}{10}
+
+\bibitem{learnproc}
+Daniel Shiffman.
+\newblock {\em Learning Processing}.
+\newblock Elsevier Inc., 2008.
+
+\bibitem{modern_statistics}
+Jay~L. Devore and Kenneth~N. Berk.
+\newblock {\em Modern Mathematical Statistics with Applications}.
+\newblock Springer, 2018.
+
+\bibitem{antiderivatives}
+Brian Conrad.
+\newblock Impossibility theorems for elementary integration.
+\newblock {\em Clay Mathematics Institute}, 2005.
+
+\bibitem{patterns_machine_learning}
+Christopher~M. Bishop.
+\newblock {\em Pattern Recognition and Machine Learning}.
+\newblock Springer, 2006.
+
+\bibitem{statistical_pattern_recognition}
+Keinosuke Fukunaga.
+\newblock {\em Introduction to Statistical Pattern Recognition}.
+\newblock Boston Academic Press, 1990.
+
+\bibitem{neural_networks}
+Jeff Heaton.
+\newblock {\em Artificial Intelligence for Humans Volume 3: Deep Learning and
+  Neural Networks}.
+\newblock Heaton Research, Inc, 2015.
+
+\bibitem{machine_learning_dictionary}
+Bil Wilson.
+\newblock {\em The Machine Learning Dictionary}.
+\newblock University of New South Wales, 2020.
+
+\bibitem{ann_handbook}
+Jayesh~Bapu Ahire.
+\newblock {\em The Artificial Neural Networks Handbook: Part 4}.
+
+\bibitem{large_data_neural_network}
+Anuj~Sharma Yaw Okyere Adu-Gyamfi, Sampson Kwasi~Asare and Tienaah Titus.
+\newblock Automated vehicle recognition with deep convolutional neural
+  networks.
+\newblock {\em Sage Journals}, 2645(1), 2017.
+
+\bibitem{supervised_neural_networks}
+B.G.~Horne D.R.~Hush.
+\newblock Progress in supervised neural networks.
+\newblock {\em IEEE Signal Processing Magazine}, 10(1), 1993.
+
+\bibitem{data_labelling}
+Cognilytica.
+\newblock Data engineering, preparation, and labeling for ai 2019.
+\newblock Technical report, Cognilytica, 2019.
+
+\bibitem{computations_neural_network}
+Shai Shalev-Shwartz Roi~Livni and Ohad Shamir.
+\newblock On the computational efficiency of training neural networks.
+\newblock 2014.
+
+\bibitem{matlab_kmeans_segment}
+Mathworks.
+\newblock {\em Matlab K-Means Image Segmentation Tutorial}.
+
+\bibitem{oreilly_python}
+Jan~Erik Solem.
+\newblock {\em Programming Computer Vision with Python}.
+\newblock O'Reilly, 2012.
+
+\bibitem{matlab_clustering}
+Mathworks.
+\newblock {\em Matlab Clustering Tutorial}.
+
+\bibitem{alg_apps}
+Richard Szeliski.
+\newblock {\em Computer Vision - Algorithms and Applications}.
+\newblock Springer, 2011.
+
+\bibitem{optimalKernel}
+Sabyasachi Sahoo.
+\newblock Deciding optimal kernel size for cnn, 2020.
+
+\bibitem{udacity_cv}
+Aaron Bobick.
+\newblock Introduction to computer vision.
+\newblock Udacity, 2018.
+
+\bibitem{realtimerendering}
+Tomas Akenine-Möller and Eric Haines.
+\newblock {\em Real-Time Rendering}.
+\newblock CRC Press, 2004.
+
+\bibitem{cv_matlab}
+Richard E.~Woods Rafael C.~Gonzalez and Steven~L. Eddins.
+\newblock {\em Digital Image Processing using MATLAB}.
+\newblock Gatesmark, 2009.
+
+\bibitem{sobel}
+Irwin Sobel and Gary Feldman.
+\newblock Isotropic 3x3 image gradient operator.
+\newblock Standford Artificial Intelligence Labratory, 1968.
+
+\bibitem{cormen_2001}
+Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT Press Ltd, 2009.
+
+\bibitem{median_filter_new}
+Joungeun Bae and Hoon Yoo.
+\newblock Fast median filtering by use of fast localization of median value.
+\newblock {\em International Journal of Applied Engineering Research}, 13(12),
+  2018.
+
+\bibitem{median_filter_3}
+James Church, Dr.~Yixin Chen, , and Dr.~Stephen Rice.
+\newblock A spatial median filter for noise removal in digital images.
+\newblock {\em IEEE}, 3(6), 2008.
+
+\bibitem{median_filter_old}
+George J.~Yang Thomas S.~Huang and Gregory~Y. Tang.
+\newblock A fast two-dimensional median filtering algorithm.
+\newblock {\em IEEE}, 27(1), 1979.
+
+\bibitem{morph_textbook}
+Gerhard~X. Ritter and Joseph~N. Wilson.
+\newblock {\em Handbook of Computer Vision Algorithms in Algerbra}.
+\newblock CRC Press, 2000.
+
+\bibitem{mog_seminal}
+Peter E.~Hart Richard O.~Duda and David~G. Stork.
+\newblock {\em Pattern Classification and Scene Analysis}.
+\newblock Wiley-Interscience, 1973.
+
+\end{thebibliography}

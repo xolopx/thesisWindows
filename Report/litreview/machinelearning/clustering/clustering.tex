@@ -1,6 +1,6 @@
-\section{Clustering}
-
-Clustering is a type of unsupervised learning that seeks to group datasets into cluster of samples that share some commonality. Clustering algorithms do not require training as they're unsupervised learning algorithms and so can be implemented immediately. Clustering algorithms can be designed to produce two or more clusters and often this is specified during the algorithms instantiation. Often a data sample's characteristics are quantified in a structure called a \emph{feature vector}, the size of which depends on the dimentionality of the data. Equation \ref{eq:featurevector} describes the general form of a feature vector, where $d$ represents a single dimension of a data sample. 
+\subsection{Clustering}
+\label{subsection:clustering}
+Clustering is a type of unsupervised learning that seeks to group datasets into cluster of samples that share some commonality. Clustering algorithms do not require training as they're unsupervised learning algorithms and so can be implemented immediately. Clustering algorithms can be designed to produce two or more clusters and often this is specified during the algorithms instantiation. Often a data sample's characteristics are quantified in a structure called a \emph{feature vector}, the size of which depends on the dimensionality of the data. Equation \ref{eq:featurevector} describes the general form of a feature vector, where $d$ represents a single dimension of a data sample. 
 
 \begin{equation}
     \vec{v} = 
@@ -12,5 +12,28 @@ Clustering is a type of unsupervised learning that seeks to group datasets into 
     \end{bmatrix}
     \label{eq:featurevector}
 \end{equation}
+
+In the context of image processing clustering may be used to specify the pixels that comprise discrete objects in an image. The pixel's similarity can be measured by their value or position in the image. Figure \ref{fig:simple_cluster} shows an example of separating a foreground object from the background. The feature vectors for the pixels are three dimensional, one dimension for each colour channel, red, green and blue (see section \ref{section:digital_image}) \cite{patterns_machine_learning}. This particular clustering implementation also supplemented the vectors with spatial information so that closely located pixels are more strongly grouped \cite{matlab_kmeans_segment}.
+
+\begin{figure}[htbp]
+    \centering
+     \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{litreview/machinelearning/clustering/dog_original}
+	\captionsetup{format = hang}
+        \caption{Img: Mathworks}
+        \label{fig:}
+    \end{subfigure} 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{litreview/machinelearning/clustering/dog_segmented}	
+	\captionsetup{format = hang}
+        \caption{Dog separated from background \cite{matlab_kmeans_segment}}
+        \label{fig:}
+    \end{subfigure}
+    \captionsetup{format = hang}
+    \caption{Segmentation of foreground object from background using K-Means Clustering.}
+    \label{fig:simple_cluster}
+\end{figure}
+
+    
 
 \input{litreview/machinelearning/clustering/kmeans}
