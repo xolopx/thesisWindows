@@ -1,17 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 The style file: unsrt.bst
 Database file #1: bibliography/bibliography.bib
-Warning--entry type for "industrialization" isn't style-file defined
---line 4 of file bibliography/bibliography.bib
-Warning--entry type for "emissions" isn't style-file defined
---line 18 of file bibliography/bibliography.bib
-Warning--entry type for "ecotoll" isn't style-file defined
---line 25 of file bibliography/bibliography.bib
-Warning--entry type for "cost" isn't style-file defined
---line 42 of file bibliography/bibliography.bib
-Warning--empty institution in trafficworse
-Warning--empty institution in mixedSolution
-Warning--empty institution in smartsolution
-Warning--empty institution in iot
-Warning--empty institution in methodsofcollection
-(There were 9 warnings)
+Warning--can't use both author and editor fields in learnproc
+Warning--empty journal in computations_neural_network
+Warning--can't use both author and editor fields in oreilly_python
+Warning--can't use both author and editor fields in alg_apps
+Warning--can't use both author and editor fields in realtimerendering
+Warning--can't use both author and editor fields in cv_matlab
+(There were 6 warnings)

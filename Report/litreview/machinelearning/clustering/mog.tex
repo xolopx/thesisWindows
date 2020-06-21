@@ -38,15 +38,14 @@ The significance of $\boldsymbol{z}$ represents the assignment of a sample to a 
 
 \[p(\bm{x}|\boldsymbol{z}) = \mathcal{N}(\boldsymbol{x}|\boldsymbol{\mu_k}, \boldsymbol{\Sigma_k}) \]
 
-Finally we can determine that the marginal distribution of $\boldsymbol{z}$ which is described by \ref{eq:mog} using the marginal distribution $p(\boldsymbol{z})$ and the conditional distribution $p(\bm{x}|\bm{z})$ as 
+Finally we can define the marginal distribution of $\boldsymbol{x}$, formerly described by \ref{eq:mog}, using the marginal distribution $p(\boldsymbol{z})$ and the conditional distribution $p(\bm{x}|\bm{z})$ as described by equation \ref{eq:mog_derive}. Figure \ref{fig:mog_compare} shows the super-positioning of individual Gaussian distributions to form a mixture of Gaussian for a one-dimensional dataset.
 
 \begin{align}
-	p(\bm{x}) 	&= p(\bm{z})p(\bm{x}|\bm{z})
+	p(\bm{x}) 	&= p(\bm{z})p(\bm{x}|\bm{z})\\
 				&= \sum^{K}_{k = 1}\pi_k \mathcal{N}(\boldsymbol{x}|\boldsymbol{\mu_k}, \boldsymbol{\Sigma_k})
 \label{eq:mog_derive}
 \end{align}
 
-Figure \ref{fig:mog_compare}
 
 \begin{figure}[htbp]
     \centering
@@ -67,76 +66,9 @@ Figure \ref{fig:mog_compare}
     \label{fig:mog_compare}
 \end{figure}
 
-
-
-
-
-
-
-
-
-
-
-Initially, K Gaussian functions are randomly generated corresponding to K clusters. If a dataset has low dimensionality, by taking a histogram of its values the Gaussians' initial conditions can be approximated, as in Figure \ref{fig:histGauss}. By super-positioning all of the Gaussians a sample's complete probabilistic model is created, i.e. a model for \emph{all} clusters, see Figure \ref{fig:histCurve}. 
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.5\linewidth}
-            \centering\includegraphics[width=215pt]{histGauss}
-      		\caption{Normalized Histogram of 1D samples.}
-		\label{fig:histGauss}
-    	\end{subfigure}%
-    	\begin{subfigure}[b]{0.5\linewidth}
-      		\centering\includegraphics[width=215pt]{hist_gauss_curve}
-      		\caption{Gaussians derived from 1D histogram.}
-       		\label{fig:histCurve}
-		\end{subfigure}
-		\caption{Formulation of Mixture of Gaussians.}
-    	\label{fig:mixture}
-\end{figure}
-
-With each iteration of the GMM algorithm the parameters of the model's component Gaussians are tuned according to the covariance between samples in each cluster. In \ref{eq:cov} $X$ and $Y$ are the variables being compared, $\overline X$ and $\overline Y$ are variable means and $n$ is the number of samples. For a multidimensional dataset a covariance matrix $\bm{\Sigma_k}$ will be generated and each Gaussian will require a mean vector $\bm{\mu_k}$ as opposed to a scalar. 
-
-\begin{equation}
-Cov(X, Y) = \frac{\Sigma(X_i-\overline X)(Y_j-\overline Y)}{n}
-\label{eq:cov}
-\end{equation}
-
-
-
-The algorithm seeks the highest covariance possible in each of its clusters. It is by considering the covariance of samples that the GMM is able to best classify ambiguous samples. The higher the covariance (aka correlation) between sample dimensions the more likely it is they belong in the same cluster. This can observed in Figure \ref{fig:mogcov}, the data being clustered is the same as in Figure \ref{fig:clusters} but notice the elliptical shape of the Gaussian cluster distributions as opposed to the spherical shape of K-Means clustering.
-
-\begin{figure}[H]
-	\centering
-	\centering\includegraphics[width=450pt]{mog}
-	\caption{Clustering using GMM. X marks cluster mean.}
-	\label{fig:mogcov}
-\end{figure}
-  
-In Figure \ref{fig:histScale} the Gaussians from Figure \ref{fig:histCurve} have been scaled to have the amplitudes $\pi_1 = 0.3$, $\pi_1 = 0.5$ and $\pi_1 = 0.2$. These are weightings that give the mixing ratio of the GMM and represent each cluster's proportion of the total samples. The more samples a cluster contains the more likely it is a sample belongs to it. The sum of ratios must add to one because the probability a sample belongs to at least one cluster is one, as defined in \ref{eq:gauss_weight1} and \ref{eq:gauss_weight2}.
-
-\begin{equation}
-    0\leq \pi_k \leq 1
-\label{eq:gauss_weight1}
-\end{equation}
-\begin{equation}
-    \sum_{k=1}^{K}\pi_k = 1
-\label{eq:gauss_weight2}
-\end{equation}
-
-
-\begin{figure}[H]
-    \centering
-    \centering\includegraphics[width=450pt]{gauss_mix_scale}
-    \caption{Individual Gaussians with scaled weightings.}
-    \label{fig:histScale}
-  \end{figure} 
-
-Each Gaussian's three parameters, mean $\bm{\mu}_k$, ampltidue $\pi_k$ and covariance $\bm{\Sigma}_k$ are updated following each iteration of the algorithm according to the 'Expectation Maximization' algorithm.
-
 \subsubsection{Expectation Maximization}
 
-Expectation Maximization (EM) is a method of updating the parameters of cluster Gaussians that seeks to maximize a sample's likelihood of belonging to said Gaussians (\ref{eq:likelihood}). 
+Expectation Maximization (EM) is a method of updating the parameters of cluster Gaussians similar in the function of recalculating the cluster centroids for K-Means clustering. that seeks to maximize a sample's likelihood of belonging to said Gaussians (\ref{eq:likelihood}). 
 
 \begin{equation}
 \label{eq:likelihood}
