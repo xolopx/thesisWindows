@@ -2,9 +2,12 @@
 \contentsline {chapter}{Acknowledgements}{i}%
 \contentsline {chapter}{Contributions}{ii}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}%
-\contentsline {chapter}{Bibliography}{3}%
-\contentsline {chapter}{Appendices}{6}%
-\contentsline {chapter}{\numberline {A}Hardware Specifications}{6}%
-\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{6}%
-\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{6}%
-\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{7}%
+\contentsline {chapter}{\numberline {2}Conclusion}{4}%
+\contentsline {section}{\numberline {2.1}System Outcomes}{4}%
+\contentsline {section}{\numberline {2.2}System Extensions}{5}%
+\contentsline {chapter}{Bibliography}{5}%
+\contentsline {chapter}{Appendices}{8}%
+\contentsline {chapter}{\numberline {A}Hardware Specifications}{8}%
+\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{8}%
+\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{8}%
+\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{9}%

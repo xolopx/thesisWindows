@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  21 JUN 2020 22:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.29)  21 JUN 2020 23:14
 entering extended mode
 **c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
 (c:/Users/Tom/Desktop/thesisWindows/Report/thesis.tex
@@ -733,19 +733,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [4
 
-] (thesis.toc)
+] (thesis.toc [5
+
+])
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [5
-
-] [6
-
-] (thesis.lot)
+ [6] (thesis.lot)
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
  [7
+
 
 ] [8
 
@@ -761,30 +760,34 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Chapter 1.
 [1
 
-] [2]) (thesis.bbl [3] [4
+] [2]) (conclusion/conclusion.tex [3]
+Chapter 2.
+[4
 
-]) (appendices/appendix.tex [5]
+]) (thesis.bbl [5] [6
+
+]) (appendices/appendix.tex [7]
 Appendix A.
-[6
+[8
 
 
 ]
 Appendix B.
-) [7
+) [9
 
 ] (thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 18205 strings out of 492484
- 327327 string characters out of 3122506
+ 18213 strings out of 492484
+ 327547 string characters out of 3122506
  397671 words of memory out of 3000000
- 22297 multiletter control sequences out of 15000+200000
- 543302 words of font info for 65 fonts, out of 3000000 for 9000
+ 22300 multiletter control sequences out of 15000+200000
+ 543907 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,9n,75p,1319b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tom/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (19 pages, 123601 bytes).
+Output written on thesis.pdf (21 pages, 129842 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
+ 96 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
