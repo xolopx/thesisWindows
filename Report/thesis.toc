@@ -1,34 +1,10 @@
-\contentsline {chapter}{\numberline {1}Theoretical Background}{1}%
-\contentsline {section}{\numberline {1.1}Digital Images}{1}%
-\contentsline {section}{\numberline {1.2}The Gaussian}{4}%
-\contentsline {section}{\numberline {1.3}Machine Learning}{7}%
-\contentsline {subsection}{\numberline {1.3.1}Artificial Neural Networks}{7}%
-\contentsline {subsubsection}{Neurons}{8}%
-\contentsline {subsubsection}{Data Aqcuisition and Training}{9}%
-\contentsline {subsection}{\numberline {1.3.2}Clustering}{10}%
-\contentsline {subsubsection}{K-Means}{10}%
-\contentsline {subsubsection}{Mixtures of Gaussians}{12}%
-\contentsline {subsubsection}{Expectation Maximization}{18}%
-\contentsline {section}{\numberline {1.4}Image Processing}{20}%
-\contentsline {subsection}{\numberline {1.4.1}Thresholding}{21}%
-\contentsline {subsection}{\numberline {1.4.2}Linear Filtering}{21}%
-\contentsline {subsubsection}{Correlation}{23}%
-\contentsline {subsubsection}{Convolution}{25}%
-\contentsline {subsubsection}{Some Important Linear Filters}{26}%
-\contentsline {subsection}{\numberline {1.4.3}Nonlinear Filtering}{30}%
-\contentsline {subsubsection}{The Median Filter}{31}%
-\contentsline {subsubsection}{Morphology}{32}%
-\contentsline {subsubsection}{Structuring Elements}{32}%
-\contentsline {subsubsection}{Performing a morphological operation}{33}%
-\contentsline {subsubsection}{Fundamental Morphological Operations}{34}%
-\contentsline {section}{\numberline {1.5}Computer Vision}{36}%
-\contentsline {subsection}{\numberline {1.5.1}Contours}{37}%
-\contentsline {subsection}{\numberline {1.5.2}Tracking}{37}%
-\contentsline {chapter}{\numberline {2}System Calibrations}{38}%
-\contentsline {section}{\numberline {2.1}Calibration File}{38}%
-\contentsline {chapter}{Bibliography}{38}%
-\contentsline {chapter}{Appendices}{41}%
-\contentsline {chapter}{\numberline {A}Hardware Specifications}{41}%
-\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{41}%
-\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{41}%
-\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{42}%
+\contentsline {chapter}{Abstract}{i}%
+\contentsline {chapter}{Acknowledgements}{i}%
+\contentsline {chapter}{Contributions}{ii}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}%
+\contentsline {chapter}{Bibliography}{3}%
+\contentsline {chapter}{Appendices}{6}%
+\contentsline {chapter}{\numberline {A}Hardware Specifications}{6}%
+\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{6}%
+\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{6}%
+\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{7}%

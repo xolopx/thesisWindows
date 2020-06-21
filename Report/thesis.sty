@@ -36,21 +36,7 @@
   \vskip 0.3in \par
   \normalsize { School of Engineering \par
   University of Newcastle}
-
-  \vskip 0.5in \par
-  \normalsize {I hereby declare that this dissertation is all my own work, except as indicated in the text: }
-
-  \vskip 0.5in 
-  \normalsize {Signature \underline{\hspace{1.5in}}}
-  
-  \vskip 0.1in
-  \normalsize {Date \underline{\hspace{0.5in}} / \underline{\hspace{0.5in}} / \underline{\hspace{0.5in}}}
-  
-  %%%%%%%%%%
-  %*Only include this sentence below if you do have all necessary rights and consents. For example, if you have including photographs or images from the web or from other papers or documents then you need to obtain explicit consent from the original copyright owner. If in doubt, delete this sentence. See Copyright Information: http://eprints.nottingham.ac.uk/copyrightinfo.html for more details.
-  %%%%%%%%%%
-  
-  
+ 
   \end{titlepage}
 }
 
@@ -83,15 +69,45 @@
   \par
 }
 
-\newenvironment{acknowledgements}{
+\def\acknowledgements{
+  \begin{center}{
+    \large\bf Acknowledgements}
+  \end{center}
+  \small
+  %\def\baselinestretch{1.5}
+  \linespread{1.5}
+  \normalsize
+}
+\def\endacknowledgements{
+  \par
+}
+
+
+% \def{acknowledgements}{
+%   \cleardoublepage
+%   \begin{center}{
+%     \large \bf Acknowledgements}
+%   \end{center}
+%   \small
+%   \linespread{1.5}
+%   \normalsize
+% }
+% {\cleardoublepage}
+% \def\endacknowledgements{
+%   \par
+% }
+
+\newenvironment{contributions}{
   \cleardoublepage
   \begin{center}{
-    \large \bf Acknowledgements}
+    \large \bf Contributions}
   \end{center}
   \small
   \linespread{1.5}
-  \normalsize
-}{\cleardoublepage}
+  \normalsize   
+}
+  
+{\cleardoublepage}
 \def\endacknowledgements{
   \par
 }
