@@ -79,6 +79,17 @@ Peter E.~Hart Richard O.~Duda and David~G. Stork.
 \newblock {\em Pattern Classification and Scene Analysis}.
 \newblock Wiley-Interscience, 1973.
 
+\bibitem{dempster_EM}
+A.~P. Dempster.
+\newblock Maximum likelihood from incomplete data via the em algorithm.
+\newblock {\em Journal of the Royal Statistical Society. Series B
+  (Methodological)}, 39(1), 1977.
+
+\bibitem{emalgo}
+Thriyambakam~Krishnan Geoffrey J.~McLachlan and See~Ket Ng.
+\newblock The em algorithm.
+\newblock {\em Center for AppliedStatistics and Economics}, 1997.
+
 \bibitem{alg_apps}
 Richard Szeliski.
 \newblock {\em Computer Vision - Algorithms and Applications}.

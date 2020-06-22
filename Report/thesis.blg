@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+This is BibTeX, Version 0.99d (MiKTeX 2.9.7350 64-bit)
+Capacity: max_strings=4000, hash_size=5000, hash_prime=4253
+The top-level auxiliary file: thesis.aux
 The style file: unsrt.bst
 Database file #1: bibliography/bibliography.bib
 Warning--can't use both author and editor fields in learnproc
@@ -7,4 +9,45 @@ Warning--can't use both author and editor fields in oreilly_python
 Warning--can't use both author and editor fields in alg_apps
 Warning--can't use both author and editor fields in realtimerendering
 Warning--can't use both author and editor fields in cv_matlab
+You've used 29 entries,
+            1791 wiz_defined-function locations,
+            584 strings with 6743 characters,
+and the built_in function-call counts, 4269 in all, are:
+= -- 336
+> -- 180
+< -- 0
++ -- 75
+- -- 46
+* -- 154
+:= -- 715
+add.period$ -- 83
+call.type$ -- 29
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 35
+duplicate$ -- 244
+empty$ -- 491
+format.name$ -- 46
+if$ -- 967
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 35
+newline$ -- 144
+num.names$ -- 29
+pop$ -- 139
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 89
+stack$ -- 0
+substring$ -- 0
+swap$ -- 35
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 6
+while$ -- 29
+width$ -- 31
+write$ -- 287
 (There were 6 warnings)
