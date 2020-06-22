@@ -10,21 +10,21 @@
 \contentsline {figure}{\numberline {1.9}{\ignorespaces K-Means clustering performed on random data. \cite {matlab_clustering}\relax }}{12}%
 \contentsline {figure}{\numberline {1.10}{\ignorespaces Comparison of K-Means cluster shape to GMM cluster shape. Img: Hongning Wang, University of Virginia \relax }}{13}%
 \contentsline {figure}{\numberline {1.11}{\ignorespaces Visualization of a Mixture of Gaussians for 1D dataset.\relax }}{15}%
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Performing thresholding on a grayscale image to isolate a white horse.\relax }}{19}%
-\contentsline {figure}{\numberline {1.13}{\ignorespaces General form of a linear filter.\relax }}{20}%
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Visualization of a filter kernel application.\relax }}{20}%
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Application of Sobel filters to exaggerate lines.\relax }}{22}%
-\contentsline {figure}{\numberline {1.16}{\ignorespaces Correlation of a filter and an image.\relax }}{23}%
-\contentsline {figure}{\numberline {1.17}{\ignorespaces Convolution of a filter and an image.\relax }}{24}%
-\contentsline {figure}{\numberline {1.18}{\ignorespaces 3x3 Box Filter Kernel\relax }}{25}%
-\contentsline {figure}{\numberline {1.19}{\ignorespaces Application of a 17x17 Box filter to blur image.\relax }}{25}%
-\contentsline {figure}{\numberline {1.20}{\ignorespaces Application of a 7x7 Gaussian filter to denoise image.\relax }}{26}%
-\contentsline {figure}{\numberline {1.21}{\ignorespaces 7x7 Gaussian Filter Kernel, Sigma = 0.5\relax }}{26}%
-\contentsline {figure}{\numberline {1.22}{\ignorespaces Sobel Filters\relax }}{27}%
-\contentsline {figure}{\numberline {1.23}{\ignorespaces Application of Sobel filters to find gradient magnitude of an image.\relax }}{28}%
-\contentsline {figure}{\numberline {1.24}{\ignorespaces Filtering out salt and pepper noise with Gaussian and median filter. Original image by Grant Durr.\relax }}{29}%
-\contentsline {figure}{\numberline {1.25}{\ignorespaces Conversion of an RGB image to a binary image. Original image by Adam Birkett\relax }}{31}%
-\contentsline {figure}{\numberline {1.26}{\ignorespaces \relax }}{31}%
-\contentsline {figure}{\numberline {1.27}{\ignorespaces Fundamental morphological operations performed on a binary image using a 9x9 rectangular structuring element.\relax }}{34}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces Performing thresholding on a grayscale image to isolate a white horse.\relax }}{21}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces General form of a linear filter.\relax }}{21}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces Visualization of a filter kernel application.\relax }}{22}%
+\contentsline {figure}{\numberline {1.15}{\ignorespaces Application of Sobel filters to exaggerate lines.\relax }}{23}%
+\contentsline {figure}{\numberline {1.16}{\ignorespaces Correlation of a filter and an image.\relax }}{24}%
+\contentsline {figure}{\numberline {1.17}{\ignorespaces Convolution of a filter and an image.\relax }}{25}%
+\contentsline {figure}{\numberline {1.18}{\ignorespaces 3x3 Box Filter Kernel\relax }}{26}%
+\contentsline {figure}{\numberline {1.19}{\ignorespaces Application of a 17x17 Box filter to blur image.\relax }}{26}%
+\contentsline {figure}{\numberline {1.20}{\ignorespaces Application of a 7x7 Gaussian filter to denoise image.\relax }}{27}%
+\contentsline {figure}{\numberline {1.21}{\ignorespaces 7x7 Gaussian Filter Kernel, Sigma = 0.5\relax }}{27}%
+\contentsline {figure}{\numberline {1.22}{\ignorespaces Sobel Filters\relax }}{28}%
+\contentsline {figure}{\numberline {1.23}{\ignorespaces Application of Sobel filters to find gradient magnitude of an image.\relax }}{29}%
+\contentsline {figure}{\numberline {1.24}{\ignorespaces Filtering out salt and pepper noise with Gaussian and median filter. Original image by Grant Durr.\relax }}{30}%
+\contentsline {figure}{\numberline {1.25}{\ignorespaces Conversion of an RGB image to a binary image. Original image by Adam Birkett\relax }}{32}%
+\contentsline {figure}{\numberline {1.26}{\ignorespaces \relax }}{32}%
+\contentsline {figure}{\numberline {1.27}{\ignorespaces Fundamental morphological operations performed on a binary image using a 9x9 rectangular structuring element.\relax }}{35}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

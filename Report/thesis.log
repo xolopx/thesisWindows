@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  22 JUN 2020 14:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  22 JUN 2020 18:35
 entering extended mode
 **c:/Users/c3175/Desktop/thesisWindows/Report/thesis.tex
 (c:/Users/c3175/Desktop/thesisWindows/Report/thesis.tex
@@ -735,170 +735,171 @@ File: ./images/litreview/machinelearning/clustering/mog/combined_mog.png Graphic
 <use ./images/litreview/machinelearning/clustering/mog/combined_mog.png>
 Package pdftex.def Info: ./images/litreview/machinelearning/clustering/mog/combined_mog.png  used on input line 59.
 (pdftex.def)             Requested size: 198.45662pt x 148.8428pt.
- (litreview/machinelearning/clustering/em.tex [15 <./images/litreview/machinelearning/clustering/mog/individual_gauss.png (PNG copy)> <./images/litreview/machinelearning/clustering/mog/combined_mog.png (PNG copy)>] [16]
+ (litreview/machinelearning/clustering/em.tex [15 <./images/litreview/machinelearning/clustering/mog/individual_gauss.png (PNG copy)> <./images/litreview/machinelearning/clustering/mog/combined_mog.png (PNG copy)>] [16] [17]
 
-LaTeX Warning: Reference `eq:likelihood' on page 17 undefined on input line 75.
+LaTeX Warning: Reference `eq:likelihood' on page 18 undefined on input line 121.
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 155--157
 
  []
 
 
-LaTeX Warning: Reference `eq:likelihood' on page 18 undefined on input line 112.
+LaTeX Warning: Reference `eq:likelihood' on page 19 undefined on input line 158.
 
-)))) (litreview/imageprocessing/imageprocessing.tex (litreview/imageprocessing/thresholding.tex [18]
-<./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg, id=138, 793.46437pt x 530.73282pt>
+)))) (litreview/imageprocessing/imageprocessing.tex [19] (litreview/imageprocessing/thresholding.tex
+<./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg, id=142, 793.46437pt x 530.73282pt>
 File: ./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg  used on input line 17.
 (pdftex.def)             Requested size: 198.45662pt x 132.73956pt.
-<./images/litreview/imageprocessing/thresholding/horses_binary.jpg, id=139, 793.46437pt x 519.44063pt>
+<./images/litreview/imageprocessing/thresholding/horses_binary.jpg, id=143, 793.46437pt x 519.44063pt>
 File: ./images/litreview/imageprocessing/thresholding/horses_binary.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/thresholding/horses_binary.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/thresholding/horses_binary.jpg  used on input line 21.
 (pdftex.def)             Requested size: 198.45662pt x 129.91531pt.
-) (litreview/imageprocessing/linear/linearFiltering.tex [19 <./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg> <./images/litreview/imageprocessing/thresholding/horses_binary.jpg>]
-<./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg, id=144, 956.82469pt x 662.475pt>
+) (litreview/imageprocessing/linear/linearFiltering.tex [20]
+<./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg, id=147, 956.82469pt x 662.475pt>
 File: ./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg  used on input line 20.
 (pdftex.def)             Requested size: 352.81552pt x 244.2729pt.
- (litreview/imageprocessing/linear/correlation.tex [20 <./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg>]
-<./images/im_color.png, id=148, 488.0634pt x 602.25pt>
+ [21 <./images/litreview/imageprocessing/thresholding/horses_grayscale.jpg> <./images/litreview/imageprocessing/thresholding/horses_binary.jpg>] (litreview/imageprocessing/linear/correlation.tex [22 <./images/litreview/imageprocessing/linearfiltering/kernel_graphics.jpg>]
+<./images/im_color.png, id=154, 488.0634pt x 602.25pt>
 File: ./images/im_color.png Graphic file (type png)
 <use ./images/im_color.png>
 Package pdftex.def Info: ./images/im_color.png  used on input line 23.
 (pdftex.def)             Requested size: 132.30666pt x 163.26213pt.
-<./images/gv.jpg, id=149, 1016.79875pt x 1254.6875pt>
+<./images/gv.jpg, id=155, 1016.79875pt x 1254.6875pt>
 File: ./images/gv.jpg Graphic file (type jpg)
 <use ./images/gv.jpg>
 Package pdftex.def Info: ./images/gv.jpg  used on input line 27.
 (pdftex.def)             Requested size: 132.30666pt x 163.24911pt.
-<./images/gh.jpg, id=150, 1016.79875pt x 1254.6875pt>
+<./images/gh.jpg, id=156, 1016.79875pt x 1254.6875pt>
 File: ./images/gh.jpg Graphic file (type jpg)
 <use ./images/gh.jpg>
 Package pdftex.def Info: ./images/gh.jpg  used on input line 32.
 (pdftex.def)             Requested size: 132.30666pt x 163.24911pt.
- [21] [22 <./images/im_color.png (PNG copy)> <./images/gv.jpg> <./images/gh.jpg>]) (litreview/imageprocessing/linear/convolution.tex [23]) (litreview/imageprocessing/linear/kernels.tex [24]
-<./images/pug_resized.jpg, id=163, 639.38875pt x 740.7675pt>
+ [23 <./images/im_color.png (PNG copy)> <./images/gv.jpg> <./images/gh.jpg>]) (litreview/imageprocessing/linear/convolution.tex [24]) (litreview/imageprocessing/linear/kernels.tex [25]
+<./images/pug_resized.jpg, id=167, 639.38875pt x 740.7675pt>
 File: ./images/pug_resized.jpg Graphic file (type jpg)
 <use ./images/pug_resized.jpg>
 Package pdftex.def Info: ./images/pug_resized.jpg  used on input line 26.
 (pdftex.def)             Requested size: 132.30666pt x 153.28252pt.
-<./images/pug_blur.jpg, id=164, 639.38875pt x 740.7675pt>
+<./images/pug_blur.jpg, id=168, 639.38875pt x 740.7675pt>
 File: ./images/pug_blur.jpg Graphic file (type jpg)
 <use ./images/pug_blur.jpg>
 Package pdftex.def Info: ./images/pug_blur.jpg  used on input line 31.
 (pdftex.def)             Requested size: 132.30666pt x 153.28252pt.
-<./images/pug_noise.jpg, id=165, 639.38875pt x 740.7675pt>
+ [26 <./images/pug_resized.jpg> <./images/pug_blur.jpg>]
+<./images/pug_noise.jpg, id=172, 639.38875pt x 740.7675pt>
 File: ./images/pug_noise.jpg Graphic file (type jpg)
 <use ./images/pug_noise.jpg>
 Package pdftex.def Info: ./images/pug_noise.jpg  used on input line 52.
 (pdftex.def)             Requested size: 132.30666pt x 153.28252pt.
-<./images/pug_denoised.jpg, id=166, 639.38875pt x 740.7675pt>
+<./images/pug_denoised.jpg, id=173, 639.38875pt x 740.7675pt>
 File: ./images/pug_denoised.jpg Graphic file (type jpg)
 <use ./images/pug_denoised.jpg>
 Package pdftex.def Info: ./images/pug_denoised.jpg  used on input line 57.
 (pdftex.def)             Requested size: 132.30666pt x 153.28252pt.
- [25 <./images/pug_resized.jpg> <./images/pug_blur.jpg>] [26 <./images/pug_noise.jpg> <./images/pug_denoised.jpg>]
-<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png, id=174, 501.072pt x 335.45325pt>
+ [27 <./images/pug_noise.jpg> <./images/pug_denoised.jpg>]
+<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png, id=177, 501.072pt x 335.45325pt>
 File: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png Graphic file (type png)
 <use ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png>
 Package pdftex.def Info: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png  used on input line 122.
 (pdftex.def)             Requested size: 198.45662pt x 132.8583pt.
-<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png, id=175, 499.8675pt x 334.851pt>
+<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png, id=178, 499.8675pt x 334.851pt>
 File: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png Graphic file (type png)
 <use ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png>
 Package pdftex.def Info: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png  used on input line 126.
 (pdftex.def)             Requested size: 198.45662pt x 132.94168pt.
-<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png, id=176, 498.06075pt x 332.442pt>
+<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png, id=179, 498.06075pt x 332.442pt>
 File: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png Graphic file (type png)
 <use ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png>
 Package pdftex.def Info: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png  used on input line 131.
 (pdftex.def)             Requested size: 198.45662pt x 132.46716pt.
-<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png, id=177, 471.56175pt x 311.36325pt>
+<./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png, id=180, 471.56175pt x 311.36325pt>
 File: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png Graphic file (type png)
 <use ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png>
 Package pdftex.def Info: ./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png  used on input line 136.
 (pdftex.def)             Requested size: 198.45662pt x 131.03772pt.
-) [27]) (litreview/imageprocessing/non-linear/nonlinear_filters.tex (litreview/imageprocessing/non-linear/median.tex [28 <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png>]
-<./images/emu_noise.jpg, id=189, 676.5275pt x 846.16125pt>
+) [28]) (litreview/imageprocessing/non-linear/nonlinear_filters.tex (litreview/imageprocessing/non-linear/median.tex [29 <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_x.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_y.png> <./images/litreview/imageprocessing/linearfiltering/kernels/sunflowers_xy.png>]
+<./images/emu_noise.jpg, id=192, 676.5275pt x 846.16125pt>
 File: ./images/emu_noise.jpg Graphic file (type jpg)
 <use ./images/emu_noise.jpg>
 Package pdftex.def Info: ./images/emu_noise.jpg  used on input line 10.
 (pdftex.def)             Requested size: 132.30666pt x 165.47205pt.
-<./images/emu_gauss.jpg, id=190, 676.5275pt x 846.16125pt>
+<./images/emu_gauss.jpg, id=193, 676.5275pt x 846.16125pt>
 File: ./images/emu_gauss.jpg Graphic file (type jpg)
 <use ./images/emu_gauss.jpg>
 Package pdftex.def Info: ./images/emu_gauss.jpg  used on input line 15.
 (pdftex.def)             Requested size: 132.30666pt x 165.47205pt.
-<./images/emu_median.jpg, id=191, 676.5275pt x 846.16125pt>
+<./images/emu_median.jpg, id=194, 676.5275pt x 846.16125pt>
 File: ./images/emu_median.jpg Graphic file (type jpg)
 <use ./images/emu_median.jpg>
 Package pdftex.def Info: ./images/emu_median.jpg  used on input line 20.
 (pdftex.def)             Requested size: 132.30666pt x 165.47205pt.
-) (litreview/imageprocessing/non-linear/morphology.tex [29 <./images/emu_noise.jpg> <./images/emu_gauss.jpg> <./images/emu_median.jpg>]
-<./images/palms_resized.jpg, id=195, 1056.94875pt x 1321.93875pt>
+) (litreview/imageprocessing/non-linear/morphology.tex [30 <./images/emu_noise.jpg> <./images/emu_gauss.jpg> <./images/emu_median.jpg>]
+<./images/palms_resized.jpg, id=198, 1056.94875pt x 1321.93875pt>
 File: ./images/palms_resized.jpg Graphic file (type jpg)
 <use ./images/palms_resized.jpg>
 Package pdftex.def Info: ./images/palms_resized.jpg  used on input line 8.
 (pdftex.def)             Requested size: 132.30666pt x 165.46382pt.
-<./images/palms_grayscale.jpg, id=196, 676.5275pt x 846.16125pt>
+<./images/palms_grayscale.jpg, id=199, 676.5275pt x 846.16125pt>
 File: ./images/palms_grayscale.jpg Graphic file (type jpg)
 <use ./images/palms_grayscale.jpg>
 Package pdftex.def Info: ./images/palms_grayscale.jpg  used on input line 13.
 (pdftex.def)             Requested size: 132.30666pt x 165.47205pt.
-<./images/palms_binary.jpg, id=197, 676.5275pt x 846.16125pt>
+<./images/palms_binary.jpg, id=200, 676.5275pt x 846.16125pt>
 File: ./images/palms_binary.jpg Graphic file (type jpg)
 <use ./images/palms_binary.jpg>
 Package pdftex.def Info: ./images/palms_binary.jpg  used on input line 18.
 (pdftex.def)             Requested size: 132.30666pt x 165.47205pt.
- [30] [31 <./images/palms_resized.jpg> <./images/palms_grayscale.jpg> <./images/palms_binary.jpg>]
+ [31] [32 <./images/palms_resized.jpg> <./images/palms_grayscale.jpg> <./images/palms_binary.jpg>]
 
-LaTeX Warning: Reference `ref:ice_open' on page 32 undefined on input line 103.
+LaTeX Warning: Reference `ref:ice_open' on page 33 undefined on input line 103.
 
-[32]
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg, id=208, 922.94812pt x 615.0478pt>
+[33]
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg, id=211, 922.94812pt x 615.0478pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg  used on input line 111.
 (pdftex.def)             Requested size: 216.1011pt x 144.00131pt.
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg, id=209, 925.95938pt x 615.0478pt>
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg, id=212, 925.95938pt x 615.0478pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg  used on input line 116.
 (pdftex.def)             Requested size: 216.1011pt x 143.53207pt.
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg, id=210, 922.94812pt x 613.54219pt>
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg, id=213, 922.94812pt x 613.54219pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg  used on input line 121.
 (pdftex.def)             Requested size: 216.1011pt x 143.6488pt.
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg, id=211, 924.45375pt x 606.76688pt>
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg, id=214, 924.45375pt x 606.76688pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg  used on input line 126.
 (pdftex.def)             Requested size: 216.1011pt x 141.84029pt.
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg, id=212, 929.72343pt x 611.28375pt>
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg, id=215, 929.72343pt x 611.28375pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg  used on input line 131.
 (pdftex.def)             Requested size: 216.1011pt x 142.07536pt.
-<./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg, id=213, 928.97063pt x 611.28375pt>
+<./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg, id=216, 928.97063pt x 611.28375pt>
 File: ./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg Graphic file (type jpg)
 <use ./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg>
 Package pdftex.def Info: ./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg  used on input line 136.
 (pdftex.def)             Requested size: 216.1011pt x 142.19662pt.
- [33]))) (litreview/computervision/computervision.tex [34 <./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg>] (litreview/computervision/contours/contours.tex) (litreview/computervision/tracking/tracking.tex))) (thesis.bbl [35] [36
+ [34]))) (litreview/computervision/computervision.tex [35 <./images/litreview/imageprocessing/nonlinear/morphology/ice_original.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_binary.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_dilate.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_erode.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_open.jpg> <./images/litreview/imageprocessing/nonlinear/morphology/ice_close.jpg>] (litreview/computervision/contours/contours.tex) (litreview/computervision/tracking/tracking.tex))) (thesis.bbl [36] [37
 
-] [37]) (appendices/appendix.tex [38]
+] [38]) (appendices/appendix.tex [39]
 Appendix A.
-[39
+[40
 
 
 ]
 Appendix B.
-) [40
+) [41
 
 ] (thesis.aux)
 
@@ -909,17 +910,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9255 strings out of 480934
- 164393 string characters out of 2899917
- 427735 words of memory out of 3000000
- 24757 multiletter control sequences out of 15000+200000
+ 9264 strings out of 480934
+ 164555 string characters out of 2899917
+ 427826 words of memory out of 3000000
+ 24766 multiletter control sequences out of 15000+200000
  545915 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,19n,54p,1583b,515s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\c3175\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on thesis.pdf (52 pages, 7407572 bytes).
+Output written on thesis.pdf (53 pages, 7413830 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
+ 307 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

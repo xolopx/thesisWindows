@@ -1,11 +1,57 @@
 \textbf{Expectation Maximization}
 
-Initially the Gaussian's that represent each cluster in the mixture model have random parameters, like the centroids for K-Means clustering (\ref{subsubsection:kmeans}) but the objective of the mixture model is to represent the distribution for a dataset, $\bm{x}$. Expectation Maximization \cite{dempster_EM}\cite{emalgo} is the algorithm that determines how to update each Gaussian's parameters. It seeks to maximise the likelihood of any one sample, $x_i$, belonging to a Gaussian which is achieved by maximizing the log likelihood function. The log likelihood is just the log of the likelihood function of the mixture model (\ref{eq:mog}) and is described by equation \ref{eq:log_likelihood}. Expectation maximization gives each sample a soft-assignment to a cluster and then changes each cluster distribution's parameters, $\bm{\mu}$ and $\bm{\Sigma}$, according to the value of the soft-assignment as outlined by algorithm \ref{algorithm:em}.
+Initially, cluster distributions of the GMM have random parameters but the ultimate objective of the model is to represent the cluster distribution for a given dataset. Expectation Maximization \cite{dempster_EM}\cite{emalgo} is the algorithm that determines how to update each Gaussian's parameters in a GMM. It seeks to maximize each sample's likelihood in each cluster distribution by maximizing the log likelihood function of the GMM. The log likelihood function for a GMM is the log of the GMM's likelihood function (\ref{eq:mog}) summed for each data sample and is described by equation \ref{eq:log_likelihood} where N is the number of data samples. Taking the natural log of the likelihood function simplifies the calculation as it removes the necessity to deal with exponential functions but because the natural log is monotonic the maximum value of $ln(f(x))$ is also the maximum value of $f(x)$ \cite{patterns_machine_learning}. 
 
 \begin{equation}
 \label{eq:log_likelihood}
-p(x) = \sum^K_{k=1} \pi_k \mathcal{N}(x|\bm{\mu}_k, \bm{\Sigma}_k)
+ln p(\bm{X}|\bm{\pi},\bm{\mu},\bm{\Sigma}) = \sum_{n=1}^N ln \bigg \{ \sum^K_{k=1} \pi_k \mathcal{N}(x|\bm{\mu}_k, \bm{\Sigma}_k) \bigg \}
 \end{equation}
+
+Expectation maximization (EM) creates a probability for each sample for each cluster hence it's a soft-assignment because each sample belongs a certain amount to each cluster. Each samples cluster probability is determined according the conditional probability of $\bm{z}$ given the dataset $\bm{x}$. This probability can be thought of as the responsibility of cluster $k$ for describing dataset $\bm{x}$ and is denoted, $\gamma(z_k)$. This probability is derived according to Bayes Theorem (appendix \ref{section:bayes}) and described by equation \ref{eq:bayes_em}.
+
+\begin{align}
+    \label{eq:bayes_em}
+    \gamma(z_k) \equiv p(z_k = 1|\bm{x}) &= \frac{p(z_k=1)p(\bm{x}|z_k=1)}{\sum\limits_{j=1}^{K}p(z_j=1)p(\bm{x}|z_j=1)}\\
+                                     &= \frac{\pi_k \mathcal{N}(\bm{x}|\bm{\mu_k},\bm{\Sigma_k})}{\sum\limits_{j=1}^{K}\pi_j\mathcal{N}(\bm{x}|\bm{\mu_j},\bm{\Sigma_j})}
+\end{align}
+
+To find the parameters for a Gaussian, $k$, that generate the maximum likelihood for a data sample, $\bm{x_n}$, we take the derivative of the log likelihood \ref{eq:log_likelihood} in terms of the mean, $\bm{\mu_k}$, and covariance, $\bm{\sigma_k}$ and set it's value to zero. Equation \ref{eq:derivative_mean} shows the derivative of the log likelihood taken in terms of the mean, $\bm{\mu_k}$ \cite{patterns_machine_learning}. Note that $\gamma(z_nk)$ is the responsibility of cluster $k$ for sample $x_n$.
+
+\begin{align}
+    0   &= -\sum^N_{n=1}\frac{\pi_k \mathcal{N}(\bm{x_n}|\bm{\mu_k},\bm{\Sigma_k})}{\sum\limits_{j=1}^{K}\pi_j\mathcal{N}(\bm{x}|\bm{\mu_j},        \bm{\Sigma_j})}\bm{\Sigma_k}(\bm{x_n} - \bm{\mu_k})\\
+        &= -\sum^N_{n=1}\gamma(z_{nk})\bm{\Sigma_k}(\bm{x_n} - \bm{\mu_k})
+    \label{eq:derivative_mean}
+\end{align}
+
+This can be rearranged to give the value of the updated mean, $\bm{\mu_k}$ for cluster distribution $k$, where $N$ is the number of samples in $\bm{x}$ 
+
+\begin{equation}
+    \label{eq:updated_mean}
+    \bm{\mu_k} = \frac{1}{N_k}\sum_{n=1}^N \gamma(z_nk)\bm{x_n}
+\end{equation}
+
+where 
+
+\begin{equation}
+    \label{eq:nk}
+    N_k = \sum_{n=1}^N \gamma(z_nk)
+\end{equation}
+
+Therefore we can think of the updated mean as simply the average of the cluster samples weighted by the responsibility of each cluster to each sample. The updated covariance matrix $\bm{Sigma_k}$ is evaluated similarly, by taking the derivative of the log likelihood in terms of covariance and setting it equal to zero, which yields the result
+
+\begin{equation}
+    \label{eq:updated_covariance}
+    \bm{Sigma_k} = \frac{1}{N_k}\sum_{n=1}^{N}\gamma(z_{nk})(\bm{x_n}-\bm{\mu_k})(\bm{x_n}-\bm{\mu_k})^T 
+\end{equation}
+
+The updated and maximized mixing coefficient of the cluster distributions $\pi_k$ is calculated as 
+
+\begin{equation}
+    \label{eq:updated_mixing_coefficient}
+    \pi_k = \frac{N_k}{N}
+\end{equation}
+
+The process of expectation maximization for a GMM is outlined by algorithm \ref{algorithm:em}.
 
 
 \begin{algorithm}

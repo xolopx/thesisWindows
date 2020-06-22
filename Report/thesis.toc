@@ -11,24 +11,25 @@
 \contentsline {subsection}{\numberline {1.3.2}Clustering}{10}%
 \contentsline {subsubsection}{K-Means}{10}%
 \contentsline {subsubsection}{Mixtures of Gaussians}{12}%
-\contentsline {section}{\numberline {1.4}Image Processing}{18}%
-\contentsline {subsection}{\numberline {1.4.1}Thresholding}{18}%
-\contentsline {subsection}{\numberline {1.4.2}Linear Filtering}{19}%
-\contentsline {subsubsection}{Correlation}{20}%
-\contentsline {subsubsection}{Convolution}{23}%
-\contentsline {subsubsection}{Some Important Linear Filters}{24}%
-\contentsline {subsection}{\numberline {1.4.3}Nonlinear Filtering}{28}%
-\contentsline {subsubsection}{The Median Filter}{29}%
-\contentsline {subsubsection}{Morphology}{30}%
-\contentsline {subsubsection}{Structuring Elements}{30}%
-\contentsline {subsubsection}{Performing a morphological operation}{31}%
-\contentsline {subsubsection}{Fundamental Morphological Operations}{32}%
-\contentsline {section}{\numberline {1.5}Computer Vision}{34}%
-\contentsline {subsection}{\numberline {1.5.1}Contours}{35}%
-\contentsline {subsection}{\numberline {1.5.2}Tracking}{35}%
-\contentsline {chapter}{Bibliography}{35}%
-\contentsline {chapter}{Appendices}{39}%
-\contentsline {chapter}{\numberline {A}Hardware Specifications}{39}%
-\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{39}%
-\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{39}%
-\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{40}%
+\contentsline {section}{\numberline {1.4}Image Processing}{20}%
+\contentsline {subsection}{\numberline {1.4.1}Thresholding}{20}%
+\contentsline {subsection}{\numberline {1.4.2}Linear Filtering}{21}%
+\contentsline {subsubsection}{Correlation}{22}%
+\contentsline {subsubsection}{Convolution}{25}%
+\contentsline {subsubsection}{Some Important Linear Filters}{25}%
+\contentsline {subsection}{\numberline {1.4.3}Nonlinear Filtering}{29}%
+\contentsline {subsubsection}{The Median Filter}{30}%
+\contentsline {subsubsection}{Morphology}{31}%
+\contentsline {subsubsection}{Structuring Elements}{31}%
+\contentsline {subsubsection}{Performing a morphological operation}{32}%
+\contentsline {subsubsection}{Fundamental Morphological Operations}{33}%
+\contentsline {section}{\numberline {1.5}Computer Vision}{35}%
+\contentsline {subsection}{\numberline {1.5.1}Contours}{36}%
+\contentsline {subsection}{\numberline {1.5.2}Tracking}{36}%
+\contentsline {chapter}{Bibliography}{36}%
+\contentsline {chapter}{Appendices}{40}%
+\contentsline {chapter}{\numberline {A}Hardware Specifications}{40}%
+\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4}{40}%
+\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{40}%
+\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{41}%
+\contentsline {section}{\numberline {B.1}Bayes Theorem}{41}%
