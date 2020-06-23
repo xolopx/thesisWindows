@@ -1,10 +1,83 @@
 \chapter{System Calibrations}
 
-This section of the report details the different parameters for calibrating the computer vision algorithm and how they affect the algorithms behaviour. Critical to the system's function is its correct calibration as computer vision algorithm is sensitive to changes in location each location has to specifically calibrated.
+This section of the report details the different parameters for calibrating the computer vision algorithm and how they affect the algorithms behavior. Calibration must be performed for each unique traffic environment has different properties to ensure the correct function of the system. 
 
-\section{Calibration File}
+\section{Calibration Parameters}
 
-All calibrations are specified in a configuration file that is read by the algorithm at its commencement. The parameters that can be calibrated, their name in the file, their purpose and effect are as listed below.
+The following is a list of calibration parameters and their description. In the system they are simply stored in a text file that the system reads upon execution.
 
+\begin{itemize}
+\item Gaussian Mixture Model:
+    \begin{itemize}
+        \item \textbf{training}: (\emph{Boolean}) Refers to whether or not the Gaussian Mixture Model for background subtraction should be trained on a number of frames first.
+        \item \textbf{history}: (\emph{Integer}) Is the number of frames that the Gaussian Mixture Model for background subtraction considers when updating its clusters.
+        \item\textbf{shadows}: (\emph{Boolean}) Specifies if the shadows cluster should be generated for the mixture model. Generally it should be as the tester should be seeking to account for shadows and removing them via thresholding.
+    \end{itemize}
 
-LIST CALIBRATION PARRAMETERS AND THEIR FUNCTION etc etc.
+\item Testing: 
+    \begin{itemize}
+        \item \textbf{paid\_test}: (\emph{Boolean}) Used for testing on prerecorded video, runs through the frames at a high frame rate so that tester can observe system response quickly.
+        \item \textbf{print\_positive}: (\emph{Boolean}) Specifies if the ID of centroids that have been counted in the positive direction should be printed to terminal.
+        \item \textbf{print\_negative}: (\emph{Boolean}) Specifies if the ID of centroids that have been counted in the negative direction should be printed to terminal.
+        \item \textbf{test\_length}: (\emph{Integer}) Specifies the number of frames that of a test video the system should be run for. This is useful for repeatedly observing the same section of a video to refine calibration.
+        \item\textbf{frame\_wait}: (\emph{Integer}) Specifies the amount of time before processing the next frame for a test video. 
+    \end{itemize}
+
+\item Morphology and Filtering:
+    \begin{itemize}
+        \item\textbf{med\_size}: (\emph{Integer}) Specifies the size of the median filter kernel used to remove noise after background subtraction is performed. This value must be an odd number or else an error will be thrown as the function used requires that the filter be square with a center cell.   
+        \item\textbf{morph\_shape}: (\emph{Integer}) Specifies the shapes of the structuring element in the morphology phase of the detection algorithm. 0 - Rectangular, 1 - Ellipse and 2 - Disc. 
+        \item\textbf{morph\_size}: (\emph{Integer}) Specifies the size of the morphological element used in morphology phase of detection algorithm.
+        \item\textbf{morph\_iter}: (\emph{Integer}) Specifies the number of iterations to be perform the morphology operations in the detection algorithm. Can increase the computational load significantly. 
+    \end{itemize}
+
+\item Object Tracking:
+    \begin{itemize}
+        \item \textbf{otherside\_centroids}: (\emph{Integer}) Specifies the number of frames that a centroids has to appear on the opposite side of a count line if it's to be counted as a vehicle crossing. This is to ensure that a centroid actually crosses the count line threshold.
+        \item \textbf{history\_count}: (\emph{Integer}) Specifies the number of frames that a centroid has to exist for before it can be counted.
+        \item\textbf{min\_width}:(\emph{Integer}) Specifies the minimum width in pixels that a blob can be considered a vehicle.
+        \item\textbf{max\_width}:(\emph{Integer}) Specifies the maximum width in pixels that a blob can be considered a vehicle.
+        \item\textbf{min\_height}:(\emph{Integer}) Specifies the minimum height in pixels that a blob can be considered a vehicle.
+        \item\textbf{max\_height}:(\emph{Integer}) Specifies the maximum height in pixels that a blob can be considered a vehicle.
+        \item\textbf{max\_dist}: (\emph{Integer}) Specifies the maximum distance in pixels that a new centroid can be located from an old one and be considered the old centroid's new position.
+        \item\textbf{min\_dist}: (\emph{Integer}) Specifies the minimum distance in pixels between two centroids and them not be combined into one centroid. 
+        \item\textbf{missing}: (\emph{Integer}) Specifies the number of frames that a centroid can be missing before that centroid is considered either left the frame or lost and removed from the current list of centroids.
+        \item\textbf{num\_lines}: (\emph{Integer}) Specifies the number of count threshold lines in use. The minimum value is 1 and the maximum is 2. 
+        \item\textbf{count\_line1\_p1}: Formatted as a point (x,y), specifies the start point of the first count line.
+        \item\textbf{count\_line1\_p2}: Formatted as a point (x,y), specifies the end point of the first count line.
+        \item\textbf{count\_line2\_p1}: Formatted as a point (x,y), specifies the start point of the second count line.
+        \item\textbf{count\_line2\_p2}: Formatted as a point (x,y), specifies the end point of the second count line.
+        \item\textbf{speed\_line1\_p1 }: Formatted as a point (x,y), specifies the start point of the first speed line.
+        \item\textbf{speed\_line1\_p2 }: Formatted as a point (x,y), specifies the end point of the second speed line one.
+        \item\textbf{speed\_line2\_p1 }: Formatted as a point (x,y), specifies the start point of the first speed line one.
+        \item\textbf{speed\_line2\_p2 }: Formatted as a point (x,y), specifies the end point of the second speed line one.
+    \end{itemize}
+
+\item Database Storage:
+    \begin{itemize}
+        \item\textbf{storage\_interval}: (\emph{Integer}) Specifies how many frame should pass before the vehicle and speed count should be stored in the database.
+        \item\textbf{multilane}: (\emph{Boolean}) Specifies whether or not there's multiple lanes of traffic for the purpose of how many database tables need to be updated as there's a table for each direction of traffic. 
+    \end{itemize} 
+
+\item Camera and Frame Setup:
+    \begin{itemize}
+        \item\textbf{traffic\_orientation}: (\emph{Boolean}) Specifies the direction of traffic relative to the camera setup orientation. True means traffic is moving up/down and False means traffic is moving left/right. 
+        \item\textbf{scale\_percent}: (\emph{Integer}) Specifies the how much to scale the original input video. This will affect how quickly the algorithm processes each frame as it changes the number of pixels in a frame.
+        \item\textbf{rotate}: (\emph{Integer}) Sometimes input video requires rotation so this parameter specifies that rotation to be either 0 or 180 degrees.
+    \end{itemize} 
+
+\item Graphics:
+    \begin{itemize}
+        \item\textbf{graphics}: (\emph{Boolean}) Sets whether or not to print any graphics onto the output video feed of the detection algorithm.
+        \item \textbf{refresh\_count}: (\emph{Boolean}) Specify if the vehicle count values which are printed on the live video during processing should be reset to zero each time the vehicle volume count is stored in the database.
+        \item \textbf{grid}: (\emph{Boolean}) Sets an onscreen grid to be printed on the live video feed. Useful while calibrating to help observe relative size of vehicles and blobs.
+        \item \textbf{frame\_count}: (\emph{Boolean}) Sets if the current frame count of a test video should be displayed on the live feed. 
+        \item \textbf{boxes}: (\emph{Boolean}) Sets if bounding boxes should be draw around the vehicles and blobs in video feed.
+        \item\textbf{centroids}: (\emph{Boolean}) Sets if the object centroids should be drawn onto the video feed.
+        \item\textbf{count\_line}: (\emph{Boolean}) Sets if the count line(s) should be drawn onto the video feed.
+        \item\textbf{count\_graphics}: (\emph{Boolean}) Sets if the vehicle volume counts should be drawn onto the video feed.
+        \item\textbf{pos\_pos}: Formatted as (x,y) is a point that specifies the location of the positive direction vehicle counts on the output video feed.
+        \item\textbf{neg\_pos}: Formatted as (x,y) is a point that specifies the location of the negative direction vehicle counts on the output video feed.
+        \item\textbf{singlelane}: (\emph{Boolean}) Specifies the direction of traffic flow if there's only one direction of flow. True means the traffic is travelling downward or to the right, False means the traffic is travelling upward or to the left.
+    \end{itemize}
+\end{itemize}

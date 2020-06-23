@@ -1,0 +1,72 @@
+\contentsline {chapter}{Abstract}{i}%
+\contentsline {chapter}{Acknowledgements}{ii}%
+\contentsline {chapter}{Contributions}{iii}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}%
+\contentsline {chapter}{\numberline {2}Theoretical Background}{4}%
+\contentsline {section}{\numberline {2.1}Digital Images}{4}%
+\contentsline {section}{\numberline {2.2}The Gaussian}{7}%
+\contentsline {section}{\numberline {2.3}Machine Learning}{10}%
+\contentsline {subsection}{\numberline {2.3.1}Artificial Neural Networks}{11}%
+\contentsline {subsubsection}{Neurons}{11}%
+\contentsline {subsubsection}{Data Aqcuisition and Training}{12}%
+\contentsline {subsection}{\numberline {2.3.2}Clustering}{13}%
+\contentsline {subsubsection}{K-Means}{14}%
+\contentsline {subsubsection}{Mixtures of Gaussians}{16}%
+\contentsline {section}{\numberline {2.4}Image Processing}{22}%
+\contentsline {subsection}{\numberline {2.4.1}Thresholding}{22}%
+\contentsline {subsection}{\numberline {2.4.2}Linear Filtering}{23}%
+\contentsline {subsubsection}{Correlation}{24}%
+\contentsline {subsubsection}{Convolution}{27}%
+\contentsline {subsubsection}{Some Important Linear Filters}{28}%
+\contentsline {subsection}{\numberline {2.4.3}Nonlinear Filtering}{31}%
+\contentsline {subsubsection}{The Median Filter}{32}%
+\contentsline {subsubsection}{Morphology}{33}%
+\contentsline {subsubsection}{Structuring Elements}{34}%
+\contentsline {subsubsection}{Performing a morphological operation}{35}%
+\contentsline {subsubsection}{Fundamental Morphological Operations}{35}%
+\contentsline {section}{\numberline {2.5}Computer Vision}{37}%
+\contentsline {subsection}{\numberline {2.5.1}Background Subtraction}{38}%
+\contentsline {subsection}{\numberline {2.5.2}Contour Tracing}{38}%
+\contentsline {subsection}{\numberline {2.5.3}Object Tracking}{38}%
+\contentsline {chapter}{\numberline {3}Design}{39}%
+\contentsline {subsubsection}{System Overview}{39}%
+\contentsline {section}{\numberline {3.1}Hardware}{40}%
+\contentsline {subsubsection}{Node Hardware}{40}%
+\contentsline {section}{\numberline {3.2}Vehicle Detection}{41}%
+\contentsline {subsection}{\numberline {3.2.1}Background Subtraction}{42}%
+\contentsline {subsubsection}{Calibration}{43}%
+\contentsline {subsection}{\numberline {3.2.2}Morphology and Filtering}{45}%
+\contentsline {subsubsection}{Filtering}{45}%
+\contentsline {subsubsection}{Morphology}{45}%
+\contentsline {subsubsection}{Calibration}{46}%
+\contentsline {subsection}{\numberline {3.2.3}Contours and Bounding Boxes}{47}%
+\contentsline {subsubsection}{Calibration}{48}%
+\contentsline {subsection}{\numberline {3.2.4}Tracking}{49}%
+\contentsline {subsubsection}{Calibration}{50}%
+\contentsline {subsection}{\numberline {3.2.5}Speed Estimation and Counting}{51}%
+\contentsline {subsubsection}{Counting}{52}%
+\contentsline {subsubsection}{Speed Estimation}{52}%
+\contentsline {subsubsection}{Calibration}{53}%
+\contentsline {section}{\numberline {3.3}Data Transfer}{54}%
+\contentsline {subsection}{\numberline {3.3.1}Video Feed}{54}%
+\contentsline {subsection}{\numberline {3.3.2}Traffic Statistics}{55}%
+\contentsline {section}{\numberline {3.4}Database Management}{55}%
+\contentsline {section}{\numberline {3.5}User Interface}{58}%
+\contentsline {chapter}{\numberline {4}System Calibrations}{60}%
+\contentsline {section}{\numberline {4.1}Calibration Parameters}{60}%
+\contentsline {chapter}{\numberline {5}Results}{65}%
+\contentsline {section}{\numberline {5.1}Traffic Volume Counting}{65}%
+\contentsline {section}{\numberline {5.2}Speed Measurements}{67}%
+\contentsline {chapter}{\numberline {6}Conclusion}{68}%
+\contentsline {section}{\numberline {6.1}System Outcomes}{68}%
+\contentsline {section}{\numberline {6.2}System Extensions}{69}%
+\contentsline {chapter}{Bibliography}{69}%
+\contentsline {chapter}{Appendices}{74}%
+\contentsline {chapter}{\numberline {A}Hardware Specifications}{74}%
+\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4B}{74}%
+\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{74}%
+\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{76}%
+\contentsline {section}{\numberline {B.1}Bayes Theorem}{76}%
+\contentsline {chapter}{\numberline {C}Traffic Setting Descriptions}{77}%
+\contentsline {section}{\numberline {C.1}Vehicle Volume Counting Locations}{77}%
+\contentsline {section}{\numberline {C.2}Vehicle Speed Measuring Locations}{80}%

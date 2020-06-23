@@ -1,9 +1,35 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
-The style file: acm.bst
-Illegal, another \bibstyle command---line 12 of file thesis.aux
- : \bibstyle
- :          {unsrt}
-I'm skipping whatever remains of this command
-I found no \citation commands---while reading file thesis.aux
-I found no \bibdata command---while reading file thesis.aux
-(There were 3 error messages)
+The style file: unsrt.bst
+Database file #1: bibliography/bibliography.bib
+Warning--entry type for "industrialization" isn't style-file defined
+--line 4 of file bibliography/bibliography.bib
+Warning--entry type for "emissions" isn't style-file defined
+--line 18 of file bibliography/bibliography.bib
+Warning--entry type for "ecotoll" isn't style-file defined
+--line 25 of file bibliography/bibliography.bib
+Warning--entry type for "cost" isn't style-file defined
+--line 42 of file bibliography/bibliography.bib
+Warning--entry type for "adrian_rosebrock_simple_object_tracking" isn't style-file defined
+--line 112 of file bibliography/bibliography.bib
+Warning--entry type for "adrian_rosebrock_vehicle_tracking" isn't style-file defined
+--line 118 of file bibliography/bibliography.bib
+Warning--entry type for "andrey_nikishaev_traffic_counting" isn't style-file defined
+--line 124 of file bibliography/bibliography.bib
+Warning--entry type for "opencv" isn't style-file defined
+--line 131 of file bibliography/bibliography.bib
+Warning--entry type for "opencv_mog2" isn't style-file defined
+--line 137 of file bibliography/bibliography.bib
+Warning--empty institution in trafficworse
+Warning--empty institution in mixedSolution
+Warning--empty institution in smartsolution
+Warning--empty institution in iot
+Warning--empty institution in methodsofcollection
+Warning--can't use both author and editor fields in learnproc
+Warning--empty journal in computations_neural_network
+Warning--can't use both author and editor fields in oreilly_python
+Warning--can't use both author and editor fields in alg_apps
+Warning--can't use both author and editor fields in realtimerendering
+Warning--can't use both author and editor fields in cv_matlab
+Warning--empty journal in zivkovic_pattern_recognition
+Warning--empty institution in zivkovic_heijden_pattern_recognition_letters
+(There were 22 warnings)
