@@ -2,13 +2,86 @@
 
 \section{Traffic Volume Counting}
 
+This section of the results documents the performance of the computer vision algorithm for counting vehicles that use the road observed by a camera node. Each table refers to a specific traffic setting and more detailed descriptions and images of each traffic setting may be found in Appendix \ref{appendices:traffic_descriptors}. Note: TP = True Positive, FP = False Positive and FN = False Negative, Lane refers to direction of traffic relative to the camera perspective. 
 
-[INSERT COUNT TABLES]
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} 
+    \hline
+    \textbf{Location} & \textbf{Lane} & \textbf{FP} & \textbf{FN}& \textbf{TP}& \textbf{True Count}&\textbf{Precision}& \textbf{Recall}& \textbf{Accuracy} & \textbf{F1}\\
+    \hline
+    \multirow{3}{4em}{1}  
+    &Up&0&5&41&46&100.00\%&89.13\%&89.13\%&94.25\%\\\cline{2-10}
+    &Down&0&3&55&58&100.00\%&94.83\%&94.83\%&97.35\%\\\cline{2-10}
+    &Total&0&8&96&104&100.00\%&92.31\%&92.31\%&96.00\%\\\hline\hline
+
+    \multirow{3}{4em}{2}
+    &Up&-&-&-&-&-&-&-&-\\\cline{2-10}
+    &Down&1&4&61&65&98.39\%&93.85\%&91.18\%&96.06\%\\\cline{2-10}
+    &Total&1&4&61&65&98.39\%&93.85\%&91.18\%&96.06\%\\\hline\hline
+
+    \multirow{3}{4em}{3}
+    &Up&1&3&38&41&97.44\%&92.68\%&92.68\%&95.00\%\\\cline{2-10}
+    &Down&2&2&38&39&95.00\%&95.00\%&97.44\%&95.00\%\\\cline{2-10}
+    &Total&3&5&76&80&96.20\%&93.38\%&95.00\%&95.00\%\\\hline\hline
 
 
-[INSERT TP AND FP TABLES]
+    
+\end{tabular}
+\caption{Location 1 - Two-Way Highway}
+\end{table}
+\raggedbottom
 
-[INSERT DISUCSSION OF RESULTS]
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|} 
+    \hline
+    location & \textbf{Lane} & \textbf{FP} & \textbf{FN}& \textbf{TP}& \textbf{True Count}& 
+    \textbf{Precision}& \textbf{Recall}& \textbf{Accuracy} & \textbf{F1}\\
+    \hline
+    1&Down&1&4&61&65&98.39\%&93.85\%&91.18\%&96.06\%\\
+    \hline
+\end{tabular}
+\caption{Location 2 - One-Way Highway with Merging}
+\end{table}
+\raggedbottom
+
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} 
+        \hline
+        \textbf{Lane} & \textbf{FP} & \textbf{FN}& \textbf{TP}& \textbf{True Count}& 
+        \textbf{Precision}& \textbf{Recall}& \textbf{Accuracy} & \textbf{F1}\\
+        \hline
+        Up&1&3&38&41&97.44\%&92.68\%&92.68\%&95.00\%\\
+        \hline
+        Down&2&2&38&39&95.00\%&95.00\%&97.44\%&95.00\%\\
+        \hline
+        Total&3&5&76&80&96.20\%&93.38\%&95.00\%&95.00\%\\
+        \hline
+    \end{tabular}
+    \caption{Location 3 - Two-Way Highway}
+    \end{table}
+
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} 
+        \hline
+        \textbf{Lane} & \textbf{FP} & \textbf{FN}& \textbf{TP}& \textbf{True Count}& 
+        \textbf{Precision}& \textbf{Recall}& \textbf{Accuracy} & \textbf{F1}\\
+        \hline
+        Up&1&3&38&41&97.44\%&92.68\%&92.68\%&95.00\%\\
+        \hline
+        Down&2&2&38&39&95.00\%&95.00\%&97.44\%&95.00\%\\
+        \hline
+        Total&3&5&76&80&96.20\%&93.38\%&95.00\%&95.00\%\\
+        \hline
+    \end{tabular}
+    \caption{Location 4 - Two-Way Highway with Slip Lane}
+\end{table}
+
+
+
 
 \section{Speed Measurements}
 

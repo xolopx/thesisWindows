@@ -4,6 +4,7 @@
 \usepackage{multirow}
 \usepackage{array}
 \usepackage{hhline}
+\usepackage{makecell}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
@@ -26,22 +27,22 @@
 % delete the two declaration sentences in thesis.sty if not applicable. 
 
 \preface
-\input{abstract/abstract}
-\input{acknowledgements/acknowledgements.tex}
-\input{contributions/contributions.tex}
+% \input{abstract/abstract}
+% \input{acknowledgements/acknowledgements.tex}
+% \input{contributions/contributions.tex}
 \body
-\input{introduction/introduction}
-\input{litreview/litreview}
+% \input{introduction/introduction}
+% \input{litreview/litreview}
 
-\input{design/design}
-\input{calibration/calibration}
+% \input{design/design}
+% \input{calibration/calibration}
 \input{results/results.tex}
-\input{conclusion/conclusion}
+% \input{conclusion/conclusion}
 
 \addcontentsline{toc}{chapter}{Bibliography}
-% \bibliographystyle{acm}
+\bibliographystyle{acm}
 \bibliographystyle{unsrt}
-\bibliography{bibliography/bibliography}
+% \bibliography{bibliography/bibliography}
 
 
 \input{appendices/appendix}
