@@ -1,15 +1,11 @@
-import cv2 as cv
 from detection import *
 from flask import Response, render_template, Flask
 from threading import Event
-import imutils
 import cv2
 import threading
 import argparse
-import datetime
 import globals
 import database_interface as db
-import ffmpeg
 import os
 
 globals.initialize()
@@ -84,10 +80,10 @@ if __name__ == '__main__':
 
 
     dirname = os.path.dirname(__file__)
-    config_path = os.path.join(dirname, r'config_files\7.txt')
+    config_path = os.path.join(dirname, r'config_files\4.txt')
 
     # video_path = r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\4.mp4"
-    video_path = r"C:\Users\c3175\OneDrive - The University Of Newcastle\FYP\video_data\7.mp4"
+    video_path = r"C:\Users\c3175\OneDrive - The University Of Newcastle\FYP\video_data\4.mp4"
 
     config_parser = ConfigParser.ConfigParser(config_path)
     config_parser.parseConfig()
