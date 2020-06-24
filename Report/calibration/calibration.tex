@@ -1,6 +1,6 @@
 \chapter{System Calibrations}
 
-This section of the report details the different parameters for calibrating the computer vision algorithm and how they affect the algorithms behavior. Calibration must be performed for each unique traffic environment has different properties to ensure the correct function of the system. 
+This section of the report details the different parameters for calibrating the computer vision algorithm and how they affect the algorithms behaviour. Calibration must be performed for each unique traffic environment has different properties to ensure the correct function of the system. 
 
 \section{Calibration Parameters}
 
@@ -10,7 +10,7 @@ The following is a list of calibration parameters and their description. In the 
 \item Gaussian Mixture Model:
     \begin{itemize}
         \item \textbf{training}: (\emph{Boolean}) Refers to whether or not the Gaussian Mixture Model for background subtraction should be trained on a number of frames first.
-        \item \textbf{history}: (\emph{Integer}) Is the number of frames that the Gaussian Mixture Model for background subtraction considers when updating its clusters.
+        \item \textbf{history}: (\emph{Integer}) Is the number of frames that the Gaussian Mixture Model for background subtraction considers when updating its clusters it is also the number of frames the the model is trained for initially if training is on.
         \item\textbf{shadows}: (\emph{Boolean}) Specifies if the shadows cluster should be generated for the mixture model. Generally it should be as the tester should be seeking to account for shadows and removing them via thresholding.
     \end{itemize}
 
@@ -25,8 +25,8 @@ The following is a list of calibration parameters and their description. In the 
 
 \item Morphology and Filtering:
     \begin{itemize}
-        \item\textbf{med\_size}: (\emph{Integer}) Specifies the size of the median filter kernel used to remove noise after background subtraction is performed. This value must be an odd number or else an error will be thrown as the function used requires that the filter be square with a center cell.   
-        \item\textbf{morph\_shape}: (\emph{Integer}) Specifies the shapes of the structuring element in the morphology phase of the detection algorithm. 0 - Rectangular, 1 - Ellipse and 2 - Disc. 
+        \item\textbf{med\_size}: (\emph{Integer}) Specifies the size of the median filter kernel used to remove noise after background subtraction is performed. This value must be an odd number or else an error will be thrown as the function used requires that the filter be square with a centre cell.   
+        \item\textbf{morph\_shape}: (\emph{Integer}) Specifies the shapes of the structuring element in the morphology phase of the detection algorithm. 0 - Rectangular, 1 - Cross and 2 - Ellipse. 
         \item\textbf{morph\_size}: (\emph{Integer}) Specifies the size of the morphological element used in morphology phase of detection algorithm.
         \item\textbf{morph\_iter}: (\emph{Integer}) Specifies the number of iterations to be perform the morphology operations in the detection algorithm. Can increase the computational load significantly. 
     \end{itemize}
@@ -57,6 +57,7 @@ The following is a list of calibration parameters and their description. In the 
     \begin{itemize}
         \item\textbf{storage\_interval}: (\emph{Integer}) Specifies how many frame should pass before the vehicle and speed count should be stored in the database.
         \item\textbf{multilane}: (\emph{Boolean}) Specifies whether or not there's multiple lanes of traffic for the purpose of how many database tables need to be updated as there's a table for each direction of traffic. 
+        \item \textbf{log\_stats}: (\emph{Boolean}) Sets whether or not data logging is turned on or off. 
     \end{itemize} 
 
 \item Camera and Frame Setup:

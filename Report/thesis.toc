@@ -1,16 +1,17 @@
 \contentsline {chapter}{Abstract}{i}%
 \contentsline {chapter}{Acknowledgements}{ii}%
 \contentsline {chapter}{Contributions}{iii}%
-\contentsline {chapter}{\numberline {1}Results}{1}%
+\contentsline {chapter}{\numberline {1}Results and Discussion}{1}%
 \contentsline {section}{\numberline {1.1}Traffic Volume Counting}{1}%
-\contentsline {section}{\numberline {1.2}Speed Measurements}{3}%
-\contentsline {chapter}{Bibliography}{3}%
-\contentsline {chapter}{Appendices}{5}%
-\contentsline {chapter}{\numberline {A}Hardware Specifications}{5}%
-\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4B}{5}%
-\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{5}%
-\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{7}%
-\contentsline {section}{\numberline {B.1}Bayes Theorem}{7}%
-\contentsline {chapter}{\numberline {C}Traffic Setting Descriptions}{8}%
-\contentsline {section}{\numberline {C.1}Vehicle Volume Counting Locations}{8}%
-\contentsline {section}{\numberline {C.2}Vehicle Speed Measuring Locations}{11}%
+\contentsline {subsection}{\numberline {1.1.1}Strengths}{4}%
+\contentsline {section}{\numberline {1.2}Speed Measurements}{4}%
+\contentsline {chapter}{Bibliography}{4}%
+\contentsline {chapter}{Appendices}{6}%
+\contentsline {chapter}{\numberline {A}Hardware Specifications}{6}%
+\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4B}{6}%
+\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{6}%
+\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{8}%
+\contentsline {section}{\numberline {B.1}Bayes Theorem}{8}%
+\contentsline {chapter}{\numberline {C}Traffic Setting Descriptions}{9}%
+\contentsline {section}{\numberline {C.1}Vehicle Volume Counting Locations}{9}%
+\contentsline {section}{\numberline {C.2}Vehicle Speed Measuring Locations}{12}%

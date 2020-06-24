@@ -5,12 +5,7 @@ import cv2 as cv
 import numpy as np
 from datetime import datetime
 import database_interface as db
-import sympy.geometry as sym
-from detection import CentroidTracker, TrackableObject, ConfigParser, Line, Point
-import keyboard
-import ffmpeg
-
-import ffmpeg
+from detection import CentroidTracker, TrackableObject, Line, Point
 
 class CVModule:
     """
@@ -92,7 +87,8 @@ class CVModule:
                     objs.calc_speed()
 
             # Log statistics   *** CURRENTLY TURNED OFF ***
-            timerStart = self.log_stats(timerStart, int(self.params["storage_interval"]))
+            if(self.params["log_stats"]) == "True":
+                timerStart = self.log_stats(timerStart, int(self.params["storage_interval"]))
 
             # *** TESTING: FOR CONTROLLING SPEED OF VIDEO AND PAUSING VIDEO ***
             # key = cv.waitKey(self.wait)
@@ -118,7 +114,8 @@ class CVModule:
                 self.video.set(cv.CAP_PROP_POS_FRAMES, 0)
 
             # Show the result.
-            cv.imshow("Combined", combined)
+            cv.imshow("Frame", frame)
+            cv.imshow("Mask", mask)
 
 
             if self.params["rapid_test"] != "True":
