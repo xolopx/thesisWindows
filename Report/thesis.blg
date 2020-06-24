@@ -1,35 +1,46 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+This is BibTeX, Version 0.99d (MiKTeX 2.9.7350 64-bit)
+Capacity: max_strings=4000, hash_size=5000, hash_prime=4253
+The top-level auxiliary file: thesis.aux
 The style file: unsrt.bst
 Database file #1: bibliography/bibliography.bib
-Warning--entry type for "industrialization" isn't style-file defined
---line 4 of file bibliography/bibliography.bib
-Warning--entry type for "emissions" isn't style-file defined
---line 18 of file bibliography/bibliography.bib
-Warning--entry type for "ecotoll" isn't style-file defined
---line 25 of file bibliography/bibliography.bib
-Warning--entry type for "cost" isn't style-file defined
---line 42 of file bibliography/bibliography.bib
-Warning--entry type for "adrian_rosebrock_simple_object_tracking" isn't style-file defined
---line 112 of file bibliography/bibliography.bib
-Warning--entry type for "adrian_rosebrock_vehicle_tracking" isn't style-file defined
---line 118 of file bibliography/bibliography.bib
-Warning--entry type for "andrey_nikishaev_traffic_counting" isn't style-file defined
---line 124 of file bibliography/bibliography.bib
-Warning--entry type for "opencv" isn't style-file defined
---line 131 of file bibliography/bibliography.bib
-Warning--entry type for "opencv_mog2" isn't style-file defined
---line 137 of file bibliography/bibliography.bib
-Warning--empty institution in trafficworse
-Warning--empty institution in mixedSolution
-Warning--empty institution in smartsolution
-Warning--empty institution in iot
-Warning--empty institution in methodsofcollection
-Warning--can't use both author and editor fields in learnproc
-Warning--empty journal in computations_neural_network
-Warning--can't use both author and editor fields in oreilly_python
-Warning--can't use both author and editor fields in alg_apps
-Warning--can't use both author and editor fields in realtimerendering
-Warning--can't use both author and editor fields in cv_matlab
-Warning--empty journal in zivkovic_pattern_recognition
-Warning--empty institution in zivkovic_heijden_pattern_recognition_letters
-(There were 22 warnings)
+You've used 1 entry,
+            1791 wiz_defined-function locations,
+            450 strings with 3599 characters,
+and the built_in function-call counts, 149 in all, are:
+= -- 11
+> -- 4
+< -- 0
++ -- 2
+- -- 1
+* -- 3
+:= -- 29
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 1
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 5
+empty$ -- 19
+format.name$ -- 1
+if$ -- 32
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 8
+num.names$ -- 1
+pop$ -- 6
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 3
+stack$ -- 0
+substring$ -- 0
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 1
+width$ -- 2
+write$ -- 12
