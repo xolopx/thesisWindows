@@ -7,3 +7,11 @@
 
 System/venv/
 System/__pycache__/
+
+*.log
+
+*.aux
+
+*.synctex(busy)
+
+*.gz

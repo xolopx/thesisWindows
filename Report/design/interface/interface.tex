@@ -1,6 +1,6 @@
 \section{User Interface}
 
-The user interface is a web application implemented using the lightweight Flask web framework integrated with a MySQL database hosted on the local network from a central computer. The web app provides a user with the functionality to query data for a given node and time range which is then presented as plots, the user also has the option to download the data a csv file. The graphics for plotting are provided by Python's matplotlib library but the logic to consolidate the data and scale the axes is tailored. 
+The user interface was implemented using the lightweight Flask web framework and integrated with a MySQL database. The web app provides a user with the ability to query data for a given node and time range. The data is presented on a plot and can be downloaded as a csv file. The graphics for plotting are provided by Python's \emph{matplotlib} library. The logic to consolidate data for a given time range and scale the plot graphic accordingly is performed by the web app backend.
 
 The interface is a single page broken into four sections, the profile of the selected node which displays relevant information to that end, the live video feed of the selected node and the count and speed statistics for the selected node and datetime range. Figure \ref{fig:dragonfly} shows the individual panes of the web app and web apps the overall appearance.
 
