@@ -3,7 +3,7 @@
 
 Mixtures of Gaussians (MoG), or the Gaussian Mixture Model (GMM), is a method of clustering (see section \ref{subsection:clustering}) that is based not on distance \ref{subsubsection:kmeans} but distribution. This method of clustering was popularized by Duda and Hart in their text \emph{Pattern Classification and Scene Analysis} \cite{mog_seminal}. This method is more effective than distance based methods because it considers the covariance of the data. Note that for K-Means clustering the distributions were spherical, but if the true clusters were more elliptical then K-Means would fail to cluster them properly. Figure \ref{fig:cluster_shapes} compares what these cluster shapes might look like and the arrows indicate the location, the arrows indicate data points that are ambiguous.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width = 0.9\textwidth]{litreview/computervision/mog/mog_vs_kmeans.png}
 	\captionsetup{format = hang}

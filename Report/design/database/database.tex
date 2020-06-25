@@ -1,6 +1,6 @@
 \section{Database Management}
 
-A database is an efficient and well organized method of storing and accessing the statistics collected by the system nodes. A MySQL database was selected for it's clear documentation and easy integration into Python applications via the MySQLConnector class \cite{mysqlconnector}. A single database is maintained on a machine on the same local area network as the nodes and is used to store the statistics they transmit. The design of the system can be seen in Figure \ref{fig:erd} and Table \ref{table:entity_attributes}, these figures an augmented design which would also facilitate \emph{speed estimation if that feature was added to the system}. The database is simple with only three entity types. \emph{Node} represents a camera node and stores the information used for identifying and locating it. \emph{Count\_record} and \emph{Speed\_record} entries belong to a specific \emph{Node} are timestamped when they're was created. Records are generated every 30 seconds as this consumes less data than a higher time resolution but is a sufficiently small period for the data to be used for live traffic volume tracking. 
+A database is an efficient and well organized method of storing and accessing the statistics collected by the system nodes. A MySQL database was selected for it's clear documentation and easy integration into Python applications via the MySQLConnector class \cite{mysqlconnector}. A single database is maintained on a machine on the same local area network as the nodes and is used to store the statistics they transmit. The design of the system can be seen in Figure \ref{fig:erd} and Table \ref{table:entity_attributes}, these figures an augmented design which would also facilitate \emph{speed estimation if that feature was added to the system}. The database is simple with only three entity types. \emph{Node} represents a camera node and stores the information used for identifying and locating it. \emph{Count\_record} and \emph{Speed\_record} entries belong to a specific \emph{Node} are timestamped when they're was created. Records are generated every 30 seconds as this consumes less data than a higher time resolution but is a sufficiently small period for the data to be used for live traffic volume tracking. Each time a record entry is created the direction that stat came from must be specified.
 
 \begin{figure}[H]
     \centering
@@ -13,7 +13,7 @@ A database is an efficient and well organized method of storing and accessing th
 \def\arraystretch{1.5}
 \begin{center}
 \begin{singlespace}
-    \begin{tabular}{|M{2.5cm}|M{2cm}|M{4cm}|M{3cm}|M{1cm}|} 
+    \begin{tabular}{|M{2.5cm}|M{2cm}|M{3.9cm}|M{3cm}|M{1cm}|} 
         \hline
         \textbf{Entity Name} & \textbf{Attributes} & \textbf{Description} & \textbf{Data Type} & \textbf{Null}\\
         \hline
@@ -28,12 +28,14 @@ A database is an efficient and well organized method of storing and accessing th
         & node id & Unique node identifier linking record to its node. & INT & N\\ \cline{2-5}
         & speed & A single speed reading averaging vehicle speeds over 30 seconds. & DECIMAL(4,2) & N\\ \cline{2-5}
         & timestamp & Time stamp indicating when the speed reading began collecting data. & DATETIME & N\\
+        & direction & Direction of travel that the record pertains to. & TINYINT & N\\
         \hhline{|=|=|=|=|=|}
         \multirow{5}{*}{Count Record} 
         & record id & A number that uniquely identifies the entity. & INT & N\\ \cline{2-5}
         & node id & Unique node identifier linking record to its node. & INT & N\\ \cline{2-5}
         & count & A single count reading for 30 seconds of traffic. & DECIMAL(4,2) & N\\ \cline{2-5}
         & timestamp & Time stamp indicating when the speed reading began collecting data. & DATETIME & N\\
+        & direction & Direction of travel that the record pertains to. & TINYINT & N\\
         \hline
     \end{tabular}
 \end{singlespace}

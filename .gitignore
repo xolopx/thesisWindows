@@ -21,3 +21,5 @@ System/__pycache__/
 *.toc
 
 *.lof
+
+*.lot
