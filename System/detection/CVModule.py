@@ -78,7 +78,7 @@ class CVModule:
             # Stitch together original image and foreground mask for display.
             combined = np.hstack((frame, mask))
             # Updating the frame shared with Flask app.
-            globals.image = frame
+            globals.image = combined
             # Increment the number of frames.
             self.frameCount += 1
             # Perform speed measurements                            *** PUT THIS IN A METHOD *** ALSO FIX THE SPEED CALCULATION SO THEY WORK ****
@@ -89,22 +89,6 @@ class CVModule:
             # Log statistics   *** CURRENTLY TURNED OFF ***
             if(self.params["log_stats"]) == "True":
                 timerStart = self.log_stats(timerStart, int(self.params["storage_interval"]))
-
-            # *** TESTING: FOR CONTROLLING SPEED OF VIDEO AND PAUSING VIDEO ***
-            # key = cv.waitKey(self.wait)
-            # if key == 27:
-            #     break
-            # if key == ord('n'):
-            #     while True:
-            #         key = cv.waitKey(50)
-            #         if key == ord('n'):
-            #             break
-            # if keyboard.is_pressed('+'):
-            #    self.wait += 1
-            # if keyboard.is_pressed('-'):
-            #     self.wait -= 1
-
-
 
             # *** TESTING: LOOPING LOGIC JUST FOR TESTING WITH SHORT VIDEO ***
             if (self.frameCount >= (self.totalFrames - int(self.params["history"]))):

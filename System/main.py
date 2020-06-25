@@ -100,8 +100,8 @@ if __name__ == '__main__':
     t2.start()
     print("Training Detection")
 
-    # Start the flask app
-    app.run(host=args["ip"], port=args["port"], debug=True,
+    app.run(port=args["port"], debug=True,
             threaded=True, use_reloader=False)
-
+    # app.run(debug=True,
+    #         threaded=True, use_reloader=False)
 
