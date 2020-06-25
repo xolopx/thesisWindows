@@ -44,3 +44,4 @@ storage_interval = 10
 singlelane = True
 multilane = True
 rotate = 0
+log_stats = False

@@ -17,3 +17,7 @@ System/__pycache__/
 *.gz
 
 *.pyc
+
+*.toc
+
+*.lof
