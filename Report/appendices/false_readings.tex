@@ -1,0 +1,65 @@
+\chapter{False Readings}
+
+This section of the Appendices outlines the causes of false readings for the test detailed in the results, Table \ref{table:volume_table}.
+
+\begin{itemize}
+    \item ID - is the unique identifier for the traffic setting.
+    \item Lane - refers to the lane(s) that the false reading occurred in. R - right, L - left, T - top and B - bottom. E.g. the right most lane of a three lane highway is R3.
+    \item Type - specifies the nature of the fault, e.g. false positive or false negative. Referred to as FP and FN respectively.
+    \item Frame \# - refers to the frame number at which the false reading occurred in the test video.
+    \item Description - provides more information pertaining to the cause of the false reading.
+\end{itemize}
+
+
+\begin{table}[H]
+    \centering
+    % \begin{tabular}{|p{1cm}p{1cm}p{1cm}p{1cm}p{10cm|} 
+    \begin{tabular}{|p{1cm}p{1cm}p{1cm}p{1cm}p{10cm}|} 
+    \hline
+    \textbf{ID} & \textbf{Lane} & \textbf{Frame \#} & \textbf{Type} & \textbf{Description}\\
+    \hline
+    \multirow{3}{1em}{1}  
+    &R2/R3&480&FN&Not enough separation between two sedans caused a superblob to form.\\\cline{2-5}
+    &R2/R3&780&FN&Not enough separation between a sedan and van causing superblob.\\\cline{2-5}
+    &R2/R3&830&FN&Two sedans too close together forming superblob.\\\Xhline{1pt}
+
+    \multirow{5}{1em}{2}  
+    &L1/L2&863&FN&Motorbike blob merged into another vehicle.\\\cline{2-5}
+    &L2&1080&FN&Centroid dropped because vehicle didn't register due to shadowing making it the same colour as road.\\\cline{2-5}
+    &L1/L2&1168&FN&Motorbike blob too small\\\cline{2-5}
+    &L2&1198&FN&Motorbike blob too small\\\cline{2-5}
+    &L2&914&FP&Van split into two blobs and second blob was large enough to be counted.\\\Xhline{1pt}
+
+    \multirow{7}{1em}{3}  
+    &R3/R4&650&FN&Two SUVs merged.\\\cline{2-5}
+    &R4&800&FN&Car was the exact same colour as road.\\\cline{2-5}
+    &R2/R3&920&FN&Sedan and SUV merged.\\\cline{2-5}
+    &L1/L2&150&FN&Two SUVs merged.\\\cline{2-5}
+    &L1/L2&1000&FN&Truck and sedan merged.\\\cline{2-5}
+    &L1&1000&FP&Camera bump causes spurious centroids around count line that generate a count.\\\cline{2-5}
+    &R2&1150&FN&Anomalous blob from camera movement jumps across count line and causes reading.\\\Xhline{1pt}
+
+    \multirow{3}{1em}{4}  
+    &L1/L2&490&FN&Two utes combine creating only one blob.\\\cline{2-5}
+    &L1&400&FN&Ute leave frame before line can be reached\\\cline{2-5}
+    &R2/R3&300&FN&Many motorbikes form a mega blob.\\\Xhline{1pt}
+
+    \multirow{2}{1em}{5}  
+    &T2/B1&580&FN&Vehicle is completely occluded at critical moment by car in far lane travelling in opposite direction.\\\cline{2-5}
+    &R2/R3&773&FN&Vehicle completely occluded by car in near lane travelling in the same direction.\\\Xhline{1pt}
+    
+    \multirow{1}{1em}{6}  
+    &T1&358&FN&Camera is bumped at the same time as the vehicle is passing over the count line.\\\Xhline{1pt}
+
+    \multirow{5}{1em}{7}  
+    &B1&400&FP&Camera is bumped generating counts.\\\cline{2-5}
+    &B1&200&FP&Headlight generates object.\\\cline{2-5}
+    &T1&2374&FP&Headlight generates object.\\\cline{2-5}
+    &B1&4590&FP&Headlight generates object.\\\cline{2-5}
+    &T1&4780&FP&Headlight generates object.\\\hline
+
+
+\end{tabular}
+\caption{Traffic Volume Count Evaluation Metrics}
+\label{table:false_readings}
+\end{table}
