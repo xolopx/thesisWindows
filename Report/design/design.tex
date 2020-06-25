@@ -1,12 +1,10 @@
 \chapter{Design}
 
-This section of the report details the subcomponents that comprise the whole traffic monitoring system and justifies the design choices made.
+This section of the report details the subcomponents that comprise the whole system. The guiding principle of the design was to satisfy the system objective but with simplicity wherever possible. 
 
 \subsubsection{System Overview}
 
-The purpose of this system is to collect the average vehicle speed and vehicle volume of a road, achieved by analysing video of the road. A camera controlled by a microcomputer is directed at the road and a computer vision algorithm determines how many cars are in the video and how fast they're going. These statistics are sent to another computer on the same wireless network and stored in a database. The hardware unit that collects video and sends away statistics is referred to as a \emph{node}. If an interested party wishes to access these statistics they can do so through a user interface presented on a web-browser which also displays a live video feed of the road.
-
-Figure \ref{fig:overall_design} shows each subsystem and its position in the system's flow of data.
+The objective of the system is to measure the vehicle volume of a road taking only video of the road as input. A camera controlled by a microcontroller is directed at the road and a computer vision algorithm determines how many cars are in the video. These statistics are sent to another computer on the same wireless network and stored in a database. The hardware unit that collects video and sends away statistics is referred to as a \emph{node}. If an interested party wishes to access these statistics they can do so through a user interface presented on a web-browser which can also display live video feed from any connected nodes. Figure \ref{fig:overall_design} shows input output relationship of each subsystem.
 
 \begin{figure}[H]
     \centering

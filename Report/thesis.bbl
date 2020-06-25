@@ -1,8 +1,251 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{industrialization}
+The~Editors of~the Encyclopaedia~Britannica.
+\newblock Industrial revolution.
+
+\bibitem{trafficworse}
+M.~Bradley.
+\newblock Road congestion in australia.
+\newblock Technical report, 2018.
+
+\bibitem{emissions}
+WHO.
+\newblock Climate impacts.
+
+\bibitem{ecotoll}
+CITYLAB.
+\newblock Traffic’s mind-boggling economic toll.
+
+\bibitem{cost}
+INRIX.
+\newblock Congestion costs each american 1348 dollars per year.
+
+\bibitem{mixedSolution}
+Vassilis Kostakos, Timo Ojala, and Tomi Juntunen.
+\newblock Traffic in the smart city.
+\newblock Technical report, 2016.
+
+\bibitem{smartsolution}
+Smarter~Cambridge Transport.
+\newblock Reducing traffic congestion and pollution in urban areas.
+\newblock Technical report, 2016.
+
+\bibitem{smartsolution2}
+M.~{Pla-Castells}, J.~J. {Martinez-Durá}, J.~J. {Samper-Zapater}, and R.~V.
+  {Cirilo-Gimeno}.
+\newblock Use of ict in smart cities. a practical case applied to traffic
+  management in the city of valencia.
+\newblock In {\em 2015 Smart Cities Symposium Prague (SCSP)}, 2015.
+
+\bibitem{smartsolution3}
+A.~{Sharif}, J.~{Li}, M.~{Khalil}, R.~{Kumar}, M.~I. {Sharif}, and A.~{Sharif}.
+\newblock Internet of things — smart traffic management system for smart
+  cities using big data analytics.
+\newblock In {\em 2017 14th International Computer Conference on Wavelet Active
+  Media Technology and Information Processing (ICCWAMTIP)}, 2017.
+
+\bibitem{iot}
+McKinsey~\& Company.
+\newblock Smart cities digital solutions for a more livable future.
+\newblock Technical report, 2016.
+
+\bibitem{methodsofcollection}
+David Green, Jeanette~Ward Kenneth~Lewis, Ann-Marie~Head, and Cameron Munro.
+\newblock Guide to traffic management part 3: Transport studies and analysis
+  methods.
+\newblock Technical report, 2020.
+
+\bibitem{learnproc}
+Daniel Shiffman.
+\newblock {\em Learning Processing}.
+\newblock Elsevier Inc., 2008.
+
+\bibitem{modern_statistics}
+Jay~L. Devore and Kenneth~N. Berk.
+\newblock {\em Modern Mathematical Statistics with Applications}.
+\newblock Springer, 2018.
+
+\bibitem{patterns_machine_learning}
+Christopher~M. Bishop.
+\newblock {\em Pattern Recognition and Machine Learning}.
+\newblock Springer, 2006.
+
+\bibitem{antiderivatives}
+Brian Conrad.
+\newblock Impossibility theorems for elementary integration.
+\newblock {\em Clay Mathematics Institute}, 2005.
+
+\bibitem{statistical_pattern_recognition}
+Keinosuke Fukunaga.
+\newblock {\em Introduction to Statistical Pattern Recognition}.
+\newblock Boston Academic Press, 1990.
+
+\bibitem{neural_networks}
+Jeff Heaton.
+\newblock {\em Artificial Intelligence for Humans Volume 3: Deep Learning and
+  Neural Networks}.
+\newblock Heaton Research, Inc, 2015.
+
+\bibitem{machine_learning_dictionary}
+Bil Wilson.
+\newblock {\em The Machine Learning Dictionary}.
+\newblock University of New South Wales, 2020.
+
+\bibitem{ann_handbook}
+Jayesh~Bapu Ahire.
+\newblock {\em The Artificial Neural Networks Handbook: Part 4}.
+
+\bibitem{large_data_neural_network}
+Anuj~Sharma Yaw Okyere Adu-Gyamfi, Sampson Kwasi~Asare and Tienaah Titus.
+\newblock Automated vehicle recognition with deep convolutional neural
+  networks.
+\newblock {\em Sage Journals}, 2645(1), 2017.
+
+\bibitem{supervised_neural_networks}
+B.G.~Horne D.R.~Hush.
+\newblock Progress in supervised neural networks.
+\newblock {\em IEEE Signal Processing Magazine}, 10(1), 1993.
+
+\bibitem{data_labelling}
+Cognilytica.
+\newblock Data engineering, preparation, and labeling for ai 2019.
+\newblock Technical report, Cognilytica, 2019.
+
+\bibitem{computations_neural_network}
+Shai Shalev-Shwartz Roi~Livni and Ohad Shamir.
+\newblock On the computational efficiency of training neural networks.
+\newblock 2014.
+
+\bibitem{matlab_kmeans_segment}
+Mathworks.
+\newblock {\em Matlab K-Means Image Segmentation Tutorial}.
+
+\bibitem{oreilly_python}
+Jan~Erik Solem.
+\newblock {\em Programming Computer Vision with Python}.
+\newblock O'Reilly, 2012.
+
+\bibitem{matlab_clustering}
+Mathworks.
+\newblock {\em Matlab Clustering Tutorial}.
+
+\bibitem{mog_seminal}
+Peter E.~Hart Richard O.~Duda and David~G. Stork.
+\newblock {\em Pattern Classification and Scene Analysis}.
+\newblock Wiley-Interscience, 1973.
+
+\bibitem{dempster_EM}
+A.~P. Dempster.
+\newblock Maximum likelihood from incomplete data via the em algorithm.
+\newblock {\em Journal of the Royal Statistical Society. Series B
+  (Methodological)}, 39(1), 1977.
+
+\bibitem{emalgo}
+Thriyambakam~Krishnan Geoffrey J.~McLachlan and See~Ket Ng.
+\newblock The em algorithm.
+\newblock {\em Center for AppliedStatistics and Economics}, 1997.
+
+\bibitem{alg_apps}
+Richard Szeliski.
+\newblock {\em Computer Vision - Algorithms and Applications}.
+\newblock Springer, 2011.
+
+\bibitem{optimalKernel}
+Sabyasachi Sahoo.
+\newblock Deciding optimal kernel size for cnn, 2020.
 
 \bibitem{udacity_cv}
 Aaron Bobick.
 \newblock Introduction to computer vision.
 \newblock Udacity, 2018.
+
+\bibitem{realtimerendering}
+Tomas Akenine-Möller and Eric Haines.
+\newblock {\em Real-Time Rendering}.
+\newblock CRC Press, 2004.
+
+\bibitem{cv_matlab}
+Richard E.~Woods Rafael C.~Gonzalez and Steven~L. Eddins.
+\newblock {\em Digital Image Processing using MATLAB}.
+\newblock Gatesmark, 2009.
+
+\bibitem{sobel}
+Irwin Sobel and Gary Feldman.
+\newblock Isotropic 3x3 image gradient operator.
+\newblock Standford Artificial Intelligence Labratory, 1968.
+
+\bibitem{cormen_2001}
+Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT Press Ltd, 2009.
+
+\bibitem{median_filter_new}
+Joungeun Bae and Hoon Yoo.
+\newblock Fast median filtering by use of fast localization of median value.
+\newblock {\em International Journal of Applied Engineering Research}, 13(12),
+  2018.
+
+\bibitem{median_filter_3}
+James Church, Dr.~Yixin Chen, , and Dr.~Stephen Rice.
+\newblock A spatial median filter for noise removal in digital images.
+\newblock {\em IEEE}, 3(6), 2008.
+
+\bibitem{median_filter_old}
+George J.~Yang Thomas S.~Huang and Gregory~Y. Tang.
+\newblock A fast two-dimensional median filtering algorithm.
+\newblock {\em IEEE}, 27(1), 1979.
+
+\bibitem{morph_textbook}
+Gerhard~X. Ritter and Joseph~N. Wilson.
+\newblock {\em Handbook of Computer Vision Algorithms in Algerbra}.
+\newblock CRC Press, 2000.
+
+\bibitem{satoshi_findContours}
+Satoshi Suzuki.
+\newblock Topological structural analysis of digitized binary images by border
+  following.
+\newblock Technical report, Shizuoka University, 1983.
+
+\bibitem{adrian_rosebrock_simple_object_tracking}
+Adrian Rosebrock.
+\newblock Simple object tracking with opencv.
+
+\bibitem{adrian_rosebrock_vehicle_tracking}
+Adrian Rosebrock.
+\newblock Opencv vehicle detection, tracking, and speed estimation.
+
+\bibitem{andrey_nikishaev_traffic_counting}
+Andrey Nikishaev.
+\newblock Traffic counting with opencv.
+
+\bibitem{opencv}
+OpenCV~Foundation Inc.
+\newblock Opencv.
+
+\bibitem{opencv_mog2}
+OpenCV~Foundation Inc.
+\newblock Backgroundsubtractormog2.
+
+\bibitem{zivkovic_pattern_recognition}
+Zoran Zivkovic.
+\newblock Improved adaptive gaussian mixture model for background subtraction.
+\newblock 2004.
+
+\bibitem{zivkovic_heijden_pattern_recognition_letters}
+Zoran Zivkovic and Ferdinand van~der Heijden.
+\newblock Efficient adaptive density estimation per image pixel for the task of
+  background subtraction.
+\newblock Technical report, 2006.
+
+\bibitem{flask}
+Armin Ronacher.
+\newblock Flask, 2020.
+
+\bibitem{mysqltutorial}
+Python mysql tutorial.
+
+\bibitem{mysqlconnector}
+Mysql connector library.
 
 \end{thebibliography}

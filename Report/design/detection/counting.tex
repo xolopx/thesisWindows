@@ -1,26 +1,36 @@
-\subsection{Speed Estimation and Counting}
+\subsection{Vehicle Volume Counting}
 \label{subsection:count_measure}
 
-Vehicle counting and speed measurement is dependent on a object's position history for it is with this information that the direction and speed of movement is determined. Elements of Adrian Rosebrock's tutorial on speed estimation and tracking of vehicles were drawn on heavily for this implementation \cite{adrian_rosebrock_vehicle_tracking}. Both speed and vehicle volume measurements are stored in a database every 30 seconds. This time resolution was selected as it makes live traffic routing an effective possibility. 
+This component of the algorithm takes as input the tracked object data from the object tracking component and returns updated traffic data for vehicle volumes. 
 
 \subsubsection{Counting}
 
-Depending on the direction of travel relative to the image, that is, up or down vs side to side, a line is specified for the image which when passed by a tracked object triggers a vehicle count to increment. The direction of travel of the object is determined by averaging the vehicle's position history. Figure \ref{fig:count_lines} is visualizes an example of a count line where if a vehicles crosses it then it is counted. 
+Depending on the direction of travel relative to the image, that is, up or down vs side to side, a line is specified on the image which when passed by a tracked object triggers a vehicle to be counted. The direction of travel of the object is determined by averaging the vehicle's position history. Figure \ref{fig:count_lines} shows an example of a count line. Algorithm \ref{algorithm:count} details the process of determining if a vehicle has crossed a count line.
+
+\begin{algorithm}
+	\SetAlgoLined
+	\KwInput{List of tracked objects, tracked} 
+	\KwOutput{Updated vehicle volume statistics}
+	
+	
+	\caption{Centroid re-assignment algorithm. \cite{adrian_rosebrock_vehicle_tracking}}
+	\label{algorithm:count}
+  \end{algorithm}
 
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[b]{0.42\textwidth}
-            \centering\includegraphics[width = \textwidth]{design/detection/counting/original_count}|
+            \centering\includegraphics[width = \textwidth]{design/detection/counting/updowntraffic.png}|
             \captionsetup{format = hang}  
-      		\caption{Count threshold lines, bounding boxes and centroids on original frame.}
+      		\caption{Count lines for traffic travelling up and down.}
     	\end{subfigure}
     	\begin{subfigure}[b]{0.42\textwidth}
-      		\centering\includegraphics[width = \textwidth]{design/detection/counting/mask_count}
+      		\centering\includegraphics[width = \textwidth]{design/detection/counting/leftrighttraffic.png}
             \captionsetup{format = hang}    
-            \caption{Count threshold lines, bounding boxes and centroids on foreground mask.}
+            \caption{Count line for traffic travelling left and right.}
         \end{subfigure}
         \captionsetup{format = hang}
-    	\caption{Vehicle count threshold lines visualized on traffic setting and foreground mask.}
+    	\caption{Count line visualization for both traffic direction orientations.}
     	\label{fig:count_lines}
 \end{figure}
 

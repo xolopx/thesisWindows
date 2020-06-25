@@ -1,12 +1,11 @@
 \section{Hardware}
 
-The hardware components of the system were selected for their cost and mobility. There are only two necessarily unique hardware components in the system, a Raspberry Pi 4 microcontroller and a Pi Cam, which are used a data collection node, capturing and processing video and then sending the road statistics away. Any retail laptop or computer is suitable for hosting the system's database and running the web-browser user interface.
 
-\subsubsection{Node Hardware}
+The hardware components of the system were selected to facilitate ease of use low cost and mobility. Each camera node is comprised of a Raspberry Pi 4B microcontroller and a Pi Cam. Each camera node's purpose is to collect video and run the computer vision algorithm fast enough to produce and send real-time data. Another machine on the same network is used to host a central database where the statistics are stored, any retail laptop or computer is suitable for this purpose.
 
-A computer suitable for performing the functionality required of a node has to be small, inexpensive, sufficiently powerful to run a computationally expensive algorithm, have networking capabilities and interface with a camera module. The Raspberry Pi 4 was selected for it meets all of these requirements and has the added benefits of a native operating system, support drivers for usb proprietary camera hardware and a large online community. It's ease of use due to these additional factors made the Pi an excellent choice for rapidly prototyping a computer vision system. 
+The Raspberry Pi 4B was selected for physical size, low cost, sufficiently computational power, networking capabilities and ease of integration with a camera module. The Raspberry Pi 4 also benefits from native operating system, support drivers for USB proprietary camera hardware and a large online community of makers. All of these factors made the Raspberry Pi 4 a easy choice for rapidly prototyping an IoT device. 
 
-The Pi Camera was the selected image capture hardware primarily for it's compatability with the Raspberry Pi environment but it is also inexpensive, can captures colour at a suitable resolution and frame rate. Figure \ref{fig:raspi_gear} shows the microcontroller with camera connected. Appendix \ref{appendices:hardware_specs} gives the full specifications of both of the Raspberry Pi 4 and Pi Cam.
+The Pi Camera was the selected image capture hardware primarily for it's compatibility with the Raspberry Pi environment, but it would not be viable without its low cost, 3-channel colour capture and frame rate. Figure \ref{fig:raspi_gear} shows the microcontroller with camera connected. Appendix \ref{appendices:hardware_specs} gives the full specifications of both of the Raspberry Pi 4 and Pi Cam.
 
 \begin{figure}[H]
     \centering

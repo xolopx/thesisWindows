@@ -1,10 +1,8 @@
 \section{Vehicle Detection}
 
-The vehicle detection subsystem is a software algorithm designed to recognize and track vehicles from video in order to count them and estimate their speed. The algorithm is comprised of a number of sub-processes which are outlined in Figure \ref{fig:detection_design}. 
+The vehicle detection subsystem is a software algorithm designed to recognize and track vehicles from video in order to count them. The algorithm is comprised of a number of sub-processes which are outlined in Figure \ref{fig:detection_design}. This algorithm builds on and improves the work of Adrian Rosebrock \cite{adrian_rosebrock_simple_object_tracking}\cite{adrian_rosebrock_vehicle_tracking} Andrey Nikishaev \cite{andrey_nikishaev_traffic_counting}. Some functionality depends on the use of the OpenCV library \cite{opencv} as it was deemed inefficient and unnecessary to rewrite tried and tested code. 
 
-The \emph{vehicle tracking} sub-process drew largely on the work of Adrian Rosebrock \cite{adrian_rosebrock_simple_object_tracking}\cite{adrian_rosebrock_vehicle_tracking} of PyImageSearch and the \emph{subtraction} and \emph{morphological} sub-processes were influenced by Andrey Nikishaev's tutorial on traffic counting \cite{andrey_nikishaev_traffic_counting}. Much of the functionality of the detection system is provided by the open source computer vision library, OpenCV \cite{opencv}.
-
-The nature of this algorithm and the image processing techniques used is such that each sub-process requires some calibration to achieve the best results for a given setting. The variability of lighting and camera perspective in particular can completely change the accuracy of the algorithm's results and hence for each subsection the necessary calibrations are detailed.
+The nature of this algorithm and the image processing techniques used is such that each sub-process requires some calibration to achieve the best results for a given setting. The variability of lighting and camera perspective in particular can completely change the accuracy of the algorithm and so each subsection details calibratable parameters. A description of each calibration parameter can be viewed in section \ref{chapter:calibration}.
 
 \begin{figure}[H]
     \includegraphics[width=0.9\columnwidth]{design/detection/detection_design}
@@ -16,7 +14,8 @@ The nature of this algorithm and the image processing techniques used is such th
 \input{design/detection/background_subtraction}
 
 
-\begin{figure}[H]
+\begin{figure}[h]
+    \centering
     \begin{tabular}{c c}
         \begin{subfigure}[b]{0.4\textwidth}
             \includegraphics[width=\textwidth]{design/detection/subtractor/original_frame}

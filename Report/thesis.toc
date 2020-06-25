@@ -1,17 +1,69 @@
 \contentsline {chapter}{Abstract}{i}%
 \contentsline {chapter}{Acknowledgements}{ii}%
 \contentsline {chapter}{Contributions}{iii}%
-\contentsline {chapter}{\numberline {1}Results and Discussion}{1}%
-\contentsline {section}{\numberline {1.1}Traffic Volume Counting}{1}%
-\contentsline {subsection}{\numberline {1.1.1}Strengths}{4}%
-\contentsline {subsection}{\numberline {1.1.2}weaknesses}{4}%
-\contentsline {chapter}{Bibliography}{5}%
-\contentsline {chapter}{Appendices}{7}%
-\contentsline {chapter}{\numberline {A}Hardware Specifications}{7}%
-\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4B}{7}%
-\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{7}%
-\contentsline {chapter}{\numberline {B}Mathematical Theorems and Proofs}{9}%
-\contentsline {section}{\numberline {B.1}Bayes Theorem}{9}%
-\contentsline {chapter}{\numberline {C}Traffic Setting Descriptions}{10}%
-\contentsline {section}{\numberline {C.1}Vehicle Volume Counting Locations}{10}%
-\contentsline {section}{\numberline {C.2}Vehicle Speed Measuring Locations}{13}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}%
+\contentsline {chapter}{\numberline {2}Theoretical Background}{4}%
+\contentsline {section}{\numberline {2.1}Digital Images}{4}%
+\contentsline {section}{\numberline {2.2}The Gaussian}{7}%
+\contentsline {section}{\numberline {2.3}Machine Learning}{10}%
+\contentsline {subsection}{\numberline {2.3.1}Artificial Neural Networks}{11}%
+\contentsline {subsubsection}{Neurons}{11}%
+\contentsline {subsubsection}{Data Aqcuisition and Training}{12}%
+\contentsline {subsection}{\numberline {2.3.2}Clustering}{13}%
+\contentsline {subsubsection}{K-Means}{14}%
+\contentsline {subsubsection}{Mixtures of Gaussians}{16}%
+\contentsline {section}{\numberline {2.4}Image Processing}{22}%
+\contentsline {subsection}{\numberline {2.4.1}Thresholding}{22}%
+\contentsline {subsection}{\numberline {2.4.2}Linear Filtering}{23}%
+\contentsline {subsubsection}{Correlation}{24}%
+\contentsline {subsubsection}{Convolution}{27}%
+\contentsline {subsubsection}{Some Important Linear Filters}{28}%
+\contentsline {subsection}{\numberline {2.4.3}Nonlinear Filtering}{31}%
+\contentsline {subsubsection}{The Median Filter}{32}%
+\contentsline {subsubsection}{Morphology}{33}%
+\contentsline {subsubsection}{Structuring Elements}{34}%
+\contentsline {subsubsection}{Performing a morphological operation}{35}%
+\contentsline {subsubsection}{Fundamental Morphological Operations}{35}%
+\contentsline {subsection}{\numberline {2.4.4}Contour Tracing}{37}%
+\contentsline {chapter}{\numberline {3}Design}{39}%
+\contentsline {subsubsection}{System Overview}{39}%
+\contentsline {section}{\numberline {3.1}Hardware}{40}%
+\contentsline {section}{\numberline {3.2}Vehicle Detection}{41}%
+\contentsline {subsection}{\numberline {3.2.1}Background Subtraction}{42}%
+\contentsline {subsubsection}{Calibration}{43}%
+\contentsline {subsection}{\numberline {3.2.2}Morphology and Filtering}{45}%
+\contentsline {subsubsection}{Median Filtering}{45}%
+\contentsline {subsubsection}{Morphology}{45}%
+\contentsline {subsubsection}{Calibration}{46}%
+\contentsline {subsection}{\numberline {3.2.3}Contours and Bounding Boxes}{47}%
+\contentsline {subsubsection}{Calibration}{48}%
+\contentsline {subsection}{\numberline {3.2.4}Tracking}{49}%
+\contentsline {subsubsection}{Calibration}{51}%
+\contentsline {subsection}{\numberline {3.2.5}Vehicle Volume Counting}{52}%
+\contentsline {subsubsection}{Counting}{52}%
+\contentsline {subsubsection}{Speed Estimation}{53}%
+\contentsline {subsubsection}{Calibration}{54}%
+\contentsline {section}{\numberline {3.3}Data Transfer}{55}%
+\contentsline {subsection}{\numberline {3.3.1}Video Feed}{55}%
+\contentsline {subsection}{\numberline {3.3.2}Traffic Statistics}{56}%
+\contentsline {section}{\numberline {3.4}Database Management}{56}%
+\contentsline {section}{\numberline {3.5}User Interface}{59}%
+\contentsline {chapter}{\numberline {4}Results and Discussion}{61}%
+\contentsline {section}{\numberline {4.1}Traffic Volume Counting}{61}%
+\contentsline {subsection}{\numberline {4.1.1}Strengths}{63}%
+\contentsline {subsection}{\numberline {4.1.2}weaknesses}{64}%
+\contentsline {chapter}{\numberline {5}Conclusion}{66}%
+\contentsline {section}{\numberline {5.1}System Outcomes}{66}%
+\contentsline {section}{\numberline {5.2}System Extensions}{67}%
+\contentsline {chapter}{Bibliography}{67}%
+\contentsline {chapter}{Appendices}{72}%
+\contentsline {chapter}{\numberline {A}Hardware Specifications}{72}%
+\contentsline {subsection}{\numberline {A.0.1}Raspberry Pi 4B}{72}%
+\contentsline {subsection}{\numberline {A.0.2}Pi Cam}{72}%
+\contentsline {chapter}{\numberline {B}System Calibrations}{74}%
+\contentsline {section}{\numberline {B.1}Calibration Parameters}{74}%
+\contentsline {chapter}{\numberline {C}Mathematical Theorems and Proofs}{79}%
+\contentsline {section}{\numberline {C.1}Bayes Theorem}{79}%
+\contentsline {chapter}{\numberline {D}Traffic Setting Descriptions}{80}%
+\contentsline {section}{\numberline {D.1}Vehicle Volume Counting Locations}{80}%
+\contentsline {section}{\numberline {D.2}Vehicle Speed Measuring Locations}{84}%
