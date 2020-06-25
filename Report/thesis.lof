@@ -41,16 +41,14 @@
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Centroids plotted over foreground objects.\relax }}{51}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Comparison of centroid generation with and without consolidating centroids based on distance.\relax }}{52}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Count line visualization for both traffic direction orientations.\relax }}{53}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Visualization of speed measurement region.\relax }}{54}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Visualization of four speed sectors of a speed region.\relax }}{55}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces High level operation of system network.\relax }}{56}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Entity Relationship Diagram of the system database.\relax }}{57}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Web Application - User Interface Panes\relax }}{60}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces High level operation of system network.\relax }}{55}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Entity Relationship Diagram of the system database.\relax }}{56}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Web Application - User Interface Panes\relax }}{59}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Super-blob formation due to poor object separation.\relax }}{64}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Super-blob formation due to poor object separation.\relax }}{63}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Traffic testing location snapshots.\relax }}{83}%
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Traffic testing location snapshots.\relax }}{82}%

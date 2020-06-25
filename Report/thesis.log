@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  25 JUN 2020 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  25 JUN 2020 15:19
 entering extended mode
 **c:/Users/c3175/Desktop/thesisWindows/Report/thesis.tex
 (c:/Users/c3175/Desktop/thesisWindows/Report/thesis.tex
@@ -1152,44 +1152,32 @@ Package pdftex.def Info: ./images/design/detection/calibration/mask_consolidate.
 <./images/design/detection/counting/updowntraffic.png, id=335, 723.30225pt x 406.51875pt>
 File: ./images/design/detection/counting/updowntraffic.png Graphic file (type png)
 <use ./images/design/detection/counting/updowntraffic.png>
-Package pdftex.def Info: ./images/design/detection/counting/updowntraffic.png  used on input line 23.
+Package pdftex.def Info: ./images/design/detection/counting/updowntraffic.png  used on input line 28.
 (pdftex.def)             Requested size: 185.22664pt x 104.0982pt.
 
-Overfull \hbox (10.95003pt too wide) in paragraph at lines 23--25
+Overfull \hbox (10.95003pt too wide) in paragraph at lines 28--30
  [][]\OT1/cmr/m/n/10.95 | 
  []
 
 <./images/design/detection/counting/leftrighttraffic.png, id=336, 434.22224pt x 245.11575pt>
 File: ./images/design/detection/counting/leftrighttraffic.png Graphic file (type png)
 <use ./images/design/detection/counting/leftrighttraffic.png>
-Package pdftex.def Info: ./images/design/detection/counting/leftrighttraffic.png  used on input line 28.
+Package pdftex.def Info: ./images/design/detection/counting/leftrighttraffic.png  used on input line 33.
 (pdftex.def)             Requested size: 185.22664pt x 104.55617pt.
-[52 <./images/design/detection/calibration/mask_noconsolidate.png> <./images/design/detection/calibration/mask_consolidate.png>]
-<./images/design/detection/counting/original_speed.png, id=342, 953.81343pt x 537.50812pt>
-File: ./images/design/detection/counting/original_speed.png Graphic file (type png)
-<use ./images/design/detection/counting/original_speed.png>
-Package pdftex.def Info: ./images/design/detection/counting/original_speed.png  used on input line 43.
-(pdftex.def)             Requested size: 352.81552pt x 198.82567pt.
- [53 <./images/design/detection/counting/updowntraffic.png> <./images/design/detection/counting/leftrighttraffic.png>]
-<./images/design/detection/counting/speed_sectors.png, id=348, 962.09438pt x 545.03625pt>
-File: ./images/design/detection/counting/speed_sectors.png Graphic file (type png)
-<use ./images/design/detection/counting/speed_sectors.png>
-Package pdftex.def Info: ./images/design/detection/counting/speed_sectors.png  used on input line 56.
-(pdftex.def)             Requested size: 352.81552pt x 199.8722pt.
- [54 <./images/design/detection/counting/original_speed.png>])) (design/networking/networking.tex [55 <./images/design/detection/counting/speed_sectors.png>]
-<./images/design/networking/network_diagram.png, id=357, 447.1104pt x 361.35pt>
+[52 <./images/design/detection/calibration/mask_noconsolidate.png> <./images/design/detection/calibration/mask_consolidate.png>])) (design/networking/networking.tex [53 <./images/design/detection/counting/updowntraffic.png> <./images/design/detection/counting/leftrighttraffic.png>]
+<./images/design/networking/network_diagram.png, id=347, 447.1104pt x 361.35pt>
 File: ./images/design/networking/network_diagram.png Graphic file (type png)
 <use ./images/design/networking/network_diagram.png>
 Package pdftex.def Info: ./images/design/networking/network_diagram.png  used on input line 16.
 (pdftex.def)             Requested size: 352.81552pt x 285.1491pt.
-) (design/database/database.tex [56 <./images/design/networking/network_diagram.png>]
-<./images/design/database/dragonfly_database_ERD.png, id=362, 271.0125pt x 253.4268pt>
+) (design/database/database.tex [54]
+<./images/design/database/dragonfly_database_ERD.png, id=351, 271.0125pt x 253.4268pt>
 File: ./images/design/database/dragonfly_database_ERD.png Graphic file (type png)
 <use ./images/design/database/dragonfly_database_ERD.png>
 Package pdftex.def Info: ./images/design/database/dragonfly_database_ERD.png  used on input line 7.
 (pdftex.def)             Requested size: 352.81552pt x 329.9343pt.
-) (design/interface/interface.tex [57 <./images/design/database/dragonfly_database_ERD.png>] [58]
-<./images/design/ui/profile.png, id=370, 711.4078pt x 344.03531pt>
+ [55 <./images/design/networking/network_diagram.png>]) (design/interface/interface.tex [56 <./images/design/database/dragonfly_database_ERD.png>] [57]
+<./images/design/ui/profile.png, id=363, 711.4078pt x 344.03531pt>
 File: ./images/design/ui/profile.png Graphic file (type png)
 <use ./images/design/ui/profile.png>
 Package pdftex.def Info: ./images/design/ui/profile.png  used on input line 10.
@@ -1210,86 +1198,86 @@ File: ./images/design/ui/profile.png Graphic file (type png)
 <use ./images/design/ui/profile.png>
 Package pdftex.def Info: ./images/design/ui/profile.png  used on input line 30.
 (pdftex.def)             Requested size: 220.50887pt x 106.63934pt.
- [59])) (results/results.tex [60 <./images/design/ui/profile.png>]
+ [58])) (results/results.tex [59 <./images/design/ui/profile.png>]
 Chapter 4.
-[61
+[60
 
 ]
 Overfull \hbox (18.14519pt too wide) in paragraph at lines 24--65
  [][] 
  []
 
-[62] [63]
-<./images/results/weaknesses/superblob.png, id=388, 378.213pt x 295.70474pt>
+[61] [62]
+<./images/results/weaknesses/superblob.png, id=380, 378.213pt x 295.70474pt>
 File: ./images/results/weaknesses/superblob.png Graphic file (type png)
 <use ./images/results/weaknesses/superblob.png>
 Package pdftex.def Info: ./images/results/weaknesses/superblob.png  used on input line 97.
 (pdftex.def)             Requested size: 198.45662pt x 155.16609pt.
-<./images/results/weaknesses/superblob_mask.png, id=389, 348.70274pt x 270.41025pt>
+<./images/results/weaknesses/superblob_mask.png, id=381, 348.70274pt x 270.41025pt>
 File: ./images/results/weaknesses/superblob_mask.png Graphic file (type png)
 <use ./images/results/weaknesses/superblob_mask.png>
 Package pdftex.def Info: ./images/results/weaknesses/superblob_mask.png  used on input line 102.
 (pdftex.def)             Requested size: 198.45662pt x 153.90437pt.
- [64 <./images/results/weaknesses/superblob.png> <./images/results/weaknesses/superblob_mask.png>]) (conclusion/conclusion.tex [65]
+ [63 <./images/results/weaknesses/superblob.png> <./images/results/weaknesses/superblob_mask.png>]) (conclusion/conclusion.tex [64]
 Chapter 5.
-[66
+[65
 
-]) (thesis.bbl [67] [68
+]) (thesis.bbl [66] [67
 
-] [69] [70]) (appendices/appendix.tex [71] (appendices/hardware_specs.tex
+] [68] [69]) (appendices/appendix.tex [70] (appendices/hardware_specs.tex
 Appendix A.
-[72
+[71
 
 
-]) (calibration/calibration.tex [73]
+]) (calibration/calibration.tex [72]
 Appendix B.
-[74
+[73
 
-] [75] [76] [77]) (appendices/maths.tex [78]
+] [74] [75] [76]) (appendices/maths.tex [77]
 Appendix C.
-) (appendices/traffic_descriptors.tex [79
+) (appendices/traffic_descriptors.tex [78
 
 ]
 Appendix D.
-[80
+[79
 
-] [81]
-<./images/appendices/descriptors/location_one.png, id=449, 1441.63594pt x 806.26219pt>
+] [80]
+<./images/appendices/descriptors/location_one.png, id=441, 1441.63594pt x 806.26219pt>
 File: ./images/appendices/descriptors/location_one.png Graphic file (type png)
 <use ./images/appendices/descriptors/location_one.png>
 Package pdftex.def Info: ./images/appendices/descriptors/location_one.png  used on input line 93.
 (pdftex.def)             Requested size: 198.45662pt x 110.98134pt.
-<./images/appendices/descriptors/location_two.png, id=450, 1443.14156pt x 811.53188pt>
+<./images/appendices/descriptors/location_two.png, id=442, 1443.14156pt x 811.53188pt>
 File: ./images/appendices/descriptors/location_two.png Graphic file (type png)
 <use ./images/appendices/descriptors/location_two.png>
 Package pdftex.def Info: ./images/appendices/descriptors/location_two.png  used on input line 98.
 (pdftex.def)             Requested size: 198.45662pt x 111.59526pt.
-<./images/appendices/descriptors/location_three.png, id=451, 1444.64719pt x 810.77907pt>
+<./images/appendices/descriptors/location_three.png, id=443, 1444.64719pt x 810.77907pt>
 File: ./images/appendices/descriptors/location_three.png Graphic file (type png)
 <use ./images/appendices/descriptors/location_three.png>
 Package pdftex.def Info: ./images/appendices/descriptors/location_three.png  used on input line 103.
 (pdftex.def)             Requested size: 198.45662pt x 111.36803pt.
-<./images/appendices/descriptors/location_four.png, id=452, 1444.64719pt x 812.28468pt>
+<./images/appendices/descriptors/location_four.png, id=444, 1444.64719pt x 812.28468pt>
 File: ./images/appendices/descriptors/location_four.png Graphic file (type png)
 <use ./images/appendices/descriptors/location_four.png>
 Package pdftex.def Info: ./images/appendices/descriptors/location_four.png  used on input line 108.
 (pdftex.def)             Requested size: 198.45662pt x 111.57483pt.
-<./images/appendices/descriptors/location_five.png, id=453, 1444.64719pt x 812.28468pt>
+<./images/appendices/descriptors/location_five.png, id=445, 1444.64719pt x 812.28468pt>
 File: ./images/appendices/descriptors/location_five.png Graphic file (type png)
 <use ./images/appendices/descriptors/location_five.png>
 Package pdftex.def Info: ./images/appendices/descriptors/location_five.png  used on input line 113.
 (pdftex.def)             Requested size: 198.45662pt x 111.57483pt.
-<./images/appendices/descriptors/location_six.png, id=454, 1444.64719pt x 812.28468pt>
+<./images/appendices/descriptors/location_six.png, id=446, 1444.64719pt x 812.28468pt>
 File: ./images/appendices/descriptors/location_six.png Graphic file (type png)
 <use ./images/appendices/descriptors/location_six.png>
 Package pdftex.def Info: ./images/appendices/descriptors/location_six.png  used on input line 118.
 (pdftex.def)             Requested size: 198.45662pt x 111.57483pt.
-<./images/appendices/descriptors/location_seven.png, id=455, 1444.64719pt x 812.28468pt>
+<./images/appendices/descriptors/location_seven.png, id=447, 1444.64719pt x 812.28468pt>
 File: ./images/appendices/descriptors/location_seven.png Graphic file (type png)
 <use ./images/appendices/descriptors/location_seven.png>
 Package pdftex.def Info: ./images/appendices/descriptors/location_seven.png  used on input line 123.
 (pdftex.def)             Requested size: 198.45662pt x 111.57483pt.
- [82])) [83 <./images/appendices/descriptors/location_one.png> <./images/appendices/descriptors/location_two.png> <./images/appendices/descriptors/location_three.png> <./images/appendices/descriptors/location_four.png> <./images/appendices/descriptors/location_five.png> <./images/appendices/descriptors/location_six.png> <./images/appendices/descriptors/location_seven.png>] [84] (thesis.aux)
+ [81])) [82 <./images/appendices/descriptors/location_one.png> <./images/appendices/descriptors/location_two.png> <./images/appendices/descriptors/location_three.png> <./images/appendices/descriptors/location_four.png> <./images/appendices/descriptors/location_five.png> <./images/appendices/descriptors/location_six.png> <./images/appendices/descriptors/location_seven.png>] [83] (thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1298,17 +1286,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9796 strings out of 480934
- 185180 string characters out of 2899917
- 433476 words of memory out of 3000000
- 25165 multiletter control sequences out of 15000+200000
+ 9778 strings out of 480934
+ 184404 string characters out of 2899917
+ 433452 words of memory out of 3000000
+ 25149 multiletter control sequences out of 15000+200000
  545915 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,19n,54p,1583b,553s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\c3175\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/c3175/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on thesis.pdf (100 pages, 49391618 bytes).
+Output written on thesis.pdf (99 pages, 47716447 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
+ 532 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 436 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 426 words of extra memory for PDF output out of 10000 (max. 10000000)
 

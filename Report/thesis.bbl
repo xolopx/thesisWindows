@@ -242,10 +242,10 @@ Zoran Zivkovic and Ferdinand van~der Heijden.
 Armin Ronacher.
 \newblock Flask, 2020.
 
-\bibitem{mysqltutorial}
-Python mysql tutorial.
-
 \bibitem{mysqlconnector}
 Mysql connector library.
+
+\bibitem{mysqltutorial}
+Python mysql tutorial.
 
 \end{thebibliography}

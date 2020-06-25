@@ -1,6 +1,6 @@
 \section{Data Transfer}
 
-The system relies of on wireless data transfer to send traffic data recorded by a node back to the central database. It is also useful to be able to transmit a live video feed from each node to the graphical interface so that a user may observe what the node sees in real time Presently data transfer occurs only on a local area network and so nodes and the central machine housing the database must be on the same network. Making the network wireless was an important consideration as it allows for more flexible and lightweight node installation.
+The system relies on wireless data transfer to send traffic data recorded by a camera node back to the central database. It is also useful to be able to transmit a live video feed from each node to the graphical interface so that a user may observe what the node sees in real time. Presently data transfer occurs only on a local area network. Making the network wireless was an important consideration as it allows for flexible and lightweight node installation, this was easily facilitated by the network capabilities of the Raspberry Pi. Figure \ref{fig:network_diagram} provides a high level outline of the relationships between the entities in the network.
 
 \subsection{Video Feed}
 
@@ -9,7 +9,7 @@ The video feed is shared with the user interface via a simple Flask \cite{flask}
 
 \subsection{Traffic Statistics}
 
-Traffic statistics are sent to the database every 30 seconds. A simple custom library was written to interface with the database informed by the "MySQLTutorial" series \cite{mysqltutorial} that utilizes the MySQLConnector class \cite{mysqlconnector}. The connection using this library is by default set to transfer control protocol (TCP) which is well suited to sending small packets of data. 
+Traffic statistics are sent to the database every 30 seconds. Simple functions implementing the MySQLConnector class \cite{mysqlconnector}\cite{mysqltutorial} were used to interface with the detection algorithm running on a camera node to the database on another machine. This connection employs transfer control protocol (TCP) which is well suited for sending small packets of data such as the traffic data though it's not as well suited to transmitting high frame rate images and so some lag can occur. 
 
 \begin{figure}[H]
     \centering
