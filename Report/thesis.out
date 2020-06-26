@@ -1,0 +1,47 @@
+\BOOKMARK [0][-]{Doc-Start}{Abstract}{}% 1
+\BOOKMARK [0][-]{Doc-Start}{Acknowledgements}{}% 2
+\BOOKMARK [0][-]{Doc-Start}{Contributions}{}% 3
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
+\BOOKMARK [0][-]{chapter.2}{Theoretical Background}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Digital Images}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{The Gaussian}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Machine Learning}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.3.1}{Artificial Neural Networks}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.2}{Clustering}{section.2.3}% 10
+\BOOKMARK [1][-]{section.2.4}{Image Processing}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.4.1}{Thresholding}{section.2.4}% 12
+\BOOKMARK [2][-]{subsection.2.4.2}{Linear Filtering}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.3}{Nonlinear Filtering}{section.2.4}% 14
+\BOOKMARK [1][-]{section.2.5}{Contour Tracing}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Design}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Hardware}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Vehicle Detection}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Background Subtraction}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Morphology and Filtering}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.3}{Contours and Bounding Boxes}{section.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.2.4}{Tracking}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.5}{Vehicle Volume Counting}{section.3.2}% 23
+\BOOKMARK [1][-]{section.3.3}{Data Transfer}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{Video Feed}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.2}{Traffic Statistics}{section.3.3}% 26
+\BOOKMARK [1][-]{section.3.4}{Database Management}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.5}{User Interface}{chapter.3}% 28
+\BOOKMARK [0][-]{chapter.4}{Results and Discussion}{}% 29
+\BOOKMARK [1][-]{section.4.1}{Traffic Volume Counting}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.1.1}{Strengths}{section.4.1}% 31
+\BOOKMARK [2][-]{subsection.4.1.2}{weaknesses}{section.4.1}% 32
+\BOOKMARK [0][-]{chapter.5}{Conclusion and Extensions}{}% 33
+\BOOKMARK [1][-]{section.5.1}{System Outcomes}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.2}{System Extensions}{chapter.5}% 35
+\BOOKMARK [0][-]{section.5.2}{Bibliography}{}% 36
+\BOOKMARK [0][-]{section*.82}{Appendices}{}% 37
+\BOOKMARK [0][-]{appendix.a.A}{Hardware Specifications}{}% 38
+\BOOKMARK [1][-]{section.a.A.1}{Raspberry Pi 4B}{appendix.a.A}% 39
+\BOOKMARK [1][-]{section.a.A.2}{Pi Cam}{appendix.a.A}% 40
+\BOOKMARK [0][-]{appendix.a.B}{System Calibrations}{}% 41
+\BOOKMARK [1][-]{section.a.B.1}{Calibration Parameters}{appendix.a.B}% 42
+\BOOKMARK [0][-]{appendix.a.C}{Mathematical Theorems and Proofs}{}% 43
+\BOOKMARK [1][-]{section.a.C.1}{Bayes Theorem}{appendix.a.C}% 44
+\BOOKMARK [0][-]{appendix.a.D}{Traffic Setting Descriptions}{}% 45
+\BOOKMARK [1][-]{section.a.D.1}{Vehicle Volume Counting Locations}{appendix.a.D}% 46
+\BOOKMARK [0][-]{appendix.a.E}{False Readings}{}% 47

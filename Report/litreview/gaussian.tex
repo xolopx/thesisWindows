@@ -11,7 +11,7 @@ Given a sufficiently large numerical population in many cases this population's 
 \label{eq:gauss}
 \end{equation}
 
-The variables $\mu$, $A$ and $\sigma$ represent the mean, amplitude and standard deviation of the distribution respectively. The mean, $\mu$, is the average value of all samples, it is also the distributions middle value, median, and most common value, mode. Half of all samples have a value greater than the mean, and half of all values have a values less than the mean. The amplitude, $A$, is the value of the \emph{distribution} at the mean, it is the largest value of the distribution because the mean is the value with the greatest \emph{likelihood}, where likelihood is the probability that given a distribution of data $x$, a piece of data $x_i$ has a specific value. The standard deviation, $\sigma$ is a measure of the distributions spread and is calculated as in equation \ref{eq:standard_deviation}, note that $N$ is the number of samples in a distribution. Figure \ref{fig:gauss} shows a one-dimensional Gaussian distribution and indicates where the mean, amplitude and standard deviation are.
+The variables $\mu$, $A$ and $\sigma$ represent the mean, amplitude and standard deviation of the distribution respectively. The mean, $\mu$, is the average value of all samples, it is also the distributions middle value, median, and most common value, mode. Half of all samples have a value greater than the mean, and half of all values have a value less than the mean. The amplitude, $A$, is the value of the distribution at the mean, it is the largest value of the distribution because the mean is the value with the greatest \emph{likelihood}, where likelihood is the probability, given a distribution of data $x$, a piece of data $x_i$ has a specific value. The standard deviation, $\sigma$ is a measure of the distributions spread and is calculated as in equation \ref{eq:standard_deviation}, note that $N$ is the number of samples in a distribution. Figure \ref{fig:gauss} shows a one-dimensional Gaussian distribution and indicates where the mean, amplitude and standard deviation are.
 
 \begin{equation}
   \sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(x_i - \mu)^2}
@@ -30,7 +30,7 @@ The Gaussian Distribution of a D-dimensional vector $\boldsymbol{x}$ is describe
 \label{eq:cov_discrete}
 \end{equation}
 
-The Gaussian function is a probability density function meaning that if it can be used to determine the probability that a random variables value lies between some range. This is calculated by taking the integral of the Gaussian function with the range of values as an interval, say for the range of values between $a$ and $b$ for random variable X, which described mathematically in equation \ref{eq:gauss_probability}, hence the total area under the normal distribution is equal to 1, at the probably of the random variable X having a value between $-\infty$ and $\infty$ must be certain. Note that the integral of the Gaussian function can only be calculated numerically as it does not have an anti-derivative, also known as indefinite integral \cite{antiderivatives}. 
+The Gaussian function is a probability density function meaning that if it can be used to determine the probability that a random variable's value lies between some range. This is calculated by taking the integral of the Gaussian function with the range of values as an interval, say for the range of values between $a$ and $b$ for random variable X, which described mathematically in equation \ref{eq:gauss_probability}. The total area under the normal distribution is equal to 1, as the probably of the random variable X having a value between $-\infty$ and $\infty$ must be certain. Note that the integral of the Gaussian function can only be calculated numerically as it does not have an anti-derivative, also known as indefinite integral \cite{antiderivatives}. 
 
 \begin{equation}
   P(a \leq X \leq b) = \frac{A}{\sqrt{2\pi}\sigma}\int_{a}^{b}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}dx
@@ -45,7 +45,7 @@ The Gaussian function is a probability density function meaning that if it can b
   \label{fig:gauss}
 \end{figure}
 
-The Gaussian distribution may be expressed in more dimensions than one, as it has been expressed thus far. It may be useful to model the distribution in more than one dimension as data sets may be comprised entries of more than one dimension. For example a digital image is specified by two dimensions in the x and y direction. Equation \ref{eq:gauss_2D} describes the Circular Gaussian distribution function, circular meaning the standard deviation for both random variables is the same, for the independent random variables X and Y. Figure \ref{fig:gauss_2D} visualizes the two dimensional distribution, anything beyond 2D cannot be easily visualized. 
+A grayscale image is specified by two dimensions in the x and y direction, Equation \ref{eq:gauss_2D} describes Gaussian distribution for just two dimensions as would be required for a grayscale image. Figure \ref{fig:gauss_2D} visualizes the two dimensional Gaussian distribution, anything beyond 2D cannot be easily visualized. 
 
 \begin{equation}
 f(x,y) = \frac{1}{2\pi\sigma}e^\frac{{-\big[(x-\mu_x)^2 + (y-\mu_y)^2\big]}}{2\sigma^2}

@@ -85,7 +85,7 @@ The system tests were conducted in a range of settings with different lighting a
 
 The algorithm is not limited to vehicle's of any one type or size as it does recognise objects according to those parameters but according to movement. Though the algorithm primarily relies on movement for detection if a vehicle stops completely or is moving slowly this does not cause the algorithm to fail as when the vehicle commences movement it will be once again detected and counted. 
 
-The system's simplicity is also a source of strength because it's generally clear why a false negative or positive occurred in viewing the algorithm's behaviour in testing. Appendix \ref{appendices:false_readings} details the causes of false errors during the tests that generated the results in table \ref{table:volume_table}.  
+The system's simplicity is also a source of strength because it's generally clear why a false negative or positive occurred in viewing the algorithm's behaviour in testing. Appendix \ref{chapter:false_readings} details the causes of false errors during the tests that generated the results in table \ref{table:volume_table}.  
 
 \subsection{weaknesses}
 
@@ -110,5 +110,5 @@ The system's most common cause of false readings is when vehicles are partially 
     \label{fig:superblob}
 \end{figure}
 
-The system also has some sensitivity to camera movement as when the entire camera moves it appears to the Gaussian Mixture Model that there are foreground pixels everywhere. Locations 4 and 6 suffered from some camera jostling which caused false readings (see Appendix \ref{appendices:false_readings}). This can easily be avoided by securing the camera well but might be an issue if a node is mounted to a flexible object in a high wind area.
+The system also has some sensitivity to camera movement as when the entire camera moves it appears to the Gaussian Mixture Model that there are foreground pixels everywhere. Locations 4 and 6 suffered from some camera jostling which caused false readings (see Appendix \ref{chapter:false_readings}). This can easily be avoided by securing the camera well but might be an issue if a node is mounted to a flexible object in a high wind area.
 

@@ -1,7 +1,7 @@
 \subsubsection{Mixtures of Gaussians}
  \label{subsection:mog}
 
-Mixtures of Gaussians (MoG), or the Gaussian Mixture Model (GMM), is a method of clustering (see section \ref{subsection:clustering}) that is based not on distance \ref{subsubsection:kmeans} but distribution. This method of clustering was popularized by Duda and Hart in their text \emph{Pattern Classification and Scene Analysis} \cite{mog_seminal}. This method is more effective than distance based methods because it considers the covariance of the data. Note that for K-Means clustering the distributions were spherical, but if the true clusters were more elliptical then K-Means would fail to cluster them properly. Figure \ref{fig:cluster_shapes} compares what these cluster shapes might look like and the arrows indicate the location, the arrows indicate data points that are ambiguous.
+Mixtures of Gaussians (MoG), or the Gaussian Mixture Model (GMM), is a method of clustering that is based not on sample distance but sample distribution. The GMM represents each cluster as a Gaussian Distribution to determine the probability that a sample belongs to it. This method of clustering was popularized by Duda and Hart in their text \emph{Pattern Classification and Scene Analysis} \cite{mog_seminal}. This method is more effective than distance based methods because it considers the covariance of the data. Note that for K-Means (\ref{subsubsection:kmeans}) clustering the distributions were spherical, but if the true shape of clusters were more elliptical then K-Means would fail to cluster them properly. Figure \ref{fig:cluster_shapes} compares what these cluster shapes might look like and the arrows indicate data points that are ambiguous but still received hard assignments in K-Means clustering.
 
 \begin{figure}[ht]
 	\centering
@@ -11,7 +11,7 @@ Mixtures of Gaussians (MoG), or the Gaussian Mixture Model (GMM), is a method of
 	\label{fig:cluster_shapes}
 \end{figure}
 	
-The basis of the Gaussian Mixture Model is of course the Gaussian Distribution function \ref{section:gaussian}. It is useful for probabilistic clustering because, as the Central Limit Theorem States, the distribution of the average value of the subsets of any data set will approximately converge to a Normal distribution as the number of terms in the subsets increases \cite{patterns_machine_learning}. The Mixture of Gaussian for the random variable $\boldsymbol{x}$ is achieved by super-positioning the distributions of random variable for each cluster. Equation \ref{eq:mog} describes the super-positioning of $K$ distributions for random variable $\boldsymbol{x}$, the resulting curve models the distribution of the random variable. 
+The basis of the Gaussian Mixture Model is the Gaussian Distribution function \ref{section:gaussian}. It is useful for probabilistic clustering because, as the Central Limit Theorem States, the distribution of the average value of the subsets of any data set will approximately converge to a Normal distribution as the number of terms in the subsets increases \cite{patterns_machine_learning}. The Mixture of Gaussian for the random variable $\boldsymbol{x}$ is achieved by super-positioning the distributions of random variable for each cluster. Equation \ref{eq:mog} describes the super-positioning of $K$ distributions for random variable $\boldsymbol{x}$, the resulting curve models the distribution of the random variable. 
 
 \begin{equation}
 p(\boldsymbol{x}) = \sum^{K}_{k = 1}\pi_k \mathcal{N}(\boldsymbol{x}|\boldsymbol{\mu_k}, \boldsymbol{\Sigma_k})

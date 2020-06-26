@@ -25,7 +25,13 @@
 \usepackage[]{algorithm2e}
 \SetKwInput{KwInput}{Input}                % Set the Input
 \SetKwInput{KwOutput}{Output}              % set the Output
-
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=false, %set true if you want colored links
+    linktoc=all,     %set to all if you want both sections and subsections linked
+    linkcolor=blue,  %choose some color if you want links to stand out
+}
 
 \input{blocked.sty}
 \input{uhead.sty}

@@ -1,6 +1,6 @@
 \subsection{Clustering}
 \label{subsection:clustering}
-Clustering is a type of unsupervised learning that seeks to group datasets into cluster of samples that share some commonality. Clustering algorithms do not require training as they're unsupervised learning algorithms and so can be implemented immediately. Clustering algorithms can be designed to produce two or more clusters and often this is specified during the algorithms instantiation. Often a data sample's characteristics are quantified in a structure called a \emph{feature vector}, the size of which depends on the dimensionality of the data. Equation \ref{eq:featurevector} describes the general form of a feature vector, where $d$ represents a single dimension of a data sample. 
+Clustering is a type of unsupervised learning that seeks to group datasets into cluster of samples that share some commonality. Clustering algorithms do not require training as they're unsupervised learning algorithms. Clustering algorithms can be designed to produce two or more clusters and often this quantity is specified during the algorithms instantiation. A data sample's characteristics are quantified in a structure called a \emph{feature vector}, the size of which depends on the dimensionality of the data. Equation \ref{eq:featurevector} describes the general form of a feature vector, where $d$ represents a single dimension of a data sample. 
 
 \begin{equation}
     \vec{v} = 
@@ -13,9 +13,9 @@ Clustering is a type of unsupervised learning that seeks to group datasets into 
     \label{eq:featurevector}
 \end{equation}
 
-In the context of image processing clustering may be used to specify the pixels that comprise discrete objects in an image. The pixel's similarity can be measured by their value or position in the image. Figure \ref{fig:simple_cluster} shows an example of separating a foreground object from the background. The feature vectors for the pixels are three dimensional, one dimension for each colour channel, red, green and blue (see section \ref{section:digital_image}) \cite{patterns_machine_learning}. This particular clustering implementation also supplemented the vectors with spatial information so that closely located pixels are more strongly grouped \cite{matlab_kmeans_segment}.
+In the context of image processing, clustering may be used to specify the pixels that comprise discrete objects in an image. The pixel's similarity can be measured by their value or position in the image. Figure \ref{fig:simple_cluster} shows an example of separating a foreground object from the background. The feature vectors for the pixels are three dimensional, one dimension for each colour channel, red, green and blue (see section \ref{section:digital_image}) \cite{patterns_machine_learning}. This particular clustering implementation also supplemented the feature vectors with spatial information so that closely located pixels are more strongly grouped \cite{matlab_kmeans_segment}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
      \begin{subfigure}[b]{0.45\textwidth}
         \includegraphics[width=\textwidth]{litreview/machinelearning/clustering/dog_original}
