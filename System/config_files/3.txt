@@ -45,3 +45,5 @@ singlelane = True
 multilane = True
 rotate = 0
 log_stats = False
+live = False
+log_stats = True

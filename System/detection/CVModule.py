@@ -113,7 +113,7 @@ class CVModule:
             else:
                 cv.waitKey(int(self.params["frame_wait"]))
 
-            if self.params["live"] == "True":
+            if self.params["live"] != "True":
                 if int(self.params["test_length"]) > 0:
                     if(self.frameCount == int(self.params["test_length"])):
                         while True:

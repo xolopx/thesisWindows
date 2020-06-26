@@ -44,3 +44,5 @@ rotate = 0
 storage_interval = 10
 singlelane = True
 multilane = False
+log_stats = True
+live = False

@@ -80,9 +80,9 @@ if __name__ == '__main__':
 
 
     dirname = os.path.dirname(__file__)
-    config_path = os.path.join(dirname, r'config_files\live1.txt')
+    config_path = os.path.join(dirname, r'config_files\3.txt')
 
-    video_path = r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\1.mp4"
+    video_path = r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\3.mp4"
     # video_path = r"C:\Users\c3175\OneDrive - The University Of Newcastle\FYP\video_data\3.mp4"
 
     config_parser = ConfigParser.ConfigParser(config_path)
@@ -104,7 +104,7 @@ if __name__ == '__main__':
     t2.start()
     print("Training Detection")
 
-    app.run(port=args["port"], debug=True,
+    app.run(host=args["ip"], port=args["port"], debug=True,
             threaded=True, use_reloader=False)
     # app.run(debug=True,
     #         threaded=True, use_reloader=False)
