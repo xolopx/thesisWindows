@@ -33,7 +33,10 @@ class CVModule:
         self.count_line1 = Line.Line(self.parse_point(self.params["count_line1_p1"]),self.parse_point(self.params["count_line1_p2"]))
         self.count_line2 = Line.Line(self.parse_point(self.params["count_line2_p1"]),self.parse_point(self.params["count_line2_p2"]))
         self.centroidTracker = CentroidTracker.CentroidTracker(maxDisappeared= int(self.params["missing"]), maxDistance= int(self.params["max_dist"]), minDistance=int(self.params["min_dist"]))
-        self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
+        if self.params["live"] == "True":
+            self.totalFrames = math.inf
+        else:
+            self.totalFrames = self.video.get(cv.CAP_PROP_FRAME_COUNT)
         self.subtractor = cv.createBackgroundSubtractorMOG2(history = int(params["history"]), detectShadows= bool(params["shadows"]))
         self.wait = int(self.params["frame_wait"])
         self.countNegativeCurrent = 0
@@ -90,12 +93,12 @@ class CVModule:
             if(self.params["log_stats"]) == "True":
                 timerStart = self.log_stats(timerStart, int(self.params["storage_interval"]))
 
-            # *** TESTING: LOOPING LOGIC JUST FOR TESTING WITH SHORT VIDEO ***
-            if (self.frameCount >= (self.totalFrames - int(self.params["history"]))):
-                # Reset frame count.
-                self.frameCount = 0
-                # Reset video cursor.
-                self.video.set(cv.CAP_PROP_POS_FRAMES, 0)
+            if self.params["live"] != "True":
+                if (self.frameCount >= (self.totalFrames - int(self.params["history"]))):
+                    # Reset frame count.
+                    self.frameCount = 0
+                    # Reset video cursor.
+                    self.video.set(cv.CAP_PROP_POS_FRAMES, 0)
 
             # Show the result.
             cv.imshow("Frame", frame)
@@ -110,13 +113,13 @@ class CVModule:
             else:
                 cv.waitKey(int(self.params["frame_wait"]))
 
-
-            if int(self.params["test_length"]) > 0:
-                if(self.frameCount == int(self.params["test_length"])):
-                    while True:
-                        key = cv.waitKey(10)
-                        if key == ord("q"):
-                            break
+            if self.params["live"] == "True":
+                if int(self.params["test_length"]) > 0:
+                    if(self.frameCount == int(self.params["test_length"])):
+                        while True:
+                            key = cv.waitKey(10)
+                            if key == ord("q"):
+                                break
 
     def train_subtractor(self):
         """

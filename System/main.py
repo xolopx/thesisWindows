@@ -80,16 +80,20 @@ if __name__ == '__main__':
 
 
     dirname = os.path.dirname(__file__)
-    config_path = os.path.join(dirname, r'config_files\3.txt')
+    config_path = os.path.join(dirname, r'config_files\live1.txt')
 
-    # video_path = r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\4.mp4"
-    video_path = r"C:\Users\c3175\OneDrive - The University Of Newcastle\FYP\video_data\3.mp4"
+    video_path = r"C:\Users\Tom\OneDrive - The University Of Newcastle\FYP\video_data\1.mp4"
+    # video_path = r"C:\Users\c3175\OneDrive - The University Of Newcastle\FYP\video_data\3.mp4"
 
     config_parser = ConfigParser.ConfigParser(config_path)
     config_parser.parseConfig()
     rotate = int(config_parser.parameters["rotate"])
 
-    inputVideo = cv2.VideoCapture(video_path)  # Initialize video capture stream.
+    if (config_parser.parameters["live"] == "True"):
+        inputVideo = cv2.VideoCapture(0)
+    else:
+        inputVideo = cv2.VideoCapture(video_path)  # Initialize video capture stream.
+
     process = CVModule.CVModule(rotate, inputVideo, config_parser.parameters, id=0, lat=10, long=10)
 
     update_or_add_node()

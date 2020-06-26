@@ -3,6 +3,7 @@ import re
 class ConfigParser:
     """ Reads a configuration file to determine the parameter calibrations for a node. """
     check_list = {
+        "live": False,
         "log_stats": False,
         "storage_interval": False,
         "singlelane": False,
@@ -55,6 +56,7 @@ class ConfigParser:
     def __init__(self, file):
         self.file = file
         self.parameters = {
+            "live": False,
             "log_stats": False,
             "storage_interval": False,
             "singlelane": False,
